@@ -158,47 +158,41 @@ export function Portfolio() {
           ))}
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {filteredProjects.map((project, index) => (
+        {/* Projects Grid — 4 columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {filteredProjects.map((project) => (
             <div
               key={project.id}
-              
-              
-              
-              
-              layout
-              className="group bg-soul-dark-card rounded-2xl border border-gray-800 overflow-hidden hover:border-soul-purple/50 transition-all duration-300"
+              className="group bg-soul-dark-card rounded-xl border border-gray-800 overflow-hidden hover:border-soul-purple/50 transition-all duration-300"
             >
               {/* Project Header */}
-              <div className={`h-48 bg-gradient-to-br ${project.color} relative`}>
+              <div className={`h-28 bg-gradient-to-br ${project.color} relative`}>
                 <div className="absolute inset-0 bg-black/30" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <project.icon size={64} className="text-white/80" />
+                  <project.icon size={36} className="text-white/80" />
                 </div>
-                {/* Category Badge */}
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-black/50 rounded-full text-white text-sm font-medium">
+                <div className="absolute top-2 left-2">
+                  <span className="px-2 py-0.5 bg-black/50 rounded-full text-white text-[10px] font-medium">
                     {t(`categories.${project.categoryKey}`)}
                   </span>
                 </div>
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-soul-purple-light transition-colors">
+              <div className="p-4">
+                <h3 className="text-sm font-bold text-white mb-1 group-hover:text-soul-purple-light transition-colors leading-tight">
                   {t(`projects.${project.key}.title`)}
                 </h3>
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-400 text-xs mb-3 line-clamp-2">
                   {t(`projects.${project.key}.description`)}
                 </p>
 
                 {/* Metrics */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.metrics.map((metric) => (
+                <div className="flex flex-wrap gap-1 mb-3">
+                  {project.metrics.slice(0, 2).map((metric) => (
                     <span
                       key={metric}
-                      className="px-3 py-1 bg-soul-purple/20 text-soul-purple-light rounded-full text-sm"
+                      className="px-2 py-0.5 bg-soul-purple/20 text-soul-purple-light rounded-full text-[10px]"
                     >
                       {metric.includes('.') ? t(metric) : metric}
                     </span>
@@ -206,11 +200,11 @@ export function Portfolio() {
                 </div>
 
                 {/* Stack */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.stack.map((tech) => (
+                <div className="flex flex-wrap gap-1 mb-3">
+                  {project.stack.slice(0, 3).map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-soul-dark-lighter text-gray-400 rounded text-xs"
+                      className="px-1.5 py-0.5 bg-soul-dark-lighter text-gray-400 rounded text-[10px]"
                     >
                       {tech}
                     </span>
@@ -218,7 +212,7 @@ export function Portfolio() {
                 </div>
 
                 {/* Links */}
-                <div className="flex space-x-3 pt-4 border-t border-gray-800">
+                <div className="flex space-x-2 pt-2 border-t border-gray-800">
                   {project.demoUrl ? (
                     <a
                       href={project.demoUrl}
@@ -226,24 +220,12 @@ export function Portfolio() {
                       rel="noopener noreferrer"
                       className="flex items-center text-soul-purple hover:text-soul-purple-light transition-colors"
                     >
-                      <ExternalLink size={16} className="mr-1" />
-                      <span className="text-sm">{t('viewCase')}</span>
+                      <ExternalLink size={12} className="mr-1" />
+                      <span className="text-xs">{t('viewCase')}</span>
                     </a>
-                  ) : null}
-                  {project.githubUrl ? (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-400 hover:text-white transition-colors"
-                    >
-                      <Github size={16} className="mr-1" />
-                      <span className="text-sm">{t('code')}</span>
-                    </a>
-                  ) : null}
-                  {!project.demoUrl && !project.githubUrl && (
-                    <span className="flex items-center text-gray-500 text-sm">
-                      <Lock size={14} className="mr-1" />
+                  ) : !project.githubUrl && (
+                    <span className="flex items-center text-gray-500 text-xs">
+                      <Lock size={10} className="mr-1" />
                       {t('confidential')}
                     </span>
                   )}

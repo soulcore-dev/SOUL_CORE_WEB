@@ -57,7 +57,7 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
               <div className="bg-soul-dark-card rounded-2xl border border-gray-800 overflow-hidden">
                 {/* Use Case Number Badge */}
                 <div className={`absolute -top-4 left-8 px-4 py-2 bg-gradient-to-r ${color} rounded-full`}>
-                  <span className="text-white font-bold text-sm">{t('useCases.caseLabel')} #{index + 1}</span>
+                  <span className="text-white font-bold text-sm">#{index + 1}</span>
                 </div>
 
                 <div className="p-8 pt-10">

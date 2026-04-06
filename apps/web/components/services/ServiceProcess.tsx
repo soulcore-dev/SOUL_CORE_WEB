@@ -11,8 +11,13 @@ interface ServiceProcessProps {
 export function ServiceProcess({ serviceKey, color }: ServiceProcessProps) {
   const t = useTranslations('serviceDetails')
 
-  // Get process steps from translations
-  const processRaw = t.raw(`${serviceKey}.process`) as Array<{ title: string; description: string }>
+  // Get process steps from translations — hide section if no data
+  let processRaw: Array<{ title: string; description: string }> = []
+  try {
+    processRaw = t.raw(`${serviceKey}.process`) as Array<{ title: string; description: string }>
+  } catch { /* translation key missing */ }
+
+  if (!processRaw || processRaw.length === 0) return null
 
   return (
     <section className="py-20 bg-soul-dark">
