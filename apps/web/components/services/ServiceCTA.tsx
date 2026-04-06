@@ -26,7 +26,14 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
         <div className={`absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-r ${color} rounded-full blur-[120px] opacity-20 animate-pulse`} style={{ animationDelay: '1s' }} />
       </div>
 
-      {/* Grid pattern overlay */}
+      {/* AI CTA background */}
+      <img
+        src="/generated/svc-cta-bg.png"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover opacity-15 mix-blend-screen"
+        onError={(e: any) => { e.target.style.display = 'none' }}
+      />
+      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

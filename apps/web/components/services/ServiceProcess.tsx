@@ -20,8 +20,14 @@ export function ServiceProcess({ serviceKey, color }: ServiceProcessProps) {
   if (!processRaw || processRaw.length === 0) return null
 
   return (
-    <section className="py-20 bg-soul-dark">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-soul-dark relative overflow-hidden">
+      <img
+        src="/generated/svc-process-bg.png"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover opacity-10"
+        onError={(e: any) => { e.target.style.display = 'none' }}
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div
           

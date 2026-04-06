@@ -18,6 +18,13 @@ export function WhyUs() {
 
   return (
     <section className="py-24 bg-soul-dark-lighter relative overflow-hidden">
+      {/* AI background */}
+      <img
+        src="/generated/whyus-bg.png"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover opacity-15"
+        onError={(e: any) => { e.target.style.display = 'none' }}
+      />
       {/* Background blur effects */}
       <div className="absolute top-0 right-1/4 w-80 h-80 bg-soul-purple/20 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-soul-purple-light/15 rounded-full blur-3xl" />

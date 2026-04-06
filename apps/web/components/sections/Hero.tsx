@@ -17,6 +17,13 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background */}
       <div className="absolute inset-0 bg-soul-dark">
+        {/* AI background image */}
+        <img
+          src="/generated/hero-bg.png"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          onError={(e: any) => { e.target.style.display = 'none' }}
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-soul-purple/20 via-transparent to-transparent" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-soul-purple/30 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-soul-purple-light/20 rounded-full blur-3xl animate-pulse delay-1000" />

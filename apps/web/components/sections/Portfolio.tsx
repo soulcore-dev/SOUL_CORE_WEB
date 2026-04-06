@@ -118,15 +118,16 @@ export function Portfolio() {
   )
 
   return (
-    <section id="portafolio" className="py-24 bg-soul-dark-lighter">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div
-          
-          
-          
-          className="text-center mb-12"
-        >
+    <section id="portafolio" className="py-24 bg-soul-dark-lighter relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header with illustration */}
+        <div className="text-center mb-12">
+          <img
+            src="/generated/portfolio-header.png"
+            alt=""
+            className="w-64 h-32 object-contain mx-auto mb-4 opacity-80"
+            onError={(e: any) => { e.target.style.display = 'none' }}
+          />
           <span className="text-soul-purple font-semibold">{t('label')}</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
             {t('title')}
