@@ -329,7 +329,9 @@
       "blog": "Blog",
       "contact": "Contact",
       "documentation": "Documentation",
-      "fullPortfolio": "Portfolio Complet"
+      "fullPortfolio": "Portfolio Complet",
+      "privacy": "Confidentialité",
+      "terms": "Conditions"
     },
     "copyright": "Tous droits réservés.",
     "location": "République Dominicaine | Service Mondial à Distance"
@@ -1320,5 +1322,43 @@
     "yearly": "Annuel",
     "weekly": "Hebdomadaire",
     "createProduct": "Créer le Produit"
+  },
+  "privacy": {
+    "title": "Politique de Confidentialite",
+    "metaDescription": "Politique de confidentialite de SOUL CORE DEVELOPERS GROUP.",
+    "lastUpdated": "Derniere mise a jour : 6 avril 2026",
+    "backHome": "Retour a l'accueil",
+    "contact": "Pour les questions de confidentialite, contactez-nous a :",
+    "sections": {
+      "collection": { "title": "Informations que Nous Collectons", "content": "Nous collectons les informations que vous nous fournissez directement lorsque vous :\n\n- Remplissez le formulaire de contact (nom, adresse e-mail, budget estime, description du projet)\n- Interagissez avec notre assistant de chat\n- Communiquez avec nous par e-mail, WhatsApp ou Upwork\n\nNous collectons egalement automatiquement des donnees techniques telles que l'adresse IP, le type de navigateur et les pages visitees." },
+      "usage": { "title": "Comment Nous Utilisons vos Informations", "content": "Nous utilisons les informations collectees pour :\n\n- Repondre a vos demandes de devis et consultations\n- Fournir les services de developpement logiciel contractes\n- Ameliorer l'experience de navigation sur notre site\n- Envoyer des communications liees aux projets actifs\n- Analyser l'utilisation du site pour ameliorer nos services\n\nNous ne vendons, ne louons ni ne partageons vos informations personnelles avec des tiers a des fins marketing." },
+      "cookies": { "title": "Cookies et Technologies de Suivi", "content": "Notre site utilise des cookies essentiels au fonctionnement du site (preference de langue, theme visuel) et des cookies d'analyse.\n\nVous pouvez desactiver les cookies depuis les parametres de votre navigateur." },
+      "thirdParty": { "title": "Services Tiers", "content": "Nous utilisons les services suivants qui peuvent traiter des donnees :\n\n- Vercel : hebergement du frontend\n- Supabase : base de donnees et authentification\n- Resend : envoi d'e-mails transactionnels\n- Anthropic : traitement des requetes dans l'assistant de chat\n\nChaque fournisseur opere selon ses propres politiques de confidentialite." },
+      "ai": { "title": "Intelligence Artificielle", "content": "Notre assistant de chat utilise des modeles d'IA (Anthropic Claude) pour repondre aux requetes. Les messages que vous envoyez au chat peuvent etre traites par ces modeles.\n\nNous n'utilisons pas vos conversations pour entrainer des modeles d'IA. Les conversations sont stockees temporairement et supprimees periodiquement." },
+      "security": { "title": "Securite des Donnees", "content": "Nous mettons en oeuvre des mesures de securite techniques et organisationnelles pour proteger vos informations :\n\n- Chiffrement SSL/TLS pour toutes les communications\n- Acces restreint aux donnees personnelles\n- Infrastructure sur des serveurs securises (AWS)\n- Surveillance continue de la securite" },
+      "rights": { "title": "Vos Droits", "content": "Vous avez le droit de :\n\n- Acceder aux informations personnelles que nous detenons\n- Demander la correction de donnees inexactes\n- Demander la suppression de vos donnees personnelles\n- Vous opposer au traitement de vos donnees\n- Demander la portabilite de vos donnees\n\nContactez-nous a founder@soulcore.dev." },
+      "international": { "title": "Transferts Internationaux", "content": "SOUL CORE DEVELOPERS GROUP opere depuis la Republique dominicaine avec un service mondial a distance. Vos donnees peuvent etre traitees sur des serveurs situes aux Etats-Unis.\n\nPour les utilisateurs de l'Union europeenne, ces transferts sont effectues conformement au RGPD." },
+      "children": { "title": "Mineurs", "content": "Nos services ne sont pas destines aux personnes de moins de 18 ans. Nous ne collectons pas intentionnellement des informations aupres de mineurs." },
+      "changes": { "title": "Modifications de cette Politique", "content": "Nous nous reservons le droit de mettre a jour cette politique de confidentialite periodiquement. Les modifications seront publiees sur cette page." }
+    }
+  },
+  "terms": {
+    "title": "Conditions d'Utilisation",
+    "metaDescription": "Conditions generales d'utilisation des services de SOUL CORE DEVELOPERS GROUP.",
+    "lastUpdated": "Derniere mise a jour : 6 avril 2026",
+    "backHome": "Retour a l'accueil",
+    "contact": "Pour les questions juridiques, contactez-nous a :",
+    "sections": {
+      "acceptance": { "title": "Acceptation des Conditions", "content": "En accedant et en utilisant soulcore.dev et les services de SOUL CORE DEVELOPERS GROUP, vous acceptez ces conditions d'utilisation dans leur integralite.\n\nCes conditions s'appliquent a tous les visiteurs, utilisateurs et clients." },
+      "services": { "title": "Description des Services", "content": "SOUL CORE DEVELOPERS GROUP propose des services de :\n\n- Developpement logiciel sur mesure (web, mobile, APIs)\n- Intelligence artificielle et automatisation\n- Cybersecurite et pentesting\n- Integrations et APIs\n- Design numerique et UX\n- E-commerce et marketing digital\n- Conseil et mentorat technologique\n- Data science et analytics\n- Cloud et DevOps\n- Modernisation de systemes legacy\n- Automatisation industrielle et IoT\n\nNous proposons egalement des produits proprietaires (VMOF, SOUL CORE MCP, SOUL_CORE)." },
+      "ip": { "title": "Propriete Intellectuelle", "content": "Tout le contenu du site web est la propriete de SOUL CORE DEVELOPERS GROUP ou de ses concedants et est protege par les lois sur le droit d'auteur et la propriete intellectuelle.\n\nLes frameworks proprietaires VMOF, SOUL CORE MCP et SOUL_CORE sont des marques de SOUL CORE DEVELOPERS GROUP. Leur utilisation necessite une licence expresse.\n\nLe code developpe pour un client est regi par les termes du contrat individuel." },
+      "userObligations": { "title": "Obligations de l'Utilisateur", "content": "En utilisant nos services, vous vous engagez a :\n\n- Fournir des informations veridiques et a jour\n- Ne pas utiliser le site a des fins illegales\n- Ne pas tenter d'acceder a des zones restreintes\n- Ne pas effectuer de retro-ingenierie de nos produits\n- Respecter la propriete intellectuelle de SOUL CORE" },
+      "payments": { "title": "Paiements et Facturation", "content": "Les services sont cotes individuellement selon la complexite du projet. Les conditions de paiement sont etablies dans le contrat de chaque projet.\n\nLes devis sont valables 30 jours. Tous les prix sont exprimes en USD sauf indication contraire." },
+      "liability": { "title": "Limitation de Responsabilite", "content": "SOUL CORE DEVELOPERS GROUP ne sera pas responsable de dommages indirects, accessoires ou consecutifs decoulant de l'utilisation de nos services.\n\nNotre responsabilite maximale sera limitee au montant paye par le client au cours des 12 mois precedant l'incident." },
+      "warranties": { "title": "Garanties", "content": "Les services sont fournis \"en l'etat\" et \"selon disponibilite\".\n\nPour les projets contractes, les garanties specifiques sont etablies dans le contrat individuel de chaque projet." },
+      "termination": { "title": "Resiliation", "content": "Nous nous reservons le droit de suspendre ou de mettre fin a l'acces a nos services si ces conditions sont violees, une activite frauduleuse est detectee, ou les obligations de paiement ne sont pas respectees." },
+      "governing": { "title": "Loi Applicable et Juridiction", "content": "Ces conditions sont regies par les lois de la Republique dominicaine. Tout litige sera soumis a la juridiction des tribunaux du District national, Saint-Domingue.\n\nPour les clients internationaux, un arbitrage international pourra etre convenu selon les regles de la Chambre de commerce de Saint-Domingue." },
+      "changes": { "title": "Modifications", "content": "SOUL CORE DEVELOPERS GROUP se reserve le droit de modifier ces conditions a tout moment.\n\nPour les projets actifs, les termes contractuels convenus prevalent sur toute modification ulterieure." }
+    }
   }
 }
