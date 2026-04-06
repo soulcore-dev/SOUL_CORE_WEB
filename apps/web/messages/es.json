@@ -370,7 +370,8 @@
       "result": "Resultado",
       "problemLabel": "El Problema",
       "solutionLabel": "Nuestra Solución",
-      "resultLabel": "El Resultado"
+      "resultLabel": "El Resultado",
+      "caseLabel": "Caso"
     },
     "cta": {
       "quote": "Solicitar Cotización",

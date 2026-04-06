@@ -75,7 +75,15 @@ export function Navbar() {
     { href: '#contacto', labelKey: 'contact' },
   ]
 
-  const navLinks = isOnLanding ? landingLinks : []
+  const innerLinks = [
+    { href: `/${locale}#servicios`, labelKey: 'services' },
+    { href: `/${locale}#portafolio`, labelKey: 'portfolio' },
+    { href: `/${locale}#productos`, labelKey: 'products' },
+    { href: `/${locale}#equipo`, labelKey: 'team' },
+    { href: `/${locale}#contacto`, labelKey: 'contact' },
+  ]
+
+  const navLinks = isOnLanding ? landingLinks : innerLinks
 
   return (
     <nav

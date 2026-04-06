@@ -370,7 +370,8 @@
       "result": "Result",
       "problemLabel": "The Problem",
       "solutionLabel": "Our Solution",
-      "resultLabel": "The Result"
+      "resultLabel": "The Result",
+      "caseLabel": "Case"
     },
     "cta": {
       "quote": "Request Quote",
