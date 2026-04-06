@@ -15,6 +15,8 @@ const nextConfig = {
     API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000',
   },
   async headers() {
+    const isDev = process.env.NODE_ENV === 'development'
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
     return [
       {
         source: '/(.*)',
@@ -45,7 +47,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://github.com https://avatars.githubusercontent.com; font-src 'self' data:; connect-src 'self' https://soulcore.dev https://api.soulcore.dev https://formspree.io; frame-ancestors 'none';",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline'" + (isDev ? " 'unsafe-eval'" : "") + "; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://github.com https://avatars.githubusercontent.com; font-src 'self' data:; connect-src 'self' https://soulcore.dev " + apiUrl + " https://formspree.io; frame-ancestors 'none'; object-src 'none'; base-uri 'self';",
           },
         ],
       },
