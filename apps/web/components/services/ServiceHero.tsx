@@ -45,11 +45,7 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back link */}
-        <div
-          
-          
-          
-        >
+        <div>
           <Link
             href={`/${locale}#servicios`}
             className="inline-flex items-center text-gray-400 hover:text-soul-purple transition-colors mb-8"
@@ -61,11 +57,7 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div
-            
-            
-            
-          >
+          <div>
             {/* Badge */}
             <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r ${color} text-white mb-6`}>
               {hero.badge}
@@ -83,22 +75,17 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
           </div>
 
           {/* Icon */}
-          <div
-            
-            
-            
-            className="flex justify-center lg:justify-end"
-          >
-            <div className={`relative w-64 h-64 md:w-80 md:h-80`}>
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-72 h-72 md:w-96 md:h-96">
               {/* Outer glow */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${color} rounded-full opacity-20 blur-3xl`} />
+              <div className={`absolute inset-8 bg-gradient-to-br ${color} rounded-3xl opacity-20 blur-3xl`} />
 
               {/* z-1: Icon fallback (visible when no AI image) */}
-              <div className={`absolute inset-0 z-[1] bg-gradient-to-br ${color} rounded-full flex items-center justify-center shadow-2xl`}>
-                <Icon className="text-white w-32 h-32 md:w-40 md:h-40" strokeWidth={1.5} />
+              <div className={`absolute inset-8 z-[1] bg-gradient-to-br ${color} rounded-3xl flex items-center justify-center shadow-2xl`}>
+                <Icon className="text-white w-24 h-24 md:w-32 md:h-32" strokeWidth={1.5} />
               </div>
 
-              {/* z-2: AI illustration from Image Factory */}
+              {/* z-2: AI illustration — full size, no clip */}
               <img
                 src={`/generated/svc-${serviceKey}.png`}
                 alt=""
@@ -107,16 +94,8 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
               />
 
               {/* Floating particles */}
-              <div
-                
-                
-                className={`absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br ${color} rounded-full opacity-60 z-[3]`}
-              />
-              <div
-                
-                
-                className={`absolute -bottom-2 -left-6 w-8 h-8 bg-gradient-to-br ${color} rounded-full opacity-40 z-[3]`}
-              />
+              <div className={`absolute top-2 right-2 w-10 h-10 bg-gradient-to-br ${color} rounded-full opacity-60 z-[3] animate-pulse`} />
+              <div className={`absolute bottom-4 left-2 w-6 h-6 bg-gradient-to-br ${color} rounded-full opacity-40 z-[3] animate-pulse delay-1000`} />
             </div>
           </div>
         </div>
