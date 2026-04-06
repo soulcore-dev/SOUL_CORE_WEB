@@ -2,11 +2,12 @@ package store
 
 import (
 	"crypto/rand"
-	"crypto/sha256"
 	"database/sql"
 	"encoding/hex"
 	"fmt"
 	"time"
+
+	"golang.org/x/crypto/bcrypt"
 )
 
 type AdminUser struct {
@@ -77,29 +78,19 @@ func (db *DB) migrateAuth() error {
 // --- Password hashing ---
 
 func HashPassword(password string) string {
-	salt := make([]byte, 16)
-	rand.Read(salt)
-	saltHex := hex.EncodeToString(salt)
-	hash := sha256.Sum256([]byte(saltHex + password))
-	return saltHex + ":" + hex.EncodeToString(hash[:])
+	hash, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+	if err != nil {
+		// Fallback should never happen with valid input
+		salt := make([]byte, 16)
+		rand.Read(salt)
+		return "bcrypt-error:" + hex.EncodeToString(salt)
+	}
+	return string(hash)
 }
 
 func VerifyPassword(stored, password string) bool {
-	parts := splitOnce(stored, ':')
-	if len(parts) != 2 {
-		return false
-	}
-	hash := sha256.Sum256([]byte(parts[0] + password))
-	return hex.EncodeToString(hash[:]) == parts[1]
-}
-
-func splitOnce(s string, sep byte) []string {
-	for i := 0; i < len(s); i++ {
-		if s[i] == sep {
-			return []string{s[:i], s[i+1:]}
-		}
-	}
-	return []string{s}
+	err := bcrypt.CompareHashAndPassword([]byte(stored), []byte(password))
+	return err == nil
 }
 
 // --- Admin Users ---

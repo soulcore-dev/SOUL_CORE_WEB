@@ -78,8 +78,7 @@ func main() {
 	whopSecret := os.Getenv("WHOP_WEBHOOK_SECRET")
 	serviceSecret := os.Getenv("LICENSE_SERVICE_SECRET")
 	if serviceSecret == "" {
-		serviceSecret = "soulcore-license-dev-secret"
-		log.Println("WARNING: Using default service secret. Set LICENSE_SERVICE_SECRET in production.")
+		log.Fatal("FATAL: LICENSE_SERVICE_SECRET not set. Cannot start without a service secret.")
 	}
 
 	// Router
@@ -114,10 +113,11 @@ func main() {
 	if db.AdminUserCount() == 0 {
 		adminPass := os.Getenv("ADMIN_DEFAULT_PASSWORD")
 		if adminPass == "" {
-			adminPass = "soulcore2026"
+			log.Println("WARNING: No admin user exists and ADMIN_DEFAULT_PASSWORD not set. Set it to create the initial admin.")
+		} else {
+			db.CreateAdminUser("admin", adminPass, "super_admin")
+			log.Println("Default admin user created (username: admin). Change the password immediately.")
 		}
-		db.CreateAdminUser("admin", adminPass, "super_admin")
-		log.Println("Default admin user created (username: admin)")
 	}
 
 	// Public endpoints
