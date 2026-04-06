@@ -132,9 +132,25 @@ export function Footer() {
             <p className="text-gray-500 text-sm">
               © {new Date().getFullYear()} SOUL CORE DEVELOPERS GROUP. {t('copyright')}
             </p>
-            <p className="text-gray-500 text-sm mt-2 md:mt-0">
-              🌍 {t('location')}
-            </p>
+            <div className="flex items-center gap-4 mt-2 md:mt-0">
+              <Link
+                href={`/${locale}/privacy`}
+                className="text-gray-500 hover:text-soul-purple transition-colors text-sm"
+              >
+                {t('links.privacy')}
+              </Link>
+              <span className="text-gray-700">|</span>
+              <Link
+                href={`/${locale}/terms`}
+                className="text-gray-500 hover:text-soul-purple transition-colors text-sm"
+              >
+                {t('links.terms')}
+              </Link>
+              <span className="text-gray-700">|</span>
+              <p className="text-gray-500 text-sm">
+                🌍 {t('location')}
+              </p>
+            </div>
           </div>
         </div>
       </div>
