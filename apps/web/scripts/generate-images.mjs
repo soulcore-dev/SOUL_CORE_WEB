@@ -57,6 +57,8 @@ function loadSlots() {
   const candidates = [
     path.join(__dirname, '..', 'src', 'data', 'image-slots.ts'),
     path.join(__dirname, '..', 'src', 'data', 'image-slots.js'),
+    path.join(__dirname, '..', 'data', 'image-slots.ts'),
+    path.join(__dirname, '..', 'data', 'image-slots.js'),
     path.join(__dirname, '..', 'image-slots.ts'),
     path.join(__dirname, '..', 'image-slots.js'),
   ];
@@ -77,29 +79,43 @@ function loadSlots() {
   const content = fs.readFileSync(slotsFile, 'utf-8');
 
   const slots = [];
-  // Match each object with id, filename, prompt, generation, group fields
-  const slotRegex = /\{[^}]*?id:\s*['"]([^'"]+)['"][^}]*?filename:\s*['"]([^'"]+)['"][^}]*?prompt:\s*['"]([^'"]*?)['"][^}]*?generation:\s*['"]([^'"]+)['"][^}]*?(?:group:\s*['"]([^'"]+)['"][^}]*?)?\}/gs;
 
-  let match;
-  while ((match = slotRegex.exec(content)) !== null) {
-    slots.push({
-      id: match[1],
-      filename: match[2],
-      prompt: match[3],
-      generation: match[4],
-      group: match[5] || 'unknown',
-    });
+  // Resolve template literal variables (e.g. const STYLE = '...')
+  const varMap = {};
+  const varRegex = /const\s+(\w+)\s*=\s*['"`]([^'"`]+)['"`]/g;
+  let varMatch;
+  while ((varMatch = varRegex.exec(content)) !== null) {
+    varMap[varMatch[1]] = varMatch[2];
   }
 
-  if (slots.length === 0) {
-    // Fallback: simpler regex for less structured files
-    const simpleRegex = /filename:\s*['"]([^'"]+)['"][\s\S]*?prompt:\s*['"]([^'"]+)[']/g;
-    while ((match = simpleRegex.exec(content)) !== null) {
+  // Split into slot blocks (each { ... } object in an array)
+  const blockRegex = /\{\s*\n\s*id:\s*['"]([^'"]+)['"]/g;
+  let blockMatch;
+  const blockStarts = [];
+  while ((blockMatch = blockRegex.exec(content)) !== null) {
+    blockStarts.push(blockMatch.index);
+  }
+
+  for (let i = 0; i < blockStarts.length; i++) {
+    const start = blockStarts[i];
+    const end = blockStarts[i + 1] || content.length;
+    const block = content.slice(start, end);
+
+    const getId = block.match(/id:\s*['"]([^'"]+)['"]/);
+    const getFile = block.match(/filename:\s*['"]([^'"]+)['"]/);
+    const getPrompt = block.match(/prompt:\s*[`'"](.+?)[`'"]\s*[,\n]/s);
+    const getGen = block.match(/generation:\s*['"]([^'"]+)['"]/);
+
+    if (getId && getFile && getPrompt) {
+      // Resolve ${VAR} references in prompt
+      let prompt = getPrompt[1];
+      prompt = prompt.replace(/\$\{(\w+)\}/g, (_, name) => varMap[name] || '');
+
       slots.push({
-        id: match[1].replace(/\.[^.]+$/, ''),
-        filename: match[1],
-        prompt: match[2],
-        generation: 'ai',
+        id: getId[1],
+        filename: getFile[1],
+        prompt: prompt.trim(),
+        generation: getGen ? getGen[1] : 'ai',
         group: 'unknown',
       });
     }
@@ -110,7 +126,7 @@ function loadSlots() {
 
 // ─── Gemini API ──────────────────────────────────────────
 
-const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent';
+const GEMINI_URL = 'https://aiplatform.googleapis.com/v1/publishers/google/models/gemini-2.5-flash-image:generateContent';
 
 async function generateImage(prompt, filename, retries = 2) {
   const url = `${GEMINI_URL}?key=${API_KEY}`;
