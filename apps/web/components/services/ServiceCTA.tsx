@@ -27,7 +27,7 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
       </div>
 
       {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div
