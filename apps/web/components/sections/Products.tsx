@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { MotionDiv } from '@/lib/motion'
 import { Boxes, Plug, Brain, ArrowRight, Sparkles } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
@@ -32,7 +32,7 @@ export function Products() {
     <section id="productos" className="py-24 bg-soul-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -45,14 +45,14 @@ export function Products() {
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
-        </motion.div>
+        </MotionDiv>
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {productData.map((product, index) => {
             const features = t.raw(`items.${product.key}.features`) as string[]
             return (
-              <motion.div
+              <MotionDiv
                 key={product.key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -102,13 +102,13 @@ export function Products() {
                     <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
-              </motion.div>
+              </MotionDiv>
             )
           })}
         </div>
 
         {/* Coming Soon */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -120,7 +120,7 @@ export function Products() {
               <strong className="text-white">{t('comingSoon')}</strong> {t('vmofSaas')}
             </span>
           </div>
-        </motion.div>
+        </MotionDiv>
       </div>
     </section>
   )

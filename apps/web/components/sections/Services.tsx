@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { MotionDiv } from '@/lib/motion'
 import Link from 'next/link'
 import {
   Bot,
@@ -43,7 +43,7 @@ export function Services() {
     <section id="servicios" className="py-24 bg-soul-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -56,7 +56,7 @@ export function Services() {
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
-        </motion.div>
+        </MotionDiv>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -66,7 +66,7 @@ export function Services() {
               href={`/${locale}/servicios/${service.key}`}
               className="block"
             >
-              <motion.div
+              <MotionDiv
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -107,13 +107,13 @@ export function Services() {
                     </a>
                   )}
                 </div>
-              </motion.div>
+              </MotionDiv>
             </Link>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -126,7 +126,7 @@ export function Services() {
             {t('cta')}
             <ArrowRight className="ml-2" size={20} />
           </a>
-        </motion.div>
+        </MotionDiv>
       </div>
     </section>
   )

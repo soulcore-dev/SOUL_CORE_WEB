@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { MotionDiv } from '@/lib/motion'
 import { ExternalLink, Github, Cpu, Shield, Cog, Lock, Scale, Building, Package, Landmark } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
@@ -121,7 +121,7 @@ export function Portfolio() {
     <section id="portafolio" className="py-24 bg-soul-dark-lighter">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -134,10 +134,10 @@ export function Portfolio() {
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
-        </motion.div>
+        </MotionDiv>
 
         {/* Category Filter */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -156,12 +156,12 @@ export function Portfolio() {
               {t(`categories.${category}`)}
             </button>
           ))}
-        </motion.div>
+        </MotionDiv>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {filteredProjects.map((project, index) => (
-            <motion.div
+            <MotionDiv
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -249,7 +249,7 @@ export function Portfolio() {
                   )}
                 </div>
               </div>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
       </div>
