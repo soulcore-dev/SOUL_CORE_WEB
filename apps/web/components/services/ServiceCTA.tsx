@@ -12,6 +12,7 @@ interface ServiceCTAProps {
 
 export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
   const t = useTranslations('serviceDetails')
+  const tSvc = useTranslations('services')
   const locale = useLocale()
 
   const ctaTitle = t(`${serviceKey}.ctaSection.title`)
@@ -85,7 +86,7 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
               >
                 <FileText className="w-5 h-5" />
                 <span className="font-medium">
-                  {locale === 'en' ? 'View Full Cybersecurity Services Portfolio' : 'Ver Portafolio Completo de Servicios de Ciberseguridad'}
+                  {tSvc('viewCyberPortfolio')}
                 </span>
                 <ArrowRight className="w-4 h-4" />
               </a>

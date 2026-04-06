@@ -14,7 +14,9 @@
     "quoteProject": "Quote Project",
     "store": "Store",
     "account": "My Account",
-    "admin": "Admin"
+    "admin": "Admin",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "badge": "From Concept to Production",
@@ -66,6 +68,8 @@
     "subtitle": "All your technology needs in one place. From idea to implementation.",
     "cta": "Request Custom Quote",
     "viewMore": "Learn more",
+    "fullPortfolio": "Full Portfolio",
+    "viewCyberPortfolio": "View Full Cybersecurity Services Portfolio",
     "items": {
       "ai": {
         "title": "AI & Automation",

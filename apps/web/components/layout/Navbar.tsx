@@ -238,7 +238,7 @@ export function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg bg-soul-dark-card"
               aria-expanded={isOpen}
-              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-label={isOpen ? t('closeMenu') : t('openMenu')}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
