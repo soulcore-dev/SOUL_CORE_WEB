@@ -67,14 +67,16 @@ export function Navbar() {
 
   const isOnLanding = pathname === `/${locale}` || pathname === `/${locale}/`
 
+  const prefix = isOnLanding ? '' : `/${locale}`
   const landingLinks = [
-    { href: '#servicios', labelKey: 'services' },
-    { href: '#portafolio', labelKey: 'portfolio' },
-    { href: '#productos', labelKey: 'products' },
-    { href: '#equipo', labelKey: 'team' },
-    { href: '#contacto', labelKey: 'contact' },
+    { href: `${prefix}#servicios`, labelKey: 'services' },
+    { href: `${prefix}#portafolio`, labelKey: 'portfolio' },
+    { href: `${prefix}#productos`, labelKey: 'products' },
+    { href: `${prefix}#equipo`, labelKey: 'team' },
+    { href: `${prefix}#contacto`, labelKey: 'contact' },
   ]
 
+<<<<<<< HEAD
   const innerLinks = [
     { href: `/${locale}#servicios`, labelKey: 'services' },
     { href: `/${locale}#portafolio`, labelKey: 'portfolio' },
@@ -84,6 +86,9 @@ export function Navbar() {
   ]
 
   const navLinks = isOnLanding ? landingLinks : innerLinks
+=======
+  const navLinks = landingLinks
+>>>>>>> 4f888ae (fix: navbar links from subpages + hide empty process timeline + remove hardcoded 'Caso')
 
   return (
     <nav
