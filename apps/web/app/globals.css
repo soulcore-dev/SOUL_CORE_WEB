@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force visibility on SSR — Framer Motion injects inline opacity:0
+   during pre-render, making content invisible in standalone builds.
+   This ensures content is always visible; animations re-apply after hydration. */
+[style*="opacity: 0"] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 :root {
   --soul-purple: #8B5CF6;
   --soul-purple-dark: #6D28D9;
