@@ -370,7 +370,8 @@
       "result": "Résultat",
       "problemLabel": "Le Problème",
       "solutionLabel": "Notre Solution",
-      "resultLabel": "Le Résultat"
+      "resultLabel": "Le Résultat",
+      "caseLabel": "Cas"
     },
     "cta": {
       "quote": "Demander un Devis",

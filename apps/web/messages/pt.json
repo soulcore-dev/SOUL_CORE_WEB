@@ -370,7 +370,8 @@
       "result": "Resultado",
       "problemLabel": "O Problema",
       "solutionLabel": "Nossa Solução",
-      "resultLabel": "O Resultado"
+      "resultLabel": "O Resultado",
+      "caseLabel": "Caso"
     },
     "cta": {
       "quote": "Solicitar Orçamento",
