@@ -93,21 +93,29 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
               {/* Outer glow */}
               <div className={`absolute inset-0 bg-gradient-to-br ${color} rounded-full opacity-20 blur-3xl`} />
 
-              {/* Icon container */}
-              <div className={`relative w-full h-full bg-gradient-to-br ${color} rounded-full flex items-center justify-center shadow-2xl`}>
+              {/* z-1: Icon fallback (visible when no AI image) */}
+              <div className={`absolute inset-0 z-[1] bg-gradient-to-br ${color} rounded-full flex items-center justify-center shadow-2xl`}>
                 <Icon className="text-white w-32 h-32 md:w-40 md:h-40" strokeWidth={1.5} />
               </div>
+
+              {/* z-2: AI illustration from Image Factory */}
+              <img
+                src={`/generated/svc-${serviceKey}.png`}
+                alt=""
+                className="absolute inset-0 w-full h-full object-contain z-[2] drop-shadow-2xl"
+                onError={(e: any) => { e.target.style.display = 'none' }}
+              />
 
               {/* Floating particles */}
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className={`absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br ${color} rounded-full opacity-60`}
+                className={`absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br ${color} rounded-full opacity-60 z-[3]`}
               />
               <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className={`absolute -bottom-2 -left-6 w-8 h-8 bg-gradient-to-br ${color} rounded-full opacity-40`}
+                className={`absolute -bottom-2 -left-6 w-8 h-8 bg-gradient-to-br ${color} rounded-full opacity-40 z-[3]`}
               />
             </div>
           </motion.div>

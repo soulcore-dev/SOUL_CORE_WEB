@@ -95,8 +95,19 @@ export default function StorePage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-center py-24"
             >
-              <div className="w-20 h-20 rounded-2xl bg-soul-purple/20 flex items-center justify-center mx-auto mb-6">
-                <Package size={40} className="text-soul-purple" />
+              {/* 3-layer empty state */}
+              <div className="relative w-48 h-48 mx-auto mb-6">
+                <div className="absolute inset-0 z-[1] flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-2xl bg-soul-purple/20 flex items-center justify-center">
+                    <Package size={40} className="text-soul-purple" />
+                  </div>
+                </div>
+                <img
+                  src="/generated/empty-store.png"
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-contain z-[2]"
+                  onError={(e: any) => { e.target.style.display = 'none' }}
+                />
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">{t('noProducts')}</h3>
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-soul-dark-card border border-dashed border-soul-purple/30 mt-4">
