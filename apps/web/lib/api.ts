@@ -1,5 +1,4 @@
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || ''
-const SERVICE_SECRET = process.env.NEXT_PUBLIC_SERVICE_SECRET || 'soulcore-lic-prod-2026'
 
 async function apiFetch<T>(path: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {
@@ -8,10 +7,6 @@ async function apiFetch<T>(path: string, options?: RequestInit): Promise<T> {
   })
   if (!res.ok) throw new Error(`API error ${res.status}: ${await res.text()}`)
   return res.json()
-}
-
-function authHeaders() {
-  return { Authorization: `Bearer ${SERVICE_SECRET}` }
 }
 
 // --- Types ---
@@ -91,7 +86,7 @@ export function timeAgo(dateStr: string): string {
   return `${Math.floor(days / 365)}y ago`
 }
 
-// --- Products ---
+// --- Products (public, no auth needed) ---
 
 export const getProducts = async (): Promise<ProductListResponse> => {
   try {
@@ -110,10 +105,11 @@ export const getProduct = async (id: string): Promise<Product | null> => {
   }
 }
 
+// Admin operations must go through server-side API routes (not client-side)
+// The service secret is only available server-side via LICENSE_SERVICE_SECRET env var
 export const createProduct = async (data: Partial<Product> & { name: string; slug: string }): Promise<Product> => {
-  return apiFetch<Product>('/api/licenses/products', {
+  return apiFetch<Product>('/api/admin/products', {
     method: 'POST',
-    headers: authHeaders(),
     body: JSON.stringify({
       name: data.name,
       slug: data.slug,
