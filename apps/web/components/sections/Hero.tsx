@@ -25,7 +25,7 @@ export function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           {/* Badge */}
-          <div className="animate-fade-in">
+          <div >
             <span className="inline-flex items-center px-4 py-2 rounded-full bg-soul-purple/20 border border-soul-purple/30 text-soul-purple-light text-sm font-medium mb-8">
               <span className="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse" />
               {t('badge')}
@@ -33,21 +33,21 @@ export function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-white">{t('title1')}</span>
             <br />
             <span className="gradient-text">{t('title2')}</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
             {t.rich('subtitle', {
               strong: (chunks) => <strong className="text-white">{chunks}</strong>
             })}
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <Link
               href="#servicios"
               className="px-8 py-4 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold text-white transition-all duration-200 glow-hover flex items-center group"
@@ -64,7 +64,7 @@ export function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-xl mx-auto animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="grid grid-cols-3 gap-8 max-w-xl mx-auto">
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col items-center">
                 <div className="w-12 h-12 rounded-xl bg-soul-purple/20 flex items-center justify-center mb-3">
@@ -79,7 +79,7 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in" style={{ animationDelay: '1s' }}>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center pt-2">
           <div className="w-1.5 h-1.5 bg-soul-purple rounded-full animate-bounce" />
         </div>
