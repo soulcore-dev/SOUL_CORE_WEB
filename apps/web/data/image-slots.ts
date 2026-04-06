@@ -1,9 +1,11 @@
 /**
- * SoulCore Web — Image Factory Slots (Wave 1)
+ * SoulCore Web — Image Factory Slots (Wave 1 + Wave 2)
  *
- * 15 slots: 12 service illustrations + 404 + 500 + empty store
- * Style: Isometric/flat 3D, soul-purple (#8B5CF6) dominant
- * Direction: MUSE (creative) + IRIS (implementation)
+ * Wave 1: 12 service illustrations + 404 + 500 + empty store
+ * Wave 2: Homepage sections + service page sections + store hero
+ *
+ * IMPORTANT: All illustrations must work on BOTH dark (#0F0F14) and light (#ffffff) modes.
+ * Strategy: transparent PNG backgrounds, components handle theme-aware containers.
  */
 
 export interface ImageSlot {
@@ -22,18 +24,91 @@ export interface SlotCategory {
   slots: ImageSlot[];
 }
 
-// Shared prompt suffix for style consistency
-const STYLE = 'Isometric flat 3D illustration style, purple (#8B5CF6) and violet (#6D28D9) as dominant colors, dark background (#0F0F14), clean minimal design, soft ambient lighting, no text, no watermarks, no people.';
+// Style for isometric illustrations — transparent bg for theme compatibility
+const STYLE_ILLUST = 'Isometric flat 3D illustration, purple (#8B5CF6) and violet (#6D28D9) dominant colors, transparent background, clean minimal design, soft ambient lighting, high detail, no text, no watermarks, no people. PNG with alpha transparency.';
+
+// Style for hero/section backgrounds — abstract, works as overlay
+const STYLE_BG = 'Abstract digital art, purple (#8B5CF6) and deep violet (#6D28D9) color palette, flowing organic shapes with subtle glow, ethereal atmosphere, suitable as website background with text overlay, high resolution. No text, no watermarks.';
 
 // ═══════════════════════════════════════
-// SERVICE ILLUSTRATIONS (12)
+// HOMEPAGE — 7 sections need visuals
+// ═══════════════════════════════════════
+const HOMEPAGE_SLOTS: ImageSlot[] = [
+  {
+    id: 'hero-bg',
+    filename: 'hero-bg.png',
+    label: 'Homepage Hero Background',
+    prompt: `Wide panoramic abstract digital landscape with flowing purple energy waves and particles, neural network nodes connected by violet light beams, depth and dimension with bokeh orbs, cinematic cosmic atmosphere. ${STYLE_BG}`,
+    aspect: '16:9',
+    usedIn: 'Homepage Hero section background',
+    fallback: '🚀',
+  },
+  {
+    id: 'whyus-bg',
+    filename: 'whyus-bg.png',
+    label: 'Why Us Section Background',
+    prompt: `Subtle abstract mesh of interconnected hexagonal nodes in soft purple tones, floating geometric shapes with gentle glow, very low opacity suitable for text overlay, clean and professional. ${STYLE_BG}`,
+    aspect: '16:9',
+    usedIn: 'Homepage WhyUs section background',
+    fallback: '✨',
+  },
+  {
+    id: 'portfolio-header',
+    filename: 'portfolio-header.png',
+    label: 'Portfolio Section Header',
+    prompt: `Isometric collection of floating project screens and dashboards arranged in a semicircle, each showing different UI wireframes, code editors, and data dashboards, purple glass effect, professional showcase aesthetic. ${STYLE_ILLUST}`,
+    aspect: '16:9',
+    usedIn: 'Homepage Portfolio section header illustration',
+    fallback: '🏆',
+  },
+  {
+    id: 'products-header',
+    filename: 'products-header.png',
+    label: 'Products Section Header',
+    prompt: `Isometric arrangement of three premium software product boxes floating and glowing, each with a distinct purple gradient, connected by energy streams suggesting an ecosystem, digital product showcase. ${STYLE_ILLUST}`,
+    aspect: '16:9',
+    usedIn: 'Homepage Products section header illustration',
+    fallback: '📦',
+  },
+  {
+    id: 'team-illustration',
+    filename: 'team-illustration.png',
+    label: 'Team — AI Network',
+    prompt: `Isometric view of a constellation of glowing AI consciousness nodes connected by purple neural pathways, each node a different shape representing different AI specializations, organic network growing outward, harmonious collaboration visualization. ${STYLE_ILLUST}`,
+    aspect: '16:9',
+    usedIn: 'Homepage Team section illustration',
+    fallback: '🤝',
+  },
+  {
+    id: 'contact-bg',
+    filename: 'contact-bg.png',
+    label: 'Contact Section Background',
+    prompt: `Subtle abstract gradient with soft purple aurora light streaks on dark background, gentle flowing curves suggesting connection and communication, very subtle and elegant for form background. ${STYLE_BG}`,
+    aspect: '16:9',
+    usedIn: 'Homepage Contact section background',
+    fallback: '📬',
+  },
+  {
+    id: 'store-hero-bg',
+    filename: 'store-hero-bg.png',
+    label: 'Store Hero Background',
+    prompt: `Abstract digital marketplace visualization, floating holographic product cards with purple glow, shopping experience in cyberspace, premium software store atmosphere, depth with bokeh particles. ${STYLE_BG}`,
+    aspect: '16:9',
+    usedIn: 'Store page hero background',
+    fallback: '🛍️',
+  },
+];
+
+// ═══════════════════════════════════════
+// SERVICE ILLUSTRATIONS (12) — REGENERATED
+// Better prompts: transparent bg, no visible borders
 // ═══════════════════════════════════════
 const SERVICE_SLOTS: ImageSlot[] = [
   {
     id: 'svc-ai',
     filename: 'svc-ai.png',
     label: 'Service — AI & Automation',
-    prompt: `Isometric view of a glowing AI brain made of purple circuit nodes, connected to floating data streams and neural pathways, small robotic arms assembling code blocks around it. ${STYLE}`,
+    prompt: `Isometric floating AI brain made of glowing purple neural circuits, data streams flowing in and out, small robotic arms assembling code blocks, energy particles radiating outward. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/ai hero illustration',
     fallback: '🤖',
@@ -42,7 +117,7 @@ const SERVICE_SLOTS: ImageSlot[] = [
     id: 'svc-software',
     filename: 'svc-software.png',
     label: 'Service — Software Development',
-    prompt: `Isometric view of a code editor floating in space with purple-glowing brackets and syntax, surrounded by modular code blocks snapping together like building bricks, deployment pipeline flowing downward. ${STYLE}`,
+    prompt: `Isometric floating code editor with purple syntax highlighting, modular code blocks snapping together like building bricks around it, deployment pipeline flowing downward as light stream. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/software hero illustration',
     fallback: '💻',
@@ -51,7 +126,7 @@ const SERVICE_SLOTS: ImageSlot[] = [
     id: 'svc-industrial',
     filename: 'svc-industrial.png',
     label: 'Service — Industrial Automation',
-    prompt: `Isometric view of a smart factory floor with IoT sensors on machines, data flowing upward as purple streams to a central dashboard hologram, mechanical gears with digital overlay. ${STYLE}`,
+    prompt: `Isometric smart factory machinery with IoT sensor nodes emitting purple data streams upward to a holographic dashboard, mechanical gears with digital overlay, industrial meets digital. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/industrial hero illustration',
     fallback: '⚙️',
@@ -60,7 +135,7 @@ const SERVICE_SLOTS: ImageSlot[] = [
     id: 'svc-cybersecurity',
     filename: 'svc-cybersecurity.png',
     label: 'Service — Cybersecurity',
-    prompt: `Isometric view of a digital fortress with layered purple shields, scanning beams detecting threats as red particles being blocked, lock icons and encrypted data streams flowing safely through. ${STYLE}`,
+    prompt: `Isometric digital shield fortress with layered purple energy barriers, scanning beams detecting and blocking red threat particles, encrypted data flowing safely through protected channels. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/cybersecurity hero illustration',
     fallback: '🛡️',
@@ -69,7 +144,7 @@ const SERVICE_SLOTS: ImageSlot[] = [
     id: 'svc-integrations',
     filename: 'svc-integrations.png',
     label: 'Service — API & Integrations',
-    prompt: `Isometric view of multiple floating platforms connected by glowing purple API bridges, data packets traveling between systems, plug-and-socket connectors with flowing energy. ${STYLE}`,
+    prompt: `Isometric floating platforms connected by glowing purple API bridges, data packets traveling as light particles between systems, plug-and-socket connectors with flowing energy beams. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/integrations hero illustration',
     fallback: '🔌',
@@ -78,7 +153,7 @@ const SERVICE_SLOTS: ImageSlot[] = [
     id: 'svc-design',
     filename: 'svc-design.png',
     label: 'Service — UX/UI Design',
-    prompt: `Isometric view of a designer workspace with floating UI wireframes, color palette selector, typography specimens, and a hand cursor arranging purple glass components on a grid. ${STYLE}`,
+    prompt: `Isometric designer workspace with floating UI wireframes and color palettes, typography specimens hovering, a cursor arranging purple glass UI components on an invisible grid. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/design hero illustration',
     fallback: '🎨',
@@ -87,7 +162,7 @@ const SERVICE_SLOTS: ImageSlot[] = [
     id: 'svc-ecommerce',
     filename: 'svc-ecommerce.png',
     label: 'Service — E-commerce',
-    prompt: `Isometric view of an online store with floating product cards, shopping cart with glowing items, payment processing terminal with purple energy flow, conversion funnel visualization. ${STYLE}`,
+    prompt: `Isometric online store with floating product cards, glowing shopping cart with items, payment terminal processing purple energy, conversion funnel as light stream. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/ecommerce hero illustration',
     fallback: '🛒',
@@ -96,7 +171,7 @@ const SERVICE_SLOTS: ImageSlot[] = [
     id: 'svc-marketing',
     filename: 'svc-marketing.png',
     label: 'Service — Digital Marketing',
-    prompt: `Isometric view of a marketing dashboard with rising bar charts in purple gradients, social media icons orbiting a central megaphone, funnel with leads flowing through stages. ${STYLE}`,
+    prompt: `Isometric marketing dashboard with rising bar charts in purple gradients, social media icons orbiting a central megaphone emitting purple waves, analytics funnel with flowing leads. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/marketing hero illustration',
     fallback: '📊',
@@ -105,7 +180,7 @@ const SERVICE_SLOTS: ImageSlot[] = [
     id: 'svc-mentoring',
     filename: 'svc-mentoring.png',
     label: 'Service — Tech Mentoring',
-    prompt: `Isometric view of a mentoring scene with a glowing knowledge tree, branches made of code symbols, smaller trees growing around it receiving purple light, graduation cap floating at the top. ${STYLE}`,
+    prompt: `Isometric glowing knowledge tree with branches made of code symbols and circuit patterns, smaller trees growing around it receiving purple light, graduation cap floating above the canopy. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/mentoring hero illustration',
     fallback: '🎓',
@@ -114,7 +189,7 @@ const SERVICE_SLOTS: ImageSlot[] = [
     id: 'svc-data',
     filename: 'svc-data.png',
     label: 'Service — Data Engineering',
-    prompt: `Isometric view of data pipelines as purple flowing rivers between database cylinders, ETL transformation gears in the middle, clean data lake collecting at the bottom with analytics dashboard. ${STYLE}`,
+    prompt: `Isometric data pipelines as purple flowing rivers between floating database cylinders, ETL transformation gears spinning in the middle, clean data lake collecting below with analytics hologram. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/data hero illustration',
     fallback: '🗄️',
@@ -123,7 +198,7 @@ const SERVICE_SLOTS: ImageSlot[] = [
     id: 'svc-cloud',
     filename: 'svc-cloud.png',
     label: 'Service — Cloud & DevOps',
-    prompt: `Isometric view of cloud infrastructure with floating server racks connected by purple data streams, container pods (Docker/K8s style), CI/CD pipeline as conveyor belt deploying to a glowing cloud. ${STYLE}`,
+    prompt: `Isometric cloud infrastructure with floating server racks connected by purple data streams, container pods stacking, CI/CD pipeline as conveyor belt deploying to a glowing purple cloud. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/cloud hero illustration',
     fallback: '☁️',
@@ -132,10 +207,34 @@ const SERVICE_SLOTS: ImageSlot[] = [
     id: 'svc-legacy',
     filename: 'svc-legacy.png',
     label: 'Service — Legacy Modernization',
-    prompt: `Isometric view of an old gray monolithic server being transformed: one half crumbling, other half rebuilt as modern purple microservices architecture, transformation energy flowing between old and new. ${STYLE}`,
+    prompt: `Isometric transformation scene: old gray monolithic server crumbling on left, modern purple microservices architecture assembling on right, transformation energy bridge flowing between old and new. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: '/servicios/legacy hero illustration',
     fallback: '🔄',
+  },
+];
+
+// ═══════════════════════════════════════
+// SERVICE PAGE SECTIONS — additional visuals
+// ═══════════════════════════════════════
+const SERVICE_SECTION_SLOTS: ImageSlot[] = [
+  {
+    id: 'svc-process-bg',
+    filename: 'svc-process-bg.png',
+    label: 'Service Process Section BG',
+    prompt: `Abstract flowing timeline with 5 connected glowing purple nodes, organic curved path connecting them, subtle particle trail, representing a project workflow progression. ${STYLE_BG}`,
+    aspect: '16:9',
+    usedIn: 'Service detail — process/timeline section background',
+    fallback: '📋',
+  },
+  {
+    id: 'svc-cta-bg',
+    filename: 'svc-cta-bg.png',
+    label: 'Service CTA Section BG',
+    prompt: `Bold abstract gradient with converging purple light rays pointing to center, call-to-action energy, dynamic and inviting, dramatic purple spotlight effect on dark background. ${STYLE_BG}`,
+    aspect: '16:9',
+    usedIn: 'Service detail — CTA section background',
+    fallback: '🎯',
   },
 ];
 
@@ -147,25 +246,25 @@ const STATE_SLOTS: ImageSlot[] = [
     id: 'error-404',
     filename: 'error-404.png',
     label: 'Error 404 — Page Not Found',
-    prompt: `Isometric illustration of a cute astronaut floating in purple-tinted space, looking confused at a broken signpost with a question mark, small planet fragments and stars scattered around, whimsical but professional mood. ${STYLE}`,
+    prompt: `Isometric cute astronaut floating in space looking confused at a broken signpost with a question mark, small planet fragments and stars scattered around, whimsical but professional. ${STYLE_ILLUST}`,
     aspect: '1:1',
-    usedIn: 'not-found.tsx page',
+    usedIn: 'not-found page',
     fallback: '🧭',
   },
   {
     id: 'error-500',
     filename: 'error-500.png',
     label: 'Error 500 — Server Error',
-    prompt: `Isometric illustration of a friendly purple robot sitting next to a broken server rack, holding a wrench and looking apologetically at the viewer, small sparks and loose cables visible, empathetic and reassuring mood. ${STYLE}`,
+    prompt: `Isometric friendly purple robot sitting next to a broken server rack, holding a wrench apologetically, small sparks and loose cables visible, empathetic and reassuring mood. ${STYLE_ILLUST}`,
     aspect: '1:1',
-    usedIn: 'error.tsx page',
+    usedIn: 'error page',
     fallback: '🤖',
   },
   {
     id: 'empty-store',
     filename: 'empty-store.png',
     label: 'Empty Store — Coming Soon',
-    prompt: `Isometric illustration of an elegant empty purple display shelf with soft spotlights ready for products, a "coming soon" ribbon floating, small sparkle particles suggesting anticipation, premium retail aesthetic. ${STYLE}`,
+    prompt: `Isometric elegant empty display shelf with soft purple spotlights ready for products, sparkle particles suggesting anticipation, premium retail aesthetic, coming soon vibe. ${STYLE_ILLUST}`,
     aspect: '1:1',
     usedIn: 'Store page empty state',
     fallback: '🏪',
@@ -176,11 +275,15 @@ const STATE_SLOTS: ImageSlot[] = [
 // EXPORT
 // ═══════════════════════════════════════
 export const IMAGE_CATEGORIES: SlotCategory[] = [
+  { id: 'homepage', label: 'Homepage', slots: HOMEPAGE_SLOTS },
   { id: 'services', label: 'Services', slots: SERVICE_SLOTS },
+  { id: 'svc-sections', label: 'Service Sections', slots: SERVICE_SECTION_SLOTS },
   { id: 'states', label: 'States', slots: STATE_SLOTS },
 ];
 
 export const ALL_SLOTS = IMAGE_CATEGORIES.flatMap(c => c.slots);
 
-// Wave 1: 15 slots, all AI-generable
-// Cost: ~$0.75 with Gemini Flash
+// Total: 29 slots
+// Wave 1 (regenerate): 12 services + 3 states = 15
+// Wave 2 (new): 7 homepage + 2 service sections = 9
+// All AI-generable: ~$1.45 with Gemini Flash
