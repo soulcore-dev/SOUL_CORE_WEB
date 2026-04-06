@@ -47,7 +47,7 @@ export function Footer() {
               <img
                 src="/logo_black.png"
                 alt="SOUL CORE"
-                className="h-32 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
             <p className="text-gray-400 mb-6 max-w-sm">
