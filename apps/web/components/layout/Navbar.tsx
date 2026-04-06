@@ -76,19 +76,7 @@ export function Navbar() {
     { href: `${prefix}#contacto`, labelKey: 'contact' },
   ]
 
-<<<<<<< HEAD
-  const innerLinks = [
-    { href: `/${locale}#servicios`, labelKey: 'services' },
-    { href: `/${locale}#portafolio`, labelKey: 'portfolio' },
-    { href: `/${locale}#productos`, labelKey: 'products' },
-    { href: `/${locale}#equipo`, labelKey: 'team' },
-    { href: `/${locale}#contacto`, labelKey: 'contact' },
-  ]
-
-  const navLinks = isOnLanding ? landingLinks : innerLinks
-=======
   const navLinks = landingLinks
->>>>>>> 4f888ae (fix: navbar links from subpages + hide empty process timeline + remove hardcoded 'Caso')
 
   return (
     <nav
