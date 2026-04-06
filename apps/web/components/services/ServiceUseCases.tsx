@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+
 import { useTranslations } from 'next-intl'
 import { Lightbulb, ArrowRight, CheckCircle2 } from 'lucide-react'
 
@@ -31,27 +31,27 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="text-center mb-16"
         >
           <span className="text-soul-purple font-semibold">{t('useCases.title')}</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
             {t('useCases.subtitle')}
           </h2>
-        </motion.div>
+        </div>
 
         {/* Use Cases */}
         <div className="space-y-12">
           {useCasesRaw.map((useCase, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
+              
+              
+              
+              
               className="relative"
             >
               <div className="bg-soul-dark-card rounded-2xl border border-gray-800 overflow-hidden">
@@ -63,11 +63,11 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
                 <div className="p-8 pt-10">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Problem */}
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.1 }}
+                    <div
+                      
+                      
+                      
+                      
                       className="relative"
                     >
                       <div className="flex items-start gap-4">
@@ -88,14 +88,14 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
                       <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2">
                         <ArrowRight className="w-8 h-8 text-gray-600" />
                       </div>
-                    </motion.div>
+                    </div>
 
                     {/* Solution */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.2 }}
+                    <div
+                      
+                      
+                      
+                      
                       className="relative"
                     >
                       <div className="flex items-start gap-4">
@@ -116,14 +116,14 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
                       <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2">
                         <ArrowRight className="w-8 h-8 text-gray-600" />
                       </div>
-                    </motion.div>
+                    </div>
 
                     {/* Result */}
-                    <motion.div
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.3 }}
+                    <div
+                      
+                      
+                      
+                      
                     >
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
@@ -138,14 +138,14 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
                           </p>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
 
                 {/* Bottom gradient line */}
                 <div className={`h-1 bg-gradient-to-r ${color}`} />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 'use client'
 
-import { MotionDiv } from '@/lib/motion'
+
 import { Code, Cpu, Zap, Shield, Users, Rocket, Brain, Globe } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
@@ -23,10 +23,10 @@ export function Team() {
     <section id="equipo" className="py-24 bg-soul-dark-lighter">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="text-center mb-16"
         >
           <span className="text-soul-purple font-semibold">{t('label')}</span>
@@ -36,13 +36,13 @@ export function Team() {
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
-        </MotionDiv>
+        </div>
 
         {/* Main Team Card */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="bg-soul-dark-card rounded-2xl p-8 border border-gray-800 mb-8"
         >
           <div className="flex flex-col lg:flex-row items-center gap-8">
@@ -66,17 +66,17 @@ export function Team() {
               </div>
             </div>
           </div>
-        </MotionDiv>
+        </div>
 
         {/* Capabilities Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {capabilityData.map((capability, index) => (
-            <MotionDiv
+            <div
               key={capability.key}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              
+              
+              
+              
               className="group bg-soul-dark-card rounded-2xl p-6 border border-gray-800 hover:border-soul-purple/50 transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-soul-purple to-violet-600 flex items-center justify-center mb-4">
@@ -88,15 +88,15 @@ export function Team() {
               <p className="text-gray-400 text-sm">
                 {t(`capabilities.${capability.key}.description`)}
               </p>
-            </MotionDiv>
+            </div>
           ))}
         </div>
 
         {/* Network Section */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="bg-soul-dark-card rounded-2xl p-8 border border-gray-800"
         >
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -118,7 +118,7 @@ export function Team() {
               ))}
             </div>
           </div>
-        </MotionDiv>
+        </div>
       </div>
     </section>
   )

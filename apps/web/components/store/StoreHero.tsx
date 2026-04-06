@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+
 import { ShoppingBag } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
@@ -15,9 +15,9 @@ export function StoreHero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
+          
+          
           className="text-center"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-soul-purple/20 border border-soul-purple/30 text-soul-purple-light text-sm font-medium mb-6">
@@ -32,7 +32,7 @@ export function StoreHero() {
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             {t('heroSubtitle')}
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

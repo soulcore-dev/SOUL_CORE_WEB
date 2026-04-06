@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { MotionDiv } from '@/lib/motion'
+
 import { ExternalLink, Github, Cpu, Shield, Cog, Lock, Scale, Building, Package, Landmark } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
@@ -121,10 +121,10 @@ export function Portfolio() {
     <section id="portafolio" className="py-24 bg-soul-dark-lighter">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="text-center mb-12"
         >
           <span className="text-soul-purple font-semibold">{t('label')}</span>
@@ -134,13 +134,13 @@ export function Portfolio() {
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
-        </MotionDiv>
+        </div>
 
         {/* Category Filter */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categoryKeys.map((category) => (
@@ -156,17 +156,17 @@ export function Portfolio() {
               {t(`categories.${category}`)}
             </button>
           ))}
-        </MotionDiv>
+        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {filteredProjects.map((project, index) => (
-            <MotionDiv
+            <div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              
+              
+              
+              
               layout
               className="group bg-soul-dark-card rounded-2xl border border-gray-800 overflow-hidden hover:border-soul-purple/50 transition-all duration-300"
             >
@@ -249,7 +249,7 @@ export function Portfolio() {
                   )}
                 </div>
               </div>
-            </MotionDiv>
+            </div>
           ))}
         </div>
       </div>

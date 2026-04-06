@@ -1,6 +1,6 @@
 'use client'
 
-import { MotionDiv } from '@/lib/motion'
+
 import { Boxes, Plug, Brain, ArrowRight, Sparkles } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
@@ -32,10 +32,10 @@ export function Products() {
     <section id="productos" className="py-24 bg-soul-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="text-center mb-16"
         >
           <span className="text-soul-purple font-semibold">{t('label')}</span>
@@ -45,19 +45,19 @@ export function Products() {
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
-        </MotionDiv>
+        </div>
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {productData.map((product, index) => {
             const features = t.raw(`items.${product.key}.features`) as string[]
             return (
-              <MotionDiv
+              <div
                 key={product.key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                
+                
+                
+                
                 className="group relative bg-soul-dark-card rounded-2xl border border-gray-800 overflow-hidden hover:border-soul-purple/50 transition-all duration-300"
               >
                 {/* Gradient Header */}
@@ -102,16 +102,16 @@ export function Products() {
                     <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
-              </MotionDiv>
+              </div>
             )
           })}
         </div>
 
         {/* Coming Soon */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="mt-12 text-center"
         >
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-soul-dark-card border border-dashed border-soul-purple/30">
@@ -120,7 +120,7 @@ export function Products() {
               <strong className="text-white">{t('comingSoon')}</strong> {t('vmofSaas')}
             </span>
           </div>
-        </MotionDiv>
+        </div>
       </div>
     </section>
   )

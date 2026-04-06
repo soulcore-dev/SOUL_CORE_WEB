@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+
 import { useTranslations, useLocale } from 'next-intl'
 import Link from 'next/link'
 import { MessageCircle, ArrowRight, Sparkles, FileText } from 'lucide-react'
@@ -29,52 +29,52 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="text-center"
         >
           {/* Sparkle icon */}
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: 'spring', stiffness: 200, delay: 0.2 }}
+          <div
+            
+            
+            
+            
             className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${color} mb-8`}
           >
             <Sparkles className="w-8 h-8 text-white" />
-          </motion.div>
+          </div>
 
           {/* Title */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
+          <div
+            
+            
+            
+            
             className="text-3xl md:text-5xl font-bold text-white mb-6"
           >
             {ctaTitle}
-          </motion.h2>
+          </div>
 
           {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+          <p
+            
+            
+            
+            
             className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto"
           >
             {ctaDescription}
-          </motion.p>
+          </p>
 
           {/* Cybersecurity detailed portfolio link */}
           {serviceKey === 'cybersecurity' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.45 }}
+            <div
+              
+              
+              
+              
               className="mb-8"
             >
               <a
@@ -89,15 +89,15 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
                 </span>
                 <ArrowRight className="w-4 h-4" />
               </a>
-            </motion.div>
+            </div>
           )}
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
+          <div
+            
+            
+            
+            
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             {/* Primary CTA - Contact */}
@@ -119,14 +119,14 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
               <MessageCircle className="w-5 h-5 text-green-400" />
               {t('cta.whatsapp')}
             </a>
-          </motion.div>
+          </div>
 
           {/* Trust badges */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.7 }}
+          <div
+            
+            
+            
+            
             className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-400"
           >
             <span className="flex items-center gap-2">
@@ -141,8 +141,8 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
               <span className="w-2 h-2 bg-green-400 rounded-full" />
               {t('cta.badge3')}
             </span>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   )

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
+
 import { Menu, X, Moon, Sun, Globe, ShoppingBag, Settings, User } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { isAdminAuthenticated } from '@/lib/admin-auth'
@@ -78,9 +78,9 @@ export function Navbar() {
   const navLinks = isOnLanding ? landingLinks : []
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+    <nav
+      
+      
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'glass py-3' : 'bg-transparent py-5'
       }`}
@@ -246,10 +246,10 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+          <div
+            
+            
+            
             className="md:hidden mt-4 pb-4"
           >
             <div className="flex flex-col space-y-4">
@@ -295,9 +295,9 @@ export function Navbar() {
                 {t('quoteProject')}
               </Link>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
-    </motion.nav>
+    </nav>
   )
 }

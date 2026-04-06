@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+
 import { MessageCircle, X, Send, Bot, User } from 'lucide-react'
 import { fetchAPI } from '@/lib/utils'
 import { useTranslations } from 'next-intl'
@@ -97,10 +97,10 @@ export function ChatWidget() {
   return (
     <>
       {/* Chat Button */}
-      <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        whileHover={{ scale: 1.1 }}
+      <button
+        
+        
+        
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(true)}
         className={`fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-soul-purple shadow-lg flex items-center justify-center glow ${
@@ -109,15 +109,15 @@ export function ChatWidget() {
         aria-label={t('openChat')}
       >
         <MessageCircle size={24} className="text-white" />
-      </motion.button>
+      </button>
 
       {/* Chat Window */}
-      <AnimatePresence>
+      
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 100, scale: 0.8 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 100, scale: 0.8 }}
+          <div
+            
+            
+            
             className="fixed bottom-6 right-6 z-50 w-[min(380px,calc(100vw-3rem))] h-[min(500px,calc(100vh-6rem))] bg-soul-dark-card rounded-2xl shadow-2xl border border-soul-purple/30 flex flex-col overflow-hidden"
           >
             {/* Header */}
@@ -221,9 +221,9 @@ export function ChatWidget() {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </>
   )
 }

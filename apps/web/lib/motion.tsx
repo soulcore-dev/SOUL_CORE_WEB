@@ -1,12 +1,12 @@
 'use client'
 
-import { motion, type MotionProps } from 'framer-motion'
+
 import { useEffect, useState, type ComponentProps } from 'react'
 
 /**
  * Drop-in replacement for motion.div that is SSR-safe.
  *
- * Problem: Framer Motion sets initial={{ opacity: 0 }} via inline styles
+ * Problem: Framer Motion sets  via inline styles
  * during SSR. If JS fails to hydrate (e.g. standalone build), sections
  * stay invisible forever.
  *
@@ -23,5 +23,5 @@ export function MotionDiv(props: ComponentProps<typeof motion.div>) {
     return <div {...rest} />
   }
 
-  return <motion.div {...props} />
+  return <div {...props} />
 }

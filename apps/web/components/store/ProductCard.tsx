@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
 import {
@@ -35,11 +35,11 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
 
   return (
     <Link href={`/${locale}/store/${product.id}`}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.08 }}
+      <div
+        
+        
+        
+        
         className="group relative bg-soul-dark-card rounded-2xl border border-gray-800 overflow-hidden hover:border-soul-purple/50 hover:scale-[1.02] transition-all duration-300 cursor-pointer h-full flex flex-col"
       >
         {/* Gradient Header */}
@@ -161,7 +161,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </Link>
   )
 }

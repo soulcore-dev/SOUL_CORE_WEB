@@ -1,6 +1,6 @@
 'use client'
 
-import { MotionDiv } from '@/lib/motion'
+
 import { Clock, Zap, FileText, Cpu, Users, Shield } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
@@ -24,10 +24,10 @@ export function WhyUs() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="text-center mb-16"
         >
           <span className="text-soul-purple font-semibold">{t('label')}</span>
@@ -37,17 +37,17 @@ export function WhyUs() {
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
-        </MotionDiv>
+        </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <MotionDiv
+            <div
               key={feature.titleKey}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              
+              
+              
+              
               className="group p-6 bg-soul-dark-card rounded-2xl border border-gray-800 hover:border-soul-purple/50 transition-all duration-300"
             >
               <div className="w-14 h-14 rounded-xl bg-soul-purple/20 flex items-center justify-center mb-4 group-hover:bg-soul-purple/30 transition-colors">
@@ -59,15 +59,15 @@ export function WhyUs() {
               <p className="text-gray-400">
                 {t(`features.${feature.titleKey}.description`)}
               </p>
-            </MotionDiv>
+            </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="mt-16 text-center"
         >
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-soul-dark-card border border-soul-purple/30">
@@ -76,7 +76,7 @@ export function WhyUs() {
               {t('ctaLink')}
             </a>
           </div>
-        </MotionDiv>
+        </div>
       </div>
     </section>
   )

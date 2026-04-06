@@ -1,6 +1,6 @@
 'use client'
 
-import { MotionDiv } from '@/lib/motion'
+
 import Link from 'next/link'
 import {
   Bot,
@@ -43,10 +43,10 @@ export function Services() {
     <section id="servicios" className="py-24 bg-soul-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="text-center mb-16"
         >
           <span className="text-soul-purple font-semibold">{t('label')}</span>
@@ -56,7 +56,7 @@ export function Services() {
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
-        </MotionDiv>
+        </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -66,11 +66,11 @@ export function Services() {
               href={`/${locale}/servicios/${service.key}`}
               className="block"
             >
-              <MotionDiv
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
+              <div
+                
+                
+                
+                
                 className="group relative p-6 bg-soul-dark-card rounded-2xl border border-gray-800 hover:border-soul-purple/50 transition-all duration-300 overflow-hidden cursor-pointer h-full"
               >
                 {/* Gradient overlay on hover */}
@@ -107,16 +107,16 @@ export function Services() {
                     </a>
                   )}
                 </div>
-              </MotionDiv>
+              </div>
             </Link>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="mt-16 text-center"
         >
           <a
@@ -126,7 +126,7 @@ export function Services() {
             {t('cta')}
             <ArrowRight className="ml-2" size={20} />
           </a>
-        </MotionDiv>
+        </div>
       </div>
     </section>
   )

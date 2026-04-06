@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+
 import { useTranslations } from 'next-intl'
 import { CheckCircle } from 'lucide-react'
 
@@ -19,27 +19,27 @@ export function ServiceFeatures({ serviceKey, color }: ServiceFeaturesProps) {
     <section className="py-20 bg-soul-dark-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {t(`${serviceKey}.hero.title`)}
           </h2>
           <div className={`w-24 h-1 bg-gradient-to-r ${color} mx-auto rounded-full`} />
-        </motion.div>
+        </div>
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuresRaw.map((feature, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              
+              
+              
+              
               className="group relative p-6 bg-soul-dark rounded-2xl border border-gray-800 hover:border-soul-purple/50 transition-all duration-300"
             >
               {/* Gradient overlay on hover */}
@@ -61,7 +61,7 @@ export function ServiceFeatures({ serviceKey, color }: ServiceFeaturesProps) {
                   {feature.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

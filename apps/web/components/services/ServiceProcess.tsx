@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+
 import { useTranslations } from 'next-intl'
 
 interface ServiceProcessProps {
@@ -18,17 +18,17 @@ export function ServiceProcess({ serviceKey, color }: ServiceProcessProps) {
     <section className="py-20 bg-soul-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          
+          
+          
           className="text-center mb-16"
         >
           <span className="text-soul-purple font-semibold">{t('process.title')}</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
             {t('process.subtitle')}
           </h2>
-        </motion.div>
+        </div>
 
         {/* Process Timeline */}
         <div className="relative">
@@ -37,12 +37,12 @@ export function ServiceProcess({ serviceKey, color }: ServiceProcessProps) {
 
           <div className="space-y-12">
             {processRaw.map((step, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
+                
+                
+                
+                
                 className={`relative flex items-center gap-8 ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}
@@ -68,7 +68,7 @@ export function ServiceProcess({ serviceKey, color }: ServiceProcessProps) {
 
                 {/* Empty space for layout */}
                 <div className="hidden md:block w-1/2" />
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
