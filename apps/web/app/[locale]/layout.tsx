@@ -93,6 +93,22 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className="dark">
       <body className={inter.className}>
+        <script dangerouslySetInnerHTML={{ __html: `
+          // Fix Framer Motion SSR: remove inline opacity:0 that makes content invisible
+          new MutationObserver(function(m){
+            document.querySelectorAll('[style*="opacity: 0"]').forEach(function(el){
+              el.style.removeProperty('opacity');
+              el.style.removeProperty('transform');
+            });
+          }).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['style']});
+          // Also run once on load
+          setTimeout(function(){
+            document.querySelectorAll('[style*="opacity: 0"]').forEach(function(el){
+              el.style.removeProperty('opacity');
+              el.style.removeProperty('transform');
+            });
+          }, 100);
+        `}} />
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <main className="min-h-screen">
