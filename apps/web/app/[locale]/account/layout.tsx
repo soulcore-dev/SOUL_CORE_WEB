@@ -3,7 +3,7 @@
 import { useState, useEffect, ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
@@ -19,6 +19,7 @@ interface CustomerInfo {
 }
 
 function CustomerLogin({ onLogin }: { onLogin: (info: CustomerInfo) => void }) {
+  const t = useTranslations('account')
   const [email, setEmail] = useState('')
   const [licenseKey, setLicenseKey] = useState('')
   const [error, setError] = useState('')
@@ -64,13 +65,13 @@ function CustomerLogin({ onLogin }: { onLogin: (info: CustomerInfo) => void }) {
             <div className="w-16 h-16 rounded-2xl bg-soul-purple/20 flex items-center justify-center mx-auto mb-4">
               <KeyRound size={32} className="text-soul-purple" />
             </div>
-            <h2 className="text-2xl font-bold text-white">Customer Portal</h2>
-            <p className="text-gray-400 mt-2">Sign in with your email and license key</p>
+            <h2 className="text-2xl font-bold text-white">{t('portalTitle')}</h2>
+            <p className="text-gray-400 mt-2">{t('portalSubtitle')}</p>
           </div>
 
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
-              <label className="block text-sm text-gray-400 mb-1">Email</label>
+              <label className="block text-sm text-gray-400 mb-1">{t('email')}</label>
               <div className="relative">
                 <Mail size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
                 <input
@@ -85,7 +86,7 @@ function CustomerLogin({ onLogin }: { onLogin: (info: CustomerInfo) => void }) {
               </div>
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">License Key</label>
+              <label className="block text-sm text-gray-400 mb-1">{t('licenseKey')}</label>
               <div className="relative">
                 <KeyRound size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
                 <input
@@ -113,10 +114,10 @@ function CustomerLogin({ onLogin }: { onLogin: (info: CustomerInfo) => void }) {
               {loading ? (
                 <>
                   <Loader2 size={18} className="animate-spin" />
-                  Signing in...
+                  {t('signingIn')}
                 </>
               ) : (
-                'Sign In'
+                t('signIn')
               )}
             </button>
           </form>
@@ -127,6 +128,7 @@ function CustomerLogin({ onLogin }: { onLogin: (info: CustomerInfo) => void }) {
 }
 
 export default function AccountLayout({ children }: { children: ReactNode }) {
+  const t = useTranslations('account')
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
@@ -181,9 +183,9 @@ export default function AccountLayout({ children }: { children: ReactNode }) {
   if (!authenticated) return <CustomerLogin onLogin={handleLogin} />
 
   const navItems = [
-    { href: `/${locale}/account`, icon: LayoutDashboard, label: 'Dashboard' },
-    { href: `/${locale}/account/products`, icon: Package, label: 'My Products' },
-    { href: `/${locale}/account/devices`, icon: Monitor, label: 'My Devices' },
+    { href: `/${locale}/account`, icon: LayoutDashboard, label: t('dashboard') },
+    { href: `/${locale}/account/products`, icon: Package, label: t('myProducts') },
+    { href: `/${locale}/account/devices`, icon: Monitor, label: t('myDevices') },
   ]
 
   const isActive = (href: string) => {
@@ -229,7 +231,7 @@ export default function AccountLayout({ children }: { children: ReactNode }) {
               className="flex items-center px-4 py-2 rounded-xl text-gray-400 hover:text-red-400 hover:bg-red-500/10 transition-all"
             >
               <LogOut size={18} className="mr-2" />
-              Logout
+              {t('logout')}
             </button>
           </div>
         </motion.div>

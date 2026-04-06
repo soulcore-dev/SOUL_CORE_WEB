@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import {
   Package, Monitor, ShieldCheck, ArrowRight, Loader2, User
 } from 'lucide-react'
@@ -28,6 +28,7 @@ interface PortalDevice {
 }
 
 export default function AccountDashboard() {
+  const t = useTranslations('account')
   const locale = useLocale()
   const [products, setProducts] = useState<PortalProduct[]>([])
   const [devices, setDevices] = useState<PortalDevice[]>([])
@@ -72,21 +73,21 @@ export default function AccountDashboard() {
 
   const stats = [
     {
-      label: 'Total Products',
+      label: t('totalProducts'),
       value: products.length,
       icon: Package,
       color: 'text-violet-400',
       bg: 'bg-violet-500/10',
     },
     {
-      label: 'Active Licenses',
+      label: t('activeLicenses'),
       value: activeCount,
       icon: ShieldCheck,
       color: 'text-emerald-400',
       bg: 'bg-emerald-500/10',
     },
     {
-      label: 'Bound Devices',
+      label: t('boundDevices'),
       value: devices.length,
       icon: Monitor,
       color: 'text-blue-400',
@@ -96,14 +97,14 @@ export default function AccountDashboard() {
 
   const quickLinks = [
     {
-      title: 'My Products',
-      description: 'View your licenses, copy keys, and check status',
+      title: t('myProducts'),
+      description: t('productsSubtitle'),
       href: `/${locale}/account/products`,
       icon: Package,
     },
     {
-      title: 'My Devices',
-      description: 'Manage bound devices and rebind counts',
+      title: t('myDevices'),
+      description: t('devicesSubtitle'),
       href: `/${locale}/account/devices`,
       icon: Monitor,
     },
@@ -122,7 +123,7 @@ export default function AccountDashboard() {
             <User size={20} className="text-soul-purple" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-white">Welcome back</h1>
+            <h1 className="text-2xl font-bold text-white">{t('welcomeBack')}</h1>
             {customerEmail && (
               <p className="text-gray-400 text-sm">{customerEmail}</p>
             )}

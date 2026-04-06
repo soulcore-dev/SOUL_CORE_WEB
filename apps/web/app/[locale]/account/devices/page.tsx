@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import {
   Monitor, Package, Loader2, Calendar, RefreshCw, Hash
 } from 'lucide-react'
@@ -53,6 +54,7 @@ function formatDate(dateStr: string): string {
 }
 
 export default function DevicesPage() {
+  const t = useTranslations('account')
   const [devices, setDevices] = useState<PortalDevice[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -94,8 +96,8 @@ export default function DevicesPage() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-8"
       >
-        <h1 className="text-2xl font-bold text-white mb-1">My Devices</h1>
-        <p className="text-gray-400">Devices bound to your licenses</p>
+        <h1 className="text-2xl font-bold text-white mb-1">{t('devicesTitle')}</h1>
+        <p className="text-gray-400">{t('devicesSubtitle')}</p>
       </motion.div>
 
       {devices.length === 0 ? (
@@ -105,8 +107,8 @@ export default function DevicesPage() {
           className="bg-soul-dark-card rounded-2xl border border-gray-800 p-12 text-center"
         >
           <Monitor size={48} className="text-gray-600 mx-auto mb-4" />
-          <h3 className="text-lg text-white font-semibold mb-2">No devices bound</h3>
-          <p className="text-gray-400">Devices will appear here once you activate a license.</p>
+          <h3 className="text-lg text-white font-semibold mb-2">{t('noDevices')}</h3>
+          <p className="text-gray-400">{t('noDevicesDesc')}</p>
         </motion.div>
       ) : (
         <div className="grid gap-4">

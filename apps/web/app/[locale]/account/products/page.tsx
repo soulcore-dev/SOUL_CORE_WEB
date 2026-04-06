@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import {
   Package, Brain, Shield, TrendingUp, Boxes, Plug, Code, Cpu, Zap,
   Copy, Check, Loader2, Calendar, Clock
@@ -57,6 +58,7 @@ function formatDate(dateStr: string): string {
 }
 
 export default function ProductsPage() {
+  const t = useTranslations('account')
   const [products, setProducts] = useState<PortalProduct[]>([])
   const [loading, setLoading] = useState(true)
   const [copiedId, setCopiedId] = useState<number | null>(null)
@@ -117,8 +119,8 @@ export default function ProductsPage() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-8"
       >
-        <h1 className="text-2xl font-bold text-white mb-1">My Products</h1>
-        <p className="text-gray-400">Your purchased products and license keys</p>
+        <h1 className="text-2xl font-bold text-white mb-1">{t('productsTitle')}</h1>
+        <p className="text-gray-400">{t('productsSubtitle')}</p>
       </motion.div>
 
       {products.length === 0 ? (
@@ -128,8 +130,8 @@ export default function ProductsPage() {
           className="bg-soul-dark-card rounded-2xl border border-gray-800 p-12 text-center"
         >
           <Package size={48} className="text-gray-600 mx-auto mb-4" />
-          <h3 className="text-lg text-white font-semibold mb-2">No products yet</h3>
-          <p className="text-gray-400">Your purchased products will appear here.</p>
+          <h3 className="text-lg text-white font-semibold mb-2">{t('noProducts')}</h3>
+          <p className="text-gray-400">{t('noProductsDesc')}</p>
         </motion.div>
       ) : (
         <div className="grid gap-4">

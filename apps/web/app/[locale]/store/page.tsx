@@ -112,7 +112,7 @@ export default function StorePage() {
               <h3 className="text-2xl font-bold text-white mb-3">{t('noProducts')}</h3>
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-soul-dark-card border border-dashed border-soul-purple/30 mt-4">
                 <Sparkles size={18} className="text-soul-purple mr-2" />
-                <span className="text-gray-400">Coming soon...</span>
+                <span className="text-gray-400">{t('comingSoon')}</span>
               </div>
             </motion.div>
           ) : (
