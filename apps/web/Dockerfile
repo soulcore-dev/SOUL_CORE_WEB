@@ -1,8 +1,7 @@
 # Multi-stage build for ARM64 Graviton deployment
 # Produces a standalone Next.js server (~150MB image)
 
-FROM node:22-alpine AS base
-RUN apk add --no-cache libc6-compat
+FROM node:22-slim AS base
 
 # Install dependencies
 FROM base AS deps
@@ -22,7 +21,7 @@ ENV NODE_ENV=production
 RUN npm run build
 
 # Production
-FROM base AS runner
+FROM node:22-slim AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
@@ -30,8 +29,8 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN groupadd --system --gid 1001 nodejs
+RUN useradd --system --uid 1001 nextjs
 
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
