@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { MotionDiv } from '@/lib/motion'
 import { Clock, Zap, FileText, Cpu, Users, Shield } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
@@ -24,7 +24,7 @@ export function WhyUs() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -37,12 +37,12 @@ export function WhyUs() {
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
-        </motion.div>
+        </MotionDiv>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <motion.div
+            <MotionDiv
               key={feature.titleKey}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -59,12 +59,12 @@ export function WhyUs() {
               <p className="text-gray-400">
                 {t(`features.${feature.titleKey}.description`)}
               </p>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -76,7 +76,7 @@ export function WhyUs() {
               {t('ctaLink')}
             </a>
           </div>
-        </motion.div>
+        </MotionDiv>
       </div>
     </section>
   )

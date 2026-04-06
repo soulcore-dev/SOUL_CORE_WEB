@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { MotionDiv } from '@/lib/motion'
 import { Code, Cpu, Zap, Shield, Users, Rocket, Brain, Globe } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
@@ -23,7 +23,7 @@ export function Team() {
     <section id="equipo" className="py-24 bg-soul-dark-lighter">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -36,10 +36,10 @@ export function Team() {
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
-        </motion.div>
+        </MotionDiv>
 
         {/* Main Team Card */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -66,12 +66,12 @@ export function Team() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </MotionDiv>
 
         {/* Capabilities Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {capabilityData.map((capability, index) => (
-            <motion.div
+            <MotionDiv
               key={capability.key}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -88,12 +88,12 @@ export function Team() {
               <p className="text-gray-400 text-sm">
                 {t(`capabilities.${capability.key}.description`)}
               </p>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
 
         {/* Network Section */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -118,7 +118,7 @@ export function Team() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </MotionDiv>
       </div>
     </section>
   )
