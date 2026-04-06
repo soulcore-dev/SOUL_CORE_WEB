@@ -27,6 +27,7 @@ const gradients = [
 
 export default function ProductDetailPage() {
   const t = useTranslations('storeDetail')
+  const tStore = useTranslations('store')
   const locale = useLocale()
   const params = useParams()
   const productId = params.id as string
@@ -78,9 +79,9 @@ export default function ProductDetailPage() {
   const techStack = parseTechStack(product.tech_stack)
 
   const faqs = [
-    { q: locale === 'es' ? 'Como recibo mi licencia?' : 'How do I receive my license?', a: locale === 'es' ? 'Inmediatamente despues de la compra recibiras un email con tu clave de licencia y el link de descarga.' : 'Immediately after purchase you will receive an email with your license key and download link.' },
-    { q: locale === 'es' ? 'Puedo usarlo en multiples maquinas?' : 'Can I use it on multiple machines?', a: locale === 'es' ? 'Cada licencia se vincula a una maquina. Puedes re-vincular hasta 3 veces por ano.' : 'Each license binds to one machine. You can rebind up to 3 times per year.' },
-    { q: locale === 'es' ? 'Hay garantia de devolucion?' : 'Is there a money-back guarantee?', a: locale === 'es' ? 'Si, ofrecemos 30 dias de garantia. Si no estas satisfecho, te devolvemos el 100%.' : 'Yes, we offer a 30-day money-back guarantee. Full refund if not satisfied.' },
+    { q: tStore('faqQ1'), a: tStore('faqA1') },
+    { q: tStore('faqQ2'), a: tStore('faqA2') },
+    { q: tStore('faqQ3'), a: tStore('faqA3') },
   ]
 
   return (
@@ -114,14 +115,14 @@ export default function ProductDetailPage() {
                     <Star size={16} className="fill-amber-400" />
                     <span className="font-semibold">{formatRating(product.rating)}</span>
                     {product.review_count > 0 && (
-                      <span className="text-gray-500">({product.review_count} reviews)</span>
+                      <span className="text-gray-500">({product.review_count} {tStore('reviews')})</span>
                     )}
                   </span>
                 )}
                 {product.downloads > 0 && (
                   <span className="flex items-center gap-1.5 text-gray-400">
                     <Download size={16} />
-                    {product.downloads >= 1000 ? `${(product.downloads / 1000).toFixed(1)}K` : product.downloads} downloads
+                    {product.downloads >= 1000 ? `${(product.downloads / 1000).toFixed(1)}K` : product.downloads} {tStore('downloads')}
                   </span>
                 )}
                 {product.badge && (
@@ -161,7 +162,7 @@ export default function ProductDetailPage() {
                 {product.updated_at && (
                   <span className="flex items-center gap-1 text-xs">
                     <Clock size={12} />
-                    Updated {timeAgo(product.updated_at)}
+                    {tStore('updated')} {timeAgo(product.updated_at)}
                   </span>
                 )}
                 {product.demo_url && (
@@ -173,7 +174,7 @@ export default function ProductDetailPage() {
                     className="flex items-center gap-1 text-soul-purple hover:text-soul-purple-light transition-colors"
                   >
                     <ExternalLink size={12} />
-                    Live Demo
+                    {tStore('liveDemo')}
                   </a>
                 )}
               </div>
@@ -197,21 +198,21 @@ export default function ProductDetailPage() {
                 </span>
                 {product.price_type !== 'one_time' && product.price_cents > 0 && (
                   <span className="text-gray-500 text-sm">
-                    {product.price_type === 'monthly' ? 'per month' : 'per year'}
+                    {product.price_type === 'monthly' ? tStore('perMonth') : tStore('perYear')}
                   </span>
                 )}
               </div>
 
               <button className="w-full sm:w-auto px-8 py-4 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold text-white transition-all duration-200 glow-hover flex items-center justify-center text-lg">
                 <ShoppingCart size={22} className="mr-2" />
-                {product.price_cents === 0 ? (locale === 'es' ? 'Descargar Gratis' : 'Download Free') : t('buyNow')}
+                {product.price_cents === 0 ? tStore('downloadFree') : t('buyNow')}
               </button>
 
               {/* Trust */}
               <div className="flex items-center gap-4 mt-4 text-xs text-gray-500">
                 <span className="flex items-center gap-1"><Lock size={12} /> {t('secure')}</span>
                 <span className="flex items-center gap-1"><Zap size={12} /> {t('instant')}</span>
-                <span className="flex items-center gap-1"><Clock size={12} /> 30-day guarantee</span>
+                <span className="flex items-center gap-1"><Clock size={12} /> {tStore('guarantee')}</span>
               </div>
             </motion.div>
 
@@ -233,7 +234,7 @@ export default function ProductDetailPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-2xl font-bold text-white mb-6">
-                {locale === 'es' ? 'Descripcion' : 'Description'}
+                {tStore('description')}
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed whitespace-pre-line">{product.description}</p>
             </motion.div>
@@ -247,7 +248,7 @@ export default function ProductDetailPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-2xl font-bold text-white mb-8 text-center">
-                {locale === 'es' ? 'Caracteristicas' : 'Features'}
+                {tStore('features')}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {features.map((f, i) => (
@@ -270,7 +271,7 @@ export default function ProductDetailPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-2xl font-bold text-white mb-6">
-                {locale === 'es' ? 'Especificaciones Tecnicas' : 'Technical Specs'}
+                {tStore('technicalSpecs')}
               </h2>
               <div className="bg-soul-dark-card rounded-xl border border-gray-800 overflow-hidden">
                 {Object.entries(specs).map(([key, value], i) => (
@@ -290,7 +291,7 @@ export default function ProductDetailPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-2xl font-bold text-white mb-8 text-center">
-              {locale === 'es' ? 'Preguntas Frecuentes' : 'FAQ'}
+              {tStore('faq')}
             </h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
@@ -317,7 +318,7 @@ export default function ProductDetailPage() {
         <section className="py-16 bg-soul-dark-lighter">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">
-              {locale === 'es' ? 'Productos Relacionados' : 'Related Products'}
+              {tStore('relatedProducts')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {related.map((p, i) => {
@@ -352,7 +353,7 @@ export default function ProductDetailPage() {
           </div>
           <button className="px-6 py-3 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold text-white transition-all glow-hover flex items-center">
             <ShoppingCart size={18} className="mr-2" />
-            {product.price_cents === 0 ? 'Get' : t('buyNow')}
+            {product.price_cents === 0 ? tStore('get') : t('buyNow')}
           </button>
         </div>
       </div>

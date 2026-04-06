@@ -1193,7 +1193,13 @@
     "reviews": "Bewertungen",
     "updated": "Aktualisiert",
     "liveDemo": "Live-Demo",
-    "get": "Erhalten"
+    "get": "Erhalten",
+    "faqQ1": "Wie erhalte ich meine Lizenz?",
+    "faqA1": "Unmittelbar nach dem Kauf erhalten Sie eine E-Mail mit Ihrem Lizenzschlüssel und dem Download-Link.",
+    "faqQ2": "Kann ich es auf mehreren Geräten verwenden?",
+    "faqA2": "Jede Lizenz ist an ein Gerät gebunden. Sie können bis zu 3 Mal pro Jahr neu zuweisen.",
+    "faqQ3": "Gibt es eine Geld-zurück-Garantie?",
+    "faqA3": "Ja, wir bieten eine 30-Tage-Geld-zurück-Garantie. Volle Rückerstattung bei Unzufriedenheit."
   },
   "storeDetail": {
     "backToStore": "Zurück zum Shop",

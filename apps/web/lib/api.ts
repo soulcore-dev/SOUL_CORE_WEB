@@ -128,7 +128,7 @@ export const createProduct = async (data: Partial<Product> & { name: string; slu
 }
 
 export const deleteProduct = async (_id: string): Promise<void> => {
-  console.warn('Delete not implemented yet')
+  // TODO: implement delete endpoint
 }
 
 export const getMemberships = async () => ({ data: [] })

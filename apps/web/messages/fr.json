@@ -1275,7 +1275,13 @@
     "reviews": "avis",
     "updated": "Mis à jour",
     "liveDemo": "Démo en Direct",
-    "get": "Obtenir"
+    "get": "Obtenir",
+    "faqQ1": "Comment est-ce que je reçois ma licence ?",
+    "faqA1": "Immédiatement après l'achat, vous recevrez un e-mail avec votre clé de licence et le lien de téléchargement.",
+    "faqQ2": "Puis-je l'utiliser sur plusieurs machines ?",
+    "faqA2": "Chaque licence est liée à une seule machine. Vous pouvez la réassocier jusqu'à 3 fois par an.",
+    "faqQ3": "Y a-t-il une garantie de remboursement ?",
+    "faqA3": "Oui, nous offrons une garantie de remboursement de 30 jours. Remboursement intégral si vous n'êtes pas satisfait."
   },
   "storeDetail": {
     "backToStore": "Retour à la Boutique",

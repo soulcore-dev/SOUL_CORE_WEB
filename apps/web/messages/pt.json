@@ -1275,7 +1275,13 @@
     "reviews": "avaliações",
     "updated": "Atualizado",
     "liveDemo": "Demo ao Vivo",
-    "get": "Obter"
+    "get": "Obter",
+    "faqQ1": "Como recebo minha licença?",
+    "faqA1": "Imediatamente após a compra, você receberá um e-mail com sua chave de licença e link para download.",
+    "faqQ2": "Posso usar em várias máquinas?",
+    "faqA2": "Cada licença é vinculada a uma máquina. Você pode revincular até 3 vezes por ano.",
+    "faqQ3": "Há garantia de reembolso?",
+    "faqA3": "Sim, oferecemos garantia de reembolso de 30 dias. Reembolso integral se não ficar satisfeito."
   },
   "storeDetail": {
     "backToStore": "Voltar à Loja",

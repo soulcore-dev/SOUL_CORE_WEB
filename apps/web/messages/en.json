@@ -1193,7 +1193,13 @@
     "reviews": "reviews",
     "updated": "Updated",
     "liveDemo": "Live Demo",
-    "get": "Get"
+    "get": "Get",
+    "faqQ1": "How do I receive my license?",
+    "faqA1": "Immediately after purchase you will receive an email with your license key and download link.",
+    "faqQ2": "Can I use it on multiple machines?",
+    "faqA2": "Each license binds to one machine. You can rebind up to 3 times per year.",
+    "faqQ3": "Is there a money-back guarantee?",
+    "faqA3": "Yes, we offer a 30-day money-back guarantee. Full refund if not satisfied."
   },
   "storeDetail": {
     "backToStore": "Back to Store",
