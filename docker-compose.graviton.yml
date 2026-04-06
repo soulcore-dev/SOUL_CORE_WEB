@@ -1,0 +1,29 @@
+# SoulCore Web — deploy on Graviton alongside existing soul-core stack
+# Usage: docker compose -f docker-compose.graviton.yml up -d --build
+
+services:
+  soulcore-web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+    container_name: soulcore-web
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      - NODE_ENV=production
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - RESEND_API_KEY=${RESEND_API_KEY:-}
+      - ADMIN_EMAIL=${ADMIN_EMAIL:-founder@soulcore.dev}
+      - FROM_EMAIL=${FROM_EMAIL:-hello@soulcore.dev}
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: "0.5"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s

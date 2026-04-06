@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUL CORE — Security & Infrastructure Partner for Dev Teams</title>
+    <meta name="description" content="We secure what you build. Cybersecurity, Cloud Infrastructure, Data Analytics, DevSecOps and Deployment services designed to complement your development workflow.">
+    <link rel="icon" href="/favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --soul-purple: #8B5CF6;
+            --soul-purple-dark: #6D28D9;
+            --soul-purple-light: #A78BFA;
+            --soul-dark: #0F0F14;
+            --soul-dark-lighter: #1A1A24;
+            --soul-dark-card: #16161E;
+            --text-primary: #FFFFFF;
+            --text-secondary: #D1D5DB;
+            --text-tertiary: #9CA3AF;
+            --text-muted: #6B7280;
+            --border-subtle: rgba(55, 65, 81, 1);
+            --border-purple: rgba(139, 92, 246, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--text-secondary);
+            background: var(--soul-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--soul-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--soul-purple); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--soul-purple-light); }
+
+        /* ANIMATIONS */
+        @keyframes glow {
+            0% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
+            100% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.05); }
+        }
+
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+
+        /* NAV */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(22, 22, 30, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-purple);
+            padding: 10px 40px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 80px;
+            transition: height 0.3s;
+        }
+
+        .nav.scrolled .nav-logo img {
+            height: 48px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--soul-purple); }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--soul-purple);
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 10px;
+            font-weight: 600 !important;
+            font-size: 13px !important;
+            transition: all 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--soul-purple-dark) !important;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 4px;
+            background: var(--soul-dark-lighter);
+            border-radius: 8px;
+            padding: 3px;
+        }
+
+        .lang-switch a {
+            padding: 4px 10px !important;
+            border-radius: 6px;
+            font-size: 12px !important;
+            font-weight: 600 !important;
+        }
+
+        .lang-switch a.active {
+            background: var(--soul-purple) !important;
+            color: white !important;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 40px 80px;
+            text-align: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--soul-dark) 0%, #0f172a 40%, #1e1b4b 100%);
+            background-size: 200% 200%;
+            animation: gradient-shift 8s ease infinite;
+        }
+
+        .hero-blob-1 {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 400px;
+            height: 400px;
+            background: rgba(139, 92, 246, 0.15);
+            border-radius: 50%;
+            filter: blur(120px);
+            animation: pulse-slow 4s ease-in-out infinite;
+        }
+
+        .hero-blob-2 {
+            position: absolute;
+            bottom: 20%;
+            right: 20%;
+            width: 300px;
+            height: 300px;
+            background: rgba(167, 139, 250, 0.1);
+            border-radius: 50%;
+            filter: blur(120px);
+            animation: pulse-slow 4s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        .hero-blob-3 {
+            position: absolute;
+            top: 60%;
+            left: 60%;
+            width: 250px;
+            height: 250px;
+            background: rgba(96, 165, 250, 0.08);
+            border-radius: 50%;
+            filter: blur(100px);
+            animation: pulse-slow 5s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            animation: slide-up 0.8s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 999px;
+            padding: 8px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--soul-purple-light);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 32px;
+        }
+
+        .hero-badge .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse-slow 2s infinite;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, var(--soul-purple) 0%, var(--soul-purple-light) 50%, #c4b5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-tertiary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-glow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--soul-purple);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-glow:hover {
+            background: var(--soul-purple-dark);
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-tertiary);
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.3s;
+        }
+
+        .btn-ghost:hover {
+            color: white;
+            border-color: var(--soul-purple);
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        /* SCROLL INDICATOR */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .scroll-indicator span {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .scroll-arrow {
+            width: 24px;
+            height: 24px;
+            border-right: 2px solid var(--text-muted);
+            border-bottom: 2px solid var(--text-muted);
+            transform: rotate(45deg);
+            animation: float 2s ease-in-out infinite;
+        }
+
+        /* TRUST BAR */
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 40px 40px;
+            background: var(--soul-dark-card);
+            border-top: 1px solid rgba(139, 92, 246, 0.1);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-num {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--soul-purple), var(--soul-purple-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .trust-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 4px;
+        }
+
+        /* SECTIONS */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 40px;
+        }
+
+        .section-alt {
+            background: var(--soul-dark-lighter);
+        }
+
+        .section-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--soul-purple);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 3.5vw, 42px);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-sub {
+            font-size: 17px;
+            color: var(--text-tertiary);
+            margin-bottom: 50px;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+
+        .text-center { text-align: center; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+
+        /* POSITIONING CARD */
+        .positioning {
+            background: var(--soul-dark-card);
+            border: 1px solid var(--border-purple);
+            border-radius: 20px;
+            padding: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .positioning::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--soul-purple), var(--soul-purple-light), var(--soul-purple));
+        }
+
+        .positioning h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .positioning > p {
+            font-size: 16px;
+            color: var(--text-tertiary);
+            line-height: 1.8;
+            max-width: 700px;
+        }
+
+        .vs-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 24px;
+            margin-top: 32px;
+            align-items: stretch;
+        }
+
+        .vs-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            padding: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+
+        .vs-card:hover {
+            border-color: var(--border-purple);
+            transform: translateY(-2px);
+        }
+
+        .vs-card h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .vs-card.them h4 { color: var(--text-muted); }
+        .vs-card.us h4 { color: var(--soul-purple-light); }
+
+        .vs-card li {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            list-style: none;
+            padding: 6px 0;
+            line-height: 1.5;
+        }
+
+        .vs-card.them li::before {
+            content: '✗ ';
+            color: #ef4444;
+            font-weight: 700;
+        }
+
+        .vs-card.us li::before {
+            content: '✓ ';
+            color: #10b981;
+            font-weight: 700;
+        }
+
+        .vs-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-muted);
+        }
+
+        /* SERVICES GRID */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--soul-dark-card);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 36px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card:hover::before { opacity: 1; }
+
+        .service-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .card-icon-wrap {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .icon-cyber { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        .icon-devsec { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+        .icon-cloud { background: linear-gradient(135deg, #0ea5e9, #6366f1); }
+        .icon-data { background: linear-gradient(135deg, #06b6d4, #3b82f6); }
+        .icon-deploy { background: linear-gradient(135deg, #f97316, #eab308); }
+
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .service-card .card-desc {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            margin-bottom: 20px;
+            line-height: 1.7;
+            position: relative;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: relative;
+        }
+
+        .tag {
+            background: rgba(139, 92, 246, 0.08);
+            border: 1px solid rgba(139, 92, 246, 0.15);
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 12px;
+            color: var(--soul-purple-light);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .tag:hover {
+            background: rgba(139, 92, 246, 0.15);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        /* PROCESS STEPS */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            position: relative;
+        }
+
+        .steps-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--soul-purple), var(--soul-purple-light), var(--soul-purple), transparent);
+            opacity: 0.2;
+        }
+
+        .step-card {
+            background: var(--soul-dark-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .step-card:hover {
+            border-color: var(--border-purple);
+            transform: translateY(-4px);
+        }
+
+        .step-num {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--soul-purple), var(--soul-purple-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 800;
+            color: white;
+            margin: 0 auto 16px;
+        }
+
+        .step-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* FREE OFFER */
+        .free-offer {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(5, 150, 105, 0.03));
+            border: 2px solid rgba(16, 185, 129, 0.2);
+            border-radius: 24px;
+            padding: 56px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .free-offer::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.08), transparent 70%);
+            border-radius: 50%;
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: 0;
+            right: 40px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 10px 20px;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .free-offer h3 {
+            font-size: 30px;
+            font-weight: 800;
+            color: #10b981;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .free-offer > p {
+            font-size: 16px;
+            color: var(--text-tertiary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .offer-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            padding: 28px 20px;
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            transition: all 0.3s;
+        }
+
+        .offer-card:hover {
+            border-color: rgba(16, 185, 129, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .offer-icon { font-size: 32px; margin-bottom: 12px; }
+        .offer-title { font-size: 14px; font-weight: 700; color: #10b981; }
+        .offer-desc { font-size: 12px; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+        .offer-price { font-size: 22px; font-weight: 800; margin-top: 12px; }
+        .offer-price.free { color: #10b981; }
+        .offer-price.quote { color: #f59e0b; }
+
+        .offer-note {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 20px 24px;
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            position: relative;
+        }
+
+        .offer-note p {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            line-height: 1.6;
+        }
+
+        .offer-note strong { color: #10b981; }
+
+        /* STACK TAGS */
+        .stack-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .stack-tag {
+            background: var(--soul-dark-card);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 13px;
+            color: var(--text-tertiary);
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .stack-tag:hover {
+            border-color: var(--border-purple);
+            color: var(--soul-purple-light);
+            background: rgba(139, 92, 246, 0.05);
+        }
+
+        /* FOOTER CTA */
+        .footer-cta {
+            position: relative;
+            overflow: hidden;
+            padding: 100px 40px;
+            text-align: center;
+        }
+
+        .footer-cta-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--soul-dark) 0%, #1e1b4b 100%);
+        }
+
+        .footer-cta-blob {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent 70%);
+            border-radius: 50%;
+            animation: pulse-slow 4s ease-in-out infinite;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .footer-cta h2 {
+            font-size: clamp(28px, 3.5vw, 40px);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-cta .footer-sub {
+            font-size: 17px;
+            color: var(--text-tertiary);
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-info {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 2;
+        }
+
+        .footer-info a {
+            color: var(--soul-purple-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-info a:hover { color: var(--soul-purple); }
+
+        .footer-bottom {
+            font-size: 11px;
+            color: #334155;
+            margin-top: 16px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .steps-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav { padding: 12px 20px; }
+            .nav.scrolled { padding: 8px 20px; }
+            .nav-links { display: none; }
+            .hero { padding: 100px 24px 60px; min-height: auto; }
+            .section { padding: 60px 24px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .service-card.full-width { grid-column: auto; }
+            .steps-grid { grid-template-columns: 1fr 1fr; }
+            .steps-grid::before { display: none; }
+            .vs-grid { grid-template-columns: 1fr; }
+            .vs-divider { display: none; }
+            .offer-grid { grid-template-columns: 1fr; }
+            .trust-bar { flex-wrap: wrap; gap: 30px; padding: 30px 24px; }
+            .positioning { padding: 32px 24px; }
+            .free-offer { padding: 40px 24px; }
+            .hero-buttons { flex-direction: column; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .footer-cta { padding: 60px 24px; }
+        }
+
+        @media (max-width: 480px) {
+            .steps-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <a href="https://soulcore.dev" class="nav-logo">
+            <img src="/logo_black.png" alt="SOUL CORE">
+        </a>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#process">Process</a>
+            <a href="#offer">Free Assessment</a>
+            <a href="#stack">Compatibility</a>
+            <div class="lang-switch">
+                <a href="/devsec.html" class="active">EN</a>
+                <a href="/devsec-es.html">ES</a>
+            </div>
+            <a href="mailto:partner@soulcore.dev" class="nav-cta">Get Started &rarr;</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-blob-1"></div>
+        <div class="hero-blob-2"></div>
+        <div class="hero-blob-3"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                For Development Teams & Agencies
+            </div>
+
+            <h1>
+                We <span class="gradient-text">Secure</span> What<br>You Build
+            </h1>
+
+            <p class="subtitle">
+                Cybersecurity, cloud infrastructure, data analytics, DevSecOps and deployment &mdash;
+                designed to plug into your workflow as a trusted extension of your team.
+                Not a competitor. A partner.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="mailto:partner@soulcore.dev" class="btn-glow">
+                    Schedule a Call &rarr;
+                </a>
+                <a href="https://wa.me/18495813171" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+                    💬 WhatsApp Us
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="trust-item animate-on-scroll">
+            <div class="trust-num">50+</div>
+            <div class="trust-label">Security Audits</div>
+        </div>
+        <div class="trust-item animate-on-scroll delay-1">
+            <div class="trust-num">0</div>
+            <div class="trust-label">Post-Audit Breaches</div>
+        </div>
+        <div class="trust-item animate-on-scroll delay-2">
+            <div class="trust-num">100%</div>
+            <div class="trust-label">White-Label Ready</div>
+        </div>
+        <div class="trust-item animate-on-scroll delay-3">
+            <div class="trust-num">NDA</div>
+            <div class="trust-label">Always Included</div>
+        </div>
+    </div>
+
+    <!-- POSITIONING -->
+    <section class="section">
+        <div class="animate-on-scroll">
+            <div class="section-label">Our Approach</div>
+            <div class="section-title">Your Clients Stay Yours</div>
+            <div class="section-sub">
+                We work behind the scenes. Your clients never know we exist unless you want them to.
+                White-label reports, your branding, your relationship.
+            </div>
+        </div>
+
+        <div class="positioning animate-on-scroll delay-2">
+            <h3>How We Complement Your Team</h3>
+            <p>
+                You're great at building software. We're great at breaking it (ethically) and hardening it.
+                Instead of hiring a full-time security engineer at $150K/year, bring us in when you need us.
+                We handle the security layer so you can focus on shipping features.
+            </p>
+
+            <div class="vs-grid">
+                <div class="vs-card them">
+                    <h4>Without a Security Partner</h4>
+                    <ul>
+                        <li>Clients ask about security, you improvise</li>
+                        <li>Vulnerabilities found in production</li>
+                        <li>No compliance documentation</li>
+                        <li>Cloud configs "probably fine"</li>
+                        <li>Data pipelines without governance</li>
+                    </ul>
+                </div>
+                <div class="vs-divider">vs</div>
+                <div class="vs-card us">
+                    <h4>With SOUL CORE as Partner</h4>
+                    <ul>
+                        <li>"Yes, we have a dedicated security team"</li>
+                        <li>Vulnerabilities caught before deploy</li>
+                        <li>SOC 2, ISO 27001, HIPAA documentation</li>
+                        <li>Cloud hardened with CIS Benchmarks</li>
+                        <li>Data pipelines with access controls & audit trails</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section-alt" id="services">
+        <div class="section">
+            <div class="animate-on-scroll">
+                <div class="section-label">Services</div>
+                <div class="section-title">Five Pillars, One Partner</div>
+                <div class="section-sub">
+                    Everything your dev team needs to ship secure, scalable, and compliant software &mdash;
+                    without changing your stack.
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="card-icon-wrap icon-cyber">🛡️</div>
+                    <h3>Cybersecurity</h3>
+                    <p class="card-desc">
+                        Penetration testing, code review, and vulnerability assessment for your clients' apps.
+                        We find the holes before attackers do &mdash; and help you fix them. White-label reports available.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Pentest (Web/API/Mobile)</span>
+                        <span class="tag">Code Review</span>
+                        <span class="tag">OWASP Top 10</span>
+                        <span class="tag">Compliance Audit</span>
+                        <span class="tag">Incident Response</span>
+                        <span class="tag">White-Label Reports</span>
+                    </div>
+                </div>
+
+                <div class="service-card animate-on-scroll delay-1">
+                    <div class="card-icon-wrap icon-devsec">🔄</div>
+                    <h3>DevSecOps</h3>
+                    <p class="card-desc">
+                        Security integrated into your CI/CD pipeline &mdash; not bolted on after. We set up SAST, DAST,
+                        dependency scanning, and secret detection so every push is automatically checked.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">CI/CD Security Gates</span>
+                        <span class="tag">SAST / DAST</span>
+                        <span class="tag">Secret Detection</span>
+                        <span class="tag">Container Scanning</span>
+                        <span class="tag">IaC Security</span>
+                        <span class="tag">Policy as Code</span>
+                    </div>
+                </div>
+
+                <div class="service-card animate-on-scroll delay-2">
+                    <div class="card-icon-wrap icon-cloud">☁️</div>
+                    <h3>Cloud Infrastructure</h3>
+                    <p class="card-desc">
+                        Architecture review, hardening, and cost optimization for AWS, GCP, and Azure.
+                        From IAM policies to network segmentation &mdash; we make sure your cloud is production-grade.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">AWS / GCP / Azure</span>
+                        <span class="tag">CIS Benchmarks</span>
+                        <span class="tag">IAM & Zero Trust</span>
+                        <span class="tag">Cost Optimization</span>
+                        <span class="tag">Kubernetes Security</span>
+                        <span class="tag">Disaster Recovery</span>
+                    </div>
+                </div>
+
+                <div class="service-card animate-on-scroll delay-3">
+                    <div class="card-icon-wrap icon-data">📊</div>
+                    <h3>Data Analytics & Governance</h3>
+                    <p class="card-desc">
+                        Secure data pipelines, access controls, encryption at rest/transit, and compliance-ready
+                        analytics. We help you handle sensitive data without the liability.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Pipeline Security</span>
+                        <span class="tag">Access Controls</span>
+                        <span class="tag">Data Encryption</span>
+                        <span class="tag">GDPR / HIPAA</span>
+                        <span class="tag">Audit Trails</span>
+                        <span class="tag">BI Dashboards</span>
+                    </div>
+                </div>
+
+                <div class="service-card full-width animate-on-scroll delay-4">
+                    <div class="card-icon-wrap icon-deploy">🚀</div>
+                    <h3>Deployment & Release Engineering</h3>
+                    <p class="card-desc">
+                        Your best ally at deploy time. We handle the infrastructure so your code lands safely in production every time.
+                        From zero-downtime deployments to rollback strategies &mdash; we make shipping painless. You build it, we deploy it.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Zero-Downtime Deploys</span>
+                        <span class="tag">Blue/Green & Canary</span>
+                        <span class="tag">Rollback Strategies</span>
+                        <span class="tag">CI/CD Pipeline Setup</span>
+                        <span class="tag">Docker & Kubernetes</span>
+                        <span class="tag">Vercel / Railway / Fly.io</span>
+                        <span class="tag">Monitoring & Alerting</span>
+                        <span class="tag">SSL & Domain Config</span>
+                        <span class="tag">Auto-Scaling</span>
+                        <span class="tag">Database Migrations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+        <div class="section">
+            <div class="animate-on-scroll text-center">
+                <div class="section-label" style="text-align:center;">Process</div>
+                <div class="section-title" style="text-align:center;">How We Work Together</div>
+                <div class="section-sub mx-auto" style="text-align:center;">
+                    No long onboarding. No vendor lock-in. We adapt to your workflow, not the other way around.
+                </div>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card animate-on-scroll">
+                    <div class="step-num">01</div>
+                    <h4>Discovery Call</h4>
+                    <p>15-min call to understand your stack, clients, and pain points</p>
+                </div>
+                <div class="step-card animate-on-scroll delay-1">
+                    <div class="step-num">02</div>
+                    <h4>Free Assessment</h4>
+                    <p>We run an initial security scan and deliver a report &mdash; no strings attached</p>
+                </div>
+                <div class="step-card animate-on-scroll delay-2">
+                    <div class="step-num">03</div>
+                    <h4>Scope & Quote</h4>
+                    <p>Custom proposal based on what we found. You decide what to fix and when</p>
+                </div>
+                <div class="step-card animate-on-scroll delay-3">
+                    <div class="step-num">04</div>
+                    <h4>Execute & Report</h4>
+                    <p>We fix, harden, and deliver white-label documentation under your brand</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREE OFFER -->
+    <section class="section-alt" id="offer">
+        <div class="section">
+            <div class="free-offer animate-on-scroll">
+                <div class="offer-badge">No Strings Attached</div>
+                <h3>Free Security Assessment</h3>
+                <p>
+                    We believe in proving value before asking for investment.
+                    Send us your app or infrastructure and we'll deliver a professional-grade report.
+                </p>
+
+                <div class="offer-grid">
+                    <div class="offer-card">
+                        <div class="offer-icon">📄</div>
+                        <div class="offer-title">Security Report</div>
+                        <div class="offer-desc">Full assessment with findings classified by severity (CVSS)</div>
+                        <div class="offer-price free">FREE</div>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-icon">🔧</div>
+                        <div class="offer-title">Medium & Low Fixes</div>
+                        <div class="offer-desc">We remediate medium and low severity vulnerabilities at no cost</div>
+                        <div class="offer-price free">FREE</div>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-icon">🛡️</div>
+                        <div class="offer-title">High & Critical Fixes</div>
+                        <div class="offer-desc">Critical vulnerabilities remediated under a tailored engagement</div>
+                        <div class="offer-price quote">Custom Quote</div>
+                    </div>
+                </div>
+
+                <div class="offer-note">
+                    <p>
+                        <strong>Why free?</strong> &mdash; If we find critical issues, you'll want them fixed.
+                        If we don't, you get peace of mind and a report to show your clients. Either way, you win.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKS WITH -->
+    <section id="stack">
+        <div class="section">
+            <div class="animate-on-scroll text-center">
+                <div class="section-label" style="text-align:center;">Compatibility</div>
+                <div class="section-title" style="text-align:center;">Works With Your Stack</div>
+                <div class="section-sub mx-auto" style="text-align:center;">
+                    We don't ask you to change anything. We plug into whatever you're already using.
+                </div>
+            </div>
+
+            <div class="stack-grid animate-on-scroll delay-2">
+                <span class="stack-tag">React / Next.js</span>
+                <span class="stack-tag">Node.js</span>
+                <span class="stack-tag">Python / Django</span>
+                <span class="stack-tag">Go</span>
+                <span class="stack-tag">Ruby on Rails</span>
+                <span class="stack-tag">.NET</span>
+                <span class="stack-tag">PHP / Laravel</span>
+                <span class="stack-tag">AWS</span>
+                <span class="stack-tag">GCP</span>
+                <span class="stack-tag">Azure</span>
+                <span class="stack-tag">Docker / K8s</span>
+                <span class="stack-tag">GitHub Actions</span>
+                <span class="stack-tag">GitLab CI</span>
+                <span class="stack-tag">Vercel</span>
+                <span class="stack-tag">Supabase</span>
+                <span class="stack-tag">PostgreSQL</span>
+                <span class="stack-tag">MongoDB</span>
+                <span class="stack-tag">Redis</span>
+                <span class="stack-tag">Terraform</span>
+                <span class="stack-tag">Solidity / Web3</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <section class="footer-cta">
+        <div class="footer-cta-bg"></div>
+        <div class="footer-cta-blob"></div>
+
+        <div class="footer-content animate-on-scroll">
+            <h2>Let's Make Your Clients' Software Bulletproof</h2>
+            <p class="footer-sub">15-minute call. No pitch deck. Just a conversation about how we can help.</p>
+
+            <div class="cta-buttons">
+                <a href="mailto:partner@soulcore.dev" class="btn-glow">
+                    Schedule a Call &rarr;
+                </a>
+                <a href="https://wa.me/18495813171" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+                    💬 WhatsApp Us
+                </a>
+            </div>
+
+            <div class="footer-info">
+                <strong style="color:white;">SOUL CORE</strong> &mdash; Security & Infrastructure Partner<br>
+                <a href="https://soulcore.dev">soulcore.dev</a> &middot; partner@soulcore.dev
+            </div>
+            <div class="footer-bottom">
+                NDA included with every engagement &middot; White-label available &middot; Based in Dominican Republic, serving globally
+            </div>
+        </div>
+    </section>
+
+    <!-- SCROLL ANIMATIONS -->
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Navbar scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

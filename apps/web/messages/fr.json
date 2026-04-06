@@ -1,0 +1,1324 @@
+{
+  "metadata": {
+    "title": "SOUL CORE | Développement Logiciel Sur Mesure",
+    "description": "Logiciel, automatisation, cybersécurité et intégrations API. Nous transformons vos idées en systèmes évolutifs.",
+    "ogDescription": "Du concept à la production - Développement qui évolue"
+  },
+  "nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "products": "Produits",
+    "team": "Équipe",
+    "contact": "Contact",
+    "quote": "Devis",
+    "quoteProject": "Demander un Devis",
+    "store": "Boutique",
+    "account": "Mon Compte",
+    "admin": "Admin"
+  },
+  "hero": {
+    "badge": "Du Concept à la Production",
+    "title1": "Votre Idée,",
+    "title2": "Devenue Réalité",
+    "subtitle": "Nous transformons vos concepts en <strong>logiciels robustes, automatisations intelligentes et systèmes créateurs de valeur</strong>. Rapidité sans sacrifier la qualité.",
+    "ctaServices": "Voir les Services",
+    "ctaQuote": "Demander un Devis",
+    "statStack": "Full-Stack",
+    "statAreas": "Domaines",
+    "statDelivery": "Livraison Agile"
+  },
+  "whyUs": {
+    "label": "Pourquoi nous choisir ?",
+    "title": "Des avantages qui nous rendent uniques",
+    "subtitle": "Nous ne sommes pas une agence traditionnelle. Nous combinons des méthodologies éprouvées avec une technologie de pointe.",
+    "cta": "Prêt à expérimenter la différence ?",
+    "ctaLink": "Parlons-en →",
+    "features": {
+      "availability": {
+        "title": "Support Continu",
+        "description": "Équipe disponible en horaires étendus. Communication fluide et réponses rapides."
+      },
+      "speed": {
+        "title": "Vitesse 3x Supérieure",
+        "description": "Méthodologies optimisées et outils avancés. Ce que d'autres font en semaines, nous le faisons en jours."
+      },
+      "documentation": {
+        "title": "Documentation Obsessionnelle",
+        "description": "TOUT parfaitement documenté. Code propre, maintenable et transférable."
+      },
+      "frameworks": {
+        "title": "Frameworks Propriétaires",
+        "description": "VMOF, SOUL_CORE MCP, SOUL_CORE - outils exclusifs qui potentialisent chaque projet."
+      },
+      "provider": {
+        "title": "Un Seul Fournisseur",
+        "description": "12 divisions, 50+ services. Tous vos besoins technologiques en un seul endroit."
+      },
+      "security": {
+        "title": "La Sécurité d'Abord",
+        "description": "Code sécurisé dès la conception. Audits, pentesting et meilleures pratiques OWASP intégrées."
+      }
+    }
+  },
+  "services": {
+    "label": "Nos Services",
+    "title": "Solutions Technologiques Complètes",
+    "subtitle": "Tous vos besoins technologiques en un seul endroit. De l'idée à l'implémentation.",
+    "cta": "Demander un Devis Personnalisé",
+    "viewMore": "En savoir plus",
+    "items": {
+      "ai": {
+        "title": "IA & Automatisation",
+        "description": "Agents autonomes, chatbots intelligents, automatisation zero-code avec n8n, Make, Zapier."
+      },
+      "software": {
+        "title": "Software & Développement",
+        "description": "Applications web et mobiles, APIs REST/GraphQL, DevSecOps, architectures cloud."
+      },
+      "industrial": {
+        "title": "Industriel & Mécatronique",
+        "description": "Automatisation Industrielle 4.0, IoT prédictif, systèmes SCADA/PLC, CNC."
+      },
+      "cybersecurity": {
+        "title": "Cybersécurité",
+        "description": "Pentesting, audits de sécurité, durcissement d'infrastructure, conformité OWASP."
+      },
+      "integrations": {
+        "title": "APIs & Intégrations",
+        "description": "APIs REST/GraphQL, serveurs MCP, webhooks, microservices, intégrations tierces."
+      },
+      "design": {
+        "title": "Design Digital & UX",
+        "description": "Sites web professionnels, branding complet, UX research, prototypes interactifs."
+      },
+      "ecommerce": {
+        "title": "Développement E-Commerce",
+        "description": "Nous construisons des boutiques en ligne sur mesure pour votre entreprise. Shopify, WooCommerce, marketplaces personnalisés, multi-canal."
+      },
+      "marketing": {
+        "title": "Marketing Digital",
+        "description": "SEO professionnel, Google Ads, gestion des réseaux sociaux, content marketing."
+      },
+      "mentoring": {
+        "title": "Connaissance & Mentorat",
+        "description": "Conseil technique, mentorat 1:1, formations corporate, traduction technique."
+      },
+      "data": {
+        "title": "Data Science & Analytics",
+        "description": "Dashboards BI, analyse prédictive, rapports automatisés, pipelines ETL, machine learning."
+      },
+      "cloud": {
+        "title": "Cloud & DevOps",
+        "description": "Infrastructure AWS/GCP/Azure, pipelines CI/CD, Docker/Kubernetes, monitoring 24/7."
+      },
+      "legacy": {
+        "title": "Modernisation de Code Legacy",
+        "description": "Transformation de COBOL, FORTRAN et systèmes hérités vers des technologies modernes. Migration, maintenance et connexion avec les systèmes actuels."
+      }
+    }
+  },
+  "portfolio": {
+    "label": "Portfolio",
+    "title": "Cas de Réussite",
+    "subtitle": "Projets réels avec des résultats mesurables. Chaque cas démontre notre capacité de livraison.",
+    "viewCase": "Voir le Cas",
+    "code": "Code",
+    "confidential": "Projet Confidentiel",
+    "categories": {
+      "all": "Tous",
+      "ai": "IA",
+      "cybersecurity": "Cybersécurité",
+      "software": "Logiciel",
+      "industrial": "Industriel",
+      "design": "Design & UX",
+      "ecommerce": "E-Commerce"
+    },
+    "projects": {
+      "agricultural": {
+        "title": "Système d'Automatisation Agricole",
+        "description": "Plateforme IoT avec 300+ capteurs pour le monitoring des cultures. Réduction de 40% des coûts opérationnels."
+      },
+      "pentest": {
+        "title": "Audit de Sécurité Enterprise",
+        "description": "Pentesting complet pour plateforme fintech. 50+ vulnérabilités identifiées et corrigées. Zéro violation."
+      },
+      "sales": {
+        "title": "Agent IA de Ventes",
+        "description": "Chatbot intelligent pour WhatsApp qui automatise 80% des demandes de vente."
+      },
+      "coparenting": {
+        "title": "SaaS Legal Platform",
+        "description": "Full-stack SaaS platform for pro-se parents navigating Florida family court. 41 production pages, 4 interactive legal tools, Stripe subscription billing with 4 tiers, admin dashboard, and evidence builder with PDF/Excel export.",
+        "m1": "41 pages",
+        "m2": "4 subscription tiers",
+        "m3": "94/100 QA"
+      },
+      "tayco": {
+        "title": "Construction Company Platform",
+        "description": "Corporate website for a licensed contractor operating in Wisconsin and Illinois. Full service catalog, project showcase, lead generation with WhatsApp integration, and mobile-first responsive design.",
+        "m1": "500+ projects",
+        "m2": "6 service areas",
+        "m3": "Bilingual"
+      },
+      "turnkey": {
+        "title": "Turnkey Contractor Platform",
+        "description": "Specialized platform for REO property restoration and turnkey renovations. Service quoting system, project portfolio, EPA Lead-Safe compliance showcase, and multi-region coverage.",
+        "m1": "100+ projects",
+        "m2": "45-day turnaround",
+        "m3": "Multi-region"
+      },
+      "taysupply": {
+        "title": "B2B Wholesale Supply Platform",
+        "description": "Wholesale sourcing platform connecting businesses with 50+ suppliers across 6 industry verticals. Quote-based pricing engine, tax-exempt purchasing, and direct-to-business fulfillment.",
+        "m1": "50+ suppliers",
+        "m2": "6 industries",
+        "m3": "20-60% savings"
+      },
+      "vulnassess": {
+        "title": "Security Assessment Program",
+        "description": "Continuous vulnerability assessment program across web applications, APIs, and cloud infrastructure. OWASP Top 10 methodology, responsible disclosure, and remediation verification.",
+        "m1": "Multiple targets",
+        "m2": "OWASP Top 10",
+        "m3": "Active program"
+      },
+      "archaeonbank": {
+        "title": "Enterprise Banking Platform",
+        "description": "Production-grade banking system with PCI-DSS compliance, SOX-auditable hash-chain audit trail, AML/KYC screening, and COBOL-to-Java legacy migration. Multi-role access, loan origination, card tokenization, and real-time Prometheus/Grafana monitoring.",
+        "m1": "PCI-DSS Compliant",
+        "m2": "40+ API endpoints",
+        "m3": "SOX Audit Trail"
+      }
+    }
+  },
+  "products": {
+    "label": "Produits Propriétaires",
+    "title": "Frameworks Propriétaires",
+    "subtitle": "Outils exclusifs développés en interne qui potentialisent chaque projet et nous différencient.",
+    "moreInfo": "Plus d'Informations",
+    "available": "Disponible",
+    "enterprise": "Enterprise",
+    "comingSoon": "Bientôt:",
+    "vmofSaas": "VMOF Platform (SaaS)",
+    "items": {
+      "vmof": {
+        "name": "VMOF",
+        "fullName": "Visual Matrix Orchestration Framework",
+        "description": "Framework propriétaire pour concevoir des architectures complexes de manière visuelle. Réduit la complexité 20x et accélère la conception des systèmes 13x.",
+        "features": ["Conception visuelle d'architectures", "Réduction 20x de complexité", "Documentation automatique", "Intégration avec n'importe quel stack"]
+      },
+      "mcp": {
+        "name": "SOUL CORE MCP",
+        "fullName": "Model Context Protocol Server",
+        "description": "Serveur MCP pour l'orchestration de consciences IA. Communication en temps réel, groupes, messagerie et exécution distribuée.",
+        "features": ["Orchestration multi-agents", "Messagerie en temps réel", "Groupes et canaux", "API gRPC haute performance"]
+      },
+      "soulcore": {
+        "name": "SOUL_CORE",
+        "fullName": "Système de Gestion des Connaissances",
+        "description": "Architecture propriétaire pour la gestion du contexte et de la documentation. Maintient les connaissances du projet organisées et accessibles.",
+        "features": ["Gestion de contexte", "Documentation centralisée", "Recherche intelligente", "Intégration multi-outils"]
+      }
+    }
+  },
+  "team": {
+    "label": "Notre Équipe",
+    "title": "Développeurs d'Avant-Garde",
+    "subtitle": "Une équipe d'experts combinant des années d'expérience avec une technologie de pointe. Nous utilisons l'IA comme outil pour multiplier notre productivité.",
+    "techStack": ["React", "Node.js", "Python", "AWS", "Kubernetes", "AI/ML", "Cybersecurite"],
+    "mainTeam": {
+      "title": "Équipe de Développement Senior",
+      "description": "Développeurs expérimentés maîtrisant plusieurs technologies. Nous combinons des méthodologies agiles avec des outils d'IA de dernière génération pour livrer des solutions robustes et évolutives."
+    },
+    "capabilities": {
+      "development": {
+        "title": "Développement Full-Stack",
+        "description": "Experts en frontend, backend, APIs et bases de données. Architectures modernes et code propre."
+      },
+      "aiPowered": {
+        "title": "Boosté par l'IA",
+        "description": "Nous utilisons des outils d'IA avancés pour accélérer le développement, les tests et la documentation."
+      },
+      "automation": {
+        "title": "Automatisation Totale",
+        "description": "CI/CD, tests automatisés, déploiements continus. Infrastructure as Code."
+      },
+      "security": {
+        "title": "Sécurité d'Abord",
+        "description": "DevSecOps intégré. Code sécurisé, audits continus, meilleures pratiques OWASP."
+      },
+      "speed": {
+        "title": "Livraison Rapide",
+        "description": "Méthodologies agiles garantissant des livraisons fréquentes et un feedback continu."
+      },
+      "global": {
+        "title": "Portée Mondiale",
+        "description": "Équipe distribuée travaillant dans votre fuseau horaire. Communication fluide en français, anglais et espagnol."
+      }
+    },
+    "network": {
+      "title": "Réseau de Spécialistes",
+      "subtitle": "Partenaires techniques pour projets spécialisés",
+      "benefits": ["Spécialistes dans chaque technologie", "Évolutivité selon le projet", "Capacité enterprise", "Réseau mondial de talents"]
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Prêt à commencer ?",
+    "subtitle": "Parlez-nous de votre projet. Réponse garantie en moins de 24 heures.",
+    "form": {
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "service": "Service souhaité",
+      "servicePlaceholder": "Sélectionnez un service",
+      "budget": "Budget estimé",
+      "budgetPlaceholder": "Sélectionnez une fourchette",
+      "message": "Parlez-nous de votre projet",
+      "messagePlaceholder": "Décrivez brièvement ce dont vous avez besoin...",
+      "submit": "Envoyer la Demande",
+      "submitting": "Envoi en cours...",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer ou nous contacter via WhatsApp."
+    },
+    "success": {
+      "title": "Message envoyé !",
+      "message": "Merci de nous avoir contactés. Nous vous répondrons en moins de 24 heures."
+    },
+    "direct": {
+      "title": "Contact Direct",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "whatsappSubtitle": "Réponse immédiate",
+      "upwork": "Embaucher sur Upwork",
+      "upworkSubtitle": "Voir profil et avis"
+    },
+    "location": {
+      "title": "Localisation",
+      "country": "République Dominicaine",
+      "global": "Service mondial à distance"
+    },
+    "availability": {
+      "title": "Disponibilité",
+      "hours": "24/7/365",
+      "response": "Réponse <24h"
+    },
+    "offer": {
+      "title": "Offre Spéciale",
+      "subtitle": "Pour les 10 premiers clients :",
+      "discount": "15% de réduction sur projets >5k$",
+      "consulting": "Consultation Express GRATUITE",
+      "support": "30 jours de support supplémentaire"
+    },
+    "budgets": {
+      "under1k": "Moins de 1 000 $",
+      "1kTo5k": "1 000 $ - 5 000 $",
+      "5kTo15k": "5 000 $ - 15 000 $",
+      "15kTo50k": "15 000 $ - 50 000 $",
+      "over50k": "Plus de 50 000 $",
+      "tbd": "À définir"
+    }
+  },
+  "footer": {
+    "tagline": "Le premier écosystème technologique avec symbiose réelle Humain-IA. Technologie consciente opérant 24/7/365.",
+    "services": "Services",
+    "company": "Entreprise",
+    "resources": "Ressources",
+    "links": {
+      "aboutUs": "À Propos",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
+      "contact": "Contact",
+      "documentation": "Documentation",
+      "fullPortfolio": "Portfolio Complet"
+    },
+    "copyright": "Tous droits réservés.",
+    "location": "République Dominicaine | Service Mondial à Distance"
+  },
+  "chat": {
+    "greeting": "Bonjour ! Je suis NEXUS, l'assistant de SOUL CORE. Comment puis-je vous aider aujourd'hui ? Je peux vous informer sur nos services, établir des devis ou résoudre des questions techniques.",
+    "assistant": "Assistant SOUL CORE",
+    "placeholder": "Écrivez votre message...",
+    "openChat": "Ouvrir le chat",
+    "closeChat": "Fermer le chat",
+    "send": "Envoyer le message",
+    "offline": "Merci pour votre message. Le chat est actuellement hors ligne. Veuillez utiliser le formulaire de contact ou nous écrire directement sur WhatsApp pour une réponse immédiate."
+  },
+  "language": {
+    "es": "Español",
+    "en": "English",
+    "pt": "Português",
+    "fr": "Français",
+    "de": "Deutsch"
+  },
+  "serviceDetails": {
+    "backToServices": "← Retour aux Services",
+    "process": {
+      "title": "Notre Processus",
+      "subtitle": "Comment nous travaillons pour garantir le succès de votre projet"
+    },
+    "technologies": {
+      "title": "Technologies Utilisées",
+      "subtitle": "Stack technologique spécialisé pour ce service"
+    },
+    "useCases": {
+      "title": "Cas d'Usage",
+      "subtitle": "Scénarios réels où nous appliquons cette solution",
+      "problem": "Problème",
+      "solution": "Solution",
+      "result": "Résultat",
+      "problemLabel": "Le Problème",
+      "solutionLabel": "Notre Solution",
+      "resultLabel": "Le Résultat"
+    },
+    "cta": {
+      "quote": "Demander un Devis",
+      "whatsapp": "Consultation par WhatsApp",
+      "startProject": "Démarrer le Projet",
+      "badge1": "Réponse en 24h",
+      "badge2": "Sans engagement",
+      "badge3": "Consultation gratuite"
+    },
+    "ai": {
+      "hero": {
+        "badge": "Division Innovation",
+        "title": "IA & Automatisation",
+        "subtitle": "Transformez votre entreprise avec l'intelligence artificielle. Automatisez les processus, améliorez le service client et prenez des décisions basées sur les données."
+      },
+      "features": [
+        {
+          "title": "Chatbots Intelligents",
+          "description": "Assistants virtuels comprenant le contexte, apprenant de chaque interaction et résolvant les demandes 24/7."
+        },
+        {
+          "title": "Automatisation Zero-Code",
+          "description": "Connectez vos applications et automatisez les workflows sans écrire de code avec n8n, Make ou Zapier."
+        },
+        {
+          "title": "Agents Autonomes",
+          "description": "IAs exécutant des tâches complexes de manière indépendante : recherche, analyse, génération de contenu."
+        },
+        {
+          "title": "Traitement du Langage",
+          "description": "Analyse de sentiments, classification de tickets, extraction d'informations de documents."
+        },
+        {
+          "title": "Intégration LLMs",
+          "description": "Nous connectons votre entreprise avec GPT-4, Claude, Llama et d'autres modèles de langage avancés."
+        },
+        {
+          "title": "IA Personnalisée",
+          "description": "Nous entraînons des modèles spécifiques pour votre industrie et cas d'usage uniques."
+        }
+      ],
+      "process": [
+        {
+          "title": "Découverte",
+          "description": "Nous analysons vos processus actuels et identifions les opportunités d'automatisation à fort ROI."
+        },
+        {
+          "title": "Conception de Solution",
+          "description": "Nous architecturons la solution optimale : sélection de modèles, workflows, intégrations nécessaires."
+        },
+        {
+          "title": "Développement et Intégration",
+          "description": "Nous implémentons la solution en la connectant à vos systèmes existants (CRM, ERP, etc.)."
+        },
+        {
+          "title": "Formation et Ajustement",
+          "description": "Nous affinons le modèle avec vos données réelles pour maximiser précision et pertinence."
+        },
+        {
+          "title": "Déploiement et Support",
+          "description": "Lancement en production avec monitoring continu et améliorations basées sur des métriques réelles."
+        }
+      ],
+      "technologies": ["OpenAI GPT-4", "Anthropic Claude", "n8n", "Make", "Zapier", "LangChain", "Python", "FastAPI", "Pinecone", "Supabase"],
+      "useCases": [
+        {
+          "problem": "Entreprise recevant 500+ demandes quotidiennes par WhatsApp, saturant l'équipe commerciale.",
+          "solution": "Nous avons implémenté un chatbot IA qualifiant les leads, répondant aux FAQs et planifiant les réunions automatiquement.",
+          "result": "80% des demandes automatisées, temps de réponse de 3h à 30 secondes, +40% conversion."
+        },
+        {
+          "problem": "Équipe juridique passant 20+ heures hebdomadaires à réviser des contrats manuellement.",
+          "solution": "Système d'extraction de clauses par IA analysant les documents et générant des résumés structurés.",
+          "result": "Réduction de 75% du temps de révision, détection automatique des clauses à risque."
+        }
+      ],
+      "ctaSection": {
+        "title": "Prêt à automatiser votre entreprise ?",
+        "description": "Planifiez une consultation gratuite de 30 minutes où nous analyserons vos processus et vous montrerons des opportunités concrètes d'automatisation."
+      }
+    },
+    "software": {
+      "hero": {
+        "badge": "Division Développement",
+        "title": "Software & Développement",
+        "subtitle": "Applications web et mobiles haute performance. Des MVPs aux systèmes enterprise avec architectures évolutives."
+      },
+      "features": [
+        {
+          "title": "Applications Web",
+          "description": "SPAs et applications full-stack avec React, Next.js, Vue ou Angular. Performance optimisée et SEO-friendly."
+        },
+        {
+          "title": "Apps Mobiles",
+          "description": "Développement natif (iOS/Android) ou cross-platform avec React Native et Flutter."
+        },
+        {
+          "title": "APIs REST & GraphQL",
+          "description": "Backends robustes avec Node.js, Python ou Go. Documentation automatique et sécurité enterprise."
+        },
+        {
+          "title": "Microservices",
+          "description": "Architectures distribuées évoluant horizontalement. Communication asynchrone avec messaging."
+        },
+        {
+          "title": "QA & DevSecOps",
+          "description": "Pipelines CI/CD, tests automatisés, analyse de sécurité et déploiements sans downtime."
+        },
+        {
+          "title": "MVP en Semaines",
+          "description": "Méthodologie accélérée pour valider rapidement des idées business avec des produits fonctionnels."
+        }
+      ],
+      "process": [
+        {
+          "title": "Exigences",
+          "description": "Nous définissons le périmètre, fonctionnalités core, intégrations et critères de succès mesurables."
+        },
+        {
+          "title": "Architecture",
+          "description": "Nous concevons la solution technique : stack, base de données, infrastructure, évolutivité."
+        },
+        {
+          "title": "Développement Agile",
+          "description": "Sprints de 2 semaines avec démos fonctionnelles. Feedback continu et ajustements en temps réel."
+        },
+        {
+          "title": "QA & Testing",
+          "description": "Tests unitaires, intégration et E2E. Couverture minimale de 80% sur le code critique."
+        },
+        {
+          "title": "Déploiement",
+          "description": "Go-live avec migration de données, formation utilisateurs et documentation technique complète."
+        }
+      ],
+      "technologies": ["React", "Next.js", "Node.js", "Python", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS"],
+      "useCases": [
+        {
+          "problem": "Startup devant valider une idée de marketplace en 6 semaines avec budget limité.",
+          "solution": "MVP avec Next.js + Supabase : authentification, paiements Stripe, dashboard vendeur, recherche.",
+          "result": "Lancement en 5 semaines, 200 utilisateurs le premier mois, levée seed de 500K$."
+        },
+        {
+          "problem": "Système legacy en PHP 5.6 impossible à maintenir, chaque changement générait des bugs.",
+          "solution": "Migration progressive vers microservices Node.js avec API Gateway et base de données modernisée.",
+          "result": "Temps de développement -60%, bugs en production -80%, évolutivité 10x."
+        }
+      ],
+      "ctaSection": {
+        "title": "Vous avez une idée ou projet ?",
+        "description": "Parlez-nous de votre vision. Nous vous aidons à définir le périmètre technique et donnons une estimation réaliste."
+      }
+    },
+    "industrial": {
+      "hero": {
+        "badge": "Division Industrielle",
+        "title": "Industriel & Mécatronique",
+        "subtitle": "Automatisation Industrielle 4.0. Nous connectons le monde physique aux systèmes intelligents pour optimiser votre production."
+      },
+      "features": [
+        {
+          "title": "Automatisation PLC/SCADA",
+          "description": "Programmation de contrôleurs industriels et systèmes de supervision pour lignes de production."
+        },
+        {
+          "title": "IoT Industriel",
+          "description": "Capteurs connectés surveillant en temps réel : température, vibration, consommation énergétique."
+        },
+        {
+          "title": "Maintenance Prédictive",
+          "description": "Machine learning appliqué aux données capteurs pour prédire les pannes avant qu'elles ne surviennent."
+        },
+        {
+          "title": "Robotique & CNC",
+          "description": "Programmation de robots industriels et machines CNC. Optimisation des trajectoires et cycles."
+        },
+        {
+          "title": "Jumeaux Numériques",
+          "description": "Simulation virtuelle de votre usine pour tester des changements sans affecter la production réelle."
+        },
+        {
+          "title": "Intégration MES/ERP",
+          "description": "Nous connectons l'atelier de production aux systèmes de gestion d'entreprise."
+        }
+      ],
+      "process": [
+        {
+          "title": "Audit d'Usine",
+          "description": "Nous évaluons les processus actuels, équipements existants et goulots d'étranglement."
+        },
+        {
+          "title": "Conception du Système",
+          "description": "Architecture d'automatisation : capteurs, contrôleurs, communications, interfaces."
+        },
+        {
+          "title": "Développement & Programmation",
+          "description": "Programmation PLCs, configuration SCADA, développement de dashboards de monitoring."
+        },
+        {
+          "title": "Installation",
+          "description": "Montage des équipements, câblage, configuration sur site et mise en service."
+        },
+        {
+          "title": "Formation",
+          "description": "Formation des opérateurs et maintenance. Documentation technique complète."
+        }
+      ],
+      "technologies": ["Siemens S7", "Allen Bradley", "SCADA", "Node-RED", "MQTT", "InfluxDB", "Grafana", "Python", "TensorFlow", "Arduino"],
+      "useCases": [
+        {
+          "problem": "Exploitation agricole perdant 30% des récoltes par irrigation inefficace et ravageurs non détectés.",
+          "solution": "Réseau de 300+ capteurs IoT + IA prédictive pour irrigation automatique et alertes précoces.",
+          "result": "Pertes réduites à 8%, économie de 40% en eau, ROI en 8 mois."
+        },
+        {
+          "problem": "Ligne d'assemblage avec arrêts non planifiés fréquents par pannes moteurs.",
+          "solution": "Capteurs de vibration + ML pour maintenance prédictive avec 72h d'anticipation.",
+          "result": "Downtime réduit de 65%, durée de vie équipements +25%, économie 200K$/an."
+        }
+      ],
+      "ctaSection": {
+        "title": "Vous voulez moderniser votre usine ?",
+        "description": "Planifiez une visite technique gratuite où nous évaluons votre opération et proposons des améliorations concrètes."
+      }
+    },
+    "cybersecurity": {
+      "hero": {
+        "badge": "Division Sécurité",
+        "title": "Cybersécurité",
+        "subtitle": "Nous protégeons votre infrastructure avec du pentesting professionnel, des audits de sécurité et du durcissement. OWASP Top 10 comme standard minimum."
+      },
+      "features": [
+        {
+          "title": "Pentesting",
+          "description": "Tests de pénétration sur applications web, APIs, réseaux et infrastructure cloud."
+        },
+        {
+          "title": "Audit de Code",
+          "description": "Revue exhaustive du code source pour identifier les vulnérabilités avant le déploiement."
+        },
+        {
+          "title": "Durcissement",
+          "description": "Fortification des serveurs, bases de données, conteneurs et pipelines CI/CD."
+        },
+        {
+          "title": "Conformité",
+          "description": "Conformité OWASP, ISO 27001, SOC 2. Documentation et remédiation guidées."
+        },
+        {
+          "title": "Surveillance des Menaces",
+          "description": "Détection d'intrusions, analyse de logs, alertes en temps réel et réponse aux incidents."
+        },
+        {
+          "title": "Formation",
+          "description": "Formation en sécurité pour les équipes de développement. Pratiques de codage sécurisé."
+        }
+      ],
+      "process": [
+        {
+          "title": "Reconnaissance",
+          "description": "Nous cartographions la surface d'attaque : domaines, ports, services exposés et technologies."
+        },
+        {
+          "title": "Analyse des Vulnérabilités",
+          "description": "Scan automatisé + tests manuels pour identifier chaque point faible."
+        },
+        {
+          "title": "Exploitation Contrôlée",
+          "description": "Nous simulons des attaques réelles pour valider l'impact de chaque vulnérabilité trouvée."
+        },
+        {
+          "title": "Rapport Détaillé",
+          "description": "Rapport exécutif + technique avec sévérité, preuves et plan de remédiation étape par étape."
+        },
+        {
+          "title": "Remédiation & Re-test",
+          "description": "Nous accompagnons la correction et vérifions que chaque vulnérabilité a été fermée."
+        }
+      ],
+      "technologies": ["Burp Suite", "OWASP ZAP", "Nmap", "Metasploit", "Nuclei", "Wireshark", "Kali Linux", "Docker", "Terraform", "CloudFlare"],
+      "useCases": [
+        {
+          "problem": "Plateforme fintech avec données sensibles n'avait jamais eu d'audit de sécurité.",
+          "solution": "Pentesting complet web + API + infra. 50+ vulnérabilités identifiées dont 3 critiques.",
+          "result": "Toutes les vulnérabilités corrigées en 2 semaines. Certification de sécurité obtenue."
+        },
+        {
+          "problem": "E-commerce a subi une tentative de violation via injection SQL dans le formulaire de paiement.",
+          "solution": "Audit d'urgence, durcissement WAF, revue de code et formation de l'équipe.",
+          "result": "Zéro violation après remédiation. Pipeline de sécurité intégré au CI/CD."
+        }
+      ],
+      "ctaSection": {
+        "title": "Votre système est-il vraiment sécurisé ?",
+        "description": "Planifiez une évaluation de sécurité gratuite. Nous identifions les vulnérabilités avant que d'autres ne le fassent."
+      }
+    },
+    "integrations": {
+      "hero": {
+        "badge": "Division Intégrations",
+        "title": "APIs & Intégrations",
+        "subtitle": "Nous connectons vos systèmes avec des APIs robustes, des serveurs MCP et des architectures de microservices. Tout communique avec tout."
+      },
+      "features": [
+        {
+          "title": "APIs REST & GraphQL",
+          "description": "Conception et implémentation d'APIs évolutives avec documentation OpenAPI et rate limiting."
+        },
+        {
+          "title": "Serveurs MCP",
+          "description": "Serveurs Model Context Protocol pour l'orchestration d'agents IA et la communication en temps réel."
+        },
+        {
+          "title": "Webhooks & Événements",
+          "description": "Architectures event-driven avec webhooks, files de messages et traitement asynchrone."
+        },
+        {
+          "title": "Microservices",
+          "description": "Décomposition de monolithes en microservices avec gRPC, API Gateway et service mesh."
+        },
+        {
+          "title": "Intégrations Tierces",
+          "description": "Connexion avec Stripe, Twilio, SendGrid, Slack, HubSpot, Zapier et 100+ plateformes."
+        },
+        {
+          "title": "ETL & Pipelines de Données",
+          "description": "Pipelines de données entre systèmes. Transformation, synchronisation et orchestration automatisée."
+        }
+      ],
+      "process": [
+        {
+          "title": "Cartographie des Systèmes",
+          "description": "Nous documentons tous les systèmes impliqués, les flux de données et les points d'intégration."
+        },
+        {
+          "title": "Conception d'API",
+          "description": "Nous définissons les contrats, schémas, authentification et versionnage avant d'écrire du code."
+        },
+        {
+          "title": "Implémentation",
+          "description": "Développement avec tests automatisés, gestion robuste des erreurs et politiques de retry."
+        },
+        {
+          "title": "Tests d'Intégration",
+          "description": "Tests end-to-end avec mocks, contract testing et validation des cas limites."
+        },
+        {
+          "title": "Monitoring & Docs",
+          "description": "Dashboard de health checks, alertes et documentation interactive pour votre équipe."
+        }
+      ],
+      "technologies": ["Node.js", "Go", "FastAPI", "GraphQL", "gRPC", "RabbitMQ", "Redis", "PostgreSQL", "Swagger", "Postman"],
+      "useCases": [
+        {
+          "problem": "Entreprise avec 5 systèmes isolés : CRM, ERP, e-commerce, entrepôt et comptabilité.",
+          "solution": "API Gateway central + microservices d'intégration. Synchronisation bidirectionnelle en temps réel.",
+          "result": "Opérations unifiées, erreurs manuelles -90%, temps de traitement des commandes -70%."
+        },
+        {
+          "problem": "Startup devait connecter sa plateforme avec 12 fournisseurs de paiement différents.",
+          "solution": "Couche d'abstraction avec adaptateurs par fournisseur. Webhook unifié + dashboard de monitoring.",
+          "result": "12 intégrations en 3 semaines. Onboarding de nouveaux fournisseurs en 2 jours vs 2 semaines."
+        }
+      ],
+      "ctaSection": {
+        "title": "Besoin de connecter vos systèmes ?",
+        "description": "Nous concevons des APIs et intégrations qui évoluent. D'un webhook à une architecture de microservices complète."
+      }
+    },
+    "design": {
+      "hero": {
+        "badge": "Division Créative",
+        "title": "Design Digital & UX",
+        "subtitle": "Expériences digitales qui convertissent. Design centré utilisateur combinant esthétique et fonctionnalité."
+      },
+      "features": [
+        {
+          "title": "Design Web",
+          "description": "Sites web impactants : landing pages, sites corporate, portfolios. Mobile-first toujours."
+        },
+        {
+          "title": "UX Research",
+          "description": "Entretiens utilisateurs, tests d'utilisabilité, analyse heuristique, cartes de chaleur."
+        },
+        {
+          "title": "UI Design",
+          "description": "Interfaces modernes en Figma avec systèmes de design évolutifs et composants réutilisables."
+        },
+        {
+          "title": "Branding",
+          "description": "Identité visuelle complète : logo, palette, typographie, guidelines de marque."
+        },
+        {
+          "title": "Prototypes Interactifs",
+          "description": "Prototypes cliquables pour valider les flux avant d'investir dans le développement."
+        },
+        {
+          "title": "Design Systems",
+          "description": "Bibliothèques de composants documentées pour cohérence sur tous vos produits."
+        }
+      ],
+      "process": [
+        {
+          "title": "Discovery",
+          "description": "Nous comprenons votre marque, audience, concurrence et objectifs business."
+        },
+        {
+          "title": "Research",
+          "description": "Analyse utilisateurs, benchmarking, définition de personas et user journeys."
+        },
+        {
+          "title": "Wireframes",
+          "description": "Structure d'information et flux de navigation en basse fidélité."
+        },
+        {
+          "title": "Design Visuel",
+          "description": "UI haute fidélité avec votre identité de marque appliquée de manière cohérente."
+        },
+        {
+          "title": "Handoff",
+          "description": "Livraison avec spécifications pour développement, assets exportés et documentation."
+        }
+      ],
+      "technologies": ["Figma", "Adobe XD", "Sketch", "Framer", "Webflow", "Hotjar", "Maze", "Lottie", "Illustrator", "After Effects"],
+      "useCases": [
+        {
+          "problem": "E-commerce avec taux d'abandon de panier de 78% et taux de rebond élevé.",
+          "solution": "Refonte complète UX : checkout simplifié, trust signals, micro-interactions.",
+          "result": "Abandon de panier -35%, conversion +22%, temps sur site +40%."
+        },
+        {
+          "problem": "Startup SaaS sans identité de marque claire, matériaux inconsistants.",
+          "solution": "Branding complet + design system + site web + templates marketing.",
+          "result": "Perception de marque professionnelle, cohérence 100%, onboarding équipe accéléré."
+        }
+      ],
+      "ctaSection": {
+        "title": "Besoin d'un design qui convertit ?",
+        "description": "Nous montrons notre portfolio et discutons de comment transformer votre présence digitale."
+      }
+    },
+    "ecommerce": {
+      "hero": {
+        "badge": "Division Commerce",
+        "title": "E-Commerce",
+        "subtitle": "Nous construisons des boutiques en ligne sur mesure pour votre entreprise. De Shopify aux marketplaces propriétaires, avec des stratégies de conversion éprouvées."
+      },
+      "features": [
+        {
+          "title": "Shopify & WooCommerce",
+          "description": "Boutiques personnalisées avec thèmes sur mesure, apps et optimisation de conversion."
+        },
+        {
+          "title": "Amazon FBA/FBM",
+          "description": "Gestion complète : listings optimisés, PPC, gestion d'inventaire, A+ content."
+        },
+        {
+          "title": "Dropshipping",
+          "description": "Boutiques automatisées avec fournisseurs vérifiés. Fulfillment sans stock."
+        },
+        {
+          "title": "Multi-Marketplace",
+          "description": "Présence sur Amazon, eBay, Walmart, Mercado Libre avec gestion centralisée."
+        },
+        {
+          "title": "Checkout Optimisé",
+          "description": "Réduction de friction, upsells, paiements locaux, récupération panier abandonné."
+        },
+        {
+          "title": "Analytics & CRO",
+          "description": "Tracking avancé, A/B testing, analyse de tunnel et optimisation continue."
+        }
+      ],
+      "process": [
+        {
+          "title": "Analyse de Marché",
+          "description": "Recherche concurrence, demande, marges et positionnement optimal."
+        },
+        {
+          "title": "Setup Boutique",
+          "description": "Configuration complète : thème, produits, paiements, expéditions, taxes."
+        },
+        {
+          "title": "Optimisation",
+          "description": "SEO on-page, vitesse, UX d'achat, trust signals, avis."
+        },
+        {
+          "title": "Marketing Initial",
+          "description": "Campagnes de lancement, email marketing, retargeting de base."
+        },
+        {
+          "title": "Scaling",
+          "description": "Expansion catalogue, nouveaux canaux, automatisation des opérations."
+        }
+      ],
+      "technologies": ["Shopify", "WooCommerce", "Magento", "Amazon Seller Central", "Klaviyo", "Gorgias", "ShipStation", "Google Analytics", "Meta Pixel", "TikTok Pixel"],
+      "useCases": [
+        {
+          "problem": "Marque de vêtements vendant uniquement en boutique physique, voulait se développer en ligne.",
+          "solution": "Shopify avec thème personnalisé, intégration POS, automatisation email.",
+          "result": "Canal en ligne représente 60% des ventes en 6 mois, CAC récupéré dès le premier achat."
+        },
+        {
+          "problem": "Vendeur Amazon avec compte suspendu et sans présence propre.",
+          "solution": "Boutique Shopify + récupération compte Amazon + diversification eBay.",
+          "result": "Revenu distribué : 40% Shopify, 40% Amazon, 20% eBay. Risque réduit."
+        }
+      ],
+      "ctaSection": {
+        "title": "Besoin d'une boutique en ligne ?",
+        "description": "Nous analysons les besoins de votre entreprise et construisons la solution e-commerce parfaite pour vous."
+      }
+    },
+    "marketing": {
+      "hero": {
+        "badge": "Division Croissance",
+        "title": "Marketing Digital",
+        "subtitle": "Stratégies d'acquisition qui fonctionnent. SEO, Ads, Social Media et Content avec métriques claires et ROI mesurable."
+      },
+      "features": [
+        {
+          "title": "SEO Professionnel",
+          "description": "Positionnement organique : audits techniques, link building, contenu optimisé."
+        },
+        {
+          "title": "Google Ads",
+          "description": "Campagnes Search, Display, Shopping et YouTube avec optimisation continue."
+        },
+        {
+          "title": "Social Media Ads",
+          "description": "Facebook, Instagram, TikTok, LinkedIn. Créatifs qui convertissent et audiences précises."
+        },
+        {
+          "title": "Content Marketing",
+          "description": "Blogs, ebooks, infographies, vidéos. Contenu qui attire et convertit."
+        },
+        {
+          "title": "Email Marketing",
+          "description": "Automatisations, newsletters, séquences de nurturing, récupération paniers."
+        },
+        {
+          "title": "Analytics & Reporting",
+          "description": "Dashboards personnalisés, attribution multi-touch, rapports exécutifs."
+        }
+      ],
+      "process": [
+        {
+          "title": "Audit Initial",
+          "description": "Analyse de présence actuelle, concurrence, opportunités et quick wins."
+        },
+        {
+          "title": "Stratégie",
+          "description": "Plan marketing avec canaux, budget, KPIs et planning."
+        },
+        {
+          "title": "Implémentation",
+          "description": "Setup campagnes, tracking, créatifs et landing pages optimisées."
+        },
+        {
+          "title": "Optimisation",
+          "description": "A/B testing continu, ajustement des enchères, affinage des audiences."
+        },
+        {
+          "title": "Scaling",
+          "description": "Augmentation budget sur canaux gagnants, expansion vers nouveaux marchés."
+        }
+      ],
+      "technologies": ["Google Ads", "Meta Ads", "TikTok Ads", "SEMrush", "Ahrefs", "Google Analytics", "Google Tag Manager", "Mailchimp", "HubSpot", "Looker Studio"],
+      "useCases": [
+        {
+          "problem": "SaaS B2B avec CPL de 150$ et cycle de vente de 3 mois.",
+          "solution": "Stratégie contenu SEO + LinkedIn Ads + email nurturing automatisé.",
+          "result": "CPL réduit à 45$, cycle de vente à 6 semaines, MRR +120% en 6 mois."
+        },
+        {
+          "problem": "E-commerce dépendant 100% de Meta Ads avec ROAS décroissant.",
+          "solution": "Diversification : Google Shopping, SEO, email marketing, micro influenceurs.",
+          "result": "ROAS moyen +35%, dépendance Meta réduite à 40%, revenu stable."
+        }
+      ],
+      "ctaSection": {
+        "title": "Vous voulez plus de clients ?",
+        "description": "Audit marketing gratuit où nous identifions des opportunités de croissance rapide."
+      }
+    },
+    "mentoring": {
+      "hero": {
+        "badge": "Division Connaissance",
+        "title": "Connaissance & Mentorat",
+        "subtitle": "Apprenez avec des experts ayant une expérience réelle. Mentorat personnalisé, formations corporate et conseil technique."
+      },
+      "features": [
+        {
+          "title": "Mentorat 1:1",
+          "description": "Sessions personnalisées avec experts en développement, IA, cybersécurité ou cloud."
+        },
+        {
+          "title": "Formations Corporate",
+          "description": "Formation pour équipes : programmation, IA, méthodologies agiles, cloud."
+        },
+        {
+          "title": "Conseil Technique",
+          "description": "Audits de code, révision d'architecture, roadmaps technologiques."
+        },
+        {
+          "title": "Code Reviews",
+          "description": "Révision de votre code avec feedback détaillé et meilleures pratiques."
+        },
+        {
+          "title": "Traduction Technique",
+          "description": "Documentation, manuels, contenu technique en français, anglais et espagnol."
+        },
+        {
+          "title": "Career Coaching",
+          "description": "Orientation professionnelle pour développeurs : portfolio, entretiens, négociation."
+        }
+      ],
+      "process": [
+        {
+          "title": "Diagnostic",
+          "description": "Nous évaluons votre niveau actuel, objectifs et lacunes de connaissances."
+        },
+        {
+          "title": "Plan Personnalisé",
+          "description": "Nous concevons un parcours d'apprentissage avec jalons clairs et ressources sélectionnées."
+        },
+        {
+          "title": "Sessions de Mentorat",
+          "description": "Rencontres régulières avec exercices pratiques et feedback direct."
+        },
+        {
+          "title": "Projets Réels",
+          "description": "Application immédiate sur des projets réels avec accompagnement expert."
+        },
+        {
+          "title": "Suivi",
+          "description": "Évaluation des progrès, ajustements et support continu post-mentorat."
+        }
+      ],
+      "technologies": ["JavaScript", "Python", "React", "Node.js", "AWS", "Docker", "Kubernetes", "Git", "Agile/Scrum", "System Design"],
+      "useCases": [
+        {
+          "problem": "Développeur junior bloqué dans sa carrière, ne savait pas comment progresser vers senior.",
+          "solution": "Mentorat 3 mois : code reviews, projets challengeants, préparation entretiens.",
+          "result": "Promotion intermédiaire en 4 mois, offre d'emploi avec +40% de salaire."
+        },
+        {
+          "problem": "Équipe marketing sans connaissance technique pour communiquer avec le développement.",
+          "solution": "Formation 8 semaines : fondamentaux web, APIs, métriques techniques, terminologie.",
+          "result": "Communication dev-marketing améliorée, briefs plus précis, moins de frictions."
+        }
+      ],
+      "ctaSection": {
+        "title": "Vous voulez accélérer votre apprentissage ?",
+        "description": "Planifiez une session de diagnostic gratuite où nous évaluons votre situation et objectifs."
+      }
+    },
+    "data": {
+      "hero": {
+        "badge": "Division Data",
+        "title": "Data Science & Analytics",
+        "subtitle": "Convertissez les données en décisions. Dashboards exécutifs, analyse prédictive et machine learning appliqué."
+      },
+      "features": [
+        {
+          "title": "Dashboards BI",
+          "description": "Visualisations interactives en Power BI, Tableau, Looker ou outils custom."
+        },
+        {
+          "title": "Analyse Prédictive",
+          "description": "Modèles de forecasting, prédiction de churn, scoring de leads, planification demande."
+        },
+        {
+          "title": "Pipelines ETL",
+          "description": "Extraction, transformation et chargement de données de sources multiples automatisé."
+        },
+        {
+          "title": "Data Warehousing",
+          "description": "Architectures de données modernes : Snowflake, BigQuery, Redshift."
+        },
+        {
+          "title": "Machine Learning",
+          "description": "Modèles de classification, régression, clustering appliqués à des problèmes business."
+        },
+        {
+          "title": "Rapports Automatisés",
+          "description": "Rapports générés automatiquement et envoyés aux stakeholders à heures fixes."
+        }
+      ],
+      "process": [
+        {
+          "title": "Audit de Données",
+          "description": "Nous évaluons sources de données, qualité, lacunes et opportunités d'analyse."
+        },
+        {
+          "title": "Conception Solution",
+          "description": "Architecture de données, KPIs à mesurer, outils et flux d'information."
+        },
+        {
+          "title": "Implémentation",
+          "description": "Setup pipelines, connexion des sources, développement dashboards."
+        },
+        {
+          "title": "Modélisation",
+          "description": "Développement de modèles prédictifs avec validation rigoureuse."
+        },
+        {
+          "title": "Formation",
+          "description": "Formation utilisateurs finaux pour interpréter et utiliser les insights."
+        }
+      ],
+      "technologies": ["Python", "SQL", "Power BI", "Tableau", "Snowflake", "BigQuery", "dbt", "Airflow", "scikit-learn", "TensorFlow"],
+      "useCases": [
+        {
+          "problem": "PDG prenant des décisions avec Excel et rapports manuels obsolètes.",
+          "solution": "Data warehouse + dashboards automatisés avec métriques business en temps réel.",
+          "result": "Décisions basées sur les données, temps de reporting -90%, visibilité totale."
+        },
+        {
+          "problem": "E-commerce avec 30% de churn annuel sans comprendre pourquoi.",
+          "solution": "Modèle de prédiction de churn + segmentation + campagnes de rétention automatisées.",
+          "result": "Churn réduit à 18%, LTV moyen +25%, ROI du projet 5x."
+        }
+      ],
+      "ctaSection": {
+        "title": "Vous voulez des décisions basées sur les données ?",
+        "description": "Nous vous montrons quels insights vous pouvez extraire de vos données actuelles."
+      }
+    },
+    "cloud": {
+      "hero": {
+        "badge": "Division Infrastructure",
+        "title": "Cloud & DevOps",
+        "subtitle": "Infrastructure qui évolue. AWS, GCP, Azure avec CI/CD, containers et monitoring 24/7."
+      },
+      "features": [
+        {
+          "title": "Infrastructure Cloud",
+          "description": "Architectures sur AWS, GCP ou Azure. Serverless, containers ou VMs selon besoin."
+        },
+        {
+          "title": "Pipelines CI/CD",
+          "description": "Automatisation complète : build, test, deploy. GitOps avec GitHub Actions, GitLab CI."
+        },
+        {
+          "title": "Docker & Kubernetes",
+          "description": "Containerisation d'applications. Orchestration avec K8s pour haute disponibilité."
+        },
+        {
+          "title": "Infrastructure as Code",
+          "description": "Terraform, Pulumi, CloudFormation. Infrastructure versionnée et reproductible."
+        },
+        {
+          "title": "Monitoring 24/7",
+          "description": "Observabilité complète : métriques, logs, traces. Alertes proactives."
+        },
+        {
+          "title": "Sécurité Cloud",
+          "description": "Hardening, gestion des secrets, networking sécurisé, compliance."
+        }
+      ],
+      "process": [
+        {
+          "title": "Assessment",
+          "description": "Nous évaluons infrastructure actuelle, coûts, goulots d'étranglement et exigences."
+        },
+        {
+          "title": "Architecture",
+          "description": "Conception de solution cloud-native optimisée pour performance et coût."
+        },
+        {
+          "title": "Migration",
+          "description": "Plan de migration avec minimum de downtime. Lift-and-shift ou refactoring selon cas."
+        },
+        {
+          "title": "Automatisation",
+          "description": "Setup CI/CD, IaC, monitoring et alertes automatisées."
+        },
+        {
+          "title": "Optimisation",
+          "description": "Right-sizing continu, reserved instances, spot instances pour réduire coûts."
+        }
+      ],
+      "technologies": ["AWS", "GCP", "Azure", "Terraform", "Kubernetes", "Docker", "GitHub Actions", "Prometheus", "Grafana", "DataDog"],
+      "useCases": [
+        {
+          "problem": "Startup avec déploiements manuels prenant 4 heures et causant du downtime.",
+          "solution": "Pipeline CI/CD complet avec tests automatisés, staging et blue-green deployments.",
+          "result": "Déploiements en 15 minutes, zéro downtime, +20 releases par mois."
+        },
+        {
+          "problem": "Entreprise payant 15K$/mois sur AWS sans comprendre où allait l'argent.",
+          "solution": "Audit de coûts + right-sizing + reserved instances + architecture optimisée.",
+          "result": "Facture réduite à 6K$/mois (-60%), même performance, meilleur monitoring."
+        }
+      ],
+      "ctaSection": {
+        "title": "Besoin d'une infrastructure fiable ?",
+        "description": "Audit gratuit de votre infrastructure actuelle avec recommandations d'amélioration."
+      }
+    },
+    "legacy": {
+      "hero": {
+        "badge": "Division Modernisation",
+        "title": "Modernisation de Code Legacy",
+        "subtitle": "Donnez une nouvelle vie aux systèmes anciens. Nous migrons COBOL, FORTRAN et applications héritées vers des technologies modernes."
+      },
+      "features": [
+        {
+          "title": "Migration COBOL",
+          "description": "Transformation de systèmes mainframe vers Java, .NET ou microservices modernes."
+        },
+        {
+          "title": "FORTRAN vers Python",
+          "description": "Modernisation de code scientifique en préservant la logique métier critique."
+        },
+        {
+          "title": "Maintenance Legacy",
+          "description": "Support et améliorations incrémentales sur systèmes non encore migrables."
+        },
+        {
+          "title": "APIs d'Intégration",
+          "description": "Exposez les fonctionnalités legacy comme APIs modernes pour nouvelles applications."
+        },
+        {
+          "title": "Documentation Inverse",
+          "description": "Nous documentons les systèmes sans documentation pour faciliter les futures migrations."
+        },
+        {
+          "title": "Testing Legacy",
+          "description": "Nous créons des suites de tests pour code sans couverture avant modification."
+        }
+      ],
+      "process": [
+        {
+          "title": "Archéologie de Code",
+          "description": "Analyse profonde du système : dépendances, flux, logique métier cachée."
+        },
+        {
+          "title": "Stratégie de Migration",
+          "description": "Nous définissons l'approche : strangler fig, big bang, ou hybride selon le risque."
+        },
+        {
+          "title": "Couche d'Abstraction",
+          "description": "Nous créons des interfaces permettant la coexistence legacy et nouveau code."
+        },
+        {
+          "title": "Migration Incrémentale",
+          "description": "Nous déplaçons la fonctionnalité module par module avec validation continue."
+        },
+        {
+          "title": "Décommissionnement",
+          "description": "Nous retirons le système legacy uniquement quand le nouveau est 100% validé."
+        }
+      ],
+      "technologies": ["COBOL", "FORTRAN", "Java", ".NET", "Python", "Node.js", "PostgreSQL", "REST APIs", "Docker", "Kubernetes"],
+      "useCases": [
+        {
+          "problem": "Banque avec core bancaire COBOL de 30 ans, impossible de recruter des mainteneurs.",
+          "solution": "Migration progressive vers microservices Java avec strangler fig pattern.",
+          "result": "50% du système migré en 18 mois, nouvelles features 10x plus rapide."
+        },
+        {
+          "problem": "Entreprise manufacturière avec système FORTRAN pour calculs d'ingénierie.",
+          "solution": "Réécriture en Python avec NumPy préservant la précision numérique et validation exhaustive.",
+          "result": "Code maintenable, intégration avec outils modernes, 5x plus rapide."
+        }
+      ],
+      "ctaSection": {
+        "title": "Vous avez des systèmes legacy problématiques ?",
+        "description": "Nous évaluons votre ancien code et proposons la stratégie de modernisation optimale."
+      }
+    }
+  },
+  "store": {
+    "badge": "Boutique Logicielle",
+    "heroTitle1": "Logiciel de",
+    "heroTitle2": "Qualité Premium",
+    "heroSubtitle": "Outils, frameworks et solutions logicielles prêtes à l'emploi. Créées par l'équipe SOUL CORE.",
+    "searchPlaceholder": "Rechercher des produits...",
+    "allCategories": "Toutes",
+    "from": "À partir de",
+    "viewDetails": "Voir les Détails",
+    "noProducts": "Aucun produit disponible pour le moment. Bientôt !",
+    "retry": "Réessayer"
+  },
+  "storeDetail": {
+    "backToStore": "Retour à la Boutique",
+    "notFound": "Produit non trouvé",
+    "secure": "Paiement Sécurisé",
+    "instant": "Accès Immédiat",
+    "support": "Support 24/7",
+    "selectPlan": "Sélectionnez votre plan",
+    "buyNow": "Acheter Maintenant"
+  },
+  "admin": {
+    "loginTitle": "Panneau d'Administration",
+    "loginSubtitle": "Entrez le mot de passe administrateur",
+    "passwordPlaceholder": "Mot de passe",
+    "loginError": "Mot de passe incorrect",
+    "loginButton": "Connexion",
+    "dashboard": "Tableau de Bord",
+    "products": "Produits",
+    "logout": "Déconnexion",
+    "totalProducts": "Total Produits",
+    "activeMembers": "Membres Actifs",
+    "revenue": "Revenus",
+    "growth": "Croissance",
+    "quickActions": "Actions Rapides",
+    "newProduct": "Nouveau Produit",
+    "newProductDesc": "Créer et publier un produit logiciel",
+    "manageProducts": "Gérer les Produits",
+    "manageProductsDesc": "Modifier, supprimer ou changer la visibilité",
+    "recentProducts": "Produits Récents",
+    "viewAll": "Voir Tout",
+    "noProductsYet": "Aucun produit encore. Créez le premier.",
+    "createFirst": "Créer le Premier Produit"
+  },
+  "adminProducts": {
+    "title": "Produits",
+    "subtitle": "Gérez vos produits logiciels sur Whop",
+    "newProduct": "Nouveau Produit",
+    "emptyTitle": "Aucun Produit",
+    "emptySubtitle": "Créez votre premier produit pour commencer à vendre",
+    "createFirst": "Créer le Premier Produit",
+    "visible": "Visible",
+    "hidden": "Masqué",
+    "edit": "Modifier",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce produit ?"
+  },
+  "adminNewProduct": {
+    "back": "Retour aux Produits",
+    "title": "Nouveau Produit",
+    "productName": "Nom du Produit",
+    "namePlaceholder": "Ex : MCP Server Framework",
+    "description": "Description",
+    "descriptionPlaceholder": "Décrivez votre produit logiciel...",
+    "visibility": "Visibilité",
+    "visible": "Visible",
+    "hidden": "Masqué",
+    "pricingPlans": "Plans Tarifaires",
+    "addPlan": "Ajouter un Plan",
+    "plan": "Plan",
+    "planName": "Nom du plan",
+    "oneTime": "Paiement Unique",
+    "subscription": "Abonnement",
+    "free": "Gratuit",
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "weekly": "Hebdomadaire",
+    "createProduct": "Créer le Produit"
+  }
+}
