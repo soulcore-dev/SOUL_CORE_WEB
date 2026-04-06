@@ -1178,7 +1178,22 @@
     "from": "Ab",
     "viewDetails": "Details Anzeigen",
     "noProducts": "Noch keine Produkte verfügbar. Bald mehr!",
-    "retry": "Erneut versuchen"
+    "retry": "Erneut versuchen",
+    "comingSoon": "Demnächst verfügbar...",
+    "description": "Beschreibung",
+    "features": "Funktionen",
+    "technicalSpecs": "Technische Spezifikationen",
+    "faq": "FAQ",
+    "relatedProducts": "Verwandte Produkte",
+    "downloadFree": "Kostenlos Herunterladen",
+    "guarantee": "30-Tage-Garantie",
+    "perMonth": "pro Monat",
+    "perYear": "pro Jahr",
+    "downloads": "Downloads",
+    "reviews": "Bewertungen",
+    "updated": "Aktualisiert",
+    "liveDemo": "Live-Demo",
+    "get": "Erhalten"
   },
   "storeDetail": {
     "backToStore": "Zurück zum Shop",
@@ -1283,5 +1298,37 @@
       "governing": { "title": "Anwendbares Recht und Gerichtsstand", "content": "Diese Bedingungen unterliegen den Gesetzen der Dominikanischen Republik. Jeder Streitfall wird der Zustandigkeit der Gerichte des Nationaldistrikts, Santo Domingo, unterworfen.\n\nFur internationale Kunden kann ein Schiedsverfahren nach den Regeln der Handelskammer von Santo Domingo vereinbart werden." },
       "changes": { "title": "Anderungen", "content": "Die SOUL CORE DEVELOPERS GROUP behalt sich das Recht vor, diese Bedingungen jederzeit zu andern.\n\nFur aktive Projekte haben die vereinbarten Vertragsbedingungen Vorrang." }
     }
+  },
+  "account": {
+    "portalTitle": "Kundenportal",
+    "portalSubtitle": "Melden Sie sich mit Ihrer E-Mail und Ihrem Lizenzschlüssel an",
+    "email": "E-Mail",
+    "licenseKey": "Lizenzschlüssel",
+    "signIn": "Anmelden",
+    "signingIn": "Anmeldung läuft...",
+    "dashboard": "Dashboard",
+    "myProducts": "Meine Produkte",
+    "myDevices": "Meine Geräte",
+    "logout": "Abmelden",
+    "welcomeBack": "Willkommen zurück",
+    "totalProducts": "Gesamte Produkte",
+    "activeLicenses": "Aktive Lizenzen",
+    "boundDevices": "Verknüpfte Geräte",
+    "noProducts": "Noch keine Produkte",
+    "noProductsDesc": "Ihre gekauften Produkte werden hier angezeigt.",
+    "noDevices": "Keine Geräte verknüpft",
+    "noDevicesDesc": "Geräte werden hier angezeigt, sobald Sie eine Lizenz aktivieren.",
+    "productsTitle": "Meine Produkte",
+    "productsSubtitle": "Ihre gekauften Produkte und Lizenzschlüssel",
+    "devicesTitle": "Meine Geräte",
+    "devicesSubtitle": "Mit Ihren Lizenzen verknüpfte Geräte"
+  },
+  "errors": {
+    "notFoundTitle": "404",
+    "notFoundMessage": "Diese Seite existiert nicht oder wurde verschoben.",
+    "goHome": "Zur Startseite",
+    "serverErrorTitle": "500",
+    "serverErrorMessage": "Etwas ist schiefgelaufen. Wir kümmern uns darum.",
+    "tryAgain": "Erneut Versuchen"
   }
 }

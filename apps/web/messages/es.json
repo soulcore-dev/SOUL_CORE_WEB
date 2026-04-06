@@ -1260,7 +1260,22 @@
     "from": "Desde",
     "viewDetails": "Ver Detalles",
     "noProducts": "No hay productos disponibles aún. ¡Pronto agregaremos más!",
-    "retry": "Reintentar"
+    "retry": "Reintentar",
+    "comingSoon": "Próximamente...",
+    "description": "Descripción",
+    "features": "Características",
+    "technicalSpecs": "Especificaciones Técnicas",
+    "faq": "Preguntas Frecuentes",
+    "relatedProducts": "Productos Relacionados",
+    "downloadFree": "Descargar Gratis",
+    "guarantee": "Garantía de 30 días",
+    "perMonth": "por mes",
+    "perYear": "por año",
+    "downloads": "descargas",
+    "reviews": "reseñas",
+    "updated": "Actualizado",
+    "liveDemo": "Demo en Vivo",
+    "get": "Obtener"
   },
   "storeDetail": {
     "backToStore": "Volver a la Tienda",
@@ -1425,5 +1440,37 @@
         "content": "SOUL CORE DEVELOPERS GROUP se reserva el derecho de modificar estos terminos en cualquier momento. Las modificaciones entraran en vigor al ser publicadas en esta pagina.\n\nPara proyectos activos, los terminos contractuales acordados prevalecen sobre cualquier cambio posterior en estos terminos generales."
       }
     }
+  },
+  "account": {
+    "portalTitle": "Portal del Cliente",
+    "portalSubtitle": "Inicia sesión con tu correo y clave de licencia",
+    "email": "Correo electrónico",
+    "licenseKey": "Clave de Licencia",
+    "signIn": "Iniciar Sesión",
+    "signingIn": "Iniciando sesión...",
+    "dashboard": "Panel",
+    "myProducts": "Mis Productos",
+    "myDevices": "Mis Dispositivos",
+    "logout": "Cerrar Sesión",
+    "welcomeBack": "Bienvenido de nuevo",
+    "totalProducts": "Total de Productos",
+    "activeLicenses": "Licencias Activas",
+    "boundDevices": "Dispositivos Vinculados",
+    "noProducts": "Aún no hay productos",
+    "noProductsDesc": "Tus productos comprados aparecerán aquí.",
+    "noDevices": "Sin dispositivos vinculados",
+    "noDevicesDesc": "Los dispositivos aparecerán aquí una vez que actives una licencia.",
+    "productsTitle": "Mis Productos",
+    "productsSubtitle": "Tus productos comprados y claves de licencia",
+    "devicesTitle": "Mis Dispositivos",
+    "devicesSubtitle": "Dispositivos vinculados a tus licencias"
+  },
+  "errors": {
+    "notFoundTitle": "404",
+    "notFoundMessage": "Esta página no existe o ha sido movida.",
+    "goHome": "Ir al Inicio",
+    "serverErrorTitle": "500",
+    "serverErrorMessage": "Algo salió mal. Estamos trabajando en ello.",
+    "tryAgain": "Intentar de Nuevo"
   }
 }

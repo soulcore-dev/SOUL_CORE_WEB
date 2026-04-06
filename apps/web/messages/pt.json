@@ -1260,7 +1260,22 @@
     "from": "A partir de",
     "viewDetails": "Ver Detalhes",
     "noProducts": "Nenhum produto disponível ainda. Em breve!",
-    "retry": "Tentar novamente"
+    "retry": "Tentar novamente",
+    "comingSoon": "Em breve...",
+    "description": "Descrição",
+    "features": "Funcionalidades",
+    "technicalSpecs": "Especificações Técnicas",
+    "faq": "FAQ",
+    "relatedProducts": "Produtos Relacionados",
+    "downloadFree": "Baixar Grátis",
+    "guarantee": "Garantia de 30 dias",
+    "perMonth": "por mês",
+    "perYear": "por ano",
+    "downloads": "downloads",
+    "reviews": "avaliações",
+    "updated": "Atualizado",
+    "liveDemo": "Demo ao Vivo",
+    "get": "Obter"
   },
   "storeDetail": {
     "backToStore": "Voltar à Loja",
@@ -1365,5 +1380,37 @@
       "governing": { "title": "Lei Aplicavel e Jurisdicao", "content": "Estes termos sao regidos pelas leis da Republica Dominicana. Qualquer disputa sera submetida a jurisdicao dos tribunais competentes do Distrito Nacional, Santo Domingo.\n\nPara clientes internacionais, podera ser acordada arbitragem internacional sob as regras do Centro de Mediacao e Arbitragem da Camara de Comercio de Santo Domingo." },
       "changes": { "title": "Modificacoes", "content": "O SOUL CORE DEVELOPERS GROUP reserva-se o direito de modificar estes termos a qualquer momento.\n\nPara projetos ativos, os termos contratuais acordados prevalecem sobre quaisquer alteracoes posteriores." }
     }
+  },
+  "account": {
+    "portalTitle": "Portal do Cliente",
+    "portalSubtitle": "Entre com seu e-mail e chave de licença",
+    "email": "E-mail",
+    "licenseKey": "Chave de Licença",
+    "signIn": "Entrar",
+    "signingIn": "Entrando...",
+    "dashboard": "Painel",
+    "myProducts": "Meus Produtos",
+    "myDevices": "Meus Dispositivos",
+    "logout": "Sair",
+    "welcomeBack": "Bem-vindo de volta",
+    "totalProducts": "Total de Produtos",
+    "activeLicenses": "Licenças Ativas",
+    "boundDevices": "Dispositivos Vinculados",
+    "noProducts": "Nenhum produto ainda",
+    "noProductsDesc": "Seus produtos comprados aparecerão aqui.",
+    "noDevices": "Nenhum dispositivo vinculado",
+    "noDevicesDesc": "Os dispositivos aparecerão aqui quando você ativar uma licença.",
+    "productsTitle": "Meus Produtos",
+    "productsSubtitle": "Seus produtos comprados e chaves de licença",
+    "devicesTitle": "Meus Dispositivos",
+    "devicesSubtitle": "Dispositivos vinculados às suas licenças"
+  },
+  "errors": {
+    "notFoundTitle": "404",
+    "notFoundMessage": "Esta página não existe ou foi movida.",
+    "goHome": "Ir para o Início",
+    "serverErrorTitle": "500",
+    "serverErrorMessage": "Algo deu errado. Estamos resolvendo.",
+    "tryAgain": "Tentar Novamente"
   }
 }

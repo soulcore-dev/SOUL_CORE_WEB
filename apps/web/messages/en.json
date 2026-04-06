@@ -1178,7 +1178,22 @@
     "from": "From",
     "viewDetails": "View Details",
     "noProducts": "No products available yet. More coming soon!",
-    "retry": "Retry"
+    "retry": "Retry",
+    "comingSoon": "Coming soon...",
+    "description": "Description",
+    "features": "Features",
+    "technicalSpecs": "Technical Specifications",
+    "faq": "FAQ",
+    "relatedProducts": "Related Products",
+    "downloadFree": "Download Free",
+    "guarantee": "30-day guarantee",
+    "perMonth": "per month",
+    "perYear": "per year",
+    "downloads": "downloads",
+    "reviews": "reviews",
+    "updated": "Updated",
+    "liveDemo": "Live Demo",
+    "get": "Get"
   },
   "storeDetail": {
     "backToStore": "Back to Store",
@@ -1283,5 +1298,37 @@
       "governing": { "title": "Governing Law and Jurisdiction", "content": "These terms are governed by the laws of the Dominican Republic. Any dispute shall be submitted to the jurisdiction of the competent courts of the National District, Santo Domingo, Dominican Republic.\n\nFor international clients, international arbitration may be agreed under the rules of the Mediation and Arbitration Center of the Santo Domingo Chamber of Commerce and Production." },
       "changes": { "title": "Modifications", "content": "SOUL CORE DEVELOPERS GROUP reserves the right to modify these terms at any time. Modifications will take effect upon being posted on this page.\n\nFor active projects, agreed contractual terms prevail over any subsequent changes to these general terms." }
     }
+  },
+  "account": {
+    "portalTitle": "Customer Portal",
+    "portalSubtitle": "Sign in with your email and license key",
+    "email": "Email",
+    "licenseKey": "License Key",
+    "signIn": "Sign In",
+    "signingIn": "Signing in...",
+    "dashboard": "Dashboard",
+    "myProducts": "My Products",
+    "myDevices": "My Devices",
+    "logout": "Logout",
+    "welcomeBack": "Welcome back",
+    "totalProducts": "Total Products",
+    "activeLicenses": "Active Licenses",
+    "boundDevices": "Bound Devices",
+    "noProducts": "No products yet",
+    "noProductsDesc": "Your purchased products will appear here.",
+    "noDevices": "No devices bound",
+    "noDevicesDesc": "Devices will appear here once you activate a license.",
+    "productsTitle": "My Products",
+    "productsSubtitle": "Your purchased products and license keys",
+    "devicesTitle": "My Devices",
+    "devicesSubtitle": "Devices bound to your licenses"
+  },
+  "errors": {
+    "notFoundTitle": "404",
+    "notFoundMessage": "This page doesn't exist or has been moved.",
+    "goHome": "Go Home",
+    "serverErrorTitle": "500",
+    "serverErrorMessage": "Something went wrong. We're on it.",
+    "tryAgain": "Try Again"
   }
 }

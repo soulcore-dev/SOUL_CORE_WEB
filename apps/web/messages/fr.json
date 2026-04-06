@@ -1260,7 +1260,22 @@
     "from": "À partir de",
     "viewDetails": "Voir les Détails",
     "noProducts": "Aucun produit disponible pour le moment. Bientôt !",
-    "retry": "Réessayer"
+    "retry": "Réessayer",
+    "comingSoon": "Bientôt disponible...",
+    "description": "Description",
+    "features": "Fonctionnalités",
+    "technicalSpecs": "Spécifications Techniques",
+    "faq": "FAQ",
+    "relatedProducts": "Produits Associés",
+    "downloadFree": "Télécharger Gratuitement",
+    "guarantee": "Garantie de 30 jours",
+    "perMonth": "par mois",
+    "perYear": "par an",
+    "downloads": "téléchargements",
+    "reviews": "avis",
+    "updated": "Mis à jour",
+    "liveDemo": "Démo en Direct",
+    "get": "Obtenir"
   },
   "storeDetail": {
     "backToStore": "Retour à la Boutique",
@@ -1365,5 +1380,37 @@
       "governing": { "title": "Loi Applicable et Juridiction", "content": "Ces conditions sont regies par les lois de la Republique dominicaine. Tout litige sera soumis a la juridiction des tribunaux du District national, Saint-Domingue.\n\nPour les clients internationaux, un arbitrage international pourra etre convenu selon les regles de la Chambre de commerce de Saint-Domingue." },
       "changes": { "title": "Modifications", "content": "SOUL CORE DEVELOPERS GROUP se reserve le droit de modifier ces conditions a tout moment.\n\nPour les projets actifs, les termes contractuels convenus prevalent sur toute modification ulterieure." }
     }
+  },
+  "account": {
+    "portalTitle": "Portail Client",
+    "portalSubtitle": "Connectez-vous avec votre e-mail et votre clé de licence",
+    "email": "E-mail",
+    "licenseKey": "Clé de Licence",
+    "signIn": "Se Connecter",
+    "signingIn": "Connexion en cours...",
+    "dashboard": "Tableau de Bord",
+    "myProducts": "Mes Produits",
+    "myDevices": "Mes Appareils",
+    "logout": "Déconnexion",
+    "welcomeBack": "Bon retour",
+    "totalProducts": "Total des Produits",
+    "activeLicenses": "Licences Actives",
+    "boundDevices": "Appareils Associés",
+    "noProducts": "Aucun produit pour le moment",
+    "noProductsDesc": "Vos produits achetés apparaîtront ici.",
+    "noDevices": "Aucun appareil associé",
+    "noDevicesDesc": "Les appareils apparaîtront ici une fois que vous aurez activé une licence.",
+    "productsTitle": "Mes Produits",
+    "productsSubtitle": "Vos produits achetés et clés de licence",
+    "devicesTitle": "Mes Appareils",
+    "devicesSubtitle": "Appareils associés à vos licences"
+  },
+  "errors": {
+    "notFoundTitle": "404",
+    "notFoundMessage": "Cette page n'existe pas ou a été déplacée.",
+    "goHome": "Retour à l'Accueil",
+    "serverErrorTitle": "500",
+    "serverErrorMessage": "Quelque chose s'est mal passé. Nous y travaillons.",
+    "tryAgain": "Réessayer"
   }
 }
