@@ -29,16 +29,16 @@ export function Products() {
   const t = useTranslations('products')
 
   return (
-    <section id="productos" className="py-24 bg-soul-dark">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header with illustration */}
+    <section id="productos" className="py-24 bg-soul-dark relative overflow-hidden">
+      <img
+        src="/generated/products-header.png"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover opacity-15"
+        onError={(e: any) => { e.target.style.display = 'none' }}
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
         <div className="text-center mb-16">
-          <img
-            src="/generated/products-header.png"
-            alt=""
-            className="w-64 h-32 object-contain mx-auto mb-4 opacity-80"
-            onError={(e: any) => { e.target.style.display = 'none' }}
-          />
           <span className="text-soul-purple font-semibold">{t('label')}</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
             {t('title')}
