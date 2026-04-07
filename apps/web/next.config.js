@@ -4,7 +4,11 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  // Force Webpack — Turbopack has CSS hash mismatch bug in production (Next.js 16)
+  // Remove this when Turbopack prod is stable
+  experimental: {
+    turbo: false,
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'github.com' },
