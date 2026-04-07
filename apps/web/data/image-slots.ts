@@ -25,7 +25,7 @@ export interface SlotCategory {
 }
 
 // Style for isometric illustrations — transparent bg for theme compatibility
-const STYLE_ILLUST = 'Isometric flat 3D illustration, purple (#8B5CF6) and violet (#6D28D9) dominant colors, transparent background, clean minimal design, soft ambient lighting, high detail, no text, no watermarks, no people. PNG with alpha transparency.';
+const STYLE_ILLUST = 'Isometric flat 3D illustration, purple (#8B5CF6) and violet (#6D28D9) dominant colors, solid pure black background (#0F0F14), subject fading smoothly into black at edges, clean minimal design, soft ambient lighting, high detail, no text, no watermarks, no people, no grid pattern, no checkerboard.';
 
 // Style for hero/section backgrounds — abstract, works as overlay
 const STYLE_BG = 'Abstract digital art, purple (#8B5CF6) and deep violet (#6D28D9) color palette, flowing organic shapes with subtle glow, ethereal atmosphere, suitable as website background with text overlay, high resolution. No text, no watermarks.';
