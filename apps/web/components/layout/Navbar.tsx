@@ -93,7 +93,7 @@ export function Navbar() {
             <img
               src={isDark ? '/logo_black.png' : '/logo_clear.png'}
               alt="SOUL CORE"
-              className="h-10 w-auto"
+              className="h-14 w-auto"
             />
           </Link>
 
