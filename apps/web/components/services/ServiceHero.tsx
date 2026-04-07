@@ -43,7 +43,17 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
       <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-5`} />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-soul-purple/20 via-transparent to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* AI illustration as section background — right-aligned, faded */}
+      <img
+        src={`/generated/svc-${serviceKey}.png`}
+        alt=""
+        className="absolute top-0 right-0 w-2/3 h-full object-contain object-right opacity-20 z-[1]"
+        onError={(e: any) => { e.target.style.display = 'none' }}
+      />
+      {/* Gradient overlay to fade image into background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-soul-dark via-soul-dark/80 to-transparent z-[2]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back link */}
         <div>
           <Link
@@ -74,28 +84,16 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
             </p>
           </div>
 
-          {/* Icon */}
+          {/* Icon — gradient circle with Lucide icon */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-72 h-72 md:w-96 md:h-96">
-              {/* Outer glow */}
-              <div className={`absolute inset-8 bg-gradient-to-br ${color} rounded-3xl opacity-20 blur-3xl`} />
-
-              {/* z-1: Icon fallback (visible when no AI image) */}
-              <div className={`absolute inset-8 z-[1] bg-gradient-to-br ${color} rounded-3xl flex items-center justify-center shadow-2xl`}>
+            <div className="relative w-48 h-48 md:w-64 md:h-64">
+              <div className={`absolute inset-0 bg-gradient-to-br ${color} rounded-full opacity-20 blur-3xl`} />
+              <div className={`relative w-full h-full bg-gradient-to-br ${color} rounded-full flex items-center justify-center shadow-2xl`}>
                 <Icon className="text-white w-24 h-24 md:w-32 md:h-32" strokeWidth={1.5} />
               </div>
-
-              {/* z-2: AI illustration — full size, no clip */}
-              <img
-                src={`/generated/svc-${serviceKey}.png`}
-                alt=""
-                className="absolute inset-0 w-full h-full object-contain z-[2] drop-shadow-2xl"
-                onError={(e: any) => { e.target.style.display = 'none' }}
-              />
-
               {/* Floating particles */}
-              <div className={`absolute top-2 right-2 w-10 h-10 bg-gradient-to-br ${color} rounded-full opacity-60 z-[3] animate-pulse`} />
-              <div className={`absolute bottom-4 left-2 w-6 h-6 bg-gradient-to-br ${color} rounded-full opacity-40 z-[3] animate-pulse delay-1000`} />
+              <div className={`absolute -top-3 -right-3 w-10 h-10 bg-gradient-to-br ${color} rounded-full opacity-60 animate-pulse`} />
+              <div className={`absolute -bottom-2 -left-4 w-6 h-6 bg-gradient-to-br ${color} rounded-full opacity-40 animate-pulse delay-1000`} />
             </div>
           </div>
         </div>
