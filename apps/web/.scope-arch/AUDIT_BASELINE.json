@@ -1,0 +1,3320 @@
+{
+  "generated_at": "2026-04-06T22:15:49.708168Z",
+  "project": "web",
+  "scope_arch_version": "0.2.0",
+  "summary": {
+    "total_loc": 587851,
+    "total_files": 362,
+    "total_modules": 8,
+    "languages": {
+      "JSON": {
+        "files": 80,
+        "loc": 7493
+      },
+      "JavaScript": {
+        "files": 217,
+        "loc": 568119
+      },
+      "CSS": {
+        "files": 5,
+        "loc": 6613
+      },
+      "TypeScript": {
+        "files": 17,
+        "loc": 1024
+      },
+      "TypeScript/JSX": {
+        "files": 43,
+        "loc": 4602
+      }
+    }
+  },
+  "modules": {
+    "_NEXT": {
+      "files": [
+        {
+          "path": ".next/dev/build-manifest.json",
+          "loc": 50,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/cache/next-devtools-config.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/fallback-build-manifest.json",
+          "loc": 37,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/package.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/prerender-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/routes-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/[...rest]/page/app-paths-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/[...rest]/page/build-manifest.json",
+          "loc": 22,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/[...rest]/page/next-font-manifest.json",
+          "loc": 10,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/[...rest]/page/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/[...rest]/page/server-reference-manifest.json",
+          "loc": 4,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/[...rest]/page.js",
+          "loc": 20,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../../../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/[...rest]/page_client-reference-manifest.js",
+          "loc": 2,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/account/page/app-paths-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/account/page/build-manifest.json",
+          "loc": 22,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/account/page/next-font-manifest.json",
+          "loc": 10,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/account/page/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/account/page/server-reference-manifest.json",
+          "loc": 4,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/account/page.js",
+          "loc": 21,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../../../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/account/page_client-reference-manifest.js",
+          "loc": 2,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/admin/page/app-paths-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/admin/page/build-manifest.json",
+          "loc": 22,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/admin/page/next-font-manifest.json",
+          "loc": 10,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/admin/page/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/admin/page/server-reference-manifest.json",
+          "loc": 4,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/admin/page.js",
+          "loc": 21,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../../../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/admin/page_client-reference-manifest.js",
+          "loc": 2,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/page/app-paths-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/page/build-manifest.json",
+          "loc": 22,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/page/next-font-manifest.json",
+          "loc": 10,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/page/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/page/server-reference-manifest.json",
+          "loc": 4,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/page.js",
+          "loc": 20,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/page_client-reference-manifest.js",
+          "loc": 2,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/privacy/page/app-paths-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/privacy/page/build-manifest.json",
+          "loc": 22,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/privacy/page/next-font-manifest.json",
+          "loc": 10,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/privacy/page/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/privacy/page/server-reference-manifest.json",
+          "loc": 4,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/privacy/page.js",
+          "loc": 20,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../../../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/privacy/page_client-reference-manifest.js",
+          "loc": 2,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/servicios/[slug]/page/app-paths-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/servicios/[slug]/page/build-manifest.json",
+          "loc": 22,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/servicios/[slug]/page/next-font-manifest.json",
+          "loc": 10,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/servicios/[slug]/page/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/servicios/[slug]/page/server-reference-manifest.json",
+          "loc": 4,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/servicios/[slug]/page.js",
+          "loc": 20,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../../../../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/servicios/[slug]/page_client-reference-manifest.js",
+          "loc": 2,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/store/page/app-paths-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/store/page/build-manifest.json",
+          "loc": 22,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/store/page/next-font-manifest.json",
+          "loc": 10,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/store/page/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/store/page/server-reference-manifest.json",
+          "loc": 4,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/store/page.js",
+          "loc": 20,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../../../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/store/page_client-reference-manifest.js",
+          "loc": 2,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/terms/page/app-paths-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/terms/page/build-manifest.json",
+          "loc": 22,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/terms/page/next-font-manifest.json",
+          "loc": 10,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/terms/page/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/terms/page/server-reference-manifest.json",
+          "loc": 4,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/terms/page.js",
+          "loc": 20,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../../../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/app/[locale]/terms/page_client-reference-manifest.js",
+          "loc": 2,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/_not-found/page/app-paths-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/_not-found/page/build-manifest.json",
+          "loc": 22,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/_not-found/page/next-font-manifest.json",
+          "loc": 6,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/_not-found/page/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/_not-found/page/server-reference-manifest.json",
+          "loc": 4,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/_not-found/page.js",
+          "loc": 14,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/app/_not-found/page_client-reference-manifest.js",
+          "loc": 2,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/api/health/route/app-paths-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/api/health/route/build-manifest.json",
+          "loc": 9,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/api/health/route/server-reference-manifest.json",
+          "loc": 4,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app/api/health/route.js",
+          "loc": 7,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../../../chunks/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/app/api/health/route_client-reference-manifest.js",
+          "loc": 2,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/app-paths-manifest.json",
+          "loc": 11,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/[root-of-the-server]__11tfvl.._.js",
+          "loc": 47,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/compiled/@opentelemetry/api",
+            "next/dist/compiled/next-server/app-page-turbo.runtime.dev.js",
+            "next/dist/compiled/next-server/app-route-turbo.runtime.dev.js",
+            "next/dist/server/app-render/after-task-async-storage.external.js",
+            "next/dist/server/app-render/work-async-storage.external.js",
+            "next/dist/server/app-render/work-unit-async-storage.external.js",
+            "next/dist/shared/lib/no-fallback-error.external.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/[turbopack]_runtime.js",
+          "loc": 1713,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "fs",
+            "path",
+            "stream",
+            "url",
+            "worker_threads"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/apps_web__next-internal_server_app_api_health_route_actions_08i7v0h.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/apps_web_app_api_health_route_ts_0lj76pj._.js",
+          "loc": 9,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/node_modules_next_0yuox19._.js",
+          "loc": 16489,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/server"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/02dz_web__next-internal_server_app_[locale]_servicios_[slug]_page_actions_10k_3~8.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[externals]__0.o~_~l._.js",
+          "loc": 22,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/compiled/@opentelemetry/api",
+            "next/dist/compiled/next-server/pages-turbo.runtime.dev.js",
+            "path",
+            "react",
+            "react/jsx-runtime"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[externals]__0n13xf4._.js",
+          "loc": 42,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "module",
+            "next/dist/compiled/@opentelemetry/api",
+            "next/dist/compiled/next-server/app-page-turbo.runtime.dev.js",
+            "next/dist/server/app-render/action-async-storage.external.js",
+            "next/dist/server/app-render/after-task-async-storage.external.js",
+            "next/dist/server/app-render/dynamic-access-async-storage.external.js",
+            "next/dist/server/app-render/work-async-storage.external.js",
+            "next/dist/server/app-render/work-unit-async-storage.external.js",
+            "path",
+            "util"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[externals]_next_dist_0yew8f-._.js",
+          "loc": 26,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/compiled/next-server/app-page-turbo.runtime.dev.js",
+            "next/dist/server/app-render/action-async-storage.external.js",
+            "next/dist/server/app-render/after-task-async-storage.external.js",
+            "next/dist/server/app-render/dynamic-access-async-storage.external.js",
+            "next/dist/server/app-render/work-async-storage.external.js",
+            "next/dist/server/app-render/work-unit-async-storage.external.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[externals]_next_dist_shared_lib_no-fallback-error_external_0fgm~bn.js",
+          "loc": 6,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/shared/lib/no-fallback-error.external.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[root-of-the-server]__0-l8edw._.js",
+          "loc": 346,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[root-of-the-server]__03nlzwa._.js",
+          "loc": 43,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/shared/lib/no-fallback-error.external.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[root-of-the-server]__05cnjbl._.js",
+          "loc": 380,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/shared/lib/no-fallback-error.external.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[root-of-the-server]__07gvvwq._.js",
+          "loc": 97,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/shared/lib/no-fallback-error.external.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[root-of-the-server]__08xau1c._.js",
+          "loc": 43,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/shared/lib/no-fallback-error.external.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[root-of-the-server]__0dxf~y.._.js",
+          "loc": 97,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/shared/lib/no-fallback-error.external.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[root-of-the-server]__0je5zm2._.js",
+          "loc": 276,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "react",
+            "react/jsx-runtime"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[root-of-the-server]__0m_u2v~._.js",
+          "loc": 97,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/shared/lib/no-fallback-error.external.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[root-of-the-server]__0t13rsz._.js",
+          "loc": 43,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/shared/lib/no-fallback-error.external.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[root-of-the-server]__0~.w4gr._.js",
+          "loc": 309,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/shared/lib/no-fallback-error.external.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/[turbopack]_runtime.js",
+          "loc": 1713,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "fs",
+            "path",
+            "stream",
+            "url",
+            "worker_threads"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/_01t.d6w._.js",
+          "loc": 205,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/_07qocts._.js",
+          "loc": 266,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/_0glua-y._.js",
+          "loc": 196,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/_0m0cp9f._.js",
+          "loc": 862,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/_0yotm4k._.js",
+          "loc": 439,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_0-pc3e.._.js",
+          "loc": 2739,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_0_~xkd_._.js",
+          "loc": 2675,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_0a9ifex._.js",
+          "loc": 1408,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_0h08b9r._.js",
+          "loc": 2826,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_0vzbvhv._.js",
+          "loc": 900,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web__next-internal_server_app_[locale]_[___rest]_page_actions_0za.ifg.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web__next-internal_server_app_[locale]_account_page_actions_0d1swa3.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web__next-internal_server_app_[locale]_admin_page_actions_0y98e9n.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web__next-internal_server_app_[locale]_page_actions_0oghn0j.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web__next-internal_server_app_[locale]_privacy_page_actions_0~f7im9.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web__next-internal_server_app_[locale]_store_page_actions_12qr2tg.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web__next-internal_server_app_[locale]_terms_page_actions_0x9_ebn.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web__next-internal_server_app__not-found_page_actions_0appun9.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_app_[locale]_account_layout_tsx_01n-x52._.js",
+          "loc": 39,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_app_[locale]_account_layout_tsx_0ur6s6r._.js",
+          "loc": 461,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_app_[locale]_admin_layout_tsx_08way~9._.js",
+          "loc": 39,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_app_[locale]_admin_layout_tsx_12i50lu._.js",
+          "loc": 405,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_app_[locale]_error_tsx_05h.y1c._.js",
+          "loc": 92,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_app_[locale]_error_tsx_0bsels5._.js",
+          "loc": 39,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_app_[locale]_not-found_tsx_03g11xw._.js",
+          "loc": 94,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_app_[locale]_not-found_tsx_0l.qrqw._.js",
+          "loc": 39,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_app_layout_tsx_0~ugwek._.js",
+          "loc": 18,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_components_sections_0e9sq5o._.js",
+          "loc": 2630,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_components_services_01mf200._.js",
+          "loc": 1366,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_messages_03rh6.x._.js",
+          "loc": 47,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_messages_0v-ke_k._.js",
+          "loc": 47,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_messages_de_json_[json]_cjs_0nm4zjf._.js",
+          "loc": 6,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_messages_en_json_[json]_cjs_0u5f011._.js",
+          "loc": 6,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_messages_es_json_[json]_cjs_02d6yrl._.js",
+          "loc": 6,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_messages_fr_json_[json]_cjs_0jn_mnh._.js",
+          "loc": 6,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/apps_web_messages_pt_json_[json]_cjs_0qhhxne._.js",
+          "loc": 6,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_0.eeuo3._.js",
+          "loc": 23402,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "lodash"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_01ed9g5._.js",
+          "loc": 6510,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_047xm.d._.js",
+          "loc": 4349,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_07wqc8_._.js",
+          "loc": 11019,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "lodash"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_09w7yel._.js",
+          "loc": 308,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_0aqs1qh._.js",
+          "loc": 14610,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_0gvi40p._.js",
+          "loc": 13097,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_0ipdy_f._.js",
+          "loc": 8898,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "lodash"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_0lea~4r._.js",
+          "loc": 8894,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "lodash"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_0nuf2s5._.js",
+          "loc": 13011,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_0vsd.g.._.js",
+          "loc": 11076,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_100j0-x._.js",
+          "loc": 13716,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_13.0ezm._.js",
+          "loc": 14610,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_framer-motion_dist_es_0d~oph2._.js",
+          "loc": 11819,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_framer-motion_dist_es_0ne5~54._.js",
+          "loc": 11453,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_lucide-react_dist_esm_icons_09orcph._.js",
+          "loc": 3375,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_lucide-react_dist_esm_icons_0dgoac2._.js",
+          "loc": 1817,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_lucide-react_dist_esm_icons_13606c5._.js",
+          "loc": 929,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_0o61c40._.js",
+          "loc": 13729,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_12i4inu._.js",
+          "loc": 52,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_001z~o4._.js",
+          "loc": 1542,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_0uxxiw~._.js",
+          "loc": 1542,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_0yh1sr3._.js",
+          "loc": 15733,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_client_components_0ee1czk._.js",
+          "loc": 147,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_client_components_0inhx6q._.js",
+          "loc": 147,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidden_0ghu-f7.js",
+          "loc": 33,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0lgvd_..js",
+          "loc": 23,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_0cjv-23.js",
+          "loc": 33,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_compiled_07ho8ku._.js",
+          "loc": 5198,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_00xse_0._.js",
+          "loc": 17019,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0173gyq._.js",
+          "loc": 1539,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_054dykp._.js",
+          "loc": 1529,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_06e27ym._.js",
+          "loc": 1548,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_07lzk88._.js",
+          "loc": 1553,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0_8cps.._.js",
+          "loc": 1548,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0_binpp._.js",
+          "loc": 1548,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0f7wio_._.js",
+          "loc": 1557,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0fwnwco._.js",
+          "loc": 1539,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0q-ksus._.js",
+          "loc": 1555,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0srqgg_._.js",
+          "loc": 1553,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0xbhfah._.js",
+          "loc": 1548,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_10r0eic._.js",
+          "loc": 1557,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "path"
+          ]
+        },
+        {
+          "path": ".next/dev/server/chunks/ssr/node_modules_next_dist_server_route-modules_app-page_0f6k0sl._.js",
+          "loc": 41,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/edge/chunks/[root-of-the-server]__0~9y3qh._.js",
+          "loc": 86,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "node:async_hooks",
+            "node:buffer"
+          ]
+        },
+        {
+          "path": ".next/dev/server/edge/chunks/node_modules_0nrws71._.js",
+          "loc": 25258,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/edge/chunks/turbopack-node_modules_next_dist_esm_build_templates_edge-wrapper_0dsx~ww.js",
+          "loc": 2125,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/interception-route-rewrite-manifest.js",
+          "loc": 1,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/middleware/middleware-manifest.json",
+          "loc": 36,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/middleware-build-manifest.js",
+          "loc": 50,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/middleware-manifest.json",
+          "loc": 38,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/next-font-manifest.js",
+          "loc": 1,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/next-font-manifest.json",
+          "loc": 31,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_app/build-manifest.json",
+          "loc": 23,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_app/client-build-manifest.json",
+          "loc": 5,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_app/next-font-manifest.json",
+          "loc": 6,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_app/pages-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_app/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_app.js",
+          "loc": 4,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/pages/_document/next-font-manifest.json",
+          "loc": 6,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_document/pages-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_document/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_document.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/pages/_error/build-manifest.json",
+          "loc": 22,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_error/client-build-manifest.json",
+          "loc": 5,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_error/next-font-manifest.json",
+          "loc": 6,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_error/pages-manifest.json",
+          "loc": 3,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_error/react-loadable-manifest.json",
+          "loc": 1,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/pages/_error.js",
+          "loc": 8,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "../chunks/ssr/[turbopack]_runtime.js"
+          ]
+        },
+        {
+          "path": ".next/dev/server/pages-manifest.json",
+          "loc": 5,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/server-reference-manifest.js",
+          "loc": 1,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/server/server-reference-manifest.json",
+          "loc": 5,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/[next]_entry_page-loader_ts_0j~flwh._.js",
+          "loc": 21,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/[next]_entry_page-loader_ts_0rqw6yo._.js",
+          "loc": 21,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/[next]_internal_font_google_inter_5972bc34_module_css_0w3-wzy._.single.css",
+          "loc": 70,
+          "language": "CSS",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/[root-of-the-server]__0dlxqx9._.js",
+          "loc": 473,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/[root-of-the-server]__0hr~eak._.js",
+          "loc": 473,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/[root-of-the-server]__0pgls8-._.css",
+          "loc": 2178,
+          "language": "CSS",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0yjw1oe._.js",
+          "loc": 469,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_10mygs7._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_10z625~._.js",
+          "loc": 12,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/_06pbldk._.js",
+          "loc": 882,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/_0x8wu31._.js",
+          "loc": 219,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/_10l.te4._.js",
+          "loc": 455,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_03gdopo._.js",
+          "loc": 945,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_08m_nll._.js",
+          "loc": 2843,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_0ae~tki._.js",
+          "loc": 1485,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_0rqeker._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_0w6v~sd._.js",
+          "loc": 2766,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_0xo.f13._.js",
+          "loc": 2930,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_[___rest]_page_tsx_0_tq3bn._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_account_layout_tsx_09au4x2._.js",
+          "loc": 483,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_account_layout_tsx_0_tq3bn._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_account_page_tsx_0._zagd._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_admin_layout_tsx_0_tq3bn._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_admin_layout_tsx_0m.b1ob._.js",
+          "loc": 434,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_admin_page_tsx_0y7rlz6._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_error_tsx_09w_1to._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_error_tsx_0_tq3bn._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_error_tsx_0l0f9zf._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_error_tsx_0q8aftj._.js",
+          "loc": 98,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_layout_tsx_01oyzok._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_not-found_tsx_08462gq._.js",
+          "loc": 100,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_not-found_tsx_09w_1to._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_not-found_tsx_0_tq3bn._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_not-found_tsx_0l0f9zf._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_page_tsx_09w_1to._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_page_tsx_0_tq3bn._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_page_tsx_0l0f9zf._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_privacy_page_tsx_0_tq3bn._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_servicios_[slug]_page_tsx_0_tq3bn._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_store_page_tsx_0_tq3bn._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_[locale]_terms_page_tsx_0_tq3bn._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_globals_0xyo3ls.css",
+          "loc": 2109,
+          "language": "CSS",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_globals_css_0w3-wzy._.single.css",
+          "loc": 2109,
+          "language": "CSS",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_layout_tsx_004glpo._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_app_not-found_tsx_01oyzok._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_components_sections_0d9y~d1._.js",
+          "loc": 2723,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_components_services_0r9x-cf._.js",
+          "loc": 1447,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_pages__app_07xvfw~._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/apps_web_pages__error_07xvfw~._.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_03yk2q6._.js",
+          "loc": 11870,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "lodash"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_06sc~yn._.js",
+          "loc": 13045,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_0802z-x._.js",
+          "loc": 13131,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_08gfe1-._.js",
+          "loc": 13750,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_0ce6emv._.js",
+          "loc": 23353,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion",
+            "lodash"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_0gs~hk_._.js",
+          "loc": 14644,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_0htscvb._.js",
+          "loc": 10526,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "lodash"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_0h~bx4e._.js",
+          "loc": 14644,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_0lx093h._.js",
+          "loc": 1334,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_@swc_helpers_cjs_0-4ujiy._.js",
+          "loc": 46,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_framer-motion_dist_es_007m.6r._.js",
+          "loc": 11877,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "framer-motion"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_lucide-react_dist_esm_icons_0grn2xl._.js",
+          "loc": 929,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_lucide-react_dist_esm_icons_0x3u8aw._.js",
+          "loc": 1817,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_lucide-react_dist_esm_icons_0~gw9dy._.js",
+          "loc": 3375,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_app_0jt-zj..js",
+          "loc": 6,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_06gz65m._.js",
+          "loc": 643,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_0rt-2cr._.js",
+          "loc": 2311,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_0tt2wve._.js",
+          "loc": 4515,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_0u_w_5s._.js",
+          "loc": 2144,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_115brz8._.js",
+          "loc": 5791,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "$2",
+            "$3"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js",
+          "loc": 1,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js",
+          "loc": 15122,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js",
+          "loc": 4055,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_client_components_builtin_global-error_01oyzok.js",
+          "loc": 5,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_compiled_0o6l_m6._.js",
+          "loc": 5595,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "react-devtools-core"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js",
+          "loc": 2902,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "react-devtools-core"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_compiled_next-devtools_index_0553esy.js",
+          "loc": 3389,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js",
+          "loc": 16763,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js",
+          "loc": 2887,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_shared_lib_0~pg0mt._.js",
+          "loc": 5831,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "$2",
+            "$3"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_next_dist_shared_lib_12bi_n7._.js",
+          "loc": 6070,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "$2",
+            "$3"
+          ]
+        },
+        {
+          "path": ".next/dev/static/chunks/node_modules_react-dom_0bruynb._.js",
+          "loc": 15376,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/pages/_app.js",
+          "loc": 13,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/pages/_error.js",
+          "loc": 12,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/turbopack-apps_web_0p44nws._.js",
+          "loc": 2233,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/turbopack-apps_web_pages__app_0b.3.xl._.js",
+          "loc": 2233,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/chunks/turbopack-apps_web_pages__error_11ljito._.js",
+          "loc": 2233,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/development/_buildManifest.js",
+          "loc": 14,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/development/_clientMiddlewareManifest.js",
+          "loc": 10,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/static/development/_ssgManifest.js",
+          "loc": 1,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/types/cache-life.d.ts",
+          "loc": 132,
+          "language": "TypeScript",
+          "public_functions": [],
+          "imports": [
+            "next/dist/server/use-cache/cache-tag"
+          ]
+        },
+        {
+          "path": ".next/dev/types/routes.d.ts",
+          "loc": 82,
+          "language": "TypeScript",
+          "public_functions": [
+            "ParamsOf"
+          ],
+          "imports": []
+        },
+        {
+          "path": ".next/dev/types/validator.ts",
+          "loc": 227,
+          "language": "TypeScript",
+          "public_functions": [],
+          "imports": [
+            "./routes.js",
+            "next/server.js",
+            "next/types.js"
+          ]
+        }
+      ],
+      "total_loc": 575641,
+      "public_functions": [
+        "ParamsOf"
+      ],
+      "languages": {
+        "JSON": {
+          "files": 73,
+          "loc": 676
+        },
+        "JavaScript": {
+          "files": 215,
+          "loc": 568058
+        },
+        "CSS": {
+          "files": 4,
+          "loc": 6466
+        },
+        "TypeScript": {
+          "files": 3,
+          "loc": 441
+        }
+      }
+    },
+    "MESSAGES": {
+      "files": [
+        {
+          "path": "messages/de.json",
+          "loc": 1287,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": "messages/en.json",
+          "loc": 1287,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": "messages/es.json",
+          "loc": 1429,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": "messages/fr.json",
+          "loc": 1369,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": "messages/pt.json",
+          "loc": 1369,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        }
+      ],
+      "total_loc": 6741,
+      "public_functions": [],
+      "languages": {
+        "JSON": {
+          "files": 5,
+          "loc": 6741
+        }
+      }
+    },
+    "APP": {
+      "files": [
+        {
+          "path": "app/[locale]/[...rest]/page.tsx",
+          "loc": 36,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "CatchAllPage"
+          ],
+          "imports": [
+            "next/link"
+          ]
+        },
+        {
+          "path": "app/[locale]/account/devices/page.tsx",
+          "loc": 140,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "DevicesPage"
+          ],
+          "imports": [
+            "framer-motion",
+            "react"
+          ]
+        },
+        {
+          "path": "app/[locale]/account/layout.tsx",
+          "loc": 217,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "AccountLayout"
+          ],
+          "imports": [
+            "framer-motion",
+            "next-intl",
+            "next/link",
+            "next/navigation",
+            "react"
+          ]
+        },
+        {
+          "path": "app/[locale]/account/page.tsx",
+          "loc": 178,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "AccountDashboard"
+          ],
+          "imports": [
+            "framer-motion",
+            "next-intl",
+            "next/link",
+            "react"
+          ]
+        },
+        {
+          "path": "app/[locale]/account/products/page.tsx",
+          "loc": 176,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "ProductsPage"
+          ],
+          "imports": [
+            "framer-motion",
+            "react"
+          ]
+        },
+        {
+          "path": "app/[locale]/admin/layout.tsx",
+          "loc": 186,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "AdminLayout"
+          ],
+          "imports": [
+            "framer-motion",
+            "lucide-react",
+            "next-intl",
+            "next/link",
+            "next/navigation",
+            "react"
+          ]
+        },
+        {
+          "path": "app/[locale]/admin/page.tsx",
+          "loc": 152,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "AdminDashboard"
+          ],
+          "imports": [
+            "@/lib/api",
+            "framer-motion",
+            "lucide-react",
+            "next-intl",
+            "next/link",
+            "react"
+          ]
+        },
+        {
+          "path": "app/[locale]/admin/products/new/page.tsx",
+          "loc": 115,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "NewProductPage"
+          ],
+          "imports": [
+            "@/lib/api",
+            "framer-motion",
+            "lucide-react",
+            "next-intl",
+            "next/link",
+            "next/navigation",
+            "react"
+          ]
+        },
+        {
+          "path": "app/[locale]/admin/products/page.tsx",
+          "loc": 123,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "AdminProductsPage"
+          ],
+          "imports": [
+            "@/lib/api",
+            "framer-motion",
+            "lucide-react",
+            "next-intl",
+            "next/link",
+            "react"
+          ]
+        },
+        {
+          "path": "app/[locale]/error.tsx",
+          "loc": 38,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "Error"
+          ],
+          "imports": []
+        },
+        {
+          "path": "app/[locale]/layout.tsx",
+          "loc": 96,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "generateStaticParams",
+            "generateMetadata",
+            "LocaleLayout"
+          ],
+          "imports": [
+            "@/components/layout/ConditionalFooter",
+            "@/components/layout/Navbar",
+            "@/i18n/config",
+            "next",
+            "next-intl",
+            "next-intl/server",
+            "next/font/google",
+            "next/navigation"
+          ]
+        },
+        {
+          "path": "app/[locale]/not-found.tsx",
+          "loc": 34,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "NotFound"
+          ],
+          "imports": [
+            "next/link"
+          ]
+        },
+        {
+          "path": "app/[locale]/page.tsx",
+          "loc": 26,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "Home"
+          ],
+          "imports": [
+            "@/components/sections/Contact",
+            "@/components/sections/Hero",
+            "@/components/sections/Portfolio",
+            "@/components/sections/Products",
+            "@/components/sections/Services",
+            "@/components/sections/Team",
+            "@/components/sections/WhyUs",
+            "next-intl/server"
+          ]
+        },
+        {
+          "path": "app/[locale]/privacy/page.tsx",
+          "loc": 35,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "generateMetadata",
+            "PrivacyPage"
+          ],
+          "imports": [
+            "@/components/legal/LegalPage",
+            "@/i18n/config",
+            "next",
+            "next-intl/server",
+            "next/navigation"
+          ]
+        },
+        {
+          "path": "app/[locale]/servicios/[slug]/page.tsx",
+          "loc": 90,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "serviceColors",
+            "generateStaticParams",
+            "generateMetadata",
+            "ServicePage"
+          ],
+          "imports": [
+            "@/components/services/ServiceCTA",
+            "@/components/services/ServiceFeatures",
+            "@/components/services/ServiceHero",
+            "@/components/services/ServiceProcess",
+            "@/components/services/ServiceTechnologies",
+            "@/components/services/ServiceUseCases",
+            "@/i18n/config",
+            "next",
+            "next-intl/server",
+            "next/navigation"
+          ]
+        },
+        {
+          "path": "app/[locale]/store/[id]/page.tsx",
+          "loc": 335,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "ProductDetailPage"
+          ],
+          "imports": [
+            "@/lib/api",
+            "framer-motion",
+            "next-intl",
+            "next/link",
+            "next/navigation",
+            "react"
+          ]
+        },
+        {
+          "path": "app/[locale]/store/page.tsx",
+          "loc": 125,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "StorePage"
+          ],
+          "imports": [
+            "@/components/store/ProductCard",
+            "@/components/store/StoreHero",
+            "@/lib/api",
+            "framer-motion",
+            "lucide-react",
+            "next-intl",
+            "react"
+          ]
+        },
+        {
+          "path": "app/[locale]/terms/page.tsx",
+          "loc": 35,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "generateMetadata",
+            "TermsPage"
+          ],
+          "imports": [
+            "@/components/legal/LegalPage",
+            "@/i18n/config",
+            "next",
+            "next-intl/server",
+            "next/navigation"
+          ]
+        },
+        {
+          "path": "app/api/admin/login/route.ts",
+          "loc": 18,
+          "language": "TypeScript",
+          "public_functions": [
+            "POST"
+          ],
+          "imports": [
+            "next/server"
+          ]
+        },
+        {
+          "path": "app/api/admin/products/route.ts",
+          "loc": 22,
+          "language": "TypeScript",
+          "public_functions": [
+            "POST"
+          ],
+          "imports": [
+            "next/server"
+          ]
+        },
+        {
+          "path": "app/api/chat/route.ts",
+          "loc": 37,
+          "language": "TypeScript",
+          "public_functions": [
+            "POST"
+          ],
+          "imports": [
+            "@anthropic-ai/sdk",
+            "next/server"
+          ]
+        },
+        {
+          "path": "app/api/contact/route.ts",
+          "loc": 40,
+          "language": "TypeScript",
+          "public_functions": [
+            "POST"
+          ],
+          "imports": [
+            "next/server",
+            "resend"
+          ]
+        },
+        {
+          "path": "app/api/health/route.ts",
+          "loc": 8,
+          "language": "TypeScript",
+          "public_functions": [
+            "GET"
+          ],
+          "imports": [
+            "next/server"
+          ]
+        },
+        {
+          "path": "app/globals.css",
+          "loc": 147,
+          "language": "CSS",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": "app/layout.tsx",
+          "loc": 9,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "RootLayout"
+          ],
+          "imports": []
+        },
+        {
+          "path": "app/not-found.tsx",
+          "loc": 52,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "RootNotFound"
+          ],
+          "imports": [
+            "next/link"
+          ]
+        },
+        {
+          "path": "app/page.tsx",
+          "loc": 6,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "RootPage"
+          ],
+          "imports": [
+            "@/i18n/config",
+            "next/navigation"
+          ]
+        }
+      ],
+      "total_loc": 2476,
+      "public_functions": [
+        "AccountDashboard",
+        "AccountLayout",
+        "AdminDashboard",
+        "AdminLayout",
+        "AdminProductsPage",
+        "CatchAllPage",
+        "DevicesPage",
+        "Error",
+        "GET",
+        "Home",
+        "LocaleLayout",
+        "NewProductPage",
+        "NotFound",
+        "POST",
+        "PrivacyPage",
+        "ProductDetailPage",
+        "ProductsPage",
+        "RootLayout",
+        "RootNotFound",
+        "RootPage",
+        "ServicePage",
+        "StorePage",
+        "TermsPage",
+        "generateMetadata",
+        "generateStaticParams",
+        "serviceColors"
+      ],
+      "languages": {
+        "TypeScript/JSX": {
+          "files": 21,
+          "loc": 2204
+        },
+        "TypeScript": {
+          "files": 5,
+          "loc": 125
+        },
+        "CSS": {
+          "files": 1,
+          "loc": 147
+        }
+      }
+    },
+    "COMPONENTS": {
+      "files": [
+        {
+          "path": "components/chat/ChatWidget.tsx",
+          "loc": 200,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "ChatWidget"
+          ],
+          "imports": [
+            "@/lib/utils",
+            "lucide-react",
+            "next-intl",
+            "react"
+          ]
+        },
+        {
+          "path": "components/layout/ConditionalFooter.tsx",
+          "loc": 16,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "ConditionalFooter"
+          ],
+          "imports": [
+            "../chat/ChatWidget",
+            "./Footer",
+            "next/navigation"
+          ]
+        },
+        {
+          "path": "components/layout/Footer.tsx",
+          "loc": 148,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "Footer"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl",
+            "next/link"
+          ]
+        },
+        {
+          "path": "components/layout/Navbar.tsx",
+          "loc": 276,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "Navbar"
+          ],
+          "imports": [
+            "@/lib/admin-auth",
+            "lucide-react",
+            "next-intl",
+            "next/link",
+            "next/navigation",
+            "react"
+          ]
+        },
+        {
+          "path": "components/legal/LegalPage.tsx",
+          "loc": 59,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "LegalPage"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl",
+            "next/link"
+          ]
+        },
+        {
+          "path": "components/sections/Contact.tsx",
+          "loc": 283,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "Contact"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl",
+            "react"
+          ]
+        },
+        {
+          "path": "components/sections/Hero.tsx",
+          "loc": 79,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "Hero"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl",
+            "next/link"
+          ]
+        },
+        {
+          "path": "components/sections/Portfolio.tsx",
+          "loc": 221,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "Portfolio"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl",
+            "react"
+          ]
+        },
+        {
+          "path": "components/sections/Products.tsx",
+          "loc": 107,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "Products"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl"
+          ]
+        },
+        {
+          "path": "components/sections/Services.tsx",
+          "loc": 111,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "Services"
+          ],
+          "imports": [
+            "next-intl",
+            "next/link"
+          ]
+        },
+        {
+          "path": "components/sections/Team.tsx",
+          "loc": 103,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "Team"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl"
+          ]
+        },
+        {
+          "path": "components/sections/WhyUs.tsx",
+          "loc": 65,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "WhyUs"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl"
+          ]
+        },
+        {
+          "path": "components/services/ServiceCTA.tsx",
+          "loc": 109,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "ServiceCTA"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl",
+            "next/link"
+          ]
+        },
+        {
+          "path": "components/services/ServiceFeatures.tsx",
+          "loc": 85,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "ServiceFeatures"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl"
+          ]
+        },
+        {
+          "path": "components/services/ServiceHero.tsx",
+          "loc": 90,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "ServiceHero"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl",
+            "next/link"
+          ]
+        },
+        {
+          "path": "components/services/ServiceProcess.tsx",
+          "loc": 65,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "ServiceProcess"
+          ],
+          "imports": [
+            "next-intl"
+          ]
+        },
+        {
+          "path": "components/services/ServiceTechnologies.tsx",
+          "loc": 44,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "ServiceTechnologies"
+          ],
+          "imports": [
+            "next-intl"
+          ]
+        },
+        {
+          "path": "components/services/ServiceUseCases.tsx",
+          "loc": 120,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "ServiceUseCases"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl"
+          ]
+        },
+        {
+          "path": "components/store/ProductCard.tsx",
+          "loc": 147,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "ProductCard"
+          ],
+          "imports": [
+            "@/lib/api",
+            "next-intl",
+            "next/link"
+          ]
+        },
+        {
+          "path": "components/store/StoreHero.tsx",
+          "loc": 32,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "StoreHero"
+          ],
+          "imports": [
+            "lucide-react",
+            "next-intl"
+          ]
+        },
+        {
+          "path": "components/ui/GlassCard.tsx",
+          "loc": 19,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "GlassCard"
+          ],
+          "imports": [
+            "react"
+          ]
+        },
+        {
+          "path": "components/ui/SectionHeader.tsx",
+          "loc": 19,
+          "language": "TypeScript/JSX",
+          "public_functions": [
+            "SectionHeader"
+          ],
+          "imports": []
+        }
+      ],
+      "total_loc": 2398,
+      "public_functions": [
+        "ChatWidget",
+        "ConditionalFooter",
+        "Contact",
+        "Footer",
+        "GlassCard",
+        "Hero",
+        "LegalPage",
+        "Navbar",
+        "Portfolio",
+        "ProductCard",
+        "Products",
+        "SectionHeader",
+        "ServiceCTA",
+        "ServiceFeatures",
+        "ServiceHero",
+        "ServiceProcess",
+        "ServiceTechnologies",
+        "ServiceUseCases",
+        "Services",
+        "StoreHero",
+        "Team",
+        "WhyUs"
+      ],
+      "languages": {
+        "TypeScript/JSX": {
+          "files": 22,
+          "loc": 2398
+        }
+      }
+    },
+    "ROOT": {
+      "files": [
+        {
+          "path": "middleware.ts",
+          "loc": 16,
+          "language": "TypeScript",
+          "public_functions": [
+            "config"
+          ],
+          "imports": [
+            "./i18n/config",
+            "next-intl/middleware"
+          ]
+        },
+        {
+          "path": "next-env.d.ts",
+          "loc": 5,
+          "language": "TypeScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": "next.config.js",
+          "loc": 55,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": [
+            "next-intl/plugin"
+          ]
+        },
+        {
+          "path": "package.json",
+          "loc": 35,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": "postcss.config.js",
+          "loc": 6,
+          "language": "JavaScript",
+          "public_functions": [],
+          "imports": []
+        },
+        {
+          "path": "tailwind.config.ts",
+          "loc": 48,
+          "language": "TypeScript",
+          "public_functions": [],
+          "imports": [
+            "tailwindcss"
+          ]
+        },
+        {
+          "path": "tsconfig.json",
+          "loc": 41,
+          "language": "JSON",
+          "public_functions": [],
+          "imports": []
+        }
+      ],
+      "total_loc": 206,
+      "public_functions": [
+        "config"
+      ],
+      "languages": {
+        "TypeScript": {
+          "files": 3,
+          "loc": 69
+        },
+        "JavaScript": {
+          "files": 2,
+          "loc": 61
+        },
+        "JSON": {
+          "files": 2,
+          "loc": 76
+        }
+      }
+    },
+    "DATA": {
+      "files": [
+        {
+          "path": "data/image-slots.ts",
+          "loc": 178,
+          "language": "TypeScript",
+          "public_functions": [
+            "ImageSlot",
+            "SlotCategory",
+            "IMAGE_CATEGORIES",
+            "ALL_SLOTS"
+          ],
+          "imports": []
+        }
+      ],
+      "total_loc": 178,
+      "public_functions": [
+        "ALL_SLOTS",
+        "IMAGE_CATEGORIES",
+        "ImageSlot",
+        "SlotCategory"
+      ],
+      "languages": {
+        "TypeScript": {
+          "files": 1,
+          "loc": 178
+        }
+      }
+    },
+    "LIB": {
+      "files": [
+        {
+          "path": "lib/admin-auth.ts",
+          "loc": 25,
+          "language": "TypeScript",
+          "public_functions": [
+            "isAdminAuthenticated",
+            "adminLogin",
+            "adminLogout"
+          ],
+          "imports": []
+        },
+        {
+          "path": "lib/api.ts",
+          "loc": 120,
+          "language": "TypeScript",
+          "public_functions": [
+            "Product",
+            "ProductListResponse",
+            "WhopProduct",
+            "WhopPlan",
+            "WhopListResponse",
+            "formatPrice",
+            "formatRating",
+            "parseFeatures",
+            "parseSpecs",
+            "parseTechStack",
+            "timeAgo",
+            "getProducts",
+            "getProduct",
+            "createProduct",
+            "deleteProduct",
+            "getMemberships",
+            "getPlans",
+            "createCheckout"
+          ],
+          "imports": []
+        },
+        {
+          "path": "lib/utils.ts",
+          "loc": 23,
+          "language": "TypeScript",
+          "public_functions": [
+            "cn",
+            "API_URL",
+            "fetchAPI"
+          ],
+          "imports": [
+            "clsx",
+            "tailwind-merge"
+          ]
+        }
+      ],
+      "total_loc": 168,
+      "public_functions": [
+        "API_URL",
+        "Product",
+        "ProductListResponse",
+        "WhopListResponse",
+        "WhopPlan",
+        "WhopProduct",
+        "adminLogin",
+        "adminLogout",
+        "cn",
+        "createCheckout",
+        "createProduct",
+        "deleteProduct",
+        "fetchAPI",
+        "formatPrice",
+        "formatRating",
+        "getMemberships",
+        "getPlans",
+        "getProduct",
+        "getProducts",
+        "isAdminAuthenticated",
+        "parseFeatures",
+        "parseSpecs",
+        "parseTechStack",
+        "timeAgo"
+      ],
+      "languages": {
+        "TypeScript": {
+          "files": 3,
+          "loc": 168
+        }
+      }
+    },
+    "I18N": {
+      "files": [
+        {
+          "path": "i18n/config.ts",
+          "loc": 30,
+          "language": "TypeScript",
+          "public_functions": [
+            "locales",
+            "Locale",
+            "defaultLocale",
+            "languageMapping"
+          ],
+          "imports": []
+        },
+        {
+          "path": "i18n/request.ts",
+          "loc": 13,
+          "language": "TypeScript",
+          "public_functions": [],
+          "imports": [
+            "./config",
+            "next-intl/server"
+          ]
+        }
+      ],
+      "total_loc": 43,
+      "public_functions": [
+        "Locale",
+        "defaultLocale",
+        "languageMapping",
+        "locales"
+      ],
+      "languages": {
+        "TypeScript": {
+          "files": 2,
+          "loc": 43
+        }
+      }
+    }
+  }
+}

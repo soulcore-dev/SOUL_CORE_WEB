@@ -5,3 +5,6 @@ dist
 .env
 .env.local
 *.tar
+
+# SCOPE-ARCH transient files
+.scope-arch/AUDIT_CURRENT.json

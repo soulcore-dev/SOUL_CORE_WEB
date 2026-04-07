@@ -1,0 +1,81 @@
+{
+  "project": {
+    "name": "web",
+    "version": "0.1.0",
+    "description": "A SCOPE-ARCH managed project"
+  },
+  "scan": {
+    "root": ".",
+    "extensions": [
+      ".ts",
+      ".tsx",
+      ".js",
+      ".jsx",
+      ".css",
+      ".scss",
+      ".json"
+    ],
+    "exclude": [
+      "build/",
+      "build64/",
+      ".git/",
+      "node_modules/",
+      "vendor/",
+      "__pycache__/",
+      ".scope-arch/",
+      "dist/",
+      "target/",
+      "*.o",
+      "*.a",
+      "*.so",
+      "*.exe",
+      "*.bin",
+      "*.vdi",
+      "*.elf",
+      "initrd/"
+    ],
+    "module_depth": 1
+  },
+  "modules": {
+    "detection": "directory",
+    "budget_loc": 5000,
+    "budget_tokens": 5000,
+    "manual_map": {}
+  },
+  "commits": {
+    "categories": [
+      "UI",
+      "API",
+      "Auth",
+      "DB",
+      "Store",
+      "Hook",
+      "Build",
+      "Test",
+      "Doc",
+      "Fix",
+      "Perf",
+      "Refactor"
+    ],
+    "max_header_len": 72
+  },
+  "docs": {
+    "output_pattern": "SUBSYSTEM_{NAME}.md",
+    "output_dir": "."
+  },
+  "compile_commands": {
+    "compiler": "gcc",
+    "flags": [
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-nostdlib",
+      "-m64",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-O2"
+    ],
+    "include_dirs": [],
+    "output": "compile_commands.json"
+  }
+}

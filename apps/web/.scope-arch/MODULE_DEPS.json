@@ -1,0 +1,575 @@
+{
+  "_NEXT": {
+    "depends_on": [],
+    "depended_by": [],
+    "imports": {
+      ".next/dev/server/app/[locale]/[...rest]/page.js": [
+        "../../../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/app/[locale]/account/page.js": [
+        "../../../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/app/[locale]/admin/page.js": [
+        "../../../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/app/[locale]/page.js": [
+        "../../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/app/[locale]/privacy/page.js": [
+        "../../../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/app/[locale]/servicios/[slug]/page.js": [
+        "../../../../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/app/[locale]/store/page.js": [
+        "../../../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/app/[locale]/terms/page.js": [
+        "../../../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/app/_not-found/page.js": [
+        "../../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/app/api/health/route.js": [
+        "../../../chunks/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/chunks/[root-of-the-server]__11tfvl.._.js": [
+        "next/dist/compiled/@opentelemetry/api",
+        "next/dist/compiled/next-server/app-page-turbo.runtime.dev.js",
+        "next/dist/compiled/next-server/app-route-turbo.runtime.dev.js",
+        "next/dist/server/app-render/after-task-async-storage.external.js",
+        "next/dist/server/app-render/work-async-storage.external.js",
+        "next/dist/server/app-render/work-unit-async-storage.external.js",
+        "next/dist/shared/lib/no-fallback-error.external.js"
+      ],
+      ".next/dev/server/chunks/[turbopack]_runtime.js": [
+        "fs",
+        "path",
+        "stream",
+        "url",
+        "worker_threads"
+      ],
+      ".next/dev/server/chunks/node_modules_next_0yuox19._.js": [
+        "next/server"
+      ],
+      ".next/dev/server/chunks/ssr/[externals]__0.o~_~l._.js": [
+        "next/dist/compiled/@opentelemetry/api",
+        "next/dist/compiled/next-server/pages-turbo.runtime.dev.js",
+        "path",
+        "react",
+        "react/jsx-runtime"
+      ],
+      ".next/dev/server/chunks/ssr/[externals]__0n13xf4._.js": [
+        "module",
+        "next/dist/compiled/@opentelemetry/api",
+        "next/dist/compiled/next-server/app-page-turbo.runtime.dev.js",
+        "next/dist/server/app-render/action-async-storage.external.js",
+        "next/dist/server/app-render/after-task-async-storage.external.js",
+        "next/dist/server/app-render/dynamic-access-async-storage.external.js",
+        "next/dist/server/app-render/work-async-storage.external.js",
+        "next/dist/server/app-render/work-unit-async-storage.external.js",
+        "path",
+        "util"
+      ],
+      ".next/dev/server/chunks/ssr/[externals]_next_dist_0yew8f-._.js": [
+        "next/dist/compiled/next-server/app-page-turbo.runtime.dev.js",
+        "next/dist/server/app-render/action-async-storage.external.js",
+        "next/dist/server/app-render/after-task-async-storage.external.js",
+        "next/dist/server/app-render/dynamic-access-async-storage.external.js",
+        "next/dist/server/app-render/work-async-storage.external.js",
+        "next/dist/server/app-render/work-unit-async-storage.external.js"
+      ],
+      ".next/dev/server/chunks/ssr/[externals]_next_dist_shared_lib_no-fallback-error_external_0fgm~bn.js": [
+        "next/dist/shared/lib/no-fallback-error.external.js"
+      ],
+      ".next/dev/server/chunks/ssr/[root-of-the-server]__03nlzwa._.js": [
+        "next/dist/shared/lib/no-fallback-error.external.js"
+      ],
+      ".next/dev/server/chunks/ssr/[root-of-the-server]__05cnjbl._.js": [
+        "next/dist/shared/lib/no-fallback-error.external.js"
+      ],
+      ".next/dev/server/chunks/ssr/[root-of-the-server]__07gvvwq._.js": [
+        "next/dist/shared/lib/no-fallback-error.external.js"
+      ],
+      ".next/dev/server/chunks/ssr/[root-of-the-server]__08xau1c._.js": [
+        "next/dist/shared/lib/no-fallback-error.external.js"
+      ],
+      ".next/dev/server/chunks/ssr/[root-of-the-server]__0dxf~y.._.js": [
+        "next/dist/shared/lib/no-fallback-error.external.js"
+      ],
+      ".next/dev/server/chunks/ssr/[root-of-the-server]__0je5zm2._.js": [
+        "react",
+        "react/jsx-runtime"
+      ],
+      ".next/dev/server/chunks/ssr/[root-of-the-server]__0m_u2v~._.js": [
+        "next/dist/shared/lib/no-fallback-error.external.js"
+      ],
+      ".next/dev/server/chunks/ssr/[root-of-the-server]__0t13rsz._.js": [
+        "next/dist/shared/lib/no-fallback-error.external.js"
+      ],
+      ".next/dev/server/chunks/ssr/[root-of-the-server]__0~.w4gr._.js": [
+        "next/dist/shared/lib/no-fallback-error.external.js"
+      ],
+      ".next/dev/server/chunks/ssr/[turbopack]_runtime.js": [
+        "fs",
+        "path",
+        "stream",
+        "url",
+        "worker_threads"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_0.eeuo3._.js": [
+        "lodash"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_07wqc8_._.js": [
+        "lodash"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_0aqs1qh._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_0gvi40p._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_0ipdy_f._.js": [
+        "lodash"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_0lea~4r._.js": [
+        "lodash"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_0nuf2s5._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_100j0-x._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_13.0ezm._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_framer-motion_dist_es_0d~oph2._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_framer-motion_dist_es_0ne5~54._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_001z~o4._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_0uxxiw~._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0173gyq._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_054dykp._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_06e27ym._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_07lzk88._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0_8cps.._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0_binpp._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0f7wio_._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0fwnwco._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0q-ksus._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0srqgg_._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_0xbhfah._.js": [
+        "path"
+      ],
+      ".next/dev/server/chunks/ssr/node_modules_next_dist_esm_10r0eic._.js": [
+        "path"
+      ],
+      ".next/dev/server/edge/chunks/[root-of-the-server]__0~9y3qh._.js": [
+        "node:async_hooks",
+        "node:buffer"
+      ],
+      ".next/dev/server/pages/_app.js": [
+        "../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/pages/_document.js": [
+        "../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/server/pages/_error.js": [
+        "../chunks/ssr/[turbopack]_runtime.js"
+      ],
+      ".next/dev/static/chunks/node_modules_03yk2q6._.js": [
+        "lodash"
+      ],
+      ".next/dev/static/chunks/node_modules_06sc~yn._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/static/chunks/node_modules_0802z-x._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/static/chunks/node_modules_08gfe1-._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/static/chunks/node_modules_0ce6emv._.js": [
+        "framer-motion",
+        "lodash"
+      ],
+      ".next/dev/static/chunks/node_modules_0gs~hk_._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/static/chunks/node_modules_0htscvb._.js": [
+        "lodash"
+      ],
+      ".next/dev/static/chunks/node_modules_0h~bx4e._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/static/chunks/node_modules_framer-motion_dist_es_007m.6r._.js": [
+        "framer-motion"
+      ],
+      ".next/dev/static/chunks/node_modules_next_dist_115brz8._.js": [
+        "$2",
+        "$3"
+      ],
+      ".next/dev/static/chunks/node_modules_next_dist_compiled_0o6l_m6._.js": [
+        "react-devtools-core"
+      ],
+      ".next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js": [
+        "react-devtools-core"
+      ],
+      ".next/dev/static/chunks/node_modules_next_dist_shared_lib_0~pg0mt._.js": [
+        "$2",
+        "$3"
+      ],
+      ".next/dev/static/chunks/node_modules_next_dist_shared_lib_12bi_n7._.js": [
+        "$2",
+        "$3"
+      ],
+      ".next/dev/types/cache-life.d.ts": [
+        "next/dist/server/use-cache/cache-tag"
+      ],
+      ".next/dev/types/validator.ts": [
+        "./routes.js",
+        "next/server.js",
+        "next/types.js"
+      ]
+    }
+  },
+  "MESSAGES": {
+    "depends_on": [],
+    "depended_by": [],
+    "imports": {}
+  },
+  "APP": {
+    "depends_on": [],
+    "depended_by": [],
+    "imports": {
+      "app/[locale]/[...rest]/page.tsx": [
+        "next-intl",
+        "next/link"
+      ],
+      "app/[locale]/account/devices/page.tsx": [
+        "framer-motion",
+        "next-intl",
+        "react"
+      ],
+      "app/[locale]/account/layout.tsx": [
+        "framer-motion",
+        "next-intl",
+        "next/link",
+        "next/navigation",
+        "react"
+      ],
+      "app/[locale]/account/page.tsx": [
+        "framer-motion",
+        "next-intl",
+        "next/link",
+        "react"
+      ],
+      "app/[locale]/account/products/page.tsx": [
+        "framer-motion",
+        "next-intl",
+        "react"
+      ],
+      "app/[locale]/admin/layout.tsx": [
+        "framer-motion",
+        "lucide-react",
+        "next-intl",
+        "next/link",
+        "next/navigation",
+        "react"
+      ],
+      "app/[locale]/admin/page.tsx": [
+        "@/lib/api",
+        "framer-motion",
+        "lucide-react",
+        "next-intl",
+        "next/link",
+        "react"
+      ],
+      "app/[locale]/admin/products/new/page.tsx": [
+        "@/lib/api",
+        "framer-motion",
+        "lucide-react",
+        "next-intl",
+        "next/link",
+        "next/navigation",
+        "react"
+      ],
+      "app/[locale]/admin/products/page.tsx": [
+        "@/lib/api",
+        "framer-motion",
+        "lucide-react",
+        "next-intl",
+        "next/link",
+        "react"
+      ],
+      "app/[locale]/error.tsx": [
+        "next-intl"
+      ],
+      "app/[locale]/layout.tsx": [
+        "@/components/layout/ConditionalFooter",
+        "@/components/layout/Navbar",
+        "@/i18n/config",
+        "next",
+        "next-intl",
+        "next-intl/server",
+        "next/font/google",
+        "next/navigation"
+      ],
+      "app/[locale]/not-found.tsx": [
+        "next/link"
+      ],
+      "app/[locale]/page.tsx": [
+        "@/components/sections/Contact",
+        "@/components/sections/Hero",
+        "@/components/sections/Portfolio",
+        "@/components/sections/Products",
+        "@/components/sections/Services",
+        "@/components/sections/Team",
+        "@/components/sections/WhyUs",
+        "next-intl/server"
+      ],
+      "app/[locale]/privacy/page.tsx": [
+        "@/components/legal/LegalPage",
+        "@/i18n/config",
+        "next",
+        "next-intl/server",
+        "next/navigation"
+      ],
+      "app/[locale]/servicios/[slug]/page.tsx": [
+        "@/components/services/ServiceCTA",
+        "@/components/services/ServiceFeatures",
+        "@/components/services/ServiceHero",
+        "@/components/services/ServiceProcess",
+        "@/components/services/ServiceTechnologies",
+        "@/components/services/ServiceUseCases",
+        "@/i18n/config",
+        "next",
+        "next-intl/server",
+        "next/navigation"
+      ],
+      "app/[locale]/store/[id]/page.tsx": [
+        "@/lib/api",
+        "framer-motion",
+        "next-intl",
+        "next/link",
+        "next/navigation",
+        "react"
+      ],
+      "app/[locale]/store/page.tsx": [
+        "@/components/store/ProductCard",
+        "@/components/store/StoreHero",
+        "@/lib/api",
+        "framer-motion",
+        "lucide-react",
+        "next-intl",
+        "react"
+      ],
+      "app/[locale]/terms/page.tsx": [
+        "@/components/legal/LegalPage",
+        "@/i18n/config",
+        "next",
+        "next-intl/server",
+        "next/navigation"
+      ],
+      "app/api/admin/login/route.ts": [
+        "next/server"
+      ],
+      "app/api/admin/products/route.ts": [
+        "next/server"
+      ],
+      "app/api/chat/route.ts": [
+        "@anthropic-ai/sdk",
+        "next/server"
+      ],
+      "app/api/contact/route.ts": [
+        "next/server",
+        "resend"
+      ],
+      "app/api/health/route.ts": [
+        "next/server"
+      ],
+      "app/not-found.tsx": [
+        "next/link"
+      ],
+      "app/page.tsx": [
+        "@/i18n/config",
+        "next/navigation"
+      ]
+    }
+  },
+  "COMPONENTS": {
+    "depends_on": [],
+    "depended_by": [],
+    "imports": {
+      "components/chat/ChatWidget.tsx": [
+        "@/lib/utils",
+        "lucide-react",
+        "next-intl",
+        "react"
+      ],
+      "components/layout/ConditionalFooter.tsx": [
+        "../chat/ChatWidget",
+        "./Footer",
+        "next/navigation"
+      ],
+      "components/layout/Footer.tsx": [
+        "lucide-react",
+        "next-intl",
+        "next/link"
+      ],
+      "components/layout/Navbar.tsx": [
+        "@/lib/admin-auth",
+        "lucide-react",
+        "next-intl",
+        "next/link",
+        "next/navigation",
+        "react"
+      ],
+      "components/legal/LegalPage.tsx": [
+        "lucide-react",
+        "next-intl",
+        "next/link"
+      ],
+      "components/sections/Contact.tsx": [
+        "lucide-react",
+        "next-intl",
+        "react"
+      ],
+      "components/sections/Hero.tsx": [
+        "lucide-react",
+        "next-intl",
+        "next/link"
+      ],
+      "components/sections/Portfolio.tsx": [
+        "lucide-react",
+        "next-intl",
+        "react"
+      ],
+      "components/sections/Products.tsx": [
+        "lucide-react",
+        "next-intl"
+      ],
+      "components/sections/Services.tsx": [
+        "next-intl",
+        "next/link"
+      ],
+      "components/sections/Team.tsx": [
+        "lucide-react",
+        "next-intl"
+      ],
+      "components/sections/WhyUs.tsx": [
+        "lucide-react",
+        "next-intl"
+      ],
+      "components/services/ServiceCTA.tsx": [
+        "lucide-react",
+        "next-intl",
+        "next/link"
+      ],
+      "components/services/ServiceFeatures.tsx": [
+        "lucide-react",
+        "next-intl"
+      ],
+      "components/services/ServiceHero.tsx": [
+        "lucide-react",
+        "next-intl",
+        "next/link"
+      ],
+      "components/services/ServiceProcess.tsx": [
+        "next-intl"
+      ],
+      "components/services/ServiceTechnologies.tsx": [
+        "next-intl"
+      ],
+      "components/services/ServiceUseCases.tsx": [
+        "lucide-react",
+        "next-intl"
+      ],
+      "components/store/ProductCard.tsx": [
+        "@/lib/api",
+        "next-intl",
+        "next/link"
+      ],
+      "components/store/StoreHero.tsx": [
+        "lucide-react",
+        "next-intl"
+      ],
+      "components/ui/GlassCard.tsx": [
+        "react"
+      ]
+    }
+  },
+  "ROOT": {
+    "depends_on": [
+      "I18N"
+    ],
+    "depended_by": [],
+    "imports": {
+      "middleware.ts": [
+        "./i18n/config \u2192 I18N",
+        "next-intl/middleware"
+      ],
+      "next.config.js": [
+        "next-intl/plugin"
+      ],
+      "tailwind.config.ts": [
+        "tailwindcss"
+      ]
+    }
+  },
+  "DATA": {
+    "depends_on": [],
+    "depended_by": [],
+    "imports": {}
+  },
+  "LIB": {
+    "depends_on": [],
+    "depended_by": [],
+    "imports": {
+      "lib/utils.ts": [
+        "clsx",
+        "tailwind-merge"
+      ]
+    }
+  },
+  "I18N": {
+    "depends_on": [],
+    "depended_by": [
+      "ROOT"
+    ],
+    "imports": {
+      "i18n/request.ts": [
+        "./config",
+        "next-intl/server"
+      ]
+    }
+  }
+}
