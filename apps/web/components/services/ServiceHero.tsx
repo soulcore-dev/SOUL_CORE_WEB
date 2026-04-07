@@ -38,10 +38,12 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
   }
 
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden">
+    <section className="relative pt-32 pb-20 overflow-hidden bg-soul-dark">
       {/* Background gradient */}
       <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-5`} />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-soul-purple/20 via-transparent to-transparent" />
+      {/* Light mode: subtle bottom border gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-100 dark:to-transparent" />
 
       {/* AI illustration as section background — right-aligned, faded */}
       <img
