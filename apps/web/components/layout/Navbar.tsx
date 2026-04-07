@@ -93,12 +93,12 @@ export function Navbar() {
             <img
               src={isDark ? '/logo_black.png' : '/logo_clear.png'}
               alt="SOUL CORE"
-              className="h-14 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-5">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
