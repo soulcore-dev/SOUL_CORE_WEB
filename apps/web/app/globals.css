@@ -102,6 +102,12 @@ body {
   border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
+/* AI background images: adapt for light mode */
+.light .ai-bg-img {
+  filter: invert(1) hue-rotate(180deg);
+  opacity: 0.08 !important;
+}
+
 /* Focus ring for keyboard accessibility */
 :focus-visible {
   outline: 2px solid var(--soul-purple);

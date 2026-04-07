@@ -60,7 +60,7 @@ export function Contact() {
       <img
         src="/generated/contact-bg.png"
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-10"
+        className="absolute inset-0 w-full h-full object-cover opacity-10 ai-bg-img"
         onError={(e: any) => { e.target.style.display = 'none' }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

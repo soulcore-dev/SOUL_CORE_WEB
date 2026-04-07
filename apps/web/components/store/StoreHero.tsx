@@ -13,7 +13,7 @@ export function StoreHero() {
         <img
           src="/generated/store-hero-bg.png"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          className="absolute inset-0 w-full h-full object-cover opacity-25 ai-bg-img"
           onError={(e: any) => { e.target.style.display = 'none' }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-soul-purple/10 via-transparent to-transparent" />

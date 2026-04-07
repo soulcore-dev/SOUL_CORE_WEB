@@ -21,7 +21,7 @@ export function Hero() {
         <img
           src="/generated/hero-bg.png"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          className="absolute inset-0 w-full h-full object-cover opacity-30 ai-bg-img"
           onError={(e: any) => { e.target.style.display = 'none' }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-soul-purple/20 via-transparent to-transparent" />

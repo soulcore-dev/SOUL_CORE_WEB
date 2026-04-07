@@ -47,11 +47,11 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
       <img
         src={`/generated/svc-${serviceKey}.png`}
         alt=""
-        className="absolute top-0 right-0 w-2/3 h-full object-contain object-right opacity-20 z-[1]"
+        className="absolute top-0 right-0 w-2/3 h-full object-contain object-right opacity-20 z-[1] ai-bg-img"
         onError={(e: any) => { e.target.style.display = 'none' }}
       />
-      {/* Gradient overlay to fade image into background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-soul-dark via-soul-dark/80 to-transparent z-[2]" />
+      {/* Gradient overlay to fade image into background — dark mode only */}
+      <div className="absolute inset-0 bg-gradient-to-r from-soul-dark via-soul-dark/80 to-transparent z-[2] hidden dark:block" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back link */}

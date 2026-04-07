@@ -22,7 +22,7 @@ export function WhyUs() {
       <img
         src="/generated/whyus-bg.png"
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-15"
+        className="absolute inset-0 w-full h-full object-cover opacity-15 ai-bg-img"
         onError={(e: any) => { e.target.style.display = 'none' }}
       />
       {/* Background blur effects */}
