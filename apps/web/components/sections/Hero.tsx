@@ -71,14 +71,14 @@ export function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 max-w-xl mx-auto glass rounded-2xl p-6">
+          <div className="grid grid-cols-3 gap-4 max-w-xl mx-auto rounded-2xl p-6 bg-soul-dark-card/60 backdrop-blur-sm border border-soul-purple/20">
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col items-center">
                 <div className="w-12 h-12 rounded-xl bg-soul-purple/20 flex items-center justify-center mb-3">
                   <stat.icon className="text-soul-purple" size={24} aria-hidden="true" />
                 </div>
-                {stat.value && <span className="text-3xl font-bold !text-white">{stat.value}</span>}
-                <span className={`text-sm ${stat.value ? 'text-gray-400' : '!text-white font-semibold'}`}>{stat.label}</span>
+                {stat.value && <span className="text-3xl font-bold text-soul-purple">{stat.value}</span>}
+                <span className="text-sm text-gray-400 font-semibold">{stat.label}</span>
               </div>
             ))}
           </div>
