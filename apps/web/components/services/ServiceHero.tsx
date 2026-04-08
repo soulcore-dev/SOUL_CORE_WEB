@@ -42,18 +42,16 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
       {/* Background gradient */}
       <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-5`} />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-soul-purple/20 via-transparent to-transparent" />
-      {/* Light mode: subtle bottom border gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-100 dark:to-transparent" />
 
-      {/* AI illustration as section background — right-aligned, faded */}
+      {/* AI illustration as FULL section background — covers entire width */}
       <img
         src={`/generated/svc-${serviceKey}.png`}
         alt=""
-        className="absolute top-0 right-0 w-2/3 h-full object-contain object-right opacity-20 z-[1] ai-bg-img"
+        className="absolute inset-0 w-full h-full object-cover opacity-25 z-[1] ai-bg-img"
         onError={(e: any) => { e.target.style.display = 'none' }}
       />
-      {/* Gradient overlay to fade image into background — dark mode only */}
-      <div className="absolute inset-0 bg-gradient-to-r from-soul-dark via-soul-dark/80 to-transparent z-[2] hidden dark:block" />
+      {/* Gradient overlay — fades image from left for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-soul-dark via-soul-dark/60 to-transparent z-[2]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back link */}
@@ -62,7 +60,7 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
             href={`/${locale}#servicios`}
             className="inline-flex items-center text-gray-400 hover:text-soul-purple transition-colors mb-8"
           >
-            <ArrowLeft size={18} className="mr-2" />
+            <ArrowLeft aria-hidden="true" size={18} className="mr-2" />
             {t('backToServices')}
           </Link>
         </div>
