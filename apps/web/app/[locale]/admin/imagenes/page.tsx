@@ -253,17 +253,17 @@ export default function AdminImagenesPage() {
                   <div className="flex gap-1 mb-2">
                     {'type' in slot && (
                       <span className="text-[9px] px-1.5 py-0.5 rounded bg-gray-700 text-gray-400">
-                        {slot.type}
+                        {String((slot as any).type)}
                       </span>
                     )}
                     {'generation' in slot && (
                       <span className="text-[9px] px-1.5 py-0.5 rounded bg-gray-700 text-gray-400">
-                        {slot.generation}
+                        {String((slot as any).generation)}
                       </span>
                     )}
                     {'aspect' in slot && (
                       <span className="text-[9px] px-1.5 py-0.5 rounded bg-gray-700 text-gray-400">
-                        {slot.aspect}
+                        {String((slot as any).aspect)}
                       </span>
                     )}
                   </div>
