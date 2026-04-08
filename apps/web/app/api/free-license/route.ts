@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { sendFreeLicense, sendWelcome } from '@/lib/email/service'
 
 const LICENSE_API = process.env.LICENSE_API_URL || 'http://127.0.0.1:8090'
 const SERVICE_SECRET = process.env.LICENSE_SERVICE_SECRET || ''
@@ -43,6 +44,15 @@ export async function POST(request: NextRequest) {
     }
 
     const data = await res.json()
+
+    // Send emails (fire-and-forget, don't block response)
+    sendWelcome(email).catch(() => {})
+    sendFreeLicense(email, {
+      productName: data.product_name,
+      licenseKey: data.license_key,
+      repoUrl: `https://github.com/soulcore-dev/${product_slug}`,
+    }).catch(() => {})
+
     return NextResponse.json({
       license_key: data.license_key,
       product_name: data.product_name,
