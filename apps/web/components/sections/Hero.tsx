@@ -14,9 +14,9 @@ export function Hero() {
   ]
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background */}
-      <div className="absolute inset-0 bg-soul-dark">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background — extends behind navbar */}
+      <div className="absolute inset-0 -top-20 bg-soul-dark">
         {/* AI background image */}
         <img
           src="/generated/hero-bg.png"
