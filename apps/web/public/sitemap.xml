@@ -3,12 +3,12 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Homepage Spanish -->
   <url>
-    <loc>https://www.soulcore.dev/es</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.soulcore.dev/es"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.soulcore.dev/en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.soulcore.dev/pt"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.soulcore.dev/fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.soulcore.dev/de"/>
+    <loc>https://soulcore.dev/es</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://soulcore.dev/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soulcore.dev/en"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://soulcore.dev/pt"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://soulcore.dev/fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://soulcore.dev/de"/>
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -16,12 +16,12 @@
 
   <!-- Homepage English -->
   <url>
-    <loc>https://www.soulcore.dev/en</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.soulcore.dev/es"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.soulcore.dev/en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.soulcore.dev/pt"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.soulcore.dev/fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.soulcore.dev/de"/>
+    <loc>https://soulcore.dev/en</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://soulcore.dev/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soulcore.dev/en"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://soulcore.dev/pt"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://soulcore.dev/fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://soulcore.dev/de"/>
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -29,12 +29,12 @@
 
   <!-- Homepage Portuguese -->
   <url>
-    <loc>https://www.soulcore.dev/pt</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.soulcore.dev/es"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.soulcore.dev/en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.soulcore.dev/pt"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.soulcore.dev/fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.soulcore.dev/de"/>
+    <loc>https://soulcore.dev/pt</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://soulcore.dev/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soulcore.dev/en"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://soulcore.dev/pt"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://soulcore.dev/fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://soulcore.dev/de"/>
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -42,12 +42,12 @@
 
   <!-- Homepage French -->
   <url>
-    <loc>https://www.soulcore.dev/fr</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.soulcore.dev/es"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.soulcore.dev/en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.soulcore.dev/pt"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.soulcore.dev/fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.soulcore.dev/de"/>
+    <loc>https://soulcore.dev/fr</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://soulcore.dev/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soulcore.dev/en"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://soulcore.dev/pt"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://soulcore.dev/fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://soulcore.dev/de"/>
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -55,84 +55,84 @@
 
   <!-- Homepage German -->
   <url>
-    <loc>https://www.soulcore.dev/de</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.soulcore.dev/es"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.soulcore.dev/en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.soulcore.dev/pt"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.soulcore.dev/fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.soulcore.dev/de"/>
+    <loc>https://soulcore.dev/de</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://soulcore.dev/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soulcore.dev/en"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://soulcore.dev/pt"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://soulcore.dev/fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://soulcore.dev/de"/>
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Services Spanish -->
-  <url><loc>https://www.soulcore.dev/es/servicios/ai</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/es/servicios/software</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/es/servicios/cybersecurity</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/es/servicios/integrations</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/es/servicios/industrial</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/es/servicios/design</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/es/servicios/ecommerce</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/es/servicios/marketing</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/es/servicios/mentoring</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/es/servicios/data</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/es/servicios/cloud</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/es/servicios/legacy</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/ai</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/software</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/cybersecurity</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/integrations</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/industrial</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/design</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/ecommerce</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/marketing</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/mentoring</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/data</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/cloud</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/es/servicios/legacy</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Services English -->
-  <url><loc>https://www.soulcore.dev/en/servicios/ai</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/en/servicios/software</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/en/servicios/cybersecurity</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/en/servicios/integrations</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/en/servicios/industrial</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/en/servicios/design</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/en/servicios/ecommerce</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/en/servicios/marketing</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/en/servicios/mentoring</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/en/servicios/data</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/en/servicios/cloud</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/en/servicios/legacy</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/ai</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/software</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/cybersecurity</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/integrations</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/industrial</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/design</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/ecommerce</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/marketing</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/mentoring</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/data</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/cloud</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/en/servicios/legacy</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Services Portuguese -->
-  <url><loc>https://www.soulcore.dev/pt/servicios/ai</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/pt/servicios/software</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/pt/servicios/cybersecurity</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/pt/servicios/integrations</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/pt/servicios/industrial</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/pt/servicios/design</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/pt/servicios/ecommerce</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/pt/servicios/marketing</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/pt/servicios/mentoring</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/pt/servicios/data</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/pt/servicios/cloud</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/pt/servicios/legacy</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/ai</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/software</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/cybersecurity</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/integrations</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/industrial</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/design</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/ecommerce</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/marketing</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/mentoring</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/data</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/cloud</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/pt/servicios/legacy</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Services French -->
-  <url><loc>https://www.soulcore.dev/fr/servicios/ai</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/fr/servicios/software</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/fr/servicios/cybersecurity</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/fr/servicios/integrations</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/fr/servicios/industrial</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/fr/servicios/design</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/fr/servicios/ecommerce</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/fr/servicios/marketing</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/fr/servicios/mentoring</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/fr/servicios/data</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/fr/servicios/cloud</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/fr/servicios/legacy</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/ai</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/software</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/cybersecurity</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/integrations</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/industrial</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/design</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/ecommerce</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/marketing</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/mentoring</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/data</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/cloud</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/fr/servicios/legacy</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Services German -->
-  <url><loc>https://www.soulcore.dev/de/servicios/ai</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/de/servicios/software</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/de/servicios/cybersecurity</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/de/servicios/integrations</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/de/servicios/industrial</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/de/servicios/design</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/de/servicios/ecommerce</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/de/servicios/marketing</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/de/servicios/mentoring</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/de/servicios/data</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/de/servicios/cloud</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.soulcore.dev/de/servicios/legacy</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/ai</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/software</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/cybersecurity</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/integrations</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/industrial</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/design</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/ecommerce</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/marketing</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/mentoring</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/data</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/cloud</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://soulcore.dev/de/servicios/legacy</loc><lastmod>2026-01-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

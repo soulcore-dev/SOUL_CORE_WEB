@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: t('metadata.title'),
       description: t('metadata.ogDescription'),
-      url: 'https://soulcore.dev',
+      url: `https://soulcore.dev/${locale}`,
       siteName: 'SOUL CORE',
       type: 'website',
       images: [
@@ -65,7 +65,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: ['/og-image.png'],
     },
     alternates: {
+      canonical: `https://soulcore.dev/${locale}`,
       languages: {
+        'x-default': '/en',
         'es': '/es',
         'en': '/en',
         'pt': '/pt',
@@ -92,6 +94,29 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'SOUL CORE DEVELOPERS GROUP',
+              url: 'https://soulcore.dev',
+              logo: 'https://soulcore.dev/logo_black.png',
+              sameAs: [
+                'https://github.com/soulcore-dev',
+              ],
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+1-849-581-3171',
+                contactType: 'sales',
+                availableLanguage: ['Spanish', 'English', 'Portuguese', 'French', 'German'],
+              },
+            }),
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
