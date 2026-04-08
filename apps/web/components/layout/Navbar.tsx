@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+
 import { usePathname, useRouter } from 'next/navigation'
 
 import { Menu, X, Moon, Sun, Globe, ShoppingBag, Settings, User } from 'lucide-react'
@@ -91,11 +91,9 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center">
-            <Image
+            <img
               src={isDark ? '/logo_black.png' : '/logo_clear.png'}
               alt="SOUL CORE"
-              width={200}
-              height={64}
               className="h-14 md:h-16 w-auto"
               priority
             />
