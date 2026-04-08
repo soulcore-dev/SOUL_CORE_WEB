@@ -22,6 +22,10 @@ export function Footer() {
     { key: 'software', slug: 'software' },
     { key: 'cybersecurity', slug: 'cybersecurity' },
     { key: 'integrations', slug: 'integrations' },
+    { key: 'design', slug: 'design' },
+    { key: 'ecommerce', slug: 'ecommerce' },
+    { key: 'cloud', slug: 'cloud' },
+    { key: 'data', slug: 'data' },
   ]
 
   const companyLinks = [

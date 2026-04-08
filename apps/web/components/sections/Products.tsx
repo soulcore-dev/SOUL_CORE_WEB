@@ -1,8 +1,10 @@
 'use client'
 
 
-import { Boxes, Plug, Brain, ArrowRight, Sparkles } from 'lucide-react'
+import { Boxes, Plug, Brain, ArrowRight, Sparkles, ShoppingBag } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { useLocale } from 'next-intl'
+import Link from 'next/link'
 
 const productData = [
   {
@@ -27,6 +29,7 @@ const productData = [
 
 export function Products() {
   const t = useTranslations('products')
+  const locale = useLocale()
 
   return (
     <section id="productos" className="py-24 bg-soul-dark relative overflow-hidden">
@@ -98,9 +101,9 @@ export function Products() {
                   </ul>
 
                   {/* CTA */}
-                  <a href="#contacto" className="w-full py-3 border border-soul-purple/50 rounded-xl text-soul-purple hover:bg-soul-purple hover:text-white transition-all duration-200 flex items-center justify-center group">
+                  <a href="#contacto" className="w-full py-3 border border-soul-purple/50 rounded-xl text-soul-purple hover:bg-soul-purple hover:!text-white transition-all duration-200 flex items-center justify-center group">
                     <span>{t('moreInfo')}</span>
-                    <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight aria-hidden="true" size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>
@@ -108,15 +111,22 @@ export function Products() {
           })}
         </div>
 
+        {/* Store CTA */}
+        <div className="mt-10 text-center">
+          <Link
+            href={`/${locale}/store`}
+            className="inline-flex items-center px-8 py-4 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold !text-white transition-all duration-200 glow-hover group"
+          >
+            <ShoppingBag size={20} className="mr-2" aria-hidden="true" />
+            {locale === 'es' ? 'Explorar Tienda' : locale === 'pt' ? 'Explorar Loja' : locale === 'fr' ? 'Explorer la Boutique' : locale === 'de' ? 'Shop erkunden' : 'Explore Store'}
+            <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+          </Link>
+        </div>
+
         {/* Coming Soon */}
-        <div
-          
-          
-          
-          className="mt-12 text-center"
-        >
+        <div className="mt-6 text-center">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-soul-dark-card border border-dashed border-soul-purple/30">
-            <Sparkles size={18} className="text-soul-purple mr-2" />
+            <Sparkles size={18} className="text-soul-purple mr-2" aria-hidden="true" />
             <span className="text-gray-400">
               <strong className="text-white">{t('comingSoon')}</strong> {t('vmofSaas')}
             </span>
