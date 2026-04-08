@@ -128,6 +128,8 @@
     "viewCase": "Voir le Cas",
     "code": "Code",
     "confidential": "Projet Confidentiel",
+    "noResults": "Aucun projet dans cette catégorie",
+    "showAll": "← Voir tous les projets",
     "categories": {
       "all": "Tous",
       "ai": "IA",

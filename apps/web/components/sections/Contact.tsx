@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 import { Send, Mail, MessageCircle, MapPin, Clock, CheckCircle, AlertCircle, Briefcase } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 
 const serviceKeys = [
   'ai', 'software', 'cybersecurity', 'integrations', 'industrial', 'design',
@@ -15,6 +15,7 @@ const budgetKeys = ['under1k', '1kTo5k', '5kTo15k', '15kTo50k', 'over50k', 'tbd'
 export function Contact() {
   const t = useTranslations('contact')
   const tServices = useTranslations('services')
+  const locale = useLocale()
 
   const [formData, setFormData] = useState({
     name: '',
@@ -110,6 +111,7 @@ export function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      autoComplete="name"
                       className="w-full px-4 py-3 bg-soul-dark-lighter border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-soul-purple focus:border-soul-purple transition-colors text-white"
                       placeholder={t('form.namePlaceholder')}
                     />
@@ -127,6 +129,7 @@ export function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      autoComplete="email"
                       className="w-full px-4 py-3 bg-soul-dark-lighter border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-soul-purple focus:border-soul-purple transition-colors text-white"
                       placeholder={t('form.emailPlaceholder')}
                     />
@@ -157,7 +160,7 @@ export function Contact() {
                   {/* Budget */}
                   <div>
                     <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
-                      {t('form.budget')}
+                      {t('form.budget')} <span className="text-gray-500 font-normal">({locale === 'es' ? 'opcional' : locale === 'pt' ? 'opcional' : locale === 'fr' ? 'optionnel' : locale === 'de' ? 'optional' : 'optional'})</span>
                     </label>
                     <select
                       id="budget"

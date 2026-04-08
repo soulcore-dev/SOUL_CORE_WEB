@@ -3,7 +3,7 @@
 
 import { useTranslations, useLocale } from 'next-intl'
 import Link from 'next/link'
-import { MessageCircle, ArrowRight, Sparkles, FileText } from 'lucide-react'
+import { MessageCircle, ArrowRight, Sparkles, FileText, ShoppingBag } from 'lucide-react'
 
 interface ServiceCTAProps {
   serviceKey: string
@@ -130,13 +130,7 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
           </div>
 
           {/* Trust badges */}
-          <div
-            
-            
-            
-            
-            className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-400"
-          >
+          <div className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 bg-green-400 rounded-full" />
               {t('cta.badge1')}
@@ -149,6 +143,22 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
               <span className="w-2 h-2 bg-green-400 rounded-full" />
               {t('cta.badge3')}
             </span>
+          </div>
+
+          {/* Cross-sell: Store */}
+          <div className="mt-8 pt-8 border-t border-gray-700/50">
+            <Link
+              href={`/${locale}/store`}
+              className="inline-flex items-center gap-2 text-gray-400 hover:text-soul-purple transition-colors text-sm"
+            >
+              <ShoppingBag size={16} aria-hidden="true" />
+              {locale === 'es' ? '¿Buscas algo listo para usar? Explora nuestra tienda' :
+               locale === 'pt' ? 'Procurando algo pronto para usar? Explore nossa loja' :
+               locale === 'fr' ? 'Vous cherchez quelque chose de prêt à utiliser ? Explorez notre boutique' :
+               locale === 'de' ? 'Suchen Sie etwas Fertiges? Entdecken Sie unseren Shop' :
+               'Looking for something ready to use? Explore our store'}
+              <ArrowRight size={14} aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </div>

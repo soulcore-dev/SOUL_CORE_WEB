@@ -128,6 +128,8 @@
     "viewCase": "Fall ansehen",
     "code": "Code",
     "confidential": "Vertrauliches Projekt",
+    "noResults": "Keine Projekte in dieser Kategorie",
+    "showAll": "← Alle Projekte anzeigen",
     "categories": {
       "all": "Alle",
       "ai": "KI",

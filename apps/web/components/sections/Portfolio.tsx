@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { ExternalLink, Github, Cpu, Shield, Cog, Lock, Scale, Building, Package, Landmark } from 'lucide-react'
+import { ExternalLink, Github, Cpu, Shield, Cog, Lock, Scale, Building, Package, Landmark, Briefcase } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 const projectData = [
@@ -161,6 +161,20 @@ export function Portfolio() {
         </div>
 
         {/* Projects Grid — 4 columns */}
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-16">
+            <div className="w-16 h-16 rounded-full bg-soul-purple/20 flex items-center justify-center mx-auto mb-4">
+              <Briefcase className="text-soul-purple" size={28} />
+            </div>
+            <p className="text-gray-400 text-lg">{t('noResults')}</p>
+            <button
+              onClick={() => setActiveCategory('all')}
+              className="mt-4 text-soul-purple hover:text-soul-purple-light transition-colors text-sm font-medium"
+            >
+              {t('showAll')}
+            </button>
+          </div>
+        )}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {filteredProjects.map((project) => (
             <div
