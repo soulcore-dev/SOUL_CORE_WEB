@@ -51,7 +51,7 @@ export default function StorePage() {
               <div className="relative flex-1">
                 <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" />
                 <input
-                  type="text"
+                  type="search"
                   placeholder={t('searchPlaceholder')}
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
@@ -64,7 +64,7 @@ export default function StorePage() {
                     <button
                       key={cat || 'all'}
                       onClick={() => setCategory(cat || 'all')}
-                      className={`px-4 py-3 rounded-xl font-medium transition-all duration-200 ${
+                      className={`px-5 py-3 min-w-[80px] rounded-xl font-medium transition-all duration-200 ${
                         category === cat
                           ? 'bg-soul-purple text-white'
                           : 'bg-soul-dark-card text-gray-400 hover:text-white border border-gray-800'

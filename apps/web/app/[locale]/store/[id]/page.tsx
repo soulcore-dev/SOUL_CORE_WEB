@@ -108,7 +108,7 @@ export default function ProductDetailPage() {
               )}
 
               {/* Metrics */}
-              <div className="flex items-center gap-4 mb-6 text-sm">
+              <div className="flex flex-wrap items-center gap-4 mb-6 text-sm">
                 {product.rating > 0 && (
                   <span className="flex items-center gap-1.5 text-amber-400">
                     <Star size={16} className="fill-amber-400" />
@@ -145,7 +145,7 @@ export default function ProductDetailPage() {
               )}
 
               {/* Author + Version + Updated */}
-              <div className="flex items-center gap-4 mb-6 text-sm text-gray-500">
+              <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-gray-500">
                 <span className="flex items-center gap-1.5">
                   <div className="w-5 h-5 rounded-full bg-soul-purple/30 flex items-center justify-center text-[10px] text-soul-purple-light font-bold">
                     {(product.author || 'S')[0]}
@@ -191,7 +191,7 @@ export default function ProductDetailPage() {
               )}
 
               {/* Price + CTA */}
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex flex-wrap items-center gap-4 mb-4">
                 <span className="text-4xl font-bold text-white">
                   {formatPrice(product.price_cents, product.price_type)}
                 </span>
@@ -280,9 +280,9 @@ export default function ProductDetailPage() {
               </h2>
               <div className="bg-soul-dark-card rounded-xl border border-gray-800 overflow-hidden">
                 {Object.entries(specs).map(([key, value], i) => (
-                  <div key={key} className={`flex items-center justify-between px-5 py-3.5 ${i > 0 ? 'border-t border-gray-800' : ''}`}>
+                  <div key={key} className={`flex flex-col sm:flex-row sm:items-center sm:justify-between px-5 py-3.5 gap-1 ${i > 0 ? 'border-t border-gray-800' : ''}`}>
                     <span className="text-gray-400 text-sm">{key}</span>
-                    <span className="text-white text-sm font-medium">{value}</span>
+                    <span className="text-white text-sm font-medium break-words min-w-0">{value}</span>
                   </div>
                 ))}
               </div>

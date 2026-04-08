@@ -95,7 +95,6 @@ export function Navbar() {
               src={isDark ? '/logo_black.png' : '/logo_clear.png'}
               alt="SOUL CORE"
               className="h-14 md:h-16 w-auto"
-              priority
             />
           </Link>
 
