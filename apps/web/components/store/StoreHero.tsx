@@ -8,7 +8,7 @@ export function StoreHero() {
   const t = useTranslations('store')
 
   return (
-    <section className="relative pt-32 pb-16 overflow-hidden">
+    <section className="relative pt-24 md:pt-32 pb-16 overflow-hidden">
       <div className="absolute inset-0 bg-soul-dark">
         <img
           src="/generated/store-hero-bg.png"
