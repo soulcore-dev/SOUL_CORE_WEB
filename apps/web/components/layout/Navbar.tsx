@@ -194,14 +194,16 @@ export function Navbar() {
               {t('account')}
             </Link>
 
-            {/* Admin Link */}
-            <Link
-              href={`/${locale}/admin`}
-              className="flex items-center text-gray-300 hover:text-soul-purple transition-colors duration-200"
-            >
-              <Settings size={18} className="mr-1" />
-              {t('admin')}
-            </Link>
+            {/* Admin Link — only visible to authenticated admins */}
+            {isAdmin && (
+              <Link
+                href={`/${locale}/admin`}
+                className="flex items-center text-gray-300 hover:text-soul-purple transition-colors duration-200"
+              >
+                <Settings size={18} className="mr-1" />
+                {t('admin')}
+              </Link>
+            )}
 
             {/* CTA Button */}
             <Link
@@ -280,14 +282,16 @@ export function Navbar() {
                 <User size={18} className="mr-2" />
                 {t('account')}
               </Link>
-              <Link
-                href={`/${locale}/admin`}
-                onClick={() => setIsOpen(false)}
-                className="flex items-center text-gray-300 hover:text-soul-purple transition-colors py-2"
-              >
-                <Settings size={18} className="mr-2" />
-                {t('admin')}
-              </Link>
+              {isAdmin && (
+                <Link
+                  href={`/${locale}/admin`}
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center text-gray-300 hover:text-soul-purple transition-colors py-2"
+                >
+                  <Settings size={18} className="mr-2" />
+                  {t('admin')}
+                </Link>
+              )}
               <Link
                 href={isOnLanding ? '#contacto' : `/${locale}/#contacto`}
                 onClick={() => setIsOpen(false)}

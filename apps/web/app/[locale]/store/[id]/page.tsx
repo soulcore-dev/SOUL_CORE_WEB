@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { useParams } from 'next/navigation'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import {
@@ -89,17 +88,17 @@ export default function ProductDetailPage() {
       <section className="pt-28 pb-12 bg-soul-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <div>
             <Link href={`/${locale}/store`} className="inline-flex items-center text-gray-400 hover:text-soul-purple transition-colors mb-8">
               <ArrowLeft size={18} className="mr-2" />
               {t('backToStore')}
             </Link>
-          </motion.div>
+          </div>
 
           {/* Hero: Text Left + Icon Right */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Info */}
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
+            <div>
               {product.category && (
                 <span className="text-soul-purple font-semibold text-sm mb-2 inline-block">{product.category}</span>
               )}
@@ -203,10 +202,13 @@ export default function ProductDetailPage() {
                 )}
               </div>
 
-              <button className="w-full sm:w-auto px-8 py-4 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold text-white transition-all duration-200 glow-hover flex items-center justify-center text-lg">
+              <Link
+                href={`/${locale}/#contacto?product=${encodeURIComponent(product.name)}`}
+                className="w-full sm:w-auto px-8 py-4 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold !text-white transition-all duration-200 glow-hover flex items-center justify-center text-lg"
+              >
                 <ShoppingCart size={22} className="mr-2" />
                 {product.price_cents === 0 ? tStore('downloadFree') : t('buyNow')}
-              </button>
+              </Link>
 
               {/* Trust */}
               <div className="flex items-center gap-4 mt-4 text-xs text-gray-500">
@@ -214,16 +216,16 @@ export default function ProductDetailPage() {
                 <span className="flex items-center gap-1"><Zap size={12} /> {t('instant')}</span>
                 <span className="flex items-center gap-1"><Clock size={12} /> {tStore('guarantee')}</span>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right: Product Visual */}
-            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
+            <div>
               <div className="aspect-square max-w-md mx-auto bg-gradient-to-br from-soul-purple/30 to-violet-600/10 rounded-3xl flex items-center justify-center border border-soul-purple/20">
                 <div className="w-32 h-32 rounded-3xl bg-gradient-to-br from-soul-purple to-violet-600 flex items-center justify-center shadow-2xl shadow-soul-purple/30">
                   <Icon size={64} className="text-white" />
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -232,12 +234,12 @@ export default function ProductDetailPage() {
       {product.description && (
         <section className="py-16 bg-soul-dark-lighter">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <div>
               <h2 className="text-2xl font-bold text-white mb-6">
                 {tStore('description')}
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed whitespace-pre-line">{product.description}</p>
-            </motion.div>
+            </div>
           </div>
         </section>
       )}
@@ -246,7 +248,7 @@ export default function ProductDetailPage() {
       {features.length > 0 && (
         <section className="py-16 bg-soul-dark">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <div>
               <h2 className="text-2xl font-bold text-white mb-8 text-center">
                 {tStore('features')}
               </h2>
@@ -260,7 +262,7 @@ export default function ProductDetailPage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       )}
@@ -269,7 +271,7 @@ export default function ProductDetailPage() {
       {Object.keys(specs).length > 0 && (
         <section className="py-16 bg-soul-dark-lighter">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <div>
               <h2 className="text-2xl font-bold text-white mb-6">
                 {tStore('technicalSpecs')}
               </h2>
@@ -281,7 +283,7 @@ export default function ProductDetailPage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       )}
@@ -289,7 +291,7 @@ export default function ProductDetailPage() {
       {/* FAQ */}
       <section className="py-16 bg-soul-dark">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <div>
             <h2 className="text-2xl font-bold text-white mb-8 text-center">
               {tStore('faq')}
             </h2>
@@ -309,7 +311,7 @@ export default function ProductDetailPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -351,10 +353,13 @@ export default function ProductDetailPage() {
             <p className="text-white font-bold text-lg">{formatPrice(product.price_cents, product.price_type)}</p>
             <p className="text-gray-500 text-xs">{product.name}</p>
           </div>
-          <button className="px-6 py-3 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold text-white transition-all glow-hover flex items-center">
+          <Link
+            href={`/${locale}/#contacto?product=${encodeURIComponent(product.name)}`}
+            className="px-6 py-3 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold !text-white transition-all glow-hover flex items-center"
+          >
             <ShoppingCart size={18} className="mr-2" />
             {product.price_cents === 0 ? tStore('get') : t('buyNow')}
-          </button>
+          </Link>
         </div>
       </div>
     </>

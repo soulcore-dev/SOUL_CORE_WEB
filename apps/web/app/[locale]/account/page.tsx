@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import {
@@ -113,11 +113,7 @@ export default function AccountDashboard() {
   return (
     <div className="pb-12">
       {/* Welcome */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-8"
-      >
+      <div className="mb-8">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-10 h-10 rounded-xl bg-soul-purple/20 flex items-center justify-center">
             <User size={20} className="text-soul-purple" />
@@ -129,7 +125,7 @@ export default function AccountDashboard() {
             )}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Stats */}
       {loading ? (
@@ -140,11 +136,8 @@ export default function AccountDashboard() {
         <>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
             {stats.map((stat, i) => (
-              <motion.div
+              <div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
                 className="bg-soul-dark-card rounded-2xl border border-gray-800 p-6"
               >
                 <div className="flex items-center gap-4">
@@ -156,19 +149,14 @@ export default function AccountDashboard() {
                     <p className="text-sm text-gray-400">{stat.label}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Quick Links */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {quickLinks.map((link, i) => (
-              <motion.div
-                key={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + i * 0.1 }}
-              >
+              <div key={link.href}>
                 <Link
                   href={link.href}
                   className="group flex items-center justify-between bg-soul-dark-card rounded-2xl border border-gray-800 p-6 hover:border-soul-purple/50 transition-all duration-300"
@@ -184,7 +172,7 @@ export default function AccountDashboard() {
                   </div>
                   <ArrowRight size={20} className="text-gray-600 group-hover:text-soul-purple transition-colors" />
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </>

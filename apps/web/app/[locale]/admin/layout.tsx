@@ -2,7 +2,7 @@
 
 import { useState, useEffect, ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
+
 import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { Lock, LogOut, Package, LayoutDashboard, User } from 'lucide-react'
@@ -49,11 +49,7 @@ function AdminLogin() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-soul-dark pt-20">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="w-full max-w-md"
-      >
+      <div className="w-full max-w-md">
         <div className="bg-soul-dark-card rounded-2xl border border-gray-800 p-8">
           <div className="text-center mb-8">
             <div className="w-16 h-16 rounded-2xl bg-soul-purple/20 flex items-center justify-center mx-auto mb-4">
@@ -99,7 +95,7 @@ function AdminLogin() {
             </button>
           </form>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }
@@ -161,11 +157,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-soul-dark pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-between mb-8 bg-soul-dark-card rounded-2xl border border-gray-800 p-4"
-        >
+        <div className="flex items-center justify-between mb-8 bg-soul-dark-card rounded-2xl border border-gray-800 p-4">
           <div className="flex items-center gap-1">
             {navItems.map((item) => (
               <Link
@@ -193,7 +185,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
               {t('logout')}
             </button>
           </div>
-        </motion.div>
+        </div>
         {children}
       </div>
     </div>

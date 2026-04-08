@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
+
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { ArrowLeft, Save, Loader2 } from 'lucide-react'
@@ -44,7 +44,7 @@ export default function NewProductPage() {
 
   return (
     <div className="pb-24 max-w-3xl mx-auto">
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <div>
         <Link
           href={`/${locale}/admin/products`}
           className="inline-flex items-center text-gray-400 hover:text-soul-purple transition-colors mb-8"
@@ -52,13 +52,9 @@ export default function NewProductPage() {
           <ArrowLeft size={18} className="mr-2" />
           {t('back')}
         </Link>
-      </motion.div>
+      </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-soul-dark-card rounded-2xl border border-gray-800 p-8"
-      >
+      <div className="bg-soul-dark-card rounded-2xl border border-gray-800 p-8">
         <h1 className="text-2xl font-bold text-white mb-8">{t('title')}</h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -123,7 +119,7 @@ export default function NewProductPage() {
             )}
           </button>
         </form>
-      </motion.div>
+      </div>
     </div>
   )
 }

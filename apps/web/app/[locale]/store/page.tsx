@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+
 import { Search, Filter, Loader2, Package, Sparkles } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { StoreHero } from '@/components/store/StoreHero'
@@ -47,12 +47,7 @@ export default function StorePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filters Bar — only show when there are products */}
           {products.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="flex flex-col md:flex-row gap-4 mb-12"
-            >
+            <div className="flex flex-col md:flex-row gap-4 mb-12">
               <div className="relative flex-1">
                 <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" />
                 <input
@@ -81,7 +76,7 @@ export default function StorePage() {
                   ))}
                 </div>
               )}
-            </motion.div>
+            </div>
           )}
 
           {/* Products Grid */}
@@ -90,11 +85,7 @@ export default function StorePage() {
               <Loader2 size={32} className="text-soul-purple animate-spin" />
             </div>
           ) : filtered.length === 0 ? (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center py-24"
-            >
+            <div className="text-center py-24">
               {/* 3-layer empty state */}
               <div className="relative w-48 h-48 mx-auto mb-6">
                 <div className="absolute inset-0 z-[1] flex items-center justify-center">
@@ -114,7 +105,7 @@ export default function StorePage() {
                 <Sparkles size={18} className="text-soul-purple mr-2" />
                 <span className="text-gray-400">{t('comingSoon')}</span>
               </div>
-            </motion.div>
+            </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filtered.map((product, index) => (
