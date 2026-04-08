@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 
 import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
-import { Lock, LogOut, Package, LayoutDashboard, User, ImageIcon } from 'lucide-react'
+import { Lock, LogOut, Package, LayoutDashboard, User, ImageIcon, Mail } from 'lucide-react'
 import { adminLogin } from '@/lib/admin-auth'
 
 const ADMIN_SESSION_KEY = 'soulcore_admin_session'
@@ -104,6 +104,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
     { href: `/${locale}/admin`, icon: LayoutDashboard, label: t('dashboard') },
     { href: `/${locale}/admin/products`, icon: Package, label: t('products') },
     { href: `/${locale}/admin/imagenes`, icon: ImageIcon, label: 'Images' },
+    { href: `/${locale}/admin/emails`, icon: Mail, label: 'Emails' },
   ]
 
   return (
