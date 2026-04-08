@@ -21,21 +21,15 @@ const MODELS = [
   'gemini-2.5-flash-image',
 ] as const
 
-function getGeminiBaseUrl(): string {
-  const key = process.env.GOOGLE_GEMINI_API_KEY ?? ''
-  if (key.startsWith('AQ.')) {
-    return 'https://aiplatform.googleapis.com/v1/publishers/google/models'
-  }
-  return 'https://generativelanguage.googleapis.com/v1beta/models'
-}
+// Always use AI Studio endpoint — works with both AIza and AQ. keys
+const GEMINI_BASE_URL = 'https://generativelanguage.googleapis.com/v1beta/models'
 
 async function callGemini(
   model: string,
   prompt: string,
   apiKey: string
 ): Promise<{ imageData: string; mimeType: string } | null> {
-  const baseUrl = getGeminiBaseUrl()
-  const url = `${baseUrl}/${model}:generateContent?key=${apiKey}`
+  const url = `${GEMINI_BASE_URL}/${model}:generateContent?key=${apiKey}`
 
   const res = await fetch(url, {
     method: 'POST',
