@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { Navbar } from '@/components/layout/Navbar'
 import { ConditionalFooter } from '@/components/layout/ConditionalFooter'
+import { ScrollToTop } from '@/components/layout/ScrollToTop'
 import { locales, type Locale } from '@/i18n/config'
 import type { Metadata } from 'next'
 import '../globals.css'
@@ -124,6 +125,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             {children}
           </main>
           <ConditionalFooter />
+          <ScrollToTop />
         </NextIntlClientProvider>
       </body>
     </html>

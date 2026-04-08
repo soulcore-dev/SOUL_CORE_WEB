@@ -93,7 +93,7 @@ export function Navbar() {
             <img
               src={isDark ? '/logo_black.png' : '/logo_clear.png'}
               alt="SOUL CORE"
-              className="h-12 w-auto"
+              className="h-14 md:h-16 w-auto"
             />
           </Link>
 
@@ -108,73 +108,6 @@ export function Navbar() {
                 {t(link.labelKey)}
               </Link>
             ))}
-
-            {/* Language Selector */}
-            <div className="relative">
-              <button
-                onClick={() => setShowLangMenu(!showLangMenu)}
-                className="flex items-center space-x-1 p-2 rounded-lg bg-soul-dark-card hover:bg-soul-dark-lighter transition-colors"
-                aria-expanded={showLangMenu}
-                aria-haspopup="true"
-                aria-label="Select language"
-              >
-                <Globe size={18} />
-                <span className="text-sm uppercase">{locale}</span>
-              </button>
-              {showLangMenu && (
-                <div className="absolute top-full right-0 mt-2 bg-soul-dark-card border border-gray-700 rounded-lg overflow-hidden shadow-xl">
-                  <button
-                    onClick={() => switchLocale('es')}
-                    className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${
-                      locale === 'es' ? 'text-soul-purple' : 'text-gray-300'
-                    }`}
-                  >
-                    {tLang('es')}
-                  </button>
-                  <button
-                    onClick={() => switchLocale('en')}
-                    className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${
-                      locale === 'en' ? 'text-soul-purple' : 'text-gray-300'
-                    }`}
-                  >
-                    {tLang('en')}
-                  </button>
-                  <button
-                    onClick={() => switchLocale('pt')}
-                    className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${
-                      locale === 'pt' ? 'text-soul-purple' : 'text-gray-300'
-                    }`}
-                  >
-                    {tLang('pt')}
-                  </button>
-                  <button
-                    onClick={() => switchLocale('fr')}
-                    className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${
-                      locale === 'fr' ? 'text-soul-purple' : 'text-gray-300'
-                    }`}
-                  >
-                    {tLang('fr')}
-                  </button>
-                  <button
-                    onClick={() => switchLocale('de')}
-                    className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${
-                      locale === 'de' ? 'text-soul-purple' : 'text-gray-300'
-                    }`}
-                  >
-                    {tLang('de')}
-                  </button>
-                </div>
-              )}
-            </div>
-
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-soul-dark-card hover:bg-soul-dark-lighter transition-colors"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
 
             {/* Store Link */}
             <Link
@@ -212,6 +145,38 @@ export function Navbar() {
             >
               {t('quote')}
             </Link>
+
+            {/* Language & Theme — after CTA per Randhy feedback */}
+            <div className="flex items-center space-x-1 border-l border-gray-700 pl-3 ml-1">
+              <div className="relative">
+                <button
+                  onClick={() => setShowLangMenu(!showLangMenu)}
+                  className="flex items-center space-x-1 p-2 rounded-lg hover:bg-soul-dark-card transition-colors"
+                  aria-expanded={showLangMenu}
+                  aria-haspopup="true"
+                  aria-label="Select language"
+                >
+                  <Globe size={16} />
+                  <span className="text-xs uppercase">{locale}</span>
+                </button>
+                {showLangMenu && (
+                  <div className="absolute top-full right-0 mt-2 bg-soul-dark-card border border-gray-700 rounded-lg overflow-hidden shadow-xl">
+                    <button onClick={() => switchLocale('es')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'es' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('es')}</button>
+                    <button onClick={() => switchLocale('en')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'en' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('en')}</button>
+                    <button onClick={() => switchLocale('pt')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'pt' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('pt')}</button>
+                    <button onClick={() => switchLocale('fr')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'fr' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('fr')}</button>
+                    <button onClick={() => switchLocale('de')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'de' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('de')}</button>
+                  </div>
+                )}
+              </div>
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg hover:bg-soul-dark-card transition-colors"
+                aria-label="Toggle theme"
+              >
+                {isDark ? <Sun size={16} /> : <Moon size={16} />}
+              </button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
