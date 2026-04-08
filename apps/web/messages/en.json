@@ -208,19 +208,34 @@
         "name": "VMOF",
         "fullName": "Visual Matrix Orchestration Framework",
         "description": "Proprietary framework for designing complex architectures visually. Reduces complexity 20x and accelerates system design 13x.",
-        "features": ["Visual architecture design", "20x complexity reduction", "Automatic documentation", "Integration with any stack"]
+        "features": [
+          "Visual architecture design",
+          "20x complexity reduction",
+          "Automatic documentation",
+          "Integration with any stack"
+        ]
       },
       "mcp": {
         "name": "SOUL CORE MCP",
         "fullName": "Model Context Protocol Server",
         "description": "MCP server for AI consciousness orchestration. Real-time communication, groups, messaging and distributed execution.",
-        "features": ["Multi-agent orchestration", "Real-time messaging", "Groups and channels", "High-performance gRPC API"]
+        "features": [
+          "Multi-agent orchestration",
+          "Real-time messaging",
+          "Groups and channels",
+          "High-performance gRPC API"
+        ]
       },
       "soulcore": {
         "name": "SOUL_CORE",
         "fullName": "Knowledge Management System",
         "description": "Proprietary architecture for context and documentation management. Keeps project knowledge organized and accessible.",
-        "features": ["Context management", "Centralized documentation", "Intelligent search", "Multi-tool integration"]
+        "features": [
+          "Context management",
+          "Centralized documentation",
+          "Intelligent search",
+          "Multi-tool integration"
+        ]
       }
     }
   },
@@ -228,7 +243,15 @@
     "label": "Our Team",
     "title": "Cutting-Edge Developers",
     "subtitle": "A team of experts combining years of experience with cutting-edge technology. We use AI as a tool to multiply our productivity.",
-    "techStack": ["React", "Node.js", "Python", "AWS", "Kubernetes", "AI/ML", "Cybersecurity"],
+    "techStack": [
+      "React",
+      "Node.js",
+      "Python",
+      "AWS",
+      "Kubernetes",
+      "AI/ML",
+      "Cybersecurity"
+    ],
     "mainTeam": {
       "title": "Senior Development Team",
       "description": "Experienced developers with expertise in multiple technologies. We combine agile methodologies with state-of-the-art AI tools to deliver robust and scalable solutions."
@@ -262,7 +285,12 @@
     "network": {
       "title": "Specialist Network",
       "subtitle": "Technical partners for specialized projects",
-      "benefits": ["Specialists in every technology", "Scalability per project", "Enterprise capacity", "Global talent network"]
+      "benefits": [
+        "Specialists in every technology",
+        "Scalability per project",
+        "Enterprise capacity",
+        "Global talent network"
+      ]
     }
   },
   "contact": {
@@ -439,7 +467,18 @@
           "description": "We launch to production with continuous monitoring and improvements based on real metrics."
         }
       ],
-      "technologies": ["OpenAI GPT-4", "Anthropic Claude", "n8n", "Make", "Zapier", "LangChain", "Python", "FastAPI", "Pinecone", "Supabase"],
+      "technologies": [
+        "OpenAI GPT-4",
+        "Anthropic Claude",
+        "n8n",
+        "Make",
+        "Zapier",
+        "LangChain",
+        "Python",
+        "FastAPI",
+        "Pinecone",
+        "Supabase"
+      ],
       "useCases": [
         {
           "problem": "Company received 500+ daily WhatsApp inquiries, overwhelming the sales team.",
@@ -511,7 +550,18 @@
           "description": "Go-live with data migration, user training and complete technical documentation."
         }
       ],
-      "technologies": ["React", "Next.js", "Node.js", "Python", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS"],
+      "technologies": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Python",
+        "TypeScript",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Docker",
+        "AWS"
+      ],
       "useCases": [
         {
           "problem": "Startup needed to validate marketplace idea in 6 weeks with limited budget.",
@@ -583,7 +633,18 @@
           "description": "Operator and maintenance training. Complete technical documentation."
         }
       ],
-      "technologies": ["Siemens S7", "Allen Bradley", "SCADA", "Node-RED", "MQTT", "InfluxDB", "Grafana", "Python", "TensorFlow", "Arduino"],
+      "technologies": [
+        "Siemens S7",
+        "Allen Bradley",
+        "SCADA",
+        "Node-RED",
+        "MQTT",
+        "InfluxDB",
+        "Grafana",
+        "Python",
+        "TensorFlow",
+        "Arduino"
+      ],
       "useCases": [
         {
           "problem": "Agricultural plant lost 30% of harvest due to inefficient irrigation and undetected pests.",
@@ -608,24 +669,76 @@
         "subtitle": "We protect your infrastructure with professional pentesting, security audits and hardening. OWASP Top 10 as minimum standard."
       },
       "features": [
-        {"title": "Pentesting", "description": "Penetration testing on web apps, APIs, networks and cloud infrastructure."},
-        {"title": "Code Audit", "description": "Exhaustive source code review to identify vulnerabilities before deployment."},
-        {"title": "Hardening", "description": "Server, database, container and CI/CD pipeline fortification."},
-        {"title": "Compliance", "description": "OWASP, ISO 27001, SOC 2 compliance. Guided documentation and remediation."},
-        {"title": "Threat Monitoring", "description": "Intrusion detection, log analysis, real-time alerts and incident response."},
-        {"title": "Training", "description": "Security training for development teams. Secure coding practices."}
+        {
+          "title": "Pentesting",
+          "description": "Penetration testing on web apps, APIs, networks and cloud infrastructure."
+        },
+        {
+          "title": "Code Audit",
+          "description": "Exhaustive source code review to identify vulnerabilities before deployment."
+        },
+        {
+          "title": "Hardening",
+          "description": "Server, database, container and CI/CD pipeline fortification."
+        },
+        {
+          "title": "Compliance",
+          "description": "OWASP, ISO 27001, SOC 2 compliance. Guided documentation and remediation."
+        },
+        {
+          "title": "Threat Monitoring",
+          "description": "Intrusion detection, log analysis, real-time alerts and incident response."
+        },
+        {
+          "title": "Training",
+          "description": "Security training for development teams. Secure coding practices."
+        }
       ],
       "process": [
-        {"title": "Reconnaissance", "description": "We map the attack surface: domains, ports, exposed services and technologies."},
-        {"title": "Vulnerability Analysis", "description": "Automated scanning + manual testing to identify every weak point."},
-        {"title": "Controlled Exploitation", "description": "We simulate real attacks to validate the impact of each vulnerability found."},
-        {"title": "Detailed Report", "description": "Executive + technical report with severity, evidence and step-by-step remediation plan."},
-        {"title": "Remediation & Re-test", "description": "We support the fix and verify that each vulnerability was closed."}
+        {
+          "title": "Reconnaissance",
+          "description": "We map the attack surface: domains, ports, exposed services and technologies."
+        },
+        {
+          "title": "Vulnerability Analysis",
+          "description": "Automated scanning + manual testing to identify every weak point."
+        },
+        {
+          "title": "Controlled Exploitation",
+          "description": "We simulate real attacks to validate the impact of each vulnerability found."
+        },
+        {
+          "title": "Detailed Report",
+          "description": "Executive + technical report with severity, evidence and step-by-step remediation plan."
+        },
+        {
+          "title": "Remediation & Re-test",
+          "description": "We support the fix and verify that each vulnerability was closed."
+        }
       ],
-      "technologies": ["Burp Suite", "OWASP ZAP", "Nmap", "Metasploit", "Nuclei", "Wireshark", "Kali Linux", "Docker", "Terraform", "CloudFlare"],
+      "technologies": [
+        "Burp Suite",
+        "OWASP ZAP",
+        "Nmap",
+        "Metasploit",
+        "Nuclei",
+        "Wireshark",
+        "Kali Linux",
+        "Docker",
+        "Terraform",
+        "CloudFlare"
+      ],
       "useCases": [
-        {"problem": "Fintech platform with sensitive data had never had a security audit.", "solution": "Full web + API + infra pentesting. 50+ vulnerabilities identified including 3 critical.", "result": "All vulnerabilities remediated in 2 weeks. Security certification obtained."},
-        {"problem": "E-commerce suffered a breach attempt via SQL injection in checkout form.", "solution": "Emergency audit, WAF hardening, code review and team training.", "result": "Zero breaches post-remediation. Security pipeline integrated into CI/CD."}
+        {
+          "problem": "Fintech platform with sensitive data had never had a security audit.",
+          "solution": "Full web + API + infra pentesting. 50+ vulnerabilities identified including 3 critical.",
+          "result": "All vulnerabilities remediated in 2 weeks. Security certification obtained."
+        },
+        {
+          "problem": "E-commerce suffered a breach attempt via SQL injection in checkout form.",
+          "solution": "Emergency audit, WAF hardening, code review and team training.",
+          "result": "Zero breaches post-remediation. Security pipeline integrated into CI/CD."
+        }
       ],
       "ctaSection": {
         "title": "Is your system really secure?",
@@ -639,24 +752,76 @@
         "subtitle": "We connect your systems with robust APIs, MCP servers and microservice architectures. Everything talks to everything."
       },
       "features": [
-        {"title": "REST & GraphQL APIs", "description": "Design and implementation of scalable APIs with OpenAPI documentation and rate limiting."},
-        {"title": "MCP Servers", "description": "Model Context Protocol servers for AI agent orchestration and real-time communication."},
-        {"title": "Webhooks & Events", "description": "Event-driven architectures with webhooks, message queues and async processing."},
-        {"title": "Microservices", "description": "Monolith decomposition into microservices with gRPC, API Gateway and service mesh."},
-        {"title": "Third-Party Integrations", "description": "Connection with Stripe, Twilio, SendGrid, Slack, HubSpot, Zapier and 100+ platforms."},
-        {"title": "ETL & Data Pipelines", "description": "Data pipelines between systems. Transformation, synchronization and automated orchestration."}
+        {
+          "title": "REST & GraphQL APIs",
+          "description": "Design and implementation of scalable APIs with OpenAPI documentation and rate limiting."
+        },
+        {
+          "title": "MCP Servers",
+          "description": "Model Context Protocol servers for AI agent orchestration and real-time communication."
+        },
+        {
+          "title": "Webhooks & Events",
+          "description": "Event-driven architectures with webhooks, message queues and async processing."
+        },
+        {
+          "title": "Microservices",
+          "description": "Monolith decomposition into microservices with gRPC, API Gateway and service mesh."
+        },
+        {
+          "title": "Third-Party Integrations",
+          "description": "Connection with Stripe, Twilio, SendGrid, Slack, HubSpot, Zapier and 100+ platforms."
+        },
+        {
+          "title": "ETL & Data Pipelines",
+          "description": "Data pipelines between systems. Transformation, synchronization and automated orchestration."
+        }
       ],
       "process": [
-        {"title": "System Mapping", "description": "We document all systems involved, data flows and integration points."},
-        {"title": "API Design", "description": "We define contracts, schemas, authentication and versioning before writing code."},
-        {"title": "Implementation", "description": "Development with automated testing, robust error handling and retry policies."},
-        {"title": "Integration Testing", "description": "End-to-end testing with mocks, contract testing and edge case validation."},
-        {"title": "Monitoring & Docs", "description": "Health check dashboard, alerts and interactive documentation for your team."}
+        {
+          "title": "System Mapping",
+          "description": "We document all systems involved, data flows and integration points."
+        },
+        {
+          "title": "API Design",
+          "description": "We define contracts, schemas, authentication and versioning before writing code."
+        },
+        {
+          "title": "Implementation",
+          "description": "Development with automated testing, robust error handling and retry policies."
+        },
+        {
+          "title": "Integration Testing",
+          "description": "End-to-end testing with mocks, contract testing and edge case validation."
+        },
+        {
+          "title": "Monitoring & Docs",
+          "description": "Health check dashboard, alerts and interactive documentation for your team."
+        }
       ],
-      "technologies": ["Node.js", "Go", "FastAPI", "GraphQL", "gRPC", "RabbitMQ", "Redis", "PostgreSQL", "Swagger", "Postman"],
+      "technologies": [
+        "Node.js",
+        "Go",
+        "FastAPI",
+        "GraphQL",
+        "gRPC",
+        "RabbitMQ",
+        "Redis",
+        "PostgreSQL",
+        "Swagger",
+        "Postman"
+      ],
       "useCases": [
-        {"problem": "Company with 5 siloed systems: CRM, ERP, e-commerce, warehouse and accounting.", "solution": "Central API Gateway + integration microservices. Bidirectional real-time sync.", "result": "Unified operations, manual errors -90%, order processing time -70%."},
-        {"problem": "Startup needed to connect their platform with 12 different payment providers.", "solution": "Abstraction layer with per-provider adapters. Unified webhook + monitoring dashboard.", "result": "12 integrations in 3 weeks. New provider onboarding in 2 days vs 2 weeks."}
+        {
+          "problem": "Company with 5 siloed systems: CRM, ERP, e-commerce, warehouse and accounting.",
+          "solution": "Central API Gateway + integration microservices. Bidirectional real-time sync.",
+          "result": "Unified operations, manual errors -90%, order processing time -70%."
+        },
+        {
+          "problem": "Startup needed to connect their platform with 12 different payment providers.",
+          "solution": "Abstraction layer with per-provider adapters. Unified webhook + monitoring dashboard.",
+          "result": "12 integrations in 3 weeks. New provider onboarding in 2 days vs 2 weeks."
+        }
       ],
       "ctaSection": {
         "title": "Need to connect your systems?",
@@ -717,7 +882,18 @@
           "description": "Delivery with development specs, exported assets and documentation."
         }
       ],
-      "technologies": ["Figma", "Adobe XD", "Sketch", "Framer", "Webflow", "Hotjar", "Maze", "Lottie", "Illustrator", "After Effects"],
+      "technologies": [
+        "Figma",
+        "Adobe XD",
+        "Sketch",
+        "Framer",
+        "Webflow",
+        "Hotjar",
+        "Maze",
+        "Lottie",
+        "Illustrator",
+        "After Effects"
+      ],
       "useCases": [
         {
           "problem": "E-commerce with 78% cart abandonment rate and high bounce rate.",
@@ -789,7 +965,18 @@
           "description": "Catalog expansion, new channels, operations automation."
         }
       ],
-      "technologies": ["Shopify", "WooCommerce", "Magento", "Amazon Seller Central", "Klaviyo", "Gorgias", "ShipStation", "Google Analytics", "Meta Pixel", "TikTok Pixel"],
+      "technologies": [
+        "Shopify",
+        "WooCommerce",
+        "Magento",
+        "Amazon Seller Central",
+        "Klaviyo",
+        "Gorgias",
+        "ShipStation",
+        "Google Analytics",
+        "Meta Pixel",
+        "TikTok Pixel"
+      ],
       "useCases": [
         {
           "problem": "Clothing brand sold only in physical store, wanted to expand online.",
@@ -861,7 +1048,18 @@
           "description": "Budget increase on winning channels, expansion to new markets."
         }
       ],
-      "technologies": ["Google Ads", "Meta Ads", "TikTok Ads", "SEMrush", "Ahrefs", "Google Analytics", "Google Tag Manager", "Mailchimp", "HubSpot", "Looker Studio"],
+      "technologies": [
+        "Google Ads",
+        "Meta Ads",
+        "TikTok Ads",
+        "SEMrush",
+        "Ahrefs",
+        "Google Analytics",
+        "Google Tag Manager",
+        "Mailchimp",
+        "HubSpot",
+        "Looker Studio"
+      ],
       "useCases": [
         {
           "problem": "B2B SaaS with $150 CPL and 3-month sales cycle.",
@@ -933,7 +1131,18 @@
           "description": "Progress evaluation, adjustments and continuous post-mentoring support."
         }
       ],
-      "technologies": ["JavaScript", "Python", "React", "Node.js", "AWS", "Docker", "Kubernetes", "Git", "Agile/Scrum", "System Design"],
+      "technologies": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Git",
+        "Agile/Scrum",
+        "System Design"
+      ],
       "useCases": [
         {
           "problem": "Junior developer stuck in career, didn't know how to advance to senior.",
@@ -1005,7 +1214,18 @@
           "description": "End-user training to interpret and use the insights."
         }
       ],
-      "technologies": ["Python", "SQL", "Power BI", "Tableau", "Snowflake", "BigQuery", "dbt", "Airflow", "scikit-learn", "TensorFlow"],
+      "technologies": [
+        "Python",
+        "SQL",
+        "Power BI",
+        "Tableau",
+        "Snowflake",
+        "BigQuery",
+        "dbt",
+        "Airflow",
+        "scikit-learn",
+        "TensorFlow"
+      ],
       "useCases": [
         {
           "problem": "CEO made decisions with Excel and outdated manual reports.",
@@ -1077,7 +1297,18 @@
           "description": "Continuous right-sizing, reserved instances, spot instances to reduce costs."
         }
       ],
-      "technologies": ["AWS", "GCP", "Azure", "Terraform", "Kubernetes", "Docker", "GitHub Actions", "Prometheus", "Grafana", "DataDog"],
+      "technologies": [
+        "AWS",
+        "GCP",
+        "Azure",
+        "Terraform",
+        "Kubernetes",
+        "Docker",
+        "GitHub Actions",
+        "Prometheus",
+        "Grafana",
+        "DataDog"
+      ],
       "useCases": [
         {
           "problem": "Startup with manual deploys taking 4 hours and causing downtime.",
@@ -1149,7 +1380,18 @@
           "description": "We retire legacy system only when new system is 100% validated."
         }
       ],
-      "technologies": ["COBOL", "FORTRAN", "Java", ".NET", "Python", "Node.js", "PostgreSQL", "REST APIs", "Docker", "Kubernetes"],
+      "technologies": [
+        "COBOL",
+        "FORTRAN",
+        "Java",
+        ".NET",
+        "Python",
+        "Node.js",
+        "PostgreSQL",
+        "REST APIs",
+        "Docker",
+        "Kubernetes"
+      ],
       "useCases": [
         {
           "problem": "Bank with 30-year-old COBOL core banking, impossible to hire maintainers.",
@@ -1199,7 +1441,9 @@
     "faqQ2": "Can I use it on multiple machines?",
     "faqA2": "Each license binds to one machine. You can rebind up to 3 times per year.",
     "faqQ3": "Is there a money-back guarantee?",
-    "faqA3": "Yes, we offer a 30-day money-back guarantee. Full refund if not satisfied."
+    "faqA3": "Yes, we offer a 30-day money-back guarantee. Full refund if not satisfied.",
+    "demo": "Demo",
+    "view": "View"
   },
   "storeDetail": {
     "backToStore": "Back to Store",
@@ -1231,7 +1475,11 @@
     "recentProducts": "Recent Products",
     "viewAll": "View All",
     "noProductsYet": "No products yet. Create the first one.",
-    "createFirst": "Create First Product"
+    "createFirst": "Create First Product",
+    "serverError": "Server error",
+    "connectionError": "Could not connect to the server",
+    "username": "Username",
+    "signingIn": "Signing in..."
   },
   "adminProducts": {
     "title": "Products",
@@ -1274,16 +1522,46 @@
     "backHome": "Back to home",
     "contact": "For privacy inquiries, contact us at:",
     "sections": {
-      "collection": { "title": "Information We Collect", "content": "We collect information you provide directly when you:\n\n- Complete the contact form (name, email address, estimated budget, project description)\n- Interact with our chat assistant (conversation messages)\n- Communicate with us via email, WhatsApp or Upwork\n\nWe also automatically collect technical data such as IP address, browser type, pages visited and time spent using standard analytics tools." },
-      "usage": { "title": "How We Use Your Information", "content": "We use the collected information to:\n\n- Respond to your quote requests and inquiries\n- Provide contracted software development services\n- Improve the browsing experience on our site\n- Send communications related to active projects\n- Analyze website usage to improve our services\n\nWe do not sell, rent or share your personal information with third parties for marketing purposes." },
-      "cookies": { "title": "Cookies and Tracking Technologies", "content": "Our site uses essential cookies for site functionality (language preference, visual theme) and analytics cookies to understand how the site is used.\n\nYou can disable cookies from your browser settings. Essential cookies are necessary for the proper functioning of the site." },
-      "thirdParty": { "title": "Third-Party Services", "content": "We use the following services that may process data:\n\n- Vercel: frontend hosting\n- Supabase: database and authentication\n- Resend: transactional email delivery\n- Anthropic: chat assistant query processing\n\nEach provider operates under their own privacy policies and complies with industry security standards." },
-      "ai": { "title": "Artificial Intelligence", "content": "Our chat assistant uses AI models (Anthropic Claude) to answer queries. Messages you send to the chat may be processed by these models to generate responses.\n\nWe do not use your chat conversations to train AI models. Conversations are temporarily stored to maintain session context and are periodically deleted." },
-      "security": { "title": "Data Security", "content": "We implement technical and organizational security measures to protect your information, including:\n\n- SSL/TLS encryption for all communications\n- Restricted access to personal data\n- Secure server infrastructure (AWS)\n- Continuous security monitoring\n\nNo internet transmission is 100% secure, but we strive to protect your information with the best available practices." },
-      "rights": { "title": "Your Rights", "content": "You have the right to:\n\n- Access the personal information we hold about you\n- Request correction of inaccurate data\n- Request deletion of your personal data\n- Object to the processing of your data\n- Request portability of your data\n\nTo exercise any of these rights, contact us at founder@soulcore.dev." },
-      "international": { "title": "International Transfers", "content": "SOUL CORE DEVELOPERS GROUP operates from the Dominican Republic with global remote service. Your data may be processed on servers located in the United States (AWS, Vercel, Supabase).\n\nFor European Union users, these transfers are made under adequate protection mechanisms in accordance with the GDPR." },
-      "children": { "title": "Children's Privacy", "content": "Our services are not directed to individuals under 18 years of age. We do not intentionally collect information from minors. If we discover that we have collected data from a minor, we will delete it immediately." },
-      "changes": { "title": "Changes to This Policy", "content": "We reserve the right to update this privacy policy periodically. Changes will be posted on this page with the update date. Continued use of the site after changes constitutes acceptance of the updated policy." }
+      "collection": {
+        "title": "Information We Collect",
+        "content": "We collect information you provide directly when you:\n\n- Complete the contact form (name, email address, estimated budget, project description)\n- Interact with our chat assistant (conversation messages)\n- Communicate with us via email, WhatsApp or Upwork\n\nWe also automatically collect technical data such as IP address, browser type, pages visited and time spent using standard analytics tools."
+      },
+      "usage": {
+        "title": "How We Use Your Information",
+        "content": "We use the collected information to:\n\n- Respond to your quote requests and inquiries\n- Provide contracted software development services\n- Improve the browsing experience on our site\n- Send communications related to active projects\n- Analyze website usage to improve our services\n\nWe do not sell, rent or share your personal information with third parties for marketing purposes."
+      },
+      "cookies": {
+        "title": "Cookies and Tracking Technologies",
+        "content": "Our site uses essential cookies for site functionality (language preference, visual theme) and analytics cookies to understand how the site is used.\n\nYou can disable cookies from your browser settings. Essential cookies are necessary for the proper functioning of the site."
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "content": "We use the following services that may process data:\n\n- Vercel: frontend hosting\n- Supabase: database and authentication\n- Resend: transactional email delivery\n- Anthropic: chat assistant query processing\n\nEach provider operates under their own privacy policies and complies with industry security standards."
+      },
+      "ai": {
+        "title": "Artificial Intelligence",
+        "content": "Our chat assistant uses AI models (Anthropic Claude) to answer queries. Messages you send to the chat may be processed by these models to generate responses.\n\nWe do not use your chat conversations to train AI models. Conversations are temporarily stored to maintain session context and are periodically deleted."
+      },
+      "security": {
+        "title": "Data Security",
+        "content": "We implement technical and organizational security measures to protect your information, including:\n\n- SSL/TLS encryption for all communications\n- Restricted access to personal data\n- Secure server infrastructure (AWS)\n- Continuous security monitoring\n\nNo internet transmission is 100% secure, but we strive to protect your information with the best available practices."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "content": "You have the right to:\n\n- Access the personal information we hold about you\n- Request correction of inaccurate data\n- Request deletion of your personal data\n- Object to the processing of your data\n- Request portability of your data\n\nTo exercise any of these rights, contact us at founder@soulcore.dev."
+      },
+      "international": {
+        "title": "International Transfers",
+        "content": "SOUL CORE DEVELOPERS GROUP operates from the Dominican Republic with global remote service. Your data may be processed on servers located in the United States (AWS, Vercel, Supabase).\n\nFor European Union users, these transfers are made under adequate protection mechanisms in accordance with the GDPR."
+      },
+      "children": {
+        "title": "Children's Privacy",
+        "content": "Our services are not directed to individuals under 18 years of age. We do not intentionally collect information from minors. If we discover that we have collected data from a minor, we will delete it immediately."
+      },
+      "changes": {
+        "title": "Changes to This Policy",
+        "content": "We reserve the right to update this privacy policy periodically. Changes will be posted on this page with the update date. Continued use of the site after changes constitutes acceptance of the updated policy."
+      }
     }
   },
   "terms": {
@@ -1293,16 +1571,46 @@
     "backHome": "Back to home",
     "contact": "For legal inquiries, contact us at:",
     "sections": {
-      "acceptance": { "title": "Acceptance of Terms", "content": "By accessing and using soulcore.dev and the services of SOUL CORE DEVELOPERS GROUP, you accept these terms of service in their entirety. If you disagree with any part of these terms, you must not use our services.\n\nThese terms apply to all visitors, users and clients of the website and services." },
-      "services": { "title": "Description of Services", "content": "SOUL CORE DEVELOPERS GROUP offers services in:\n\n- Custom software development (web, mobile, APIs)\n- Artificial intelligence and automation\n- Cybersecurity and pentesting\n- Integrations and APIs\n- Digital design and UX\n- E-commerce and digital marketing\n- Technology consulting and mentoring\n- Data science and analytics\n- Cloud and DevOps\n- Legacy system modernization\n- Industrial automation and IoT\n\nWe also offer proprietary products and frameworks (VMOF, SOUL CORE MCP, SOUL_CORE) subject to specific license terms." },
-      "ip": { "title": "Intellectual Property", "content": "All website content, including but not limited to text, graphics, logos, icons, software, source code, frameworks and materials, is the property of SOUL CORE DEVELOPERS GROUP or its licensors and is protected by copyright and intellectual property laws.\n\nThe proprietary frameworks VMOF, SOUL CORE MCP and SOUL_CORE are trademarks and products of SOUL CORE DEVELOPERS GROUP. Their use requires an express license.\n\nCode developed specifically for a client is governed by the terms of each project's individual contract." },
-      "userObligations": { "title": "User Obligations", "content": "By using our services you agree to:\n\n- Provide truthful and up-to-date information\n- Not use the site for illegal or unauthorized purposes\n- Not attempt to access restricted areas of the site or its systems\n- Not reverse engineer our products or services\n- Not submit malicious, offensive content or content that infringes third-party rights\n- Respect the intellectual property of SOUL CORE and its clients" },
-      "payments": { "title": "Payments and Billing", "content": "Development services are quoted individually based on project complexity. Payment terms are established in each project's contract and may include:\n\n- Advance payment (partial or full)\n- Milestone-based payments\n- Hourly or per-sprint rates\n\nQuotes are valid for 30 days. Store product prices are those published at the time of purchase. All prices are expressed in USD unless otherwise indicated." },
-      "liability": { "title": "Limitation of Liability", "content": "SOUL CORE DEVELOPERS GROUP shall not be liable for:\n\n- Indirect, incidental or consequential damages arising from the use of our services\n- Loss of data, profits or business interruption\n- Errors or inaccuracies in website content\n- Actions of third parties or failures in third-party services\n\nOur maximum liability in any case shall be limited to the amount paid by the client in the 12 months prior to the incident." },
-      "warranties": { "title": "Warranties", "content": "Services are provided \"as is\" and \"as available\". We make no implied warranties of merchantability or fitness for a particular purpose regarding the website.\n\nFor contracted projects, specific warranties are established in each project's individual contract. We generally offer a post-delivery bug-fix warranty period as agreed." },
-      "termination": { "title": "Termination", "content": "We reserve the right to suspend or terminate access to our services if:\n\n- These terms of service are violated\n- Fraudulent or malicious activity is detected\n- Agreed payment obligations are not met\n\nTermination of contracted projects is governed by the terms of the corresponding individual contract." },
-      "governing": { "title": "Governing Law and Jurisdiction", "content": "These terms are governed by the laws of the Dominican Republic. Any dispute shall be submitted to the jurisdiction of the competent courts of the National District, Santo Domingo, Dominican Republic.\n\nFor international clients, international arbitration may be agreed under the rules of the Mediation and Arbitration Center of the Santo Domingo Chamber of Commerce and Production." },
-      "changes": { "title": "Modifications", "content": "SOUL CORE DEVELOPERS GROUP reserves the right to modify these terms at any time. Modifications will take effect upon being posted on this page.\n\nFor active projects, agreed contractual terms prevail over any subsequent changes to these general terms." }
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "content": "By accessing and using soulcore.dev and the services of SOUL CORE DEVELOPERS GROUP, you accept these terms of service in their entirety. If you disagree with any part of these terms, you must not use our services.\n\nThese terms apply to all visitors, users and clients of the website and services."
+      },
+      "services": {
+        "title": "Description of Services",
+        "content": "SOUL CORE DEVELOPERS GROUP offers services in:\n\n- Custom software development (web, mobile, APIs)\n- Artificial intelligence and automation\n- Cybersecurity and pentesting\n- Integrations and APIs\n- Digital design and UX\n- E-commerce and digital marketing\n- Technology consulting and mentoring\n- Data science and analytics\n- Cloud and DevOps\n- Legacy system modernization\n- Industrial automation and IoT\n\nWe also offer proprietary products and frameworks (VMOF, SOUL CORE MCP, SOUL_CORE) subject to specific license terms."
+      },
+      "ip": {
+        "title": "Intellectual Property",
+        "content": "All website content, including but not limited to text, graphics, logos, icons, software, source code, frameworks and materials, is the property of SOUL CORE DEVELOPERS GROUP or its licensors and is protected by copyright and intellectual property laws.\n\nThe proprietary frameworks VMOF, SOUL CORE MCP and SOUL_CORE are trademarks and products of SOUL CORE DEVELOPERS GROUP. Their use requires an express license.\n\nCode developed specifically for a client is governed by the terms of each project's individual contract."
+      },
+      "userObligations": {
+        "title": "User Obligations",
+        "content": "By using our services you agree to:\n\n- Provide truthful and up-to-date information\n- Not use the site for illegal or unauthorized purposes\n- Not attempt to access restricted areas of the site or its systems\n- Not reverse engineer our products or services\n- Not submit malicious, offensive content or content that infringes third-party rights\n- Respect the intellectual property of SOUL CORE and its clients"
+      },
+      "payments": {
+        "title": "Payments and Billing",
+        "content": "Development services are quoted individually based on project complexity. Payment terms are established in each project's contract and may include:\n\n- Advance payment (partial or full)\n- Milestone-based payments\n- Hourly or per-sprint rates\n\nQuotes are valid for 30 days. Store product prices are those published at the time of purchase. All prices are expressed in USD unless otherwise indicated."
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "content": "SOUL CORE DEVELOPERS GROUP shall not be liable for:\n\n- Indirect, incidental or consequential damages arising from the use of our services\n- Loss of data, profits or business interruption\n- Errors or inaccuracies in website content\n- Actions of third parties or failures in third-party services\n\nOur maximum liability in any case shall be limited to the amount paid by the client in the 12 months prior to the incident."
+      },
+      "warranties": {
+        "title": "Warranties",
+        "content": "Services are provided \"as is\" and \"as available\". We make no implied warranties of merchantability or fitness for a particular purpose regarding the website.\n\nFor contracted projects, specific warranties are established in each project's individual contract. We generally offer a post-delivery bug-fix warranty period as agreed."
+      },
+      "termination": {
+        "title": "Termination",
+        "content": "We reserve the right to suspend or terminate access to our services if:\n\n- These terms of service are violated\n- Fraudulent or malicious activity is detected\n- Agreed payment obligations are not met\n\nTermination of contracted projects is governed by the terms of the corresponding individual contract."
+      },
+      "governing": {
+        "title": "Governing Law and Jurisdiction",
+        "content": "These terms are governed by the laws of the Dominican Republic. Any dispute shall be submitted to the jurisdiction of the competent courts of the National District, Santo Domingo, Dominican Republic.\n\nFor international clients, international arbitration may be agreed under the rules of the Mediation and Arbitration Center of the Santo Domingo Chamber of Commerce and Production."
+      },
+      "changes": {
+        "title": "Modifications",
+        "content": "SOUL CORE DEVELOPERS GROUP reserves the right to modify these terms at any time. Modifications will take effect upon being posted on this page.\n\nFor active projects, agreed contractual terms prevail over any subsequent changes to these general terms."
+      }
     }
   },
   "account": {

@@ -33,7 +33,7 @@ function AdminLogin() {
       if (!res.ok) {
         setError(data.error === 'invalid_credentials'
           ? (t('loginError'))
-          : 'Error del servidor')
+          : t('serverError'))
         return
       }
 
@@ -41,7 +41,7 @@ function AdminLogin() {
       sessionStorage.setItem(ADMIN_USER_KEY, JSON.stringify({ username: data.username, role: data.role }))
       window.location.reload()
     } catch {
-      setError('No se pudo conectar al servidor')
+      setError(t('connectionError'))
     } finally {
       setLoading(false)
     }
@@ -65,7 +65,7 @@ function AdminLogin() {
 
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-400 mb-1.5">Usuario</label>
+              <label className="block text-sm font-medium text-gray-400 mb-1.5">{t('username')}</label>
               <input
                 type="text"
                 value={username}
@@ -95,7 +95,7 @@ function AdminLogin() {
               disabled={loading || !username || !password}
               className="w-full py-3 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold text-white transition-all duration-200 glow-hover disabled:opacity-50"
             >
-              {loading ? 'Accediendo...' : t('loginButton')}
+              {loading ? t('signingIn') : t('loginButton')}
             </button>
           </form>
         </div>
