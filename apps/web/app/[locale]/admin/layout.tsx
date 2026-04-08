@@ -5,14 +5,13 @@ import { useRouter } from 'next/navigation'
 
 import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
-import { Lock, LogOut, Package, LayoutDashboard, User } from 'lucide-react'
+import { Lock, LogOut, Package, LayoutDashboard, User, ImageIcon } from 'lucide-react'
+import { adminLogin } from '@/lib/admin-auth'
 
-const ADMIN_TOKEN_KEY = 'soulcore_admin_token'
-const ADMIN_USER_KEY = 'soulcore_admin_user'
+const ADMIN_SESSION_KEY = 'soulcore_admin_session'
 
 function AdminLogin() {
   const t = useTranslations('admin')
-  const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -23,23 +22,12 @@ function AdminLogin() {
     setError('')
 
     try {
-      const res = await fetch('/api/licenses/auth/admin/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
-      })
-      const data = await res.json()
-
-      if (!res.ok) {
-        setError(data.error === 'invalid_credentials'
-          ? (t('loginError'))
-          : t('serverError'))
-        return
+      const success = await adminLogin(password)
+      if (success) {
+        window.location.reload()
+      } else {
+        setError(t('loginError'))
       }
-
-      sessionStorage.setItem(ADMIN_TOKEN_KEY, data.token)
-      sessionStorage.setItem(ADMIN_USER_KEY, JSON.stringify({ username: data.username, role: data.role }))
-      window.location.reload()
     } catch {
       setError(t('connectionError'))
     } finally {
@@ -61,18 +49,6 @@ function AdminLogin() {
 
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-400 mb-1.5">{t('username')}</label>
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => { setUsername(e.target.value); setError('') }}
-                placeholder="admin"
-                className="w-full px-4 py-3 bg-soul-dark-lighter border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-soul-purple transition-colors text-white"
-                autoFocus
-                autoComplete="username"
-              />
-            </div>
-            <div>
               <label className="block text-sm font-medium text-gray-400 mb-1.5">{t('passwordPlaceholder')}</label>
               <input
                 type="password"
@@ -82,13 +58,14 @@ function AdminLogin() {
                 className={`w-full px-4 py-3 bg-soul-dark-lighter border rounded-xl focus:outline-none focus:ring-2 focus:ring-soul-purple transition-colors text-white ${
                   error ? 'border-red-500' : 'border-gray-700'
                 }`}
+                autoFocus
                 autoComplete="current-password"
               />
               {error && <p className="text-red-400 text-sm mt-2">{error}</p>}
             </div>
             <button
               type="submit"
-              disabled={loading || !username || !password}
+              disabled={loading || !password}
               className="w-full py-3 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold text-white transition-all duration-200 glow-hover disabled:opacity-50"
             >
               {loading ? t('signingIn') : t('loginButton')}
@@ -105,31 +82,13 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   const t = useTranslations('admin')
   const router = useRouter()
   const [authenticated, setAuthenticated] = useState(false)
-  const [adminUser, setAdminUser] = useState<{ username: string; role: string } | null>(null)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
-    const token = sessionStorage.getItem(ADMIN_TOKEN_KEY)
-    if (token) {
-      // Verify session is still valid
-      fetch('/api/licenses/auth/admin/me', {
-        headers: { Authorization: `Bearer ${token}` },
-      }).then(res => {
-        if (res.ok) {
-          setAuthenticated(true)
-          try {
-            const user = JSON.parse(sessionStorage.getItem(ADMIN_USER_KEY) || '{}')
-            setAdminUser(user)
-          } catch { /* */ }
-        } else {
-          sessionStorage.removeItem(ADMIN_TOKEN_KEY)
-          sessionStorage.removeItem(ADMIN_USER_KEY)
-        }
-      }).catch(() => {
-        // Offline — allow if token exists
-        setAuthenticated(true)
-      })
+    const session = sessionStorage.getItem(ADMIN_SESSION_KEY)
+    if (session === 'authenticated') {
+      setAuthenticated(true)
     }
   }, [])
 
@@ -137,21 +96,14 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   if (!authenticated) return <AdminLogin />
 
   const handleLogout = () => {
-    const token = sessionStorage.getItem(ADMIN_TOKEN_KEY)
-    if (token) {
-      fetch('/api/licenses/auth/admin/logout', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${token}` },
-      }).catch(() => {})
-    }
-    sessionStorage.removeItem(ADMIN_TOKEN_KEY)
-    sessionStorage.removeItem(ADMIN_USER_KEY)
+    sessionStorage.removeItem(ADMIN_SESSION_KEY)
     router.push(`/${locale}`)
   }
 
   const navItems = [
     { href: `/${locale}/admin`, icon: LayoutDashboard, label: t('dashboard') },
     { href: `/${locale}/admin/products`, icon: Package, label: t('products') },
+    { href: `/${locale}/admin/imagenes`, icon: ImageIcon, label: 'Images' },
   ]
 
   return (
@@ -171,12 +123,6 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
             ))}
           </div>
           <div className="flex items-center gap-3">
-            {adminUser && (
-              <span className="flex items-center text-gray-500 text-sm">
-                <User size={14} className="mr-1" />
-                {adminUser.username}
-              </span>
-            )}
             <button
               onClick={handleLogout}
               className="flex items-center px-4 py-2 rounded-xl text-gray-400 hover:text-red-400 hover:bg-red-500/10 transition-all"
