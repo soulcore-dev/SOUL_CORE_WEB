@@ -6,7 +6,7 @@ import { Resend } from 'resend'
 import { transactionalEmail, receiptEmail } from './templates'
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
-const FROM = process.env.FROM_EMAIL ?? 'SoulCore <hello@send.soulcore.dev>'
+const FROM = process.env.FROM_EMAIL ?? 'SoulCore <hello@soulcore.dev>'
 const PORTAL_URL = 'https://soulcore.dev/es/account'
 
 interface SendResult {
