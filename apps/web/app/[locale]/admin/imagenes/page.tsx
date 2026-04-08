@@ -15,8 +15,6 @@ import { IMAGE_CATEGORIES, ALL_SLOTS, type ImageSlot } from '@/data/image-slots'
  */
 
 const STORAGE_KEY = 'image-factory-settings';
-const AI_IMAGE_URL = process.env.NEXT_PUBLIC_AI_IMAGE_URL || '';
-const AI_IMAGE_API_KEY = process.env.NEXT_PUBLIC_AI_IMAGE_API_KEY || 'dev-key';
 
 interface DisplaySettings {
   opacityDark: number;
@@ -190,28 +188,20 @@ export default function AdminImagenesPage() {
   const existingCount = Object.values(slotStates).filter(s => s.exists || s.preview).length;
 
   const handleGenerate = useCallback(async (slot: ImageSlot) => {
-    if (!AI_IMAGE_URL) {
-      try {
-        await navigator.clipboard.writeText(slot.prompt);
-        alert(`Prompt copied!\n\nGenerate with Gemini (best model).\nSave as: public/generated/${slot.filename}\n\nSize: ${slot.aspect === '16:9' ? '1792x1024' : '1024x1024'}`);
-      } catch { alert(`Prompt:\n${slot.prompt}\n\nSave as: public/generated/${slot.filename}`); }
-      return;
-    }
-
     setSlotStates(prev => ({ ...prev, [slot.id]: { ...prev[slot.id], generating: true, error: null } }));
     try {
-      const res = await fetch(`${AI_IMAGE_URL}/api/v1/images/generate`, {
+      const res = await fetch('/api/admin/generate-image', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'x-api-key': AI_IMAGE_API_KEY },
-        body: JSON.stringify({ prompt: slot.prompt, aspectRatio: slot.aspect, folder: 'soulcore-web' }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: slot.prompt, filename: slot.filename }),
       });
       if (!res.ok) {
         const errData = await res.json().catch(() => ({}));
-        throw new Error(errData.message || `Error ${res.status}`);
+        throw new Error(errData.error || `Error ${res.status}`);
       }
       const data = await res.json();
       setSlotStates(prev => ({
-        ...prev, [slot.id]: { exists: true, generating: false, error: null, preview: data.imageUrl || null },
+        ...prev, [slot.id]: { exists: true, generating: false, error: null, preview: data.url || `/generated/${slot.filename}?t=${Date.now()}` },
       }));
     } catch (err: any) {
       setSlotStates(prev => ({ ...prev, [slot.id]: { ...prev[slot.id], generating: false, error: err.message || 'Failed' } }));
