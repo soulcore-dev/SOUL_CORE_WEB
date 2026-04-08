@@ -148,6 +148,7 @@ export function Portfolio() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
+              aria-pressed={activeCategory === category}
               className={`px-5 py-2 rounded-full font-medium transition-all duration-200 ${
                 activeCategory === category
                   ? 'bg-soul-purple !text-white'
@@ -170,7 +171,7 @@ export function Portfolio() {
               <div className={`h-28 bg-gradient-to-br ${project.color} relative`}>
                 <div className="absolute inset-0 bg-black/30" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <project.icon size={36} className="text-white/80" />
+                  <project.icon aria-hidden="true" size={36} className="text-white/80" />
                 </div>
                 <div className="absolute top-2 left-2">
                   <span className="px-2 py-0.5 bg-black/50 rounded-full !text-white text-[10px] font-medium">

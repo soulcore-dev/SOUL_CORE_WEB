@@ -49,7 +49,7 @@ export function Team() {
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="flex-shrink-0">
               <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-soul-purple to-violet-600 flex items-center justify-center">
-                <Rocket size={48} className="!text-white" />
+                <Rocket aria-hidden="true" size={48} className="!text-white" />
               </div>
             </div>
             <div className="flex-1 text-center lg:text-left">
@@ -81,7 +81,7 @@ export function Team() {
               className="group bg-soul-dark-card rounded-2xl p-6 border border-gray-800 hover:border-soul-purple/50 transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-soul-purple to-violet-600 flex items-center justify-center mb-4">
-                <capability.icon size={24} className="!text-white" />
+                <capability.icon aria-hidden="true" size={24} className="!text-white" />
               </div>
               <h3 className="text-lg font-bold text-white mb-2 group-hover:text-soul-purple-light transition-colors">
                 {t(`capabilities.${capability.key}.title`)}
@@ -103,7 +103,7 @@ export function Team() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center mb-6 md:mb-0">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mr-4">
-                <Users size={32} className="!text-white" />
+                <Users aria-hidden="true" size={32} className="!text-white" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">{t('network.title')}</h3>

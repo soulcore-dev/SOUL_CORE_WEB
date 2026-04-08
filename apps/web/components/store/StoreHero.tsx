@@ -27,7 +27,7 @@ export function StoreHero() {
           className="text-center"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-soul-purple/20 border border-soul-purple/30 text-soul-purple-light text-sm font-medium mb-6">
-            <ShoppingBag size={16} className="mr-2" />
+            <ShoppingBag aria-hidden="true" size={16} className="mr-2" />
             {t('badge')}
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">

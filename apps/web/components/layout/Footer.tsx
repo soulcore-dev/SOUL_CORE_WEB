@@ -68,7 +68,7 @@ export function Footer() {
                   className="p-2 rounded-lg bg-soul-dark-lighter hover:bg-soul-purple/20 transition-colors"
                   aria-label={social.label}
                 >
-                  <social.icon size={20} className="text-gray-400 hover:text-soul-purple" />
+                  <social.icon aria-hidden="true" size={20} className="text-gray-400 hover:text-soul-purple" />
                 </a>
               ))}
             </div>

@@ -64,7 +64,7 @@ export function Products() {
                 {/* Gradient Header */}
                 <div className={`h-32 bg-gradient-to-br ${product.color} relative`}>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <product.icon size={48} className="!text-white" />
+                    <product.icon aria-hidden="true" size={48} className="!text-white" />
                   </div>
                   {/* Status Badge */}
                   <div className="absolute top-4 right-4">

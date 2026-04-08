@@ -60,7 +60,7 @@ export function Hero() {
               className="px-8 py-4 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold !text-white transition-all duration-200 glow-hover flex items-center group"
             >
               {t('ctaServices')}
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+              <ArrowRight aria-hidden="true" className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
             </Link>
             <Link
               href="#contacto"

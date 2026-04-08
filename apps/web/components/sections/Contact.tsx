@@ -88,7 +88,7 @@ export function Contact() {
             
           >
             {isSubmitted ? (
-              <div className="bg-soul-dark-card rounded-2xl p-8 border border-green-500/30 text-center">
+              <div role="status" aria-live="polite" className="bg-soul-dark-card rounded-2xl p-8 border border-green-500/30 text-center">
                 <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
                   <CheckCircle size={32} className="text-green-500" />
                 </div>
@@ -194,8 +194,8 @@ export function Contact() {
 
                   {/* Error Message */}
                   {submitError && (
-                    <div className="flex items-center p-4 bg-red-500/10 border border-red-500/30 rounded-xl">
-                      <AlertCircle size={20} className="text-red-500 mr-3 flex-shrink-0" />
+                    <div role="alert" className="flex items-center p-4 bg-red-500/10 border border-red-500/30 rounded-xl">
+                      <AlertCircle aria-hidden="true" size={20} className="text-red-500 mr-3 flex-shrink-0" />
                       <p className="text-red-400 text-sm">
                         {t('form.error')}
                       </p>
@@ -238,7 +238,7 @@ export function Contact() {
                   className="flex items-center p-4 bg-soul-dark-lighter rounded-xl hover:bg-soul-purple/20 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-soul-purple/20 flex items-center justify-center mr-4">
-                    <Mail className="text-soul-purple" size={24} />
+                    <Mail aria-hidden="true" className="text-soul-purple" size={24} />
                   </div>
                   <div>
                     <p className="text-white font-medium group-hover:text-soul-purple-light">{t('direct.email')}</p>
@@ -253,7 +253,7 @@ export function Contact() {
                   className="flex items-center p-4 bg-soul-dark-lighter rounded-xl hover:bg-green-500/20 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mr-4">
-                    <MessageCircle className="text-green-500" size={24} />
+                    <MessageCircle aria-hidden="true" className="text-green-500" size={24} />
                   </div>
                   <div>
                     <p className="text-white font-medium group-hover:text-green-400">{t('direct.whatsapp')}</p>
@@ -268,7 +268,7 @@ export function Contact() {
                   className="flex items-center p-4 bg-soul-dark-lighter rounded-xl hover:bg-emerald-500/20 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mr-4">
-                    <Briefcase className="text-emerald-500" size={24} />
+                    <Briefcase aria-hidden="true" className="text-emerald-500" size={24} />
                   </div>
                   <div>
                     <p className="text-white font-medium group-hover:text-emerald-400">{t('direct.upwork')}</p>
@@ -281,14 +281,14 @@ export function Contact() {
             {/* Info Cards */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-soul-dark-card rounded-2xl p-6 border border-gray-800">
-                <MapPin className="text-soul-purple mb-3" size={24} />
+                <MapPin aria-hidden="true" className="text-soul-purple mb-3" size={24} />
                 <h4 className="text-white font-medium mb-1">{t('location.title')}</h4>
                 <p className="text-gray-400 text-sm">{t('location.country')}</p>
                 <p className="text-gray-500 text-xs mt-1">{t('location.global')}</p>
               </div>
 
               <div className="bg-soul-dark-card rounded-2xl p-6 border border-gray-800">
-                <Clock className="text-soul-purple mb-3" size={24} />
+                <Clock aria-hidden="true" className="text-soul-purple mb-3" size={24} />
                 <h4 className="text-white font-medium mb-1">{t('availability.title')}</h4>
                 <p className="text-gray-400 text-sm">{t('availability.hours')}</p>
                 <p className="text-gray-500 text-xs mt-1">{t('availability.response')}</p>

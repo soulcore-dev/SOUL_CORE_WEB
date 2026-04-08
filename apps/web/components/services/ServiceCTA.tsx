@@ -51,19 +51,19 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
             
             className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${color} mb-8`}
           >
-            <Sparkles className="w-8 h-8 !text-white" />
+            <Sparkles aria-hidden="true" className="w-8 h-8 !text-white" />
           </div>
 
           {/* Title */}
-          <div
-            
-            
-            
-            
+          <h2
+
+
+
+
             className="text-3xl md:text-5xl font-bold text-white mb-6"
           >
             {ctaTitle}
-          </div>
+          </h2>
 
           {/* Description */}
           <p
@@ -114,7 +114,7 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
               className={`group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r ${color} rounded-xl font-semibold !text-white text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-soul-purple/30`}
             >
               {t('cta.startProject')}
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight aria-hidden="true" className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Link>
 
             {/* Secondary CTA - WhatsApp */}
@@ -124,7 +124,7 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-soul-dark border-2 border-gray-400 dark:border-gray-700 hover:border-green-500 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-green-500/10"
             >
-              <MessageCircle className="w-5 h-5 text-green-400" />
+              <MessageCircle aria-hidden="true" className="w-5 h-5 text-green-400" />
               {t('cta.whatsapp')}
             </a>
           </div>
