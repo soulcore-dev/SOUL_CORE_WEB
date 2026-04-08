@@ -1,13 +1,14 @@
 'use client'
 
 import { useState, useEffect, ReactNode } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
-  KeyRound, LogOut, Package, LayoutDashboard, Monitor, Mail, Loader2
+  KeyRound, LogOut, Package, LayoutDashboard, Monitor, Mail, Loader2,
+  Gift, Copy, Check, ExternalLink
 } from 'lucide-react'
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || ''
@@ -123,11 +124,178 @@ function CustomerLogin({ onLogin }: { onLogin: (info: CustomerInfo) => void }) {
   )
 }
 
+function FreeProductClaim({ productSlug, onClaimed }: { productSlug: string; onClaimed: (info: CustomerInfo) => void }) {
+  const t = useTranslations('account')
+  const locale = useLocale()
+  const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [result, setResult] = useState<{ license_key: string; product_name: string } | null>(null)
+  const [error, setError] = useState('')
+  const [copied, setCopied] = useState(false)
+
+  const handleClaim = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError('')
+    setLoading(true)
+
+    try {
+      const res = await fetch('/api/free-license', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, product_slug: productSlug }),
+      })
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({ error: 'Error' }))
+        throw new Error(data.error || `Error ${res.status}`)
+      }
+
+      const data = await res.json()
+      setResult(data)
+
+      // Auto-login with the new license
+      try {
+        const loginRes = await fetch(`${API_BASE}/api/licenses/auth/customer/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, license_key: data.license_key }),
+        })
+        if (loginRes.ok) {
+          const loginData = await loginRes.json()
+          sessionStorage.setItem('soulcore_customer_token', loginData.token)
+          sessionStorage.setItem('soulcore_customer_email', email)
+        }
+      } catch { /* auto-login failed, user still has the key */ }
+    } catch (err: any) {
+      setError(err.message || 'Failed to generate license')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const copyKey = () => {
+    if (result) {
+      navigator.clipboard.writeText(result.license_key)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
+  }
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-soul-dark pt-20">
+      <div className="w-full max-w-md mx-4">
+        <div className="bg-soul-dark-card rounded-2xl border border-gray-800 p-8">
+          <div className="text-center mb-8">
+            <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 flex items-center justify-center mx-auto mb-4">
+              <Gift size={32} className="text-emerald-400" />
+            </div>
+            <h2 className="text-2xl font-bold text-white">Producto Gratuito</h2>
+            <p className="text-gray-400 mt-2">Ingresa tu correo para obtener tu licencia gratuita</p>
+          </div>
+
+          {!result ? (
+            <form onSubmit={handleClaim} className="space-y-4">
+              <div>
+                <label className="block text-sm text-gray-400 mb-1">{t('email')}</label>
+                <div className="relative">
+                  <Mail size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => { setEmail(e.target.value); setError('') }}
+                    placeholder="you@example.com"
+                    className="w-full pl-10 pr-4 py-3 bg-soul-dark-lighter border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-colors text-white placeholder-gray-500"
+                    required
+                    autoFocus
+                  />
+                </div>
+              </div>
+
+              <p className="text-xs text-gray-500">
+                Producto: <span className="text-gray-300 font-medium">{productSlug}</span>
+              </p>
+
+              {error && (
+                <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-xl">
+                  <p className="text-red-400 text-sm">{error}</p>
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={loading || !email}
+                className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 rounded-xl font-semibold text-white transition-all duration-200 disabled:opacity-50 flex items-center justify-center gap-2"
+              >
+                {loading ? (
+                  <>
+                    <Loader2 size={18} className="animate-spin" />
+                    Generando licencia...
+                  </>
+                ) : (
+                  'Obtener Gratis'
+                )}
+              </button>
+            </form>
+          ) : (
+            <div className="space-y-4">
+              <div className="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl">
+                <p className="text-emerald-400 text-sm font-semibold mb-1">Licencia generada</p>
+                <p className="text-white text-sm">{result.product_name}</p>
+              </div>
+
+              <div>
+                <label className="block text-sm text-gray-400 mb-1">Tu clave de licencia</label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={result.license_key}
+                    readOnly
+                    className="w-full px-4 py-3 bg-soul-dark-lighter border border-gray-700 rounded-xl text-white font-mono text-xs pr-12"
+                  />
+                  <button
+                    onClick={copyKey}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                  >
+                    {copied ? <Check size={18} className="text-emerald-400" /> : <Copy size={18} />}
+                  </button>
+                </div>
+                <p className="text-xs text-gray-500 mt-1">Guarda esta clave — la necesitas para iniciar sesión</p>
+              </div>
+
+              <div className="flex gap-3">
+                <button
+                  onClick={() => {
+                    onClaimed({ token: sessionStorage.getItem('soulcore_customer_token') || '', email, name: '' })
+                  }}
+                  className="flex-1 py-3 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold text-white transition-all text-center"
+                >
+                  Ir a Mi Cuenta
+                </button>
+                <a
+                  href={`https://github.com/soulcore-dev/${productSlug}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-3 bg-soul-dark-lighter border border-gray-700 rounded-xl text-gray-300 hover:text-white hover:border-gray-600 transition-all"
+                >
+                  <ExternalLink size={16} />
+                  GitHub
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function AccountLayout({ children }: { children: ReactNode }) {
   const t = useTranslations('account')
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const freeSlug = searchParams.get('free')
   const [authenticated, setAuthenticated] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [customerName, setCustomerName] = useState('')
@@ -176,6 +344,7 @@ export default function AccountLayout({ children }: { children: ReactNode }) {
   }
 
   if (!mounted) return null
+  if (!authenticated && freeSlug) return <FreeProductClaim productSlug={freeSlug} onClaimed={handleLogin} />
   if (!authenticated) return <CustomerLogin onLogin={handleLogin} />
 
   const navItems = [
