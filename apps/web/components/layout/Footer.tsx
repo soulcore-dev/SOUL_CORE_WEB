@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Github, Linkedin, Mail, MessageCircle, Briefcase } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 
@@ -48,15 +49,19 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href={`/${locale}`} className="flex items-center mb-4">
-              <img
+              <Image
                 src="/logo_black.png"
                 alt="SOUL CORE"
-                className="h-16 w-auto dark:block hidden"
+                width={200}
+                height={64}
+                className="h-12 w-auto dark:block hidden"
               />
-              <img
+              <Image
                 src="/logo_clear.png"
                 alt="SOUL CORE"
-                className="h-16 w-auto dark:hidden block"
+                width={200}
+                height={64}
+                className="h-12 w-auto dark:hidden block"
               />
             </Link>
             <p className="text-gray-400 mb-6 max-w-sm">
