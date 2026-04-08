@@ -350,24 +350,27 @@ export default function ProductDetailPage() {
       )}
 
       {/* Mobile Sticky Buy Button */}
-      <div className="fixed bottom-0 left-0 right-0 lg:hidden bg-soul-dark-card/95 backdrop-blur-sm border-t border-gray-800 p-4 z-40">
-        <div className="flex items-center justify-between max-w-lg mx-auto">
-          <div>
-            <p className="text-white font-bold text-lg">{formatPrice(product.price_cents, product.price_type)}</p>
-            <p className="text-gray-500 text-xs">{product.name}</p>
+      <div className="fixed bottom-0 left-0 right-0 lg:hidden bg-soul-dark-card/95 backdrop-blur-sm border-t border-gray-800 px-4 py-3 z-50 mb-safe">
+        <div className="flex items-center justify-between max-w-lg mx-auto gap-3">
+          <div className="min-w-0">
+            <p className="text-white font-bold">{formatPrice(product.price_cents, product.price_type)}</p>
+            <p className="text-gray-500 text-xs truncate">{product.name}</p>
           </div>
           <Link
             href={product.price_cents === 0
               ? `/${locale}/account?free=${encodeURIComponent(product.slug)}`
               : `/api/buy?product=${encodeURIComponent(product.slug)}&locale=${locale}`
             }
-            className="px-6 py-3 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold !text-white transition-all glow-hover flex items-center"
+            className="shrink-0 px-5 py-2.5 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold !text-white transition-all glow-hover flex items-center text-sm"
           >
-            <ShoppingCart size={18} className="mr-2" />
+            <ShoppingCart size={16} className="mr-1.5" />
             {product.price_cents === 0 ? tStore('get') : t('buyNow')}
           </Link>
         </div>
       </div>
+
+      {/* Spacer for mobile sticky bar */}
+      <div className="h-20 lg:hidden" />
     </>
   )
 }
