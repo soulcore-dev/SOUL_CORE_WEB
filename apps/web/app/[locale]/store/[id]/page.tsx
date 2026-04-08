@@ -203,7 +203,10 @@ export default function ProductDetailPage() {
               </div>
 
               <Link
-                href={`/${locale}/#contacto?product=${encodeURIComponent(product.name)}`}
+                href={product.price_cents === 0
+                  ? `/${locale}/account?free=${encodeURIComponent(product.slug)}`
+                  : `/api/buy?product=${encodeURIComponent(product.slug)}&locale=${locale}`
+                }
                 className="w-full sm:w-auto px-8 py-4 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold !text-white transition-all duration-200 glow-hover flex items-center justify-center text-lg"
               >
                 <ShoppingCart size={22} className="mr-2" />
@@ -354,7 +357,10 @@ export default function ProductDetailPage() {
             <p className="text-gray-500 text-xs">{product.name}</p>
           </div>
           <Link
-            href={`/${locale}/#contacto?product=${encodeURIComponent(product.name)}`}
+            href={product.price_cents === 0
+              ? `/${locale}/account?free=${encodeURIComponent(product.slug)}`
+              : `/api/buy?product=${encodeURIComponent(product.slug)}&locale=${locale}`
+            }
             className="px-6 py-3 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold !text-white transition-all glow-hover flex items-center"
           >
             <ShoppingCart size={18} className="mr-2" />

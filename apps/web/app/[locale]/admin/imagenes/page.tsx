@@ -16,6 +16,7 @@ import { IMAGE_CATEGORIES, ALL_SLOTS, type ImageSlot } from '@/data/image-slots'
 
 const STORAGE_KEY = 'image-factory-settings';
 const AI_IMAGE_URL = process.env.NEXT_PUBLIC_AI_IMAGE_URL || '';
+const AI_IMAGE_API_KEY = process.env.NEXT_PUBLIC_AI_IMAGE_API_KEY || 'dev-key';
 
 interface DisplaySettings {
   opacityDark: number;
@@ -201,13 +202,16 @@ export default function AdminImagenesPage() {
     try {
       const res = await fetch(`${AI_IMAGE_URL}/api/v1/images/generate`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: slot.prompt, aspectRatio: slot.aspect, filename: slot.filename }),
+        headers: { 'Content-Type': 'application/json', 'x-api-key': AI_IMAGE_API_KEY },
+        body: JSON.stringify({ prompt: slot.prompt, aspectRatio: slot.aspect, folder: 'soulcore-web' }),
       });
-      if (!res.ok) throw new Error(`Error ${res.status}`);
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.message || `Error ${res.status}`);
+      }
       const data = await res.json();
       setSlotStates(prev => ({
-        ...prev, [slot.id]: { exists: true, generating: false, error: null, preview: data.imageUrl || data.url || null },
+        ...prev, [slot.id]: { exists: true, generating: false, error: null, preview: data.imageUrl || null },
       }));
     } catch (err: any) {
       setSlotStates(prev => ({ ...prev, [slot.id]: { ...prev[slot.id], generating: false, error: err.message || 'Failed' } }));
