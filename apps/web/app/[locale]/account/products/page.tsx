@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+
 import { useTranslations } from 'next-intl'
 import {
   Package, Brain, Shield, TrendingUp, Boxes, Plug, Code, Cpu, Zap,
@@ -114,35 +114,24 @@ export default function ProductsPage() {
 
   return (
     <div className="pb-12">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-8"
-      >
+      <div className="mb-8">
         <h1 className="text-2xl font-bold text-white mb-1">{t('productsTitle')}</h1>
         <p className="text-gray-400">{t('productsSubtitle')}</p>
-      </motion.div>
+      </div>
 
       {products.length === 0 ? (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="bg-soul-dark-card rounded-2xl border border-gray-800 p-12 text-center"
-        >
+        <div className="bg-soul-dark-card rounded-2xl border border-gray-800 p-12 text-center">
           <Package size={48} className="text-gray-600 mx-auto mb-4" />
           <h3 className="text-lg text-white font-semibold mb-2">{t('noProducts')}</h3>
           <p className="text-gray-400">{t('noProductsDesc')}</p>
-        </motion.div>
+        </div>
       ) : (
         <div className="grid gap-4">
           {products.map((product, i) => {
             const Icon = iconMap[product.product_icon] || Package
             return (
-              <motion.div
+              <div
                 key={product.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
                 className="bg-soul-dark-card rounded-2xl border border-gray-800 p-6 hover:border-soul-purple/30 transition-all duration-300"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4">
@@ -185,7 +174,7 @@ export default function ProductsPage() {
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </div>

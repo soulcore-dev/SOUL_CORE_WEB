@@ -208,19 +208,34 @@
         "name": "VMOF",
         "fullName": "Visual Matrix Orchestration Framework",
         "description": "Framework propriétaire pour concevoir des architectures complexes de manière visuelle. Réduit la complexité 20x et accélère la conception des systèmes 13x.",
-        "features": ["Conception visuelle d'architectures", "Réduction 20x de complexité", "Documentation automatique", "Intégration avec n'importe quel stack"]
+        "features": [
+          "Conception visuelle d'architectures",
+          "Réduction 20x de complexité",
+          "Documentation automatique",
+          "Intégration avec n'importe quel stack"
+        ]
       },
       "mcp": {
         "name": "SOUL CORE MCP",
         "fullName": "Model Context Protocol Server",
         "description": "Serveur MCP pour l'orchestration de consciences IA. Communication en temps réel, groupes, messagerie et exécution distribuée.",
-        "features": ["Orchestration multi-agents", "Messagerie en temps réel", "Groupes et canaux", "API gRPC haute performance"]
+        "features": [
+          "Orchestration multi-agents",
+          "Messagerie en temps réel",
+          "Groupes et canaux",
+          "API gRPC haute performance"
+        ]
       },
       "soulcore": {
         "name": "SOUL_CORE",
         "fullName": "Système de Gestion des Connaissances",
         "description": "Architecture propriétaire pour la gestion du contexte et de la documentation. Maintient les connaissances du projet organisées et accessibles.",
-        "features": ["Gestion de contexte", "Documentation centralisée", "Recherche intelligente", "Intégration multi-outils"]
+        "features": [
+          "Gestion de contexte",
+          "Documentation centralisée",
+          "Recherche intelligente",
+          "Intégration multi-outils"
+        ]
       }
     }
   },
@@ -228,7 +243,15 @@
     "label": "Notre Équipe",
     "title": "Développeurs d'Avant-Garde",
     "subtitle": "Une équipe d'experts combinant des années d'expérience avec une technologie de pointe. Nous utilisons l'IA comme outil pour multiplier notre productivité.",
-    "techStack": ["React", "Node.js", "Python", "AWS", "Kubernetes", "AI/ML", "Cybersecurite"],
+    "techStack": [
+      "React",
+      "Node.js",
+      "Python",
+      "AWS",
+      "Kubernetes",
+      "AI/ML",
+      "Cybersecurite"
+    ],
     "mainTeam": {
       "title": "Équipe de Développement Senior",
       "description": "Développeurs expérimentés maîtrisant plusieurs technologies. Nous combinons des méthodologies agiles avec des outils d'IA de dernière génération pour livrer des solutions robustes et évolutives."
@@ -262,7 +285,12 @@
     "network": {
       "title": "Réseau de Spécialistes",
       "subtitle": "Partenaires techniques pour projets spécialisés",
-      "benefits": ["Spécialistes dans chaque technologie", "Évolutivité selon le projet", "Capacité enterprise", "Réseau mondial de talents"]
+      "benefits": [
+        "Spécialistes dans chaque technologie",
+        "Évolutivité selon le projet",
+        "Capacité enterprise",
+        "Réseau mondial de talents"
+      ]
     }
   },
   "contact": {
@@ -439,7 +467,18 @@
           "description": "Lancement en production avec monitoring continu et améliorations basées sur des métriques réelles."
         }
       ],
-      "technologies": ["OpenAI GPT-4", "Anthropic Claude", "n8n", "Make", "Zapier", "LangChain", "Python", "FastAPI", "Pinecone", "Supabase"],
+      "technologies": [
+        "OpenAI GPT-4",
+        "Anthropic Claude",
+        "n8n",
+        "Make",
+        "Zapier",
+        "LangChain",
+        "Python",
+        "FastAPI",
+        "Pinecone",
+        "Supabase"
+      ],
       "useCases": [
         {
           "problem": "Entreprise recevant 500+ demandes quotidiennes par WhatsApp, saturant l'équipe commerciale.",
@@ -511,7 +550,18 @@
           "description": "Go-live avec migration de données, formation utilisateurs et documentation technique complète."
         }
       ],
-      "technologies": ["React", "Next.js", "Node.js", "Python", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS"],
+      "technologies": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Python",
+        "TypeScript",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Docker",
+        "AWS"
+      ],
       "useCases": [
         {
           "problem": "Startup devant valider une idée de marketplace en 6 semaines avec budget limité.",
@@ -583,7 +633,18 @@
           "description": "Formation des opérateurs et maintenance. Documentation technique complète."
         }
       ],
-      "technologies": ["Siemens S7", "Allen Bradley", "SCADA", "Node-RED", "MQTT", "InfluxDB", "Grafana", "Python", "TensorFlow", "Arduino"],
+      "technologies": [
+        "Siemens S7",
+        "Allen Bradley",
+        "SCADA",
+        "Node-RED",
+        "MQTT",
+        "InfluxDB",
+        "Grafana",
+        "Python",
+        "TensorFlow",
+        "Arduino"
+      ],
       "useCases": [
         {
           "problem": "Exploitation agricole perdant 30% des récoltes par irrigation inefficace et ravageurs non détectés.",
@@ -655,7 +716,18 @@
           "description": "Nous accompagnons la correction et vérifions que chaque vulnérabilité a été fermée."
         }
       ],
-      "technologies": ["Burp Suite", "OWASP ZAP", "Nmap", "Metasploit", "Nuclei", "Wireshark", "Kali Linux", "Docker", "Terraform", "CloudFlare"],
+      "technologies": [
+        "Burp Suite",
+        "OWASP ZAP",
+        "Nmap",
+        "Metasploit",
+        "Nuclei",
+        "Wireshark",
+        "Kali Linux",
+        "Docker",
+        "Terraform",
+        "CloudFlare"
+      ],
       "useCases": [
         {
           "problem": "Plateforme fintech avec données sensibles n'avait jamais eu d'audit de sécurité.",
@@ -727,7 +799,18 @@
           "description": "Dashboard de health checks, alertes et documentation interactive pour votre équipe."
         }
       ],
-      "technologies": ["Node.js", "Go", "FastAPI", "GraphQL", "gRPC", "RabbitMQ", "Redis", "PostgreSQL", "Swagger", "Postman"],
+      "technologies": [
+        "Node.js",
+        "Go",
+        "FastAPI",
+        "GraphQL",
+        "gRPC",
+        "RabbitMQ",
+        "Redis",
+        "PostgreSQL",
+        "Swagger",
+        "Postman"
+      ],
       "useCases": [
         {
           "problem": "Entreprise avec 5 systèmes isolés : CRM, ERP, e-commerce, entrepôt et comptabilité.",
@@ -799,7 +882,18 @@
           "description": "Livraison avec spécifications pour développement, assets exportés et documentation."
         }
       ],
-      "technologies": ["Figma", "Adobe XD", "Sketch", "Framer", "Webflow", "Hotjar", "Maze", "Lottie", "Illustrator", "After Effects"],
+      "technologies": [
+        "Figma",
+        "Adobe XD",
+        "Sketch",
+        "Framer",
+        "Webflow",
+        "Hotjar",
+        "Maze",
+        "Lottie",
+        "Illustrator",
+        "After Effects"
+      ],
       "useCases": [
         {
           "problem": "E-commerce avec taux d'abandon de panier de 78% et taux de rebond élevé.",
@@ -871,7 +965,18 @@
           "description": "Expansion catalogue, nouveaux canaux, automatisation des opérations."
         }
       ],
-      "technologies": ["Shopify", "WooCommerce", "Magento", "Amazon Seller Central", "Klaviyo", "Gorgias", "ShipStation", "Google Analytics", "Meta Pixel", "TikTok Pixel"],
+      "technologies": [
+        "Shopify",
+        "WooCommerce",
+        "Magento",
+        "Amazon Seller Central",
+        "Klaviyo",
+        "Gorgias",
+        "ShipStation",
+        "Google Analytics",
+        "Meta Pixel",
+        "TikTok Pixel"
+      ],
       "useCases": [
         {
           "problem": "Marque de vêtements vendant uniquement en boutique physique, voulait se développer en ligne.",
@@ -943,7 +1048,18 @@
           "description": "Augmentation budget sur canaux gagnants, expansion vers nouveaux marchés."
         }
       ],
-      "technologies": ["Google Ads", "Meta Ads", "TikTok Ads", "SEMrush", "Ahrefs", "Google Analytics", "Google Tag Manager", "Mailchimp", "HubSpot", "Looker Studio"],
+      "technologies": [
+        "Google Ads",
+        "Meta Ads",
+        "TikTok Ads",
+        "SEMrush",
+        "Ahrefs",
+        "Google Analytics",
+        "Google Tag Manager",
+        "Mailchimp",
+        "HubSpot",
+        "Looker Studio"
+      ],
       "useCases": [
         {
           "problem": "SaaS B2B avec CPL de 150$ et cycle de vente de 3 mois.",
@@ -1015,7 +1131,18 @@
           "description": "Évaluation des progrès, ajustements et support continu post-mentorat."
         }
       ],
-      "technologies": ["JavaScript", "Python", "React", "Node.js", "AWS", "Docker", "Kubernetes", "Git", "Agile/Scrum", "System Design"],
+      "technologies": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Git",
+        "Agile/Scrum",
+        "System Design"
+      ],
       "useCases": [
         {
           "problem": "Développeur junior bloqué dans sa carrière, ne savait pas comment progresser vers senior.",
@@ -1087,7 +1214,18 @@
           "description": "Formation utilisateurs finaux pour interpréter et utiliser les insights."
         }
       ],
-      "technologies": ["Python", "SQL", "Power BI", "Tableau", "Snowflake", "BigQuery", "dbt", "Airflow", "scikit-learn", "TensorFlow"],
+      "technologies": [
+        "Python",
+        "SQL",
+        "Power BI",
+        "Tableau",
+        "Snowflake",
+        "BigQuery",
+        "dbt",
+        "Airflow",
+        "scikit-learn",
+        "TensorFlow"
+      ],
       "useCases": [
         {
           "problem": "PDG prenant des décisions avec Excel et rapports manuels obsolètes.",
@@ -1159,7 +1297,18 @@
           "description": "Right-sizing continu, reserved instances, spot instances pour réduire coûts."
         }
       ],
-      "technologies": ["AWS", "GCP", "Azure", "Terraform", "Kubernetes", "Docker", "GitHub Actions", "Prometheus", "Grafana", "DataDog"],
+      "technologies": [
+        "AWS",
+        "GCP",
+        "Azure",
+        "Terraform",
+        "Kubernetes",
+        "Docker",
+        "GitHub Actions",
+        "Prometheus",
+        "Grafana",
+        "DataDog"
+      ],
       "useCases": [
         {
           "problem": "Startup avec déploiements manuels prenant 4 heures et causant du downtime.",
@@ -1231,7 +1380,18 @@
           "description": "Nous retirons le système legacy uniquement quand le nouveau est 100% validé."
         }
       ],
-      "technologies": ["COBOL", "FORTRAN", "Java", ".NET", "Python", "Node.js", "PostgreSQL", "REST APIs", "Docker", "Kubernetes"],
+      "technologies": [
+        "COBOL",
+        "FORTRAN",
+        "Java",
+        ".NET",
+        "Python",
+        "Node.js",
+        "PostgreSQL",
+        "REST APIs",
+        "Docker",
+        "Kubernetes"
+      ],
       "useCases": [
         {
           "problem": "Banque avec core bancaire COBOL de 30 ans, impossible de recruter des mainteneurs.",
@@ -1281,7 +1441,9 @@
     "faqQ2": "Puis-je l'utiliser sur plusieurs machines ?",
     "faqA2": "Chaque licence est liée à une seule machine. Vous pouvez la réassocier jusqu'à 3 fois par an.",
     "faqQ3": "Y a-t-il une garantie de remboursement ?",
-    "faqA3": "Oui, nous offrons une garantie de remboursement de 30 jours. Remboursement intégral si vous n'êtes pas satisfait."
+    "faqA3": "Oui, nous offrons une garantie de remboursement de 30 jours. Remboursement intégral si vous n'êtes pas satisfait.",
+    "demo": "Demo",
+    "view": "Voir"
   },
   "storeDetail": {
     "backToStore": "Retour à la Boutique",
@@ -1313,7 +1475,11 @@
     "recentProducts": "Produits Récents",
     "viewAll": "Voir Tout",
     "noProductsYet": "Aucun produit encore. Créez le premier.",
-    "createFirst": "Créer le Premier Produit"
+    "createFirst": "Créer le Premier Produit",
+    "serverError": "Erreur du serveur",
+    "connectionError": "Impossible de se connecter au serveur",
+    "username": "Nom d'utilisateur",
+    "signingIn": "Connexion..."
   },
   "adminProducts": {
     "title": "Produits",
@@ -1356,16 +1522,46 @@
     "backHome": "Retour a l'accueil",
     "contact": "Pour les questions de confidentialite, contactez-nous a :",
     "sections": {
-      "collection": { "title": "Informations que Nous Collectons", "content": "Nous collectons les informations que vous nous fournissez directement lorsque vous :\n\n- Remplissez le formulaire de contact (nom, adresse e-mail, budget estime, description du projet)\n- Interagissez avec notre assistant de chat\n- Communiquez avec nous par e-mail, WhatsApp ou Upwork\n\nNous collectons egalement automatiquement des donnees techniques telles que l'adresse IP, le type de navigateur et les pages visitees." },
-      "usage": { "title": "Comment Nous Utilisons vos Informations", "content": "Nous utilisons les informations collectees pour :\n\n- Repondre a vos demandes de devis et consultations\n- Fournir les services de developpement logiciel contractes\n- Ameliorer l'experience de navigation sur notre site\n- Envoyer des communications liees aux projets actifs\n- Analyser l'utilisation du site pour ameliorer nos services\n\nNous ne vendons, ne louons ni ne partageons vos informations personnelles avec des tiers a des fins marketing." },
-      "cookies": { "title": "Cookies et Technologies de Suivi", "content": "Notre site utilise des cookies essentiels au fonctionnement du site (preference de langue, theme visuel) et des cookies d'analyse.\n\nVous pouvez desactiver les cookies depuis les parametres de votre navigateur." },
-      "thirdParty": { "title": "Services Tiers", "content": "Nous utilisons les services suivants qui peuvent traiter des donnees :\n\n- Vercel : hebergement du frontend\n- Supabase : base de donnees et authentification\n- Resend : envoi d'e-mails transactionnels\n- Anthropic : traitement des requetes dans l'assistant de chat\n\nChaque fournisseur opere selon ses propres politiques de confidentialite." },
-      "ai": { "title": "Intelligence Artificielle", "content": "Notre assistant de chat utilise des modeles d'IA (Anthropic Claude) pour repondre aux requetes. Les messages que vous envoyez au chat peuvent etre traites par ces modeles.\n\nNous n'utilisons pas vos conversations pour entrainer des modeles d'IA. Les conversations sont stockees temporairement et supprimees periodiquement." },
-      "security": { "title": "Securite des Donnees", "content": "Nous mettons en oeuvre des mesures de securite techniques et organisationnelles pour proteger vos informations :\n\n- Chiffrement SSL/TLS pour toutes les communications\n- Acces restreint aux donnees personnelles\n- Infrastructure sur des serveurs securises (AWS)\n- Surveillance continue de la securite" },
-      "rights": { "title": "Vos Droits", "content": "Vous avez le droit de :\n\n- Acceder aux informations personnelles que nous detenons\n- Demander la correction de donnees inexactes\n- Demander la suppression de vos donnees personnelles\n- Vous opposer au traitement de vos donnees\n- Demander la portabilite de vos donnees\n\nContactez-nous a founder@soulcore.dev." },
-      "international": { "title": "Transferts Internationaux", "content": "SOUL CORE DEVELOPERS GROUP opere depuis la Republique dominicaine avec un service mondial a distance. Vos donnees peuvent etre traitees sur des serveurs situes aux Etats-Unis.\n\nPour les utilisateurs de l'Union europeenne, ces transferts sont effectues conformement au RGPD." },
-      "children": { "title": "Mineurs", "content": "Nos services ne sont pas destines aux personnes de moins de 18 ans. Nous ne collectons pas intentionnellement des informations aupres de mineurs." },
-      "changes": { "title": "Modifications de cette Politique", "content": "Nous nous reservons le droit de mettre a jour cette politique de confidentialite periodiquement. Les modifications seront publiees sur cette page." }
+      "collection": {
+        "title": "Informations que Nous Collectons",
+        "content": "Nous collectons les informations que vous nous fournissez directement lorsque vous :\n\n- Remplissez le formulaire de contact (nom, adresse e-mail, budget estime, description du projet)\n- Interagissez avec notre assistant de chat\n- Communiquez avec nous par e-mail, WhatsApp ou Upwork\n\nNous collectons egalement automatiquement des donnees techniques telles que l'adresse IP, le type de navigateur et les pages visitees."
+      },
+      "usage": {
+        "title": "Comment Nous Utilisons vos Informations",
+        "content": "Nous utilisons les informations collectees pour :\n\n- Repondre a vos demandes de devis et consultations\n- Fournir les services de developpement logiciel contractes\n- Ameliorer l'experience de navigation sur notre site\n- Envoyer des communications liees aux projets actifs\n- Analyser l'utilisation du site pour ameliorer nos services\n\nNous ne vendons, ne louons ni ne partageons vos informations personnelles avec des tiers a des fins marketing."
+      },
+      "cookies": {
+        "title": "Cookies et Technologies de Suivi",
+        "content": "Notre site utilise des cookies essentiels au fonctionnement du site (preference de langue, theme visuel) et des cookies d'analyse.\n\nVous pouvez desactiver les cookies depuis les parametres de votre navigateur."
+      },
+      "thirdParty": {
+        "title": "Services Tiers",
+        "content": "Nous utilisons les services suivants qui peuvent traiter des donnees :\n\n- Vercel : hebergement du frontend\n- Supabase : base de donnees et authentification\n- Resend : envoi d'e-mails transactionnels\n- Anthropic : traitement des requetes dans l'assistant de chat\n\nChaque fournisseur opere selon ses propres politiques de confidentialite."
+      },
+      "ai": {
+        "title": "Intelligence Artificielle",
+        "content": "Notre assistant de chat utilise des modeles d'IA (Anthropic Claude) pour repondre aux requetes. Les messages que vous envoyez au chat peuvent etre traites par ces modeles.\n\nNous n'utilisons pas vos conversations pour entrainer des modeles d'IA. Les conversations sont stockees temporairement et supprimees periodiquement."
+      },
+      "security": {
+        "title": "Securite des Donnees",
+        "content": "Nous mettons en oeuvre des mesures de securite techniques et organisationnelles pour proteger vos informations :\n\n- Chiffrement SSL/TLS pour toutes les communications\n- Acces restreint aux donnees personnelles\n- Infrastructure sur des serveurs securises (AWS)\n- Surveillance continue de la securite"
+      },
+      "rights": {
+        "title": "Vos Droits",
+        "content": "Vous avez le droit de :\n\n- Acceder aux informations personnelles que nous detenons\n- Demander la correction de donnees inexactes\n- Demander la suppression de vos donnees personnelles\n- Vous opposer au traitement de vos donnees\n- Demander la portabilite de vos donnees\n\nContactez-nous a founder@soulcore.dev."
+      },
+      "international": {
+        "title": "Transferts Internationaux",
+        "content": "SOUL CORE DEVELOPERS GROUP opere depuis la Republique dominicaine avec un service mondial a distance. Vos donnees peuvent etre traitees sur des serveurs situes aux Etats-Unis.\n\nPour les utilisateurs de l'Union europeenne, ces transferts sont effectues conformement au RGPD."
+      },
+      "children": {
+        "title": "Mineurs",
+        "content": "Nos services ne sont pas destines aux personnes de moins de 18 ans. Nous ne collectons pas intentionnellement des informations aupres de mineurs."
+      },
+      "changes": {
+        "title": "Modifications de cette Politique",
+        "content": "Nous nous reservons le droit de mettre a jour cette politique de confidentialite periodiquement. Les modifications seront publiees sur cette page."
+      }
     }
   },
   "terms": {
@@ -1375,16 +1571,46 @@
     "backHome": "Retour a l'accueil",
     "contact": "Pour les questions juridiques, contactez-nous a :",
     "sections": {
-      "acceptance": { "title": "Acceptation des Conditions", "content": "En accedant et en utilisant soulcore.dev et les services de SOUL CORE DEVELOPERS GROUP, vous acceptez ces conditions d'utilisation dans leur integralite.\n\nCes conditions s'appliquent a tous les visiteurs, utilisateurs et clients." },
-      "services": { "title": "Description des Services", "content": "SOUL CORE DEVELOPERS GROUP propose des services de :\n\n- Developpement logiciel sur mesure (web, mobile, APIs)\n- Intelligence artificielle et automatisation\n- Cybersecurite et pentesting\n- Integrations et APIs\n- Design numerique et UX\n- E-commerce et marketing digital\n- Conseil et mentorat technologique\n- Data science et analytics\n- Cloud et DevOps\n- Modernisation de systemes legacy\n- Automatisation industrielle et IoT\n\nNous proposons egalement des produits proprietaires (VMOF, SOUL CORE MCP, SOUL_CORE)." },
-      "ip": { "title": "Propriete Intellectuelle", "content": "Tout le contenu du site web est la propriete de SOUL CORE DEVELOPERS GROUP ou de ses concedants et est protege par les lois sur le droit d'auteur et la propriete intellectuelle.\n\nLes frameworks proprietaires VMOF, SOUL CORE MCP et SOUL_CORE sont des marques de SOUL CORE DEVELOPERS GROUP. Leur utilisation necessite une licence expresse.\n\nLe code developpe pour un client est regi par les termes du contrat individuel." },
-      "userObligations": { "title": "Obligations de l'Utilisateur", "content": "En utilisant nos services, vous vous engagez a :\n\n- Fournir des informations veridiques et a jour\n- Ne pas utiliser le site a des fins illegales\n- Ne pas tenter d'acceder a des zones restreintes\n- Ne pas effectuer de retro-ingenierie de nos produits\n- Respecter la propriete intellectuelle de SOUL CORE" },
-      "payments": { "title": "Paiements et Facturation", "content": "Les services sont cotes individuellement selon la complexite du projet. Les conditions de paiement sont etablies dans le contrat de chaque projet.\n\nLes devis sont valables 30 jours. Tous les prix sont exprimes en USD sauf indication contraire." },
-      "liability": { "title": "Limitation de Responsabilite", "content": "SOUL CORE DEVELOPERS GROUP ne sera pas responsable de dommages indirects, accessoires ou consecutifs decoulant de l'utilisation de nos services.\n\nNotre responsabilite maximale sera limitee au montant paye par le client au cours des 12 mois precedant l'incident." },
-      "warranties": { "title": "Garanties", "content": "Les services sont fournis \"en l'etat\" et \"selon disponibilite\".\n\nPour les projets contractes, les garanties specifiques sont etablies dans le contrat individuel de chaque projet." },
-      "termination": { "title": "Resiliation", "content": "Nous nous reservons le droit de suspendre ou de mettre fin a l'acces a nos services si ces conditions sont violees, une activite frauduleuse est detectee, ou les obligations de paiement ne sont pas respectees." },
-      "governing": { "title": "Loi Applicable et Juridiction", "content": "Ces conditions sont regies par les lois de la Republique dominicaine. Tout litige sera soumis a la juridiction des tribunaux du District national, Saint-Domingue.\n\nPour les clients internationaux, un arbitrage international pourra etre convenu selon les regles de la Chambre de commerce de Saint-Domingue." },
-      "changes": { "title": "Modifications", "content": "SOUL CORE DEVELOPERS GROUP se reserve le droit de modifier ces conditions a tout moment.\n\nPour les projets actifs, les termes contractuels convenus prevalent sur toute modification ulterieure." }
+      "acceptance": {
+        "title": "Acceptation des Conditions",
+        "content": "En accedant et en utilisant soulcore.dev et les services de SOUL CORE DEVELOPERS GROUP, vous acceptez ces conditions d'utilisation dans leur integralite.\n\nCes conditions s'appliquent a tous les visiteurs, utilisateurs et clients."
+      },
+      "services": {
+        "title": "Description des Services",
+        "content": "SOUL CORE DEVELOPERS GROUP propose des services de :\n\n- Developpement logiciel sur mesure (web, mobile, APIs)\n- Intelligence artificielle et automatisation\n- Cybersecurite et pentesting\n- Integrations et APIs\n- Design numerique et UX\n- E-commerce et marketing digital\n- Conseil et mentorat technologique\n- Data science et analytics\n- Cloud et DevOps\n- Modernisation de systemes legacy\n- Automatisation industrielle et IoT\n\nNous proposons egalement des produits proprietaires (VMOF, SOUL CORE MCP, SOUL_CORE)."
+      },
+      "ip": {
+        "title": "Propriete Intellectuelle",
+        "content": "Tout le contenu du site web est la propriete de SOUL CORE DEVELOPERS GROUP ou de ses concedants et est protege par les lois sur le droit d'auteur et la propriete intellectuelle.\n\nLes frameworks proprietaires VMOF, SOUL CORE MCP et SOUL_CORE sont des marques de SOUL CORE DEVELOPERS GROUP. Leur utilisation necessite une licence expresse.\n\nLe code developpe pour un client est regi par les termes du contrat individuel."
+      },
+      "userObligations": {
+        "title": "Obligations de l'Utilisateur",
+        "content": "En utilisant nos services, vous vous engagez a :\n\n- Fournir des informations veridiques et a jour\n- Ne pas utiliser le site a des fins illegales\n- Ne pas tenter d'acceder a des zones restreintes\n- Ne pas effectuer de retro-ingenierie de nos produits\n- Respecter la propriete intellectuelle de SOUL CORE"
+      },
+      "payments": {
+        "title": "Paiements et Facturation",
+        "content": "Les services sont cotes individuellement selon la complexite du projet. Les conditions de paiement sont etablies dans le contrat de chaque projet.\n\nLes devis sont valables 30 jours. Tous les prix sont exprimes en USD sauf indication contraire."
+      },
+      "liability": {
+        "title": "Limitation de Responsabilite",
+        "content": "SOUL CORE DEVELOPERS GROUP ne sera pas responsable de dommages indirects, accessoires ou consecutifs decoulant de l'utilisation de nos services.\n\nNotre responsabilite maximale sera limitee au montant paye par le client au cours des 12 mois precedant l'incident."
+      },
+      "warranties": {
+        "title": "Garanties",
+        "content": "Les services sont fournis \"en l'etat\" et \"selon disponibilite\".\n\nPour les projets contractes, les garanties specifiques sont etablies dans le contrat individuel de chaque projet."
+      },
+      "termination": {
+        "title": "Resiliation",
+        "content": "Nous nous reservons le droit de suspendre ou de mettre fin a l'acces a nos services si ces conditions sont violees, une activite frauduleuse est detectee, ou les obligations de paiement ne sont pas respectees."
+      },
+      "governing": {
+        "title": "Loi Applicable et Juridiction",
+        "content": "Ces conditions sont regies par les lois de la Republique dominicaine. Tout litige sera soumis a la juridiction des tribunaux du District national, Saint-Domingue.\n\nPour les clients internationaux, un arbitrage international pourra etre convenu selon les regles de la Chambre de commerce de Saint-Domingue."
+      },
+      "changes": {
+        "title": "Modifications",
+        "content": "SOUL CORE DEVELOPERS GROUP se reserve le droit de modifier ces conditions a tout moment.\n\nPour les projets actifs, les termes contractuels convenus prevalent sur toute modification ulterieure."
+      }
     }
   },
   "account": {

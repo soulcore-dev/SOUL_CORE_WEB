@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { Package, Plus, Trash2, Loader2 } from 'lucide-react'
@@ -65,11 +65,7 @@ export default function AdminProductsPage() {
           <Loader2 size={32} className="animate-spin text-soul-purple" />
         </div>
       ) : products.length === 0 ? (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-soul-dark-card rounded-2xl border border-gray-800 p-12 text-center"
-        >
+        <div className="bg-soul-dark-card rounded-2xl border border-gray-800 p-12 text-center">
           <Package size={48} className="text-gray-600 mx-auto mb-4" />
           <h3 className="text-xl font-bold text-white mb-2">{t('emptyTitle')}</h3>
           <p className="text-gray-400 mb-6">{t('emptySubtitle')}</p>
@@ -80,15 +76,12 @@ export default function AdminProductsPage() {
             <Plus size={18} className="mr-2" />
             {t('createFirst')}
           </Link>
-        </motion.div>
+        </div>
       ) : (
         <div className="space-y-4">
           {products.map((product, index) => (
-            <motion.div
+            <div
               key={product.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.05 }}
               className="bg-soul-dark-card rounded-2xl border border-gray-800 p-6 flex items-center justify-between hover:border-gray-700 transition-colors"
             >
               <div className="flex items-center">
@@ -122,7 +115,7 @@ export default function AdminProductsPage() {
                   )}
                 </button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       )}

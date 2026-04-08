@@ -72,7 +72,7 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
                     >
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center">
-                          <Lightbulb className="w-6 h-6 text-red-400" />
+                          <Lightbulb aria-hidden="true" className="w-6 h-6 text-red-400" />
                         </div>
                         <div>
                           <h3 className="text-lg font-semibold text-red-400 mb-2">
@@ -86,7 +86,7 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
 
                       {/* Arrow (desktop) */}
                       <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2">
-                        <ArrowRight className="w-8 h-8 text-gray-600" />
+                        <ArrowRight aria-hidden="true" className="w-8 h-8 text-gray-600" />
                       </div>
                     </div>
 
@@ -100,7 +100,7 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
                     >
                       <div className="flex items-start gap-4">
                         <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center`}>
-                          <span className="text-white font-bold text-lg">SC</span>
+                          <span className="!text-white font-bold text-lg">SC</span>
                         </div>
                         <div>
                           <h3 className="text-lg font-semibold text-soul-purple mb-2">
@@ -114,7 +114,7 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
 
                       {/* Arrow (desktop) */}
                       <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2">
-                        <ArrowRight className="w-8 h-8 text-gray-600" />
+                        <ArrowRight aria-hidden="true" className="w-8 h-8 text-gray-600" />
                       </div>
                     </div>
 
@@ -127,7 +127,7 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
                     >
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
-                          <CheckCircle2 className="w-6 h-6 text-green-400" />
+                          <CheckCircle2 aria-hidden="true" className="w-6 h-6 text-green-400" />
                         </div>
                         <div>
                           <h3 className="text-lg font-semibold text-green-400 mb-2">

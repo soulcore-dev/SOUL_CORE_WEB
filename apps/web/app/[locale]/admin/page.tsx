@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { Package, Users, CreditCard, TrendingUp, Plus, ArrowRight, Loader2 } from 'lucide-react'
@@ -44,11 +44,8 @@ export default function AdminDashboard() {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {stats.map((stat, i) => (
-          <motion.div
+          <div
             key={stat.label}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
             className="bg-soul-dark-card rounded-2xl border border-gray-800 p-6"
           >
             <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center mb-4`}>
@@ -58,17 +55,12 @@ export default function AdminDashboard() {
             <p className="text-3xl font-bold text-white mt-1">
               {loading ? <Loader2 size={24} className="animate-spin text-gray-500" /> : stat.value}
             </p>
-          </motion.div>
+          </div>
         ))}
       </div>
 
       {/* Quick Actions */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
-        className="bg-soul-dark-card rounded-2xl border border-gray-800 p-6 mb-12"
-      >
+      <div className="bg-soul-dark-card rounded-2xl border border-gray-800 p-6 mb-12">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-bold text-white">{t('quickActions')}</h2>
         </div>
@@ -98,15 +90,10 @@ export default function AdminDashboard() {
             </div>
           </Link>
         </div>
-      </motion.div>
+      </div>
 
       {/* Recent Products */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-        className="bg-soul-dark-card rounded-2xl border border-gray-800 p-6"
-      >
+      <div className="bg-soul-dark-card rounded-2xl border border-gray-800 p-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-bold text-white">{t('recentProducts')}</h2>
           <Link
@@ -154,7 +141,7 @@ export default function AdminDashboard() {
             ))}
           </div>
         )}
-      </motion.div>
+      </div>
     </div>
   )
 }

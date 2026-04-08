@@ -47,7 +47,12 @@ export function Footer() {
               <img
                 src="/logo_black.png"
                 alt="SOUL CORE"
-                className="h-16 w-auto"
+                className="h-16 w-auto dark:block hidden"
+              />
+              <img
+                src="/logo_clear.png"
+                alt="SOUL CORE"
+                className="h-16 w-auto dark:hidden block"
               />
             </Link>
             <p className="text-gray-400 mb-6 max-w-sm">
@@ -63,7 +68,7 @@ export function Footer() {
                   className="p-2 rounded-lg bg-soul-dark-lighter hover:bg-soul-purple/20 transition-colors"
                   aria-label={social.label}
                 >
-                  <social.icon size={20} className="text-gray-400 hover:text-soul-purple" />
+                  <social.icon aria-hidden="true" size={20} className="text-gray-400 hover:text-soul-purple" />
                 </a>
               ))}
             </div>

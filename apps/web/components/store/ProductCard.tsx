@@ -2,7 +2,7 @@
 
 
 import Link from 'next/link'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import {
   Package, Brain, Shield, TrendingUp, Boxes, Plug, Code, Cpu, Zap,
   ArrowRight, Star, Download, ExternalLink, Clock
@@ -29,6 +29,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product, index = 0 }: ProductCardProps) {
   const locale = useLocale()
+  const t = useTranslations('store')
   const Icon = iconMap[product.icon] || Package
   const gradient = product.color || defaultGradients[index % defaultGradients.length]
   const techStack = parseTechStack(product.tech_stack)
@@ -151,11 +152,11 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
               {product.demo_url && (
                 <span className="text-gray-500 text-xs flex items-center">
                   <ExternalLink size={11} className="mr-0.5" />
-                  Demo
+                  {t('demo')}
                 </span>
               )}
               <span className="flex items-center text-soul-purple group-hover:text-soul-purple-light text-sm font-medium transition-colors">
-                Ver
+                {t('view')}
                 <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
               </span>
             </div>

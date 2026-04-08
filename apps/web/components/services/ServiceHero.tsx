@@ -38,10 +38,12 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
   }
 
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden">
+    <section className="relative pt-32 pb-20 overflow-hidden bg-soul-dark">
       {/* Background gradient */}
       <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-5`} />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-soul-purple/20 via-transparent to-transparent" />
+      {/* Light mode: subtle bottom border gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-100 dark:to-transparent" />
 
       {/* AI illustration as section background — right-aligned, faded */}
       <img
@@ -69,7 +71,7 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
           {/* Content */}
           <div>
             {/* Badge */}
-            <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r ${color} text-white mb-6`}>
+            <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r ${color} !text-white mb-6`}>
               {hero.badge}
             </span>
 
@@ -89,7 +91,7 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
             <div className="relative w-48 h-48 md:w-64 md:h-64">
               <div className={`absolute inset-0 bg-gradient-to-br ${color} rounded-full opacity-20 blur-3xl`} />
               <div className={`relative w-full h-full bg-gradient-to-br ${color} rounded-full flex items-center justify-center shadow-2xl`}>
-                <Icon className="text-white w-24 h-24 md:w-32 md:h-32" strokeWidth={1.5} />
+                <Icon aria-hidden="true" className="!text-white w-24 h-24 md:w-32 md:h-32" strokeWidth={1.5} />
               </div>
               {/* Floating particles */}
               <div className={`absolute -top-3 -right-3 w-10 h-10 bg-gradient-to-br ${color} rounded-full opacity-60 animate-pulse`} />

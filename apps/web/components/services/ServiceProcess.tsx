@@ -61,7 +61,7 @@ export function ServiceProcess({ serviceKey, color }: ServiceProcessProps) {
                 {/* Step number */}
                 <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 z-10">
                   <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${color} flex items-center justify-center shadow-lg shadow-soul-purple/30`}>
-                    <span className="text-2xl font-bold text-white">{index + 1}</span>
+                    <span className="text-2xl font-bold !text-white">{index + 1}</span>
                   </div>
                 </div>
 

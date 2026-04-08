@@ -3,7 +3,9 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.soulcore.dev/sitemap.xml
+Sitemap: https://soulcore.dev/sitemap.xml
 
-# Disallow admin/api routes
+# Disallow admin/api/account routes
 Disallow: /api/
+Disallow: /*/admin/
+Disallow: /*/account/

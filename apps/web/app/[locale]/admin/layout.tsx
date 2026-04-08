@@ -2,7 +2,7 @@
 
 import { useState, useEffect, ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
+
 import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { Lock, LogOut, Package, LayoutDashboard, User } from 'lucide-react'
@@ -33,7 +33,7 @@ function AdminLogin() {
       if (!res.ok) {
         setError(data.error === 'invalid_credentials'
           ? (t('loginError'))
-          : 'Error del servidor')
+          : t('serverError'))
         return
       }
 
@@ -41,7 +41,7 @@ function AdminLogin() {
       sessionStorage.setItem(ADMIN_USER_KEY, JSON.stringify({ username: data.username, role: data.role }))
       window.location.reload()
     } catch {
-      setError('No se pudo conectar al servidor')
+      setError(t('connectionError'))
     } finally {
       setLoading(false)
     }
@@ -49,11 +49,7 @@ function AdminLogin() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-soul-dark pt-20">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="w-full max-w-md"
-      >
+      <div className="w-full max-w-md">
         <div className="bg-soul-dark-card rounded-2xl border border-gray-800 p-8">
           <div className="text-center mb-8">
             <div className="w-16 h-16 rounded-2xl bg-soul-purple/20 flex items-center justify-center mx-auto mb-4">
@@ -65,7 +61,7 @@ function AdminLogin() {
 
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-400 mb-1.5">Usuario</label>
+              <label className="block text-sm font-medium text-gray-400 mb-1.5">{t('username')}</label>
               <input
                 type="text"
                 value={username}
@@ -95,11 +91,11 @@ function AdminLogin() {
               disabled={loading || !username || !password}
               className="w-full py-3 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold text-white transition-all duration-200 glow-hover disabled:opacity-50"
             >
-              {loading ? 'Accediendo...' : t('loginButton')}
+              {loading ? t('signingIn') : t('loginButton')}
             </button>
           </form>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }
@@ -161,11 +157,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-soul-dark pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-between mb-8 bg-soul-dark-card rounded-2xl border border-gray-800 p-4"
-        >
+        <div className="flex items-center justify-between mb-8 bg-soul-dark-card rounded-2xl border border-gray-800 p-4">
           <div className="flex items-center gap-1">
             {navItems.map((item) => (
               <Link
@@ -193,7 +185,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
               {t('logout')}
             </button>
           </div>
-        </motion.div>
+        </div>
         {children}
       </div>
     </div>

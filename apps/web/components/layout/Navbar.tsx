@@ -80,8 +80,8 @@ export function Navbar() {
 
   return (
     <nav
-      
-      
+      aria-label="Main navigation"
+
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'glass py-3' : 'bg-transparent py-5'
       }`}
@@ -194,19 +194,21 @@ export function Navbar() {
               {t('account')}
             </Link>
 
-            {/* Admin Link */}
-            <Link
-              href={`/${locale}/admin`}
-              className="flex items-center text-gray-300 hover:text-soul-purple transition-colors duration-200"
-            >
-              <Settings size={18} className="mr-1" />
-              {t('admin')}
-            </Link>
+            {/* Admin Link — only visible to authenticated admins */}
+            {isAdmin && (
+              <Link
+                href={`/${locale}/admin`}
+                className="flex items-center text-gray-300 hover:text-soul-purple transition-colors duration-200"
+              >
+                <Settings size={18} className="mr-1" />
+                {t('admin')}
+              </Link>
+            )}
 
             {/* CTA Button */}
             <Link
               href={isOnLanding ? '#contacto' : `/${locale}/#contacto`}
-              className="px-6 py-2 bg-soul-purple hover:bg-soul-purple-dark rounded-lg font-medium transition-all duration-200 glow-hover"
+              className="px-6 py-2 bg-soul-purple hover:bg-soul-purple-dark rounded-lg font-medium !text-white transition-all duration-200 glow-hover"
             >
               {t('quote')}
             </Link>
@@ -280,14 +282,16 @@ export function Navbar() {
                 <User size={18} className="mr-2" />
                 {t('account')}
               </Link>
-              <Link
-                href={`/${locale}/admin`}
-                onClick={() => setIsOpen(false)}
-                className="flex items-center text-gray-300 hover:text-soul-purple transition-colors py-2"
-              >
-                <Settings size={18} className="mr-2" />
-                {t('admin')}
-              </Link>
+              {isAdmin && (
+                <Link
+                  href={`/${locale}/admin`}
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center text-gray-300 hover:text-soul-purple transition-colors py-2"
+                >
+                  <Settings size={18} className="mr-2" />
+                  {t('admin')}
+                </Link>
+              )}
               <Link
                 href={isOnLanding ? '#contacto' : `/${locale}/#contacto`}
                 onClick={() => setIsOpen(false)}

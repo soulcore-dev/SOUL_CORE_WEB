@@ -65,6 +65,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = hero?.title || slug
   const description = hero?.subtitle || ''
 
+  const hreflangAlternates: Record<string, string> = { 'x-default': `/en/servicios/${slug}` }
+  for (const loc of locales) {
+    hreflangAlternates[loc] = `/${loc}/servicios/${slug}`
+  }
+
   return {
     title: `${title} | SOUL CORE`,
     description: description.slice(0, 160),
@@ -74,6 +79,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://soulcore.dev/${locale}/servicios/${slug}`,
       siteName: 'SOUL CORE',
       type: 'website',
+      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${title} - SOUL CORE` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | SOUL CORE`,
+      description: description.slice(0, 160),
+      images: ['/og-image.png'],
+    },
+    alternates: {
+      canonical: `https://soulcore.dev/${locale}/servicios/${slug}`,
+      languages: hreflangAlternates,
     },
   }
 }

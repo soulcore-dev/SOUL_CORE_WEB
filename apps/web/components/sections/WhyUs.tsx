@@ -58,7 +58,7 @@ export function WhyUs() {
               className="group p-6 bg-soul-dark-card rounded-2xl border border-gray-800 hover:border-soul-purple/50 transition-all duration-300"
             >
               <div className="w-14 h-14 rounded-xl bg-soul-purple/20 flex items-center justify-center mb-4 group-hover:bg-soul-purple/30 transition-colors">
-                <feature.icon className="text-soul-purple" size={28} />
+                <feature.icon aria-hidden="true" className="text-soul-purple" size={28} />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
                 {t(`features.${feature.titleKey}.title`)}

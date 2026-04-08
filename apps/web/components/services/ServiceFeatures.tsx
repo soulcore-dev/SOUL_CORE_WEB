@@ -72,7 +72,7 @@ export function ServiceFeatures({ serviceKey, color }: ServiceFeaturesProps) {
                 <div className="relative">
                   {/* Icon */}
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center mb-4`}>
-                    <Icon className="text-white" size={24} />
+                    <Icon aria-hidden="true" className="!text-white" size={24} />
                   </div>
 
                   {/* Title */}

@@ -208,19 +208,34 @@
         "name": "VMOF",
         "fullName": "Visual Matrix Orchestration Framework",
         "description": "Framework propietario para diseñar arquitecturas complejas de forma visual. Reduce la complejidad 20x y acelera el diseño de sistemas 13x.",
-        "features": ["Diseño visual de arquitecturas", "Reducción 20x de complejidad", "Documentación automática", "Integración con cualquier stack"]
+        "features": [
+          "Diseño visual de arquitecturas",
+          "Reducción 20x de complejidad",
+          "Documentación automática",
+          "Integración con cualquier stack"
+        ]
       },
       "mcp": {
         "name": "SOUL CORE MCP",
         "fullName": "Model Context Protocol Server",
         "description": "Servidor MCP para orquestación de consciencias AI. Comunicación en tiempo real, grupos, mensajería y ejecución distribuida.",
-        "features": ["Orquestación multi-agente", "Mensajería en tiempo real", "Grupos y canales", "API gRPC de alto rendimiento"]
+        "features": [
+          "Orquestación multi-agente",
+          "Mensajería en tiempo real",
+          "Grupos y canales",
+          "API gRPC de alto rendimiento"
+        ]
       },
       "soulcore": {
         "name": "SOUL_CORE",
         "fullName": "Sistema de Gestión de Conocimiento",
         "description": "Arquitectura propietaria para gestión de contexto y documentación. Mantiene el conocimiento del proyecto organizado y accesible.",
-        "features": ["Gestión de contexto", "Documentación centralizada", "Búsqueda inteligente", "Integración multi-herramienta"]
+        "features": [
+          "Gestión de contexto",
+          "Documentación centralizada",
+          "Búsqueda inteligente",
+          "Integración multi-herramienta"
+        ]
       }
     }
   },
@@ -228,7 +243,15 @@
     "label": "Nuestro Equipo",
     "title": "Desarrolladores de Vanguardia",
     "subtitle": "Un equipo de expertos que combina años de experiencia con tecnología de punta. Usamos IA como herramienta para multiplicar nuestra productividad.",
-    "techStack": ["React", "Node.js", "Python", "AWS", "Kubernetes", "AI/ML", "Ciberseguridad"],
+    "techStack": [
+      "React",
+      "Node.js",
+      "Python",
+      "AWS",
+      "Kubernetes",
+      "AI/ML",
+      "Ciberseguridad"
+    ],
     "mainTeam": {
       "title": "Equipo de Desarrollo Senior",
       "description": "Desarrolladores experimentados con dominio en múltiples tecnologías. Combinamos metodologías ágiles con herramientas de IA de última generación para entregar soluciones robustas y escalables."
@@ -262,7 +285,12 @@
     "network": {
       "title": "Red de Especialistas",
       "subtitle": "Partners técnicos para proyectos especializados",
-      "benefits": ["Especialistas en cada tecnología", "Escalabilidad según proyecto", "Capacidad enterprise", "Red global de talento"]
+      "benefits": [
+        "Especialistas en cada tecnología",
+        "Escalabilidad según proyecto",
+        "Capacidad enterprise",
+        "Red global de talento"
+      ]
     }
   },
   "contact": {
@@ -439,7 +467,18 @@
           "description": "Lanzamos en producción con monitoreo continuo y mejoras basadas en métricas reales."
         }
       ],
-      "technologies": ["OpenAI GPT-4", "Anthropic Claude", "n8n", "Make", "Zapier", "LangChain", "Python", "FastAPI", "Pinecone", "Supabase"],
+      "technologies": [
+        "OpenAI GPT-4",
+        "Anthropic Claude",
+        "n8n",
+        "Make",
+        "Zapier",
+        "LangChain",
+        "Python",
+        "FastAPI",
+        "Pinecone",
+        "Supabase"
+      ],
       "useCases": [
         {
           "problem": "Empresa recibía 500+ consultas diarias por WhatsApp, saturando al equipo de ventas.",
@@ -511,7 +550,18 @@
           "description": "Go-live con migración de datos, capacitación de usuarios y documentación técnica completa."
         }
       ],
-      "technologies": ["React", "Next.js", "Node.js", "Python", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS"],
+      "technologies": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Python",
+        "TypeScript",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Docker",
+        "AWS"
+      ],
       "useCases": [
         {
           "problem": "Startup necesitaba validar idea de marketplace en 6 semanas con presupuesto limitado.",
@@ -583,7 +633,18 @@
           "description": "Entrenamiento a operadores y mantenimiento. Documentación técnica completa."
         }
       ],
-      "technologies": ["Siemens S7", "Allen Bradley", "SCADA", "Node-RED", "MQTT", "InfluxDB", "Grafana", "Python", "TensorFlow", "Arduino"],
+      "technologies": [
+        "Siemens S7",
+        "Allen Bradley",
+        "SCADA",
+        "Node-RED",
+        "MQTT",
+        "InfluxDB",
+        "Grafana",
+        "Python",
+        "TensorFlow",
+        "Arduino"
+      ],
       "useCases": [
         {
           "problem": "Planta agrícola perdía 30% de cosecha por riego ineficiente y plagas no detectadas.",
@@ -655,7 +716,18 @@
           "description": "Acompañamos la corrección y verificamos que cada vulnerabilidad fue cerrada."
         }
       ],
-      "technologies": ["Burp Suite", "OWASP ZAP", "Nmap", "Metasploit", "Nuclei", "Wireshark", "Kali Linux", "Docker", "Terraform", "CloudFlare"],
+      "technologies": [
+        "Burp Suite",
+        "OWASP ZAP",
+        "Nmap",
+        "Metasploit",
+        "Nuclei",
+        "Wireshark",
+        "Kali Linux",
+        "Docker",
+        "Terraform",
+        "CloudFlare"
+      ],
       "useCases": [
         {
           "problem": "Plataforma fintech con datos sensibles nunca había tenido auditoría de seguridad.",
@@ -727,7 +799,18 @@
           "description": "Dashboard de health checks, alertas y documentación interactiva para tu equipo."
         }
       ],
-      "technologies": ["Node.js", "Go", "FastAPI", "GraphQL", "gRPC", "RabbitMQ", "Redis", "PostgreSQL", "Swagger", "Postman"],
+      "technologies": [
+        "Node.js",
+        "Go",
+        "FastAPI",
+        "GraphQL",
+        "gRPC",
+        "RabbitMQ",
+        "Redis",
+        "PostgreSQL",
+        "Swagger",
+        "Postman"
+      ],
       "useCases": [
         {
           "problem": "Empresa con 5 sistemas aislados: CRM, ERP, e-commerce, warehouse y contabilidad.",
@@ -799,7 +882,18 @@
           "description": "Entrega con especificaciones para desarrollo, assets exportados y documentación."
         }
       ],
-      "technologies": ["Figma", "Adobe XD", "Sketch", "Framer", "Webflow", "Hotjar", "Maze", "Lottie", "Illustrator", "After Effects"],
+      "technologies": [
+        "Figma",
+        "Adobe XD",
+        "Sketch",
+        "Framer",
+        "Webflow",
+        "Hotjar",
+        "Maze",
+        "Lottie",
+        "Illustrator",
+        "After Effects"
+      ],
       "useCases": [
         {
           "problem": "E-commerce con tasa de abandono de carrito del 78% y bounce rate alto.",
@@ -871,7 +965,18 @@
           "description": "Expansión de catálogo, nuevos canales, automatización de operaciones."
         }
       ],
-      "technologies": ["Shopify", "WooCommerce", "Magento", "Amazon Seller Central", "Klaviyo", "Gorgias", "ShipStation", "Google Analytics", "Meta Pixel", "TikTok Pixel"],
+      "technologies": [
+        "Shopify",
+        "WooCommerce",
+        "Magento",
+        "Amazon Seller Central",
+        "Klaviyo",
+        "Gorgias",
+        "ShipStation",
+        "Google Analytics",
+        "Meta Pixel",
+        "TikTok Pixel"
+      ],
       "useCases": [
         {
           "problem": "Marca de ropa vendía solo en tienda física, quería expandir online.",
@@ -943,7 +1048,18 @@
           "description": "Incremento de presupuesto en canales ganadores, expansión a nuevos mercados."
         }
       ],
-      "technologies": ["Google Ads", "Meta Ads", "TikTok Ads", "SEMrush", "Ahrefs", "Google Analytics", "Google Tag Manager", "Mailchimp", "HubSpot", "Looker Studio"],
+      "technologies": [
+        "Google Ads",
+        "Meta Ads",
+        "TikTok Ads",
+        "SEMrush",
+        "Ahrefs",
+        "Google Analytics",
+        "Google Tag Manager",
+        "Mailchimp",
+        "HubSpot",
+        "Looker Studio"
+      ],
       "useCases": [
         {
           "problem": "SaaS B2B con CPL de $150 y ciclo de ventas de 3 meses.",
@@ -1015,7 +1131,18 @@
           "description": "Evaluación de progreso, ajustes y soporte continuo post-mentoría."
         }
       ],
-      "technologies": ["JavaScript", "Python", "React", "Node.js", "AWS", "Docker", "Kubernetes", "Git", "Agile/Scrum", "System Design"],
+      "technologies": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Git",
+        "Agile/Scrum",
+        "System Design"
+      ],
       "useCases": [
         {
           "problem": "Junior developer estancado en su carrera, no sabía cómo avanzar a senior.",
@@ -1087,7 +1214,18 @@
           "description": "Entrenamiento a usuarios finales para interpretar y usar los insights."
         }
       ],
-      "technologies": ["Python", "SQL", "Power BI", "Tableau", "Snowflake", "BigQuery", "dbt", "Airflow", "scikit-learn", "TensorFlow"],
+      "technologies": [
+        "Python",
+        "SQL",
+        "Power BI",
+        "Tableau",
+        "Snowflake",
+        "BigQuery",
+        "dbt",
+        "Airflow",
+        "scikit-learn",
+        "TensorFlow"
+      ],
       "useCases": [
         {
           "problem": "CEO tomaba decisiones con Excel y reportes manuales desactualizados.",
@@ -1159,7 +1297,18 @@
           "description": "Right-sizing continuo, reserved instances, spot instances para reducir costos."
         }
       ],
-      "technologies": ["AWS", "GCP", "Azure", "Terraform", "Kubernetes", "Docker", "GitHub Actions", "Prometheus", "Grafana", "DataDog"],
+      "technologies": [
+        "AWS",
+        "GCP",
+        "Azure",
+        "Terraform",
+        "Kubernetes",
+        "Docker",
+        "GitHub Actions",
+        "Prometheus",
+        "Grafana",
+        "DataDog"
+      ],
       "useCases": [
         {
           "problem": "Startup con deploys manuales que tomaban 4 horas y causaban downtime.",
@@ -1231,7 +1380,18 @@
           "description": "Retiramos sistema legacy solo cuando nuevo sistema está 100% validado."
         }
       ],
-      "technologies": ["COBOL", "FORTRAN", "Java", ".NET", "Python", "Node.js", "PostgreSQL", "REST APIs", "Docker", "Kubernetes"],
+      "technologies": [
+        "COBOL",
+        "FORTRAN",
+        "Java",
+        ".NET",
+        "Python",
+        "Node.js",
+        "PostgreSQL",
+        "REST APIs",
+        "Docker",
+        "Kubernetes"
+      ],
       "useCases": [
         {
           "problem": "Banco con core bancario COBOL de 30 años, imposible contratar mantenedores.",
@@ -1281,7 +1441,9 @@
     "faqQ2": "¿Puedo usarlo en varias máquinas?",
     "faqA2": "Cada licencia se vincula a una máquina. Puedes revincular hasta 3 veces por año.",
     "faqQ3": "¿Hay garantía de devolución?",
-    "faqA3": "Sí, ofrecemos garantía de devolución de 30 días. Reembolso completo si no quedas satisfecho."
+    "faqA3": "Sí, ofrecemos garantía de devolución de 30 días. Reembolso completo si no quedas satisfecho.",
+    "demo": "Demo",
+    "view": "Ver"
   },
   "storeDetail": {
     "backToStore": "Volver a la Tienda",
@@ -1313,7 +1475,11 @@
     "recentProducts": "Productos Recientes",
     "viewAll": "Ver Todos",
     "noProductsYet": "Aún no hay productos. Crea el primero.",
-    "createFirst": "Crear Primer Producto"
+    "createFirst": "Crear Primer Producto",
+    "serverError": "Error del servidor",
+    "connectionError": "No se pudo conectar al servidor",
+    "username": "Usuario",
+    "signingIn": "Accediendo..."
   },
   "adminProducts": {
     "title": "Productos",
