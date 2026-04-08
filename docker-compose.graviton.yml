@@ -27,3 +27,34 @@ services:
       timeout: 5s
       retries: 3
       start_period: 15s
+
+  license-server:
+    build:
+      context: ./apps/license-server
+      dockerfile: Dockerfile
+    container_name: license-server
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8090:8090"
+    environment:
+      - LICENSE_SERVICE_SECRET=${LICENSE_SERVICE_SECRET}
+      - WHOP_WEBHOOK_SECRET=${WHOP_WEBHOOK_SECRET:-}
+      - DOWNLOAD_SECRET=${DOWNLOAD_SECRET:-}
+      - DOWNLOAD_BASE_URL=https://soulcore.dev/api/licenses
+      - ADMIN_DEFAULT_PASSWORD=${ADMIN_DEFAULT_PASSWORD:-}
+    volumes:
+      - license-data:/data
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: "0.25"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8090/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  license-data:

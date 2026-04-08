@@ -47,7 +47,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline'" + (isDev ? " 'unsafe-eval'" : "") + "; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://github.com https://avatars.githubusercontent.com; font-src 'self' data:; connect-src 'self' https://soulcore.dev " + apiUrl + " https://formspree.io; frame-ancestors 'none'; object-src 'none'; base-uri 'self';",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline'" + (isDev ? " 'unsafe-eval'" : "") + "; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://github.com https://avatars.githubusercontent.com; font-src 'self' data:; connect-src 'self' https://soulcore.dev https://whop.com " + apiUrl + " https://formspree.io; frame-ancestors 'none'; object-src 'none'; base-uri 'self';",
           },
         ],
       },

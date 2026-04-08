@@ -133,6 +133,28 @@ export const deleteProduct = async (_id: string): Promise<void> => {
 
 export const getMemberships = async () => ({ data: [] })
 export const getPlans = async () => ({ data: [] })
-export const createCheckout = async (_planId: string, _redirectUrl?: string) => {
-  throw new Error('Checkout requires Whop — coming soon')
+export const createCheckout = async (productSlug: string): Promise<string> => {
+  const res = await fetch(`/api/buy?product=${encodeURIComponent(productSlug)}`, {
+    redirect: 'manual',
+  })
+  const location = res.headers.get('Location')
+  if (location) return location
+  const data = await res.json().catch(() => ({ error: 'Unknown error' }))
+  throw new Error(data.error || 'Checkout not available')
+}
+
+export const requestFreeLicense = async (
+  email: string,
+  productSlug: string
+): Promise<{ license_key: string; product_name: string }> => {
+  const res = await fetch('/api/free-license', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, product_slug: productSlug }),
+  })
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({ error: 'Unknown error' }))
+    throw new Error(data.error || 'Failed to generate license')
+  }
+  return res.json()
 }

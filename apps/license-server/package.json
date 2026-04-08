@@ -1,0 +1,10 @@
+{
+  "name": "license-server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Go binary — build via Docker'",
+    "dev": "go run ./cmd/server/ --addr :8090",
+    "clean": "echo 'noop'"
+  }
+}
