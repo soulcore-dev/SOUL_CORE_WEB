@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, ReactNode } from 'react'
+import { useState, useEffect, ReactNode, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 
 import { useLocale, useTranslations } from 'next-intl'
@@ -290,6 +290,14 @@ function FreeProductClaim({ productSlug, onClaimed }: { productSlug: string; onC
 }
 
 export default function AccountLayout({ children }: { children: ReactNode }) {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-soul-dark pt-20"><Loader2 size={32} className="animate-spin text-soul-purple" /></div>}>
+      <AccountLayoutInner>{children}</AccountLayoutInner>
+    </Suspense>
+  )
+}
+
+function AccountLayoutInner({ children }: { children: ReactNode }) {
   const t = useTranslations('account')
   const locale = useLocale()
   const pathname = usePathname()
