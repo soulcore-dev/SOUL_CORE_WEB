@@ -251,19 +251,19 @@ export default function AdminImagenesPage() {
 
                   {/* Type + generation badges */}
                   <div className="flex gap-1 mb-2">
-                    {'type' in slot && (
+                    {slot.type && (
                       <span className="text-[9px] px-1.5 py-0.5 rounded bg-gray-700 text-gray-400">
-                        {String((slot as any).type)}
+                        {slot.type}
                       </span>
                     )}
-                    {'generation' in slot && (
+                    {slot.generation && (
                       <span className="text-[9px] px-1.5 py-0.5 rounded bg-gray-700 text-gray-400">
-                        {String((slot as any).generation)}
+                        {slot.generation}
                       </span>
                     )}
-                    {'aspect' in slot && (
+                    {slot.aspect && (
                       <span className="text-[9px] px-1.5 py-0.5 rounded bg-gray-700 text-gray-400">
-                        {String((slot as any).aspect)}
+                        {slot.aspect}
                       </span>
                     )}
                   </div>

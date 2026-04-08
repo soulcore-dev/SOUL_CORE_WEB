@@ -16,6 +16,8 @@ export interface ImageSlot {
   aspect: '16:9' | '4:3' | '1:1' | '3:1';
   usedIn: string;
   fallback?: string;
+  type?: string;
+  generation?: 'ai' | 'manual' | 'photo' | 'screenshot' | 'code';
 }
 
 export interface SlotCategory {
