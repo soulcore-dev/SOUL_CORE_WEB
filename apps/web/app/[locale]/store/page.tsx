@@ -43,11 +43,11 @@ export default function StorePage() {
     <>
       <StoreHero />
 
-      <section className="py-12 bg-soul-dark">
+      <section className="py-6 md:py-12 bg-soul-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filters Bar — only show when there are products */}
           {products.length > 0 && (
-            <div className="flex flex-col md:flex-row gap-4 mb-12">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-4 mb-6 md:mb-12">
               <div className="relative flex-1">
                 <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" />
                 <input
@@ -107,7 +107,7 @@ export default function StorePage() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className={`grid gap-4 md:gap-8 ${filtered.length === 1 ? 'grid-cols-1 max-w-md mx-auto' : filtered.length === 2 ? 'grid-cols-1 sm:grid-cols-2 max-w-3xl mx-auto' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
               {filtered.map((product, index) => (
                 <ProductCard
                   key={product.id}

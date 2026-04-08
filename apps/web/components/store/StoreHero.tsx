@@ -8,7 +8,7 @@ export function StoreHero() {
   const t = useTranslations('store')
 
   return (
-    <section className="relative pt-32 pb-16 overflow-hidden">
+    <section className="relative pt-24 pb-8 md:pt-32 md:pb-16 overflow-hidden">
       <div className="absolute inset-0 bg-soul-dark">
         <img
           src="/generated/store-hero-bg.png"
@@ -30,12 +30,12 @@ export function StoreHero() {
             <ShoppingBag aria-hidden="true" size={16} className="mr-2" />
             {t('badge')}
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             <span className="text-white">{t('heroTitle1')}</span>
             <br />
             <span className="gradient-text">{t('heroTitle2')}</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-gray-400 max-w-2xl mx-auto">
             {t('heroSubtitle')}
           </p>
         </div>
