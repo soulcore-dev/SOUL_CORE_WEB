@@ -206,7 +206,7 @@ export function Navbar() {
             {/* CTA Button */}
             <Link
               href={isOnLanding ? '#contacto' : `/${locale}/#contacto`}
-              className="px-6 py-2 bg-soul-purple hover:bg-soul-purple-dark rounded-lg font-medium transition-all duration-200 glow-hover"
+              className="px-6 py-2 bg-soul-purple hover:bg-soul-purple-dark rounded-lg font-medium !text-white transition-all duration-200 glow-hover"
             >
               {t('quote')}
             </Link>

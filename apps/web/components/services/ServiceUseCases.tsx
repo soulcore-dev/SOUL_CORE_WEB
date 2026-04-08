@@ -100,7 +100,7 @@ export function ServiceUseCases({ serviceKey, color }: ServiceUseCasesProps) {
                     >
                       <div className="flex items-start gap-4">
                         <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center`}>
-                          <span className="text-white font-bold text-lg">SC</span>
+                          <span className="!text-white font-bold text-lg">SC</span>
                         </div>
                         <div>
                           <h3 className="text-lg font-semibold text-soul-purple mb-2">

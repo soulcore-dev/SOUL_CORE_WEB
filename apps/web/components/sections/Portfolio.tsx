@@ -150,7 +150,7 @@ export function Portfolio() {
               onClick={() => setActiveCategory(category)}
               className={`px-5 py-2 rounded-full font-medium transition-all duration-200 ${
                 activeCategory === category
-                  ? 'bg-soul-purple text-white'
+                  ? 'bg-soul-purple !text-white'
                   : 'bg-soul-dark-card text-gray-400 hover:text-white border border-gray-700'
               }`}
             >
@@ -173,7 +173,7 @@ export function Portfolio() {
                   <project.icon size={36} className="text-white/80" />
                 </div>
                 <div className="absolute top-2 left-2">
-                  <span className="px-2 py-0.5 bg-black/50 rounded-full text-white text-[10px] font-medium">
+                  <span className="px-2 py-0.5 bg-black/50 rounded-full !text-white text-[10px] font-medium">
                     {t(`categories.${project.categoryKey}`)}
                   </span>
                 </div>

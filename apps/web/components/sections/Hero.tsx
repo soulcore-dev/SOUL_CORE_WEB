@@ -49,7 +49,7 @@ export function Hero() {
           {/* Subheadline */}
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
             {t.rich('subtitle', {
-              strong: (chunks) => <strong className="text-white">{chunks}</strong>
+              strong: (chunks) => <strong className="!text-soul-purple font-bold">{chunks}</strong>
             })}
           </p>
 
@@ -57,14 +57,14 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <Link
               href="#servicios"
-              className="px-8 py-4 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold text-white transition-all duration-200 glow-hover flex items-center group"
+              className="px-8 py-4 bg-soul-purple hover:bg-soul-purple-dark rounded-xl font-semibold !text-white transition-all duration-200 glow-hover flex items-center group"
             >
               {t('ctaServices')}
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
             </Link>
             <Link
               href="#contacto"
-              className="px-8 py-4 border border-soul-purple/50 hover:border-soul-purple rounded-xl font-semibold text-white transition-all duration-200"
+              className="px-8 py-4 border border-soul-purple/50 hover:border-soul-purple rounded-xl font-semibold text-soul-purple transition-all duration-200"
             >
               {t('ctaQuote')}
             </Link>
