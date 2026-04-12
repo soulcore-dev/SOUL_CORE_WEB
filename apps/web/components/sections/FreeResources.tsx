@@ -15,7 +15,7 @@ export function FreeResources() {
       <div className="absolute inset-0 bg-gradient-to-b from-soul-dark via-transparent to-soul-dark" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-soul-dark-card/80 backdrop-blur-sm border border-emerald-500/15 rounded-2xl p-8 sm:p-12">
+        <div className="free-banner bg-soul-dark-card/80 backdrop-blur-sm border border-emerald-500/15 rounded-2xl p-8 sm:p-12">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Left — text */}
             <div className="flex-1 text-center md:text-left">
@@ -42,15 +42,15 @@ export function FreeResources() {
 
             {/* Right — feature pills */}
             <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-3 bg-white/5 rounded-xl px-5 py-3 border border-white/5">
+              <div className="flex items-center gap-3 free-pill bg-white/5 rounded-xl px-5 py-3 border border-white/5">
                 <Download size={18} className="text-emerald-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">{t('feature1')}</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/5 rounded-xl px-5 py-3 border border-white/5">
+              <div className="flex items-center gap-3 free-pill bg-white/5 rounded-xl px-5 py-3 border border-white/5">
                 <Sparkles size={18} className="text-emerald-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">{t('feature2')}</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/5 rounded-xl px-5 py-3 border border-white/5">
+              <div className="flex items-center gap-3 free-pill bg-white/5 rounded-xl px-5 py-3 border border-white/5">
                 <Code size={18} className="text-emerald-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">{t('feature3')}</span>
               </div>

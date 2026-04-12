@@ -108,6 +108,57 @@ body {
   opacity: 0.08 !important;
 }
 
+/* Light mode: Hero section fixes */
+.light .hero-gradient-top {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.85), transparent) !important;
+}
+.light .hero-gradient-bottom {
+  background: linear-gradient(to top, #ffffff, rgba(255,255,255,0.5), transparent) !important;
+}
+.light .hero-glow {
+  background: rgba(139, 92, 246, 0.08) !important;
+}
+.light .hero-stats {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.15) !important;
+}
+
+/* Light mode: gradient text stays purple */
+.light .gradient-text {
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Light mode: carousel arrows */
+.light .carousel-arrow {
+  background: #f0f0f5 !important;
+  border-color: #d0d0d5 !important;
+  color: #4a4a5a !important;
+}
+
+/* Light mode: FreeResources banner */
+.light .free-banner {
+  background: rgba(16, 185, 129, 0.06) !important;
+  border-color: rgba(16, 185, 129, 0.2) !important;
+}
+.light .free-pill {
+  background: rgba(16, 185, 129, 0.08) !important;
+  border-color: rgba(16, 185, 129, 0.15) !important;
+}
+
+/* Light mode: scroll indicator */
+.light .scroll-indicator {
+  border-color: rgba(139, 92, 246, 0.3) !important;
+}
+.light .scroll-dot {
+  background: var(--soul-purple) !important;
+}
+
+/* Light mode: drop shadow on logo */
+.light .hero-logo {
+  filter: drop-shadow(0 4px 20px rgba(139, 92, 246, 0.15)) !important;
+}
+
 /* Focus ring for keyboard accessibility */
 :focus-visible {
   outline: 2px solid var(--soul-purple);

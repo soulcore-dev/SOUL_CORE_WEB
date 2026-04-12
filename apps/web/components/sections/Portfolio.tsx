@@ -42,14 +42,14 @@ export function Portfolio() {
         <div className="flex items-center justify-end gap-2 mb-6">
           <button
             onClick={() => scroll('left')}
-            className="w-10 h-10 rounded-full bg-soul-dark-card border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-soul-purple/50 transition-all"
+            className="carousel-arrow w-10 h-10 rounded-full bg-soul-dark-card border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-soul-purple/50 transition-all"
             aria-label="Anterior"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             onClick={() => scroll('right')}
-            className="w-10 h-10 rounded-full bg-soul-dark-card border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-soul-purple/50 transition-all"
+            className="carousel-arrow w-10 h-10 rounded-full bg-soul-dark-card border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-soul-purple/50 transition-all"
             aria-label="Siguiente"
           >
             <ChevronRight size={20} />
