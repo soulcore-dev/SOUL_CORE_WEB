@@ -123,9 +123,9 @@
     }
   },
   "portfolio": {
-    "label": "Portfolio",
-    "title": "Success Stories",
-    "subtitle": "Real projects with measurable results. Each case demonstrates our delivery capability.",
+    "label": "Our Work",
+    "title": "Projects We Have Built",
+    "subtitle": "Each of these projects was designed, developed and delivered by our team from start to finish. Real results for real clients.",
     "viewCase": "View Case",
     "code": "Code",
     "confidential": "Confidential Project",

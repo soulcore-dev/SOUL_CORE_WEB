@@ -123,9 +123,9 @@
     }
   },
   "portfolio": {
-    "label": "Portafolio",
-    "title": "Casos de Éxito",
-    "subtitle": "Proyectos reales con resultados medibles. Cada caso demuestra nuestra capacidad de entrega.",
+    "label": "Nuestro Trabajo",
+    "title": "Proyectos que Hemos Construido",
+    "subtitle": "Cada uno de estos proyectos fue diseñado, desarrollado y entregado por nuestro equipo de inicio a fin. Resultados reales para clientes reales.",
     "viewCase": "Ver Caso",
     "code": "Código",
     "confidential": "Proyecto Confidencial",

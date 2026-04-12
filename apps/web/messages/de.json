@@ -123,9 +123,9 @@
     }
   },
   "portfolio": {
-    "label": "Portfolio",
-    "title": "Erfolgsgeschichten",
-    "subtitle": "Echte Projekte mit messbaren Ergebnissen. Jeder Fall demonstriert unsere Lieferfähigkeit.",
+    "label": "Unsere Arbeit",
+    "title": "Projekte die Wir Gebaut Haben",
+    "subtitle": "Jedes dieser Projekte wurde von unserem Team von Anfang bis Ende entworfen, entwickelt und geliefert. Echte Ergebnisse für echte Kunden.",
     "viewCase": "Fall ansehen",
     "code": "Code",
     "confidential": "Vertrauliches Projekt",
