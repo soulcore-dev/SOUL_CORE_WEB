@@ -81,7 +81,7 @@ export function Hero() {
           </div>
 
           {/* Stats — glass strip, minimal */}
-          <div className="grid grid-cols-3 gap-3 max-w-md mx-auto rounded-2xl p-4 bg-black/30 backdrop-blur-md border border-white/[0.06]">
+          <div className="grid grid-cols-3 gap-3 max-w-md mx-auto rounded-2xl p-4 bg-black/30 backdrop-blur-md">
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col items-center">
                 <div className="w-10 h-10 rounded-lg bg-soul-purple/15 flex items-center justify-center mb-2">
