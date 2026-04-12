@@ -27,7 +27,8 @@
     "ctaQuote": "Angebot anfordern",
     "statStack": "Full-Stack",
     "statAreas": "Bereiche",
-    "statDelivery": "Agile Lieferung"
+    "statDelivery": "Agile Lieferung",
+    "ctaFree": "Kostenlose Ressourcen"
   },
   "whyUs": {
     "label": "Warum uns wählen?",
@@ -1646,5 +1647,14 @@
     "serverErrorTitle": "500",
     "serverErrorMessage": "Etwas ist schiefgelaufen. Wir kümmern uns darum.",
     "tryAgain": "Erneut Versuchen"
+  },
+  "freeResources": {
+    "badge": "Kostenlos fur Entwickler",
+    "title": "Kostenlose Ressourcen fur Ihr Nachstes Projekt",
+    "subtitle": "Templates, KI-Tools und Frameworks, die wir in der Produktion verwenden. Kostenlos, ohne Haken.",
+    "cta": "Shop Entdecken",
+    "feature1": "Produktionsreife Templates",
+    "feature2": "KI-Tools + Automatisierungen",
+    "feature3": "Open-Source Frameworks"
   }
 }

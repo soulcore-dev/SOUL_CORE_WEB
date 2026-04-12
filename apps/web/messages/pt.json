@@ -27,7 +27,8 @@
     "ctaQuote": "Solicitar Orçamento",
     "statStack": "Full-Stack",
     "statAreas": "Áreas",
-    "statDelivery": "Entrega Ágil"
+    "statDelivery": "Entrega Ágil",
+    "ctaFree": "Recursos Gratis"
   },
   "whyUs": {
     "label": "Por que nos escolher?",
@@ -1646,5 +1647,14 @@
     "serverErrorTitle": "500",
     "serverErrorMessage": "Algo deu errado. Estamos resolvendo.",
     "tryAgain": "Tentar Novamente"
+  },
+  "freeResources": {
+    "badge": "Gratis para desenvolvedores",
+    "title": "Recursos Gratis para seu Proximo Projeto",
+    "subtitle": "Templates, ferramentas AI e frameworks que usamos em producao. Sem custo, sem truques.",
+    "cta": "Explorar Loja",
+    "feature1": "Templates prontos para producao",
+    "feature2": "Ferramentas AI + automacoes",
+    "feature3": "Frameworks open-source"
   }
 }

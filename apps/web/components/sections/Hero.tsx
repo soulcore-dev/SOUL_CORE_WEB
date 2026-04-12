@@ -1,11 +1,12 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, Zap, Layers, Rocket } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { ArrowRight, Zap, Layers, Rocket, Gift } from 'lucide-react'
+import { useTranslations, useLocale } from 'next-intl'
 
 export function Hero() {
   const t = useTranslations('hero')
+  const locale = useLocale()
 
   const stats = [
     { icon: Layers, label: t('statStack') },
@@ -73,10 +74,11 @@ export function Hero() {
               <ArrowRight aria-hidden="true" className="ml-2 group-hover:translate-x-1 transition-transform" size={22} />
             </Link>
             <Link
-              href="#contacto"
-              className="w-full sm:w-auto px-10 py-4 border-2 border-white/20 hover:border-white/40 hover:bg-white/5 rounded-xl font-bold text-lg text-white transition-all duration-200"
+              href={`/${locale}/store`}
+              className="w-full sm:w-auto px-10 py-4 bg-emerald-600/20 border-2 border-emerald-500/30 hover:bg-emerald-600/30 hover:border-emerald-500/50 rounded-xl font-bold text-lg text-emerald-300 transition-all duration-200 flex items-center justify-center group"
             >
-              {t('ctaQuote')}
+              <Gift size={20} className="mr-2" />
+              {t('ctaFree')}
             </Link>
           </div>
 

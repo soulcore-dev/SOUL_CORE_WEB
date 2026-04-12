@@ -27,7 +27,8 @@
     "ctaQuote": "Demander un Devis",
     "statStack": "Full-Stack",
     "statAreas": "Domaines",
-    "statDelivery": "Livraison Agile"
+    "statDelivery": "Livraison Agile",
+    "ctaFree": "Ressources Gratuites"
   },
   "whyUs": {
     "label": "Pourquoi nous choisir ?",
@@ -1646,5 +1647,14 @@
     "serverErrorTitle": "500",
     "serverErrorMessage": "Quelque chose s'est mal passé. Nous y travaillons.",
     "tryAgain": "Réessayer"
+  },
+  "freeResources": {
+    "badge": "Gratuit pour les developpeurs",
+    "title": "Ressources Gratuites pour votre Prochain Projet",
+    "subtitle": "Templates, outils IA et frameworks que nous utilisons en production. Gratuit, sans piege.",
+    "cta": "Explorer la Boutique",
+    "feature1": "Templates prets pour la production",
+    "feature2": "Outils IA + automatisations",
+    "feature3": "Frameworks open-source"
   }
 }

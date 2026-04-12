@@ -27,7 +27,8 @@
     "ctaQuote": "Cotizar Proyecto",
     "statStack": "Full-Stack",
     "statAreas": "Áreas",
-    "statDelivery": "Entrega Ágil"
+    "statDelivery": "Entrega Ágil",
+    "ctaFree": "Recursos Gratis"
   },
   "whyUs": {
     "label": "¿Por qué elegirnos?",
@@ -1646,5 +1647,14 @@
     "serverErrorTitle": "500",
     "serverErrorMessage": "Algo salió mal. Estamos trabajando en ello.",
     "tryAgain": "Intentar de Nuevo"
+  },
+  "freeResources": {
+    "badge": "Gratis para desarrolladores",
+    "title": "Recursos Gratis para tu Proximo Proyecto",
+    "subtitle": "Templates, herramientas AI y frameworks que usamos en produccion. Sin costo, sin trucos.",
+    "cta": "Explorar Tienda",
+    "feature1": "Templates listos para produccion",
+    "feature2": "Herramientas AI + automatizaciones",
+    "feature3": "Frameworks open-source"
   }
 }

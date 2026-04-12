@@ -27,7 +27,8 @@
     "ctaQuote": "Quote Project",
     "statStack": "Full-Stack",
     "statAreas": "Areas",
-    "statDelivery": "Agile Delivery"
+    "statDelivery": "Agile Delivery",
+    "ctaFree": "Free Resources"
   },
   "whyUs": {
     "label": "Why Choose Us?",
@@ -1646,5 +1647,14 @@
     "serverErrorTitle": "500",
     "serverErrorMessage": "Something went wrong. We're on it.",
     "tryAgain": "Try Again"
+  },
+  "freeResources": {
+    "badge": "Free for developers",
+    "title": "Free Resources for Your Next Project",
+    "subtitle": "Templates, AI tools and frameworks we use in production. No cost, no catch.",
+    "cta": "Explore Store",
+    "feature1": "Production-ready templates",
+    "feature2": "AI tools + automations",
+    "feature3": "Open-source frameworks"
   }
 }

@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import { usePathname, useRouter } from 'next/navigation'
 
-import { Menu, X, Moon, Sun, Globe, ShoppingBag, Settings, User } from 'lucide-react'
+import { Menu, X, Moon, Sun, Globe, Gift, Settings, User, ChevronDown } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 import { isAdminAuthenticated } from '@/lib/admin-auth'
 
@@ -20,6 +20,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [isDark, setIsDark] = useState(true)
   const [showLangMenu, setShowLangMenu] = useState(false)
+  const [showMore, setShowMore] = useState(false)
   const [isAdmin, setIsAdmin] = useState(false)
 
   // Check admin status
@@ -45,6 +46,18 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClick = () => {
+      setShowLangMenu(false)
+      setShowMore(false)
+    }
+    if (showLangMenu || showMore) {
+      document.addEventListener('click', handleClick)
+      return () => document.removeEventListener('click', handleClick)
+    }
+  }, [showLangMenu, showMore])
+
   const toggleTheme = () => {
     const newIsDark = !isDark
     setIsDark(newIsDark)
@@ -69,19 +82,17 @@ export function Navbar() {
   const isOnLanding = pathname === `/${locale}` || pathname === `/${locale}/`
 
   const prefix = isOnLanding ? '' : `/${locale}`
-  const landingLinks = [
+
+  // Primary nav — only the essentials
+  const primaryLinks = [
     { href: `${prefix}#servicios`, labelKey: 'services' },
     { href: `/${locale}/portafolio`, labelKey: 'portfolio' },
-    { href: `${prefix}#equipo`, labelKey: 'team' },
     { href: `${prefix}#contacto`, labelKey: 'contact' },
   ]
-
-  const navLinks = landingLinks
 
   return (
     <nav
       aria-label="Main navigation"
-
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'glass py-3' : 'bg-transparent py-5'
       }`}
@@ -99,7 +110,7 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-5">
-            {navLinks.map((link) => (
+            {primaryLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -109,34 +120,17 @@ export function Navbar() {
               </Link>
             ))}
 
-            {/* Store Link */}
+            {/* Store Link — prominent with FREE badge */}
             <Link
               href={`/${locale}/store`}
-              className="flex items-center text-gray-300 hover:text-soul-purple transition-colors duration-200"
+              className="flex items-center text-gray-300 hover:text-soul-purple transition-colors duration-200 relative"
             >
-              <ShoppingBag size={18} className="mr-1" />
+              <Gift size={18} className="mr-1.5" />
               {t('store')}
+              <span className="ml-1.5 px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold rounded-full uppercase leading-none">
+                Free
+              </span>
             </Link>
-
-            {/* Account Link */}
-            <Link
-              href={`/${locale}/account`}
-              className="flex items-center text-gray-300 hover:text-soul-purple transition-colors duration-200"
-            >
-              <User size={18} className="mr-1" />
-              {t('account')}
-            </Link>
-
-            {/* Admin Link — only visible to authenticated admins */}
-            {isAdmin && (
-              <Link
-                href={`/${locale}/admin`}
-                className="flex items-center text-gray-300 hover:text-soul-purple transition-colors duration-200"
-              >
-                <Settings size={18} className="mr-1" />
-                {t('admin')}
-              </Link>
-            )}
 
             {/* CTA Button */}
             <Link
@@ -146,42 +140,45 @@ export function Navbar() {
               {t('quote')}
             </Link>
 
-            {/* Language & Theme — after CTA per Randhy feedback */}
-            <div className="flex items-center space-x-1 border-l border-gray-700 pl-3 ml-1">
-              <div className="relative">
+            {/* More menu — language, theme, account */}
+            <div className="relative border-l border-gray-700 pl-3 ml-1">
+              <div className="flex items-center space-x-1">
+                {/* Language */}
+                <div className="relative">
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setShowLangMenu(!showLangMenu); setShowMore(false) }}
+                    className="flex items-center space-x-1 p-2 rounded-lg hover:bg-soul-dark-card transition-colors"
+                    aria-expanded={showLangMenu}
+                    aria-haspopup="true"
+                    aria-label="Select language"
+                  >
+                    <Globe size={16} />
+                    <span className="text-xs uppercase">{locale}</span>
+                  </button>
+                  {showLangMenu && (
+                    <div className="absolute top-full right-0 mt-2 bg-soul-dark-card border border-gray-700 rounded-lg overflow-hidden shadow-xl">
+                      <button onClick={() => switchLocale('es')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'es' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('es')}</button>
+                      <button onClick={() => switchLocale('en')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'en' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('en')}</button>
+                      <button onClick={() => switchLocale('pt')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'pt' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('pt')}</button>
+                      <button onClick={() => switchLocale('fr')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'fr' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('fr')}</button>
+                      <button onClick={() => switchLocale('de')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'de' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('de')}</button>
+                    </div>
+                  )}
+                </div>
+                {/* Theme */}
                 <button
-                  onClick={() => setShowLangMenu(!showLangMenu)}
-                  className="flex items-center space-x-1 p-2 rounded-lg hover:bg-soul-dark-card transition-colors"
-                  aria-expanded={showLangMenu}
-                  aria-haspopup="true"
-                  aria-label="Select language"
+                  onClick={toggleTheme}
+                  className="p-2 rounded-lg hover:bg-soul-dark-card transition-colors"
+                  aria-label="Toggle theme"
                 >
-                  <Globe size={16} />
-                  <span className="text-xs uppercase">{locale}</span>
+                  {isDark ? <Sun size={16} /> : <Moon size={16} />}
                 </button>
-                {showLangMenu && (
-                  <div className="absolute top-full right-0 mt-2 bg-soul-dark-card border border-gray-700 rounded-lg overflow-hidden shadow-xl">
-                    <button onClick={() => switchLocale('es')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'es' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('es')}</button>
-                    <button onClick={() => switchLocale('en')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'en' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('en')}</button>
-                    <button onClick={() => switchLocale('pt')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'pt' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('pt')}</button>
-                    <button onClick={() => switchLocale('fr')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'fr' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('fr')}</button>
-                    <button onClick={() => switchLocale('de')} className={`w-full px-4 py-2 text-left text-sm hover:bg-soul-purple/20 transition-colors ${locale === 'de' ? 'text-soul-purple' : 'text-gray-300'}`}>{tLang('de')}</button>
-                  </div>
-                )}
               </div>
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-lg hover:bg-soul-dark-card transition-colors"
-                aria-label="Toggle theme"
-              >
-                {isDark ? <Sun size={16} /> : <Moon size={16} />}
-              </button>
             </div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* Mobile Language Selector */}
             <button
               onClick={() => {
                 const localeOrder = ['es', 'en', 'pt', 'fr', 'de']
@@ -214,14 +211,9 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div
-            
-            
-            
-            className="md:hidden mt-4 pb-4"
-          >
+          <div className="md:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
+              {primaryLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -236,8 +228,11 @@ export function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="flex items-center text-gray-300 hover:text-soul-purple transition-colors py-2"
               >
-                <ShoppingBag size={18} className="mr-2" />
+                <Gift size={18} className="mr-2" />
                 {t('store')}
+                <span className="ml-2 px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold rounded-full uppercase leading-none">
+                  Free
+                </span>
               </Link>
               <Link
                 href={`/${locale}/account`}
