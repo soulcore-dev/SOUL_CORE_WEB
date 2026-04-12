@@ -20,7 +20,7 @@ export const projects: Project[] = [
     stack: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Schema.org', 'SEO'],
     color: 'from-amber-500 to-yellow-600',
     demoUrl: 'https://tayco.llc',
-    image: '/generated/svc-web-development.png',
+    image: '/generated/project-tayco.png',
     featured: true,
   },
   {
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     stack: ['Next.js 14', 'Supabase', 'Stripe', 'Vercel', 'Resend'],
     color: 'from-violet-500 to-fuchsia-600',
     demoUrl: 'https://coparentingcommander.com',
-    image: '/generated/svc-custom-software.png',
+    image: '/generated/project-coparenting-commander.png',
     featured: true,
   },
   {
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     stack: ['Next.js', 'Tailwind CSS', 'SEO', 'Responsive'],
     color: 'from-orange-400 to-rose-500',
     demoUrl: 'https://taycoturnkey.com',
-    image: '/generated/svc-ecommerce.png',
+    image: '/generated/project-tayco-turnkey.png',
     featured: false,
   },
   {
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     stack: ['Next.js', 'Tailwind CSS', 'i18n', 'Dark Mode'],
     color: 'from-emerald-500 to-teal-600',
     demoUrl: 'https://taysupply.com',
-    image: '/generated/svc-integrations.png',
+    image: '/generated/project-taysupply.png',
     featured: false,
   },
   {
