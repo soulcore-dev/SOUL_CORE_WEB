@@ -71,7 +71,7 @@ export function Navbar() {
   const prefix = isOnLanding ? '' : `/${locale}`
   const landingLinks = [
     { href: `${prefix}#servicios`, labelKey: 'services' },
-    { href: `${prefix}#portafolio`, labelKey: 'portfolio' },
+    { href: `/${locale}/portafolio`, labelKey: 'portfolio' },
     { href: `${prefix}#equipo`, labelKey: 'team' },
     { href: `${prefix}#contacto`, labelKey: 'contact' },
   ]
