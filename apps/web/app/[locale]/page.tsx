@@ -18,10 +18,10 @@ export default async function Home({ params }: Props) {
   return (
     <>
       <Hero />
+      <Portfolio />
       <WhyUs />
       <Services />
       <FreeResources />
-      <Portfolio />
       <Team />
       <Contact />
     </>
