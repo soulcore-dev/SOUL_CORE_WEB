@@ -72,7 +72,6 @@ export function Navbar() {
   const landingLinks = [
     { href: `${prefix}#servicios`, labelKey: 'services' },
     { href: `${prefix}#portafolio`, labelKey: 'portfolio' },
-    { href: `${prefix}#productos`, labelKey: 'products' },
     { href: `${prefix}#equipo`, labelKey: 'team' },
     { href: `${prefix}#contacto`, labelKey: 'contact' },
   ]

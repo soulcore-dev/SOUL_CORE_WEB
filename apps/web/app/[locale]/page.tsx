@@ -3,7 +3,7 @@ import { Hero } from '@/components/sections/Hero'
 import { Services } from '@/components/sections/Services'
 import { WhyUs } from '@/components/sections/WhyUs'
 import { Portfolio } from '@/components/sections/Portfolio'
-import { Products } from '@/components/sections/Products'
+// import { Products } from '@/components/sections/Products'
 import { Team } from '@/components/sections/Team'
 import { Contact } from '@/components/sections/Contact'
 
@@ -21,7 +21,7 @@ export default async function Home({ params }: Props) {
       <WhyUs />
       <Services />
       <Portfolio />
-      <Products />
+      {/* <Products /> */}
       <Team />
       <Contact />
     </>
