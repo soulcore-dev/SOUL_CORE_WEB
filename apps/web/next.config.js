@@ -49,6 +49,23 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: "default-src 'self'; script-src 'self' 'unsafe-inline'" + (isDev ? " 'unsafe-eval'" : "") + "; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://github.com https://avatars.githubusercontent.com; font-src 'self' data:; connect-src 'self' https://soulcore.dev https://whop.com " + apiUrl + " https://formspree.io; frame-ancestors 'none'; object-src 'none'; base-uri 'self';",
           },
+          // Cross-origin isolation headers — defense-in-depth against
+          // Spectre-class side channels + ensures the page is only embedded
+          // / referenced by same-origin contexts. COEP is 'unsafe-none'
+          // because the landing embeds GitHub avatars / images that don't
+          // ship CORP headers; 'require-corp' would break those.
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin',
+          },
+          {
+            key: 'Cross-Origin-Resource-Policy',
+            value: 'same-origin',
+          },
+          {
+            key: 'Cross-Origin-Embedder-Policy',
+            value: 'unsafe-none',
+          },
         ],
       },
     ]

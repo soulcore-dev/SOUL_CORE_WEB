@@ -40,7 +40,7 @@ export const projects: Project[] = [
     stack: ['Spring Boot 3.4', 'PostgreSQL 17', 'Docker', 'Prometheus', 'Flyway'],
     color: 'from-cyan-500 to-teal-600',
     demoUrl: 'https://o1banca.vercel.app/',
-    image: '/generated/svc-cloud-infrastructure.png',
+    image: '/generated/project-archaeon-bank.png',
     featured: true,
   },
   {
