@@ -5,7 +5,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+// Empty default = same-origin relative paths. Caddy routes /api/* to
+// the Next.js container on prod. Setting NEXT_PUBLIC_API_URL only makes
+// sense for a cross-origin dev server (rare).
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || ''
 
 export async function fetchAPI<T>(
   endpoint: string,
