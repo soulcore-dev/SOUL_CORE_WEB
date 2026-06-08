@@ -48,9 +48,10 @@ export async function callDeepSeek(messages: DeepSeekMessage[]): Promise<DeepSee
         temperature: 0.3,
         // Force strict JSON object output — output guard parses this.
         response_format: { type: 'json_object' },
-        // Disable thinking mode for fast customer chat.
-        // (DeepSeek extension over the OpenAI format.)
-        thinking: false,
+        // Disable thinking mode for fast customer chat. Per official
+        // docs (api-docs.deepseek.com/guides/thinking_mode), the
+        // toggle is a ThinkingOptions struct, not a boolean.
+        thinking: { type: 'disabled' },
       }),
       signal: controller.signal,
     })
