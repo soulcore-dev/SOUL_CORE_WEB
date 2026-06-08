@@ -83,6 +83,10 @@ export const NEXUS_FACTS = {
     'How to start a project / contact / quote process',
     'What SoulCore has built (link to /portafolio)',
     'Free resources, blog posts, tools',
+    'Why choose SoulCore / what makes us different — pivot to differentiators',
+    'Tell me about <service> — describe the service from the services list',
+    'Follow-up questions that reference earlier turns of THIS conversation',
+    'Help me think through whether SoulCore fits my use case',
   ],
 
   scope_out: [
@@ -98,7 +102,7 @@ export const NEXUS_FACTS = {
     pricing:
       "Pricing depends on the scope of your project. The fastest path to a real quote is the contact form or founder@soulcore.dev — usually a 24-business-hour response.",
     competitor:
-      "I'm not the right source to compare us with other providers. If you tell me what you need, I can describe how SoulCore would approach it.",
+      "Instead of comparing with named competitors, here's what makes SoulCore different: continuous extended-hours support, 3x faster delivery via proprietary methodologies, obsessive documentation, proprietary frameworks (VMOF, SOUL_CORE MCP), a single provider for 12 divisions, and security-first design. Tell me what you need and I'll describe how we'd approach it.",
     off_topic:
       "I'm scoped to questions about SoulCore's services. For something else, you might want a different tool — and if you're looking for a SoulCore use case, I'm here.",
     confidential:
