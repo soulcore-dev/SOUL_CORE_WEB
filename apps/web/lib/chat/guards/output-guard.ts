@@ -12,7 +12,28 @@
  * (for audit logging).
  */
 
-import { NEXUS_FACTS } from '../knowledge/nexus-facts'
+import { NEXUS_FACTS, type SupportedLanguage } from '../knowledge/nexus-facts'
+
+type RefusalKey = keyof typeof NEXUS_FACTS.refusal_examples
+
+/**
+ * Pick the localized refusal for the user's language, falling back to
+ * English when the detected language isn't one we have a translation for.
+ */
+function localizedRefusal(key: RefusalKey, lang: string): string {
+  const family = NEXUS_FACTS.refusal_examples[key]
+  const code = (['en', 'es', 'pt', 'fr', 'de'] as const).includes(lang as SupportedLanguage)
+    ? (lang as SupportedLanguage)
+    : 'en'
+  return family[code] ?? family.en
+}
+
+function localizedFooter(lang: string): string {
+  const code = (['en', 'es', 'pt', 'fr', 'de'] as const).includes(lang as SupportedLanguage)
+    ? (lang as SupportedLanguage)
+    : 'en'
+  return NEXUS_FACTS.safety_footer[code] ?? NEXUS_FACTS.safety_footer.en
+}
 
 export type OutputGuardResult = {
   reply: string
@@ -47,9 +68,6 @@ const SYSTEM_LEAK_MARKERS = [
 const PRICE_PATTERN = /\$\s?\d{1,3}([,.]?\d{3})*(\.\d+)?|\b(\d+\s?(usd|eur|cop|mxn|ars|clp)|usd\s?\d+|eur\s?\d+)\b/i
 const DATE_COMMIT_PATTERN = /\b(deliver|delivery|ready|ship|complete|finish|done)\b\s+(by|in|on)\s+(\d|january|february|march|april|may|june|july|august|september|october|november|december|monday|tuesday|wednesday|thursday|friday|saturday|sunday|\d+\s+(days?|weeks?|months?))/i
 
-const SAFETY_FOOTER =
-  '\n\nFor commercial offers and quotes, please use the contact form or founder@soulcore.dev.'
-
 /**
  * Try to parse DeepSeek's JSON response. The model was instructed to
  * emit JSON, but we still wrap in try/catch and salvage degraded
@@ -62,7 +80,7 @@ function parseStrict(raw: string): {
   language: string
 } {
   const fallback = {
-    reply: NEXUS_FACTS.refusal_examples.off_topic,
+    reply: NEXUS_FACTS.refusal_examples.off_topic.en,
     confidence: 'low' as const,
     out_of_scope: true,
     language: 'en',
@@ -98,7 +116,7 @@ export function outputGuard(rawModelOutput: string): OutputGuardResult {
   const guards_fired: string[] = []
 
   const parsed = parseStrict(rawModelOutput)
-  if (parsed.reply === NEXUS_FACTS.refusal_examples.off_topic && parsed.confidence === 'low') {
+  if (parsed.reply === NEXUS_FACTS.refusal_examples.off_topic.en && parsed.confidence === 'low') {
     guards_fired.push('parse_failed')
   }
   let { reply, confidence, out_of_scope, language } = parsed
@@ -107,26 +125,27 @@ export function outputGuard(rawModelOutput: string): OutputGuardResult {
   for (const marker of SYSTEM_LEAK_MARKERS) {
     if (reply.includes(marker)) {
       guards_fired.push(`leak:${marker}`)
-      reply = NEXUS_FACTS.refusal_examples.confidential
+      reply = localizedRefusal('confidential', language)
       confidence = 'low'
       out_of_scope = true
       break
     }
   }
 
-  // 2. Low-confidence or out-of-scope → replace with safe redirect.
+  // 2. Low-confidence or out-of-scope → replace with safe redirect
+  //    (in the user's language).
   if (out_of_scope) {
     guards_fired.push('out_of_scope')
-    reply = NEXUS_FACTS.refusal_examples.off_topic
+    reply = localizedRefusal('off_topic', language)
   } else if (confidence === 'low') {
     guards_fired.push('low_confidence')
-    reply = NEXUS_FACTS.pricing_policy.fallback_response
+    reply = localizedRefusal('pricing', language)
   }
 
-  // 3. Price claim → annotate "subject to confirmation" if not already.
+  // 3. Price claim → replace with the localized pricing refusal.
   if (PRICE_PATTERN.test(reply)) {
     guards_fired.push('price_claim')
-    reply = NEXUS_FACTS.refusal_examples.pricing
+    reply = localizedRefusal('pricing', language)
   }
 
   // 4. Date / delivery commitment → strip + replace.
@@ -144,9 +163,9 @@ export function outputGuard(rawModelOutput: string): OutputGuardResult {
     reply = reply.replace(/\b(claude|gpt|chatgpt|gemini|llama|deepseek)\b/gi, 'AI')
   }
 
-  // 6. Always-on safety footer for non-trivial replies.
+  // 6. Always-on safety footer (in the user's language) for non-trivial replies.
   if (reply.length > 100 && !reply.includes('founder@soulcore.dev')) {
-    reply = reply + SAFETY_FOOTER
+    reply = reply + '\n\n' + localizedFooter(language)
   }
 
   return { reply, confidence, out_of_scope, language, guards_fired }
