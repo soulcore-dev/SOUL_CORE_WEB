@@ -60,7 +60,9 @@ function saveSettings(settings: Record<string, DisplaySettings>) {
 function SlotControls({ slotId, settings, onChange }: {
   slotId: string; settings: DisplaySettings; onChange: (s: DisplaySettings) => void;
 }) {
-  const update = <K extends keyof DisplaySettings>(key: K, value: DisplaySettings[K]) => onChange({ ...settings, [key]: value });
+  function update<K extends keyof DisplaySettings>(key: K, value: DisplaySettings[K]) {
+    onChange({ ...settings, [key]: value });
+  }
 
   const exportCSS = () => {
     const filters = [
