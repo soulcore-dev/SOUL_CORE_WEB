@@ -106,7 +106,7 @@ function SlotControls({ slotId, settings, onChange }: {
       {/* Object Fit */}
       <div className="flex items-center justify-between">
         <label className="text-[10px] text-gray-400 w-24">Fit</label>
-        <select value={settings.objectFit} onChange={e => update('objectFit', e.target.value)}
+        <select value={settings.objectFit} onChange={e => update('objectFit', e.target.value as DisplaySettings['objectFit'])}
           className="flex-1 mx-2 bg-gray-900 border border-gray-700 rounded text-[10px] text-gray-300 px-1 py-0.5">
           <option value="cover">Cover</option>
           <option value="contain">Contain</option>
@@ -117,7 +117,7 @@ function SlotControls({ slotId, settings, onChange }: {
       {/* Object Position */}
       <div className="flex items-center justify-between">
         <label className="text-[10px] text-gray-400 w-24">Position</label>
-        <select value={settings.objectPosition} onChange={e => update('objectPosition', e.target.value)}
+        <select value={settings.objectPosition} onChange={e => update('objectPosition', e.target.value as DisplaySettings['objectPosition'])}
           className="flex-1 mx-2 bg-gray-900 border border-gray-700 rounded text-[10px] text-gray-300 px-1 py-0.5">
           {['center','top','bottom','left','right','top left','top right','bottom left','bottom right'].map(p => (
             <option key={p} value={p}>{p}</option>
