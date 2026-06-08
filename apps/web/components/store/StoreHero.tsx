@@ -14,7 +14,7 @@ export function StoreHero() {
           src="/generated/store-hero-bg.png"
           alt=""
           className="absolute inset-0 w-full h-full object-cover opacity-25 ai-bg-img"
-          onError={(e: any) => { e.target.style.display = 'none' }}
+          onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display = 'none' }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-soul-purple/10 via-transparent to-transparent" />
         <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-soul-purple/20 rounded-full blur-3xl animate-pulse" />

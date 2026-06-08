@@ -97,7 +97,7 @@ export default function StorePage() {
                   src="/generated/empty-store.png"
                   alt=""
                   className="absolute inset-0 w-full h-full object-contain z-[2]"
-                  onError={(e: any) => { e.target.style.display = 'none' }}
+                  onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display = 'none' }}
                 />
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">{t('noProducts')}</h3>

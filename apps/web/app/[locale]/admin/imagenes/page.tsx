@@ -60,7 +60,7 @@ function saveSettings(settings: Record<string, DisplaySettings>) {
 function SlotControls({ slotId, settings, onChange }: {
   slotId: string; settings: DisplaySettings; onChange: (s: DisplaySettings) => void;
 }) {
-  const update = (key: keyof DisplaySettings, value: any) => onChange({ ...settings, [key]: value });
+  const update = <K extends keyof DisplaySettings>(key: K, value: DisplaySettings[K]) => onChange({ ...settings, [key]: value });
 
   const exportCSS = () => {
     const filters = [
@@ -203,8 +203,9 @@ export default function AdminImagenesPage() {
       setSlotStates(prev => ({
         ...prev, [slot.id]: { exists: true, generating: false, error: null, preview: data.url || `/generated/${slot.filename}?t=${Date.now()}` },
       }));
-    } catch (err: any) {
-      setSlotStates(prev => ({ ...prev, [slot.id]: { ...prev[slot.id], generating: false, error: err.message || 'Failed' } }));
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'Failed'
+      setSlotStates(prev => ({ ...prev, [slot.id]: { ...prev[slot.id], generating: false, error: message } }));
     }
   }, []);
 
@@ -313,7 +314,7 @@ export default function AdminImagenesPage() {
                         filter: filters,
                         transform: settings.scale !== 100 ? `scale(${settings.scale / 100})` : undefined,
                       }}
-                      onError={(e: any) => { e.target.style.display = 'none'; }} />
+                      onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display = 'none'; }} />
                   )}
 
                   <div className="absolute top-2 right-2 z-[3]">

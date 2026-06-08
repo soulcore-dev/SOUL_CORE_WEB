@@ -74,7 +74,7 @@ export function Portfolio() {
                   src={project.image}
                   alt={t(`projects.${project.key}.title`)}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  onError={(e: any) => { e.target.style.display = 'none' }}
+                  onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display = 'none' }}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-30 mix-blend-multiply`} />
                 <div className="absolute inset-0 bg-gradient-to-t from-soul-dark-card via-transparent to-transparent" />

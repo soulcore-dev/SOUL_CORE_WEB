@@ -66,7 +66,7 @@ function loadSlots() {
   let slotsFile = candidates.find(f => fs.existsSync(f));
 
   if (!slotsFile) {
-    console.error('Could not find image-slots.ts in any of:');
+    console.error('Could not find image-slots.ts in the expected locations:');
     candidates.forEach(c => console.error(`  ${c}`));
     console.error('\nCreate src/data/image-slots.ts first. See image-slots.example.ts');
     process.exit(1);

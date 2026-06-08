@@ -23,7 +23,7 @@ export function WhyUs() {
         src="/generated/whyus-bg.png"
         alt=""
         className="absolute inset-0 w-full h-full object-cover opacity-15 ai-bg-img"
-        onError={(e: any) => { e.target.style.display = 'none' }}
+        onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display = 'none' }}
       />
       {/* Background blur effects */}
       <div className="absolute top-0 right-1/4 w-80 h-80 bg-soul-purple/20 rounded-full blur-3xl" />

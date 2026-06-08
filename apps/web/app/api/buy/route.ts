@@ -19,8 +19,14 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Failed to fetch products' }, { status: 502 })
     }
 
-    const products = await res.json()
-    const product = (products as any[]).find(
+    type StoreProduct = {
+      id: number | string
+      slug: string
+      price_cents: number
+      whop_product_id?: string
+    }
+    const products = (await res.json()) as StoreProduct[]
+    const product = products.find(
       (p) => p.slug === slug || String(p.id) === slug
     )
 

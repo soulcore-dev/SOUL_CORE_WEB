@@ -25,7 +25,7 @@ export function Team() {
         src="/generated/team-illustration.png"
         alt=""
         className="absolute inset-0 w-full h-full object-cover opacity-15 ai-bg-img"
-        onError={(e: any) => { e.target.style.display = 'none' }}
+        onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display = 'none' }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}

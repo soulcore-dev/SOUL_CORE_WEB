@@ -7,11 +7,12 @@ import { useTranslations, useLocale } from 'next-intl'
 import {
   Package, Brain, Shield, TrendingUp, Boxes, Plug, Code, Cpu, Zap,
   ArrowLeft, ShoppingCart, Check, Loader2, Star, Download, ChevronDown,
-  Monitor, Globe, FileCode, Lock, Clock, Sparkles, ExternalLink, Tag, User
+  Monitor, Globe, FileCode, Lock, Clock, Sparkles, ExternalLink, Tag, User,
+  type LucideIcon,
 } from 'lucide-react'
 import { getProduct, getProducts, type Product, formatPrice, formatRating, parseFeatures, parseSpecs, parseTechStack, timeAgo } from '@/lib/api'
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   Package, Brain, Shield, TrendingUp, Boxes, Plug, Code, Cpu, Zap,
 }
 

@@ -6,7 +6,7 @@ export function SafeImage({ src, alt, className }: { src: string; alt: string; c
       src={src}
       alt={alt}
       className={className}
-      onError={(e: any) => { e.target.style.display = 'none' }}
+      onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display = 'none' }}
     />
   )
 }

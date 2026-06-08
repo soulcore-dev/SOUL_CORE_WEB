@@ -23,13 +23,17 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const messages = await getMessages()
-  const t = (key: string) => {
+  const t = (key: string): string => {
     const keys = key.split('.')
-    let value: any = messages
+    let value: unknown = messages
     for (const k of keys) {
-      value = value?.[k]
+      if (value && typeof value === 'object' && k in value) {
+        value = (value as Record<string, unknown>)[k]
+      } else {
+        return key
+      }
     }
-    return value || key
+    return typeof value === 'string' ? value : key
   }
 
   return {

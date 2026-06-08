@@ -12,7 +12,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const messages = await getMessages()
-  const privacy = (messages as Record<string, any>).privacy
+  const privacy = (messages as Record<string, { title?: string; metaDescription?: string }>).privacy
 
   return {
     title: `${privacy?.title || 'Privacy Policy'} | SOUL CORE`,

@@ -5,11 +5,12 @@ import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import {
   Package, Brain, Shield, TrendingUp, Boxes, Plug, Code, Cpu, Zap,
-  ArrowRight, Star, Download, ExternalLink, Clock
+  ArrowRight, Star, Download, ExternalLink, Clock,
+  type LucideIcon,
 } from 'lucide-react'
 import { type Product, formatPrice, formatRating, parseTechStack, timeAgo } from '@/lib/api'
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   Package, Brain, Shield, TrendingUp, Boxes, Plug, Code, Cpu, Zap,
 }
 

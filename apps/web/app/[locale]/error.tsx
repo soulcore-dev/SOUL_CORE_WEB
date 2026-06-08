@@ -21,7 +21,7 @@ export default function Error({
             src="/generated/error-500.png"
             alt=""
             className="absolute inset-0 w-full h-full object-contain z-[2]"
-            onError={(e: any) => { e.target.style.display = 'none' }}
+            onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display = 'none' }}
           />
         </div>
 

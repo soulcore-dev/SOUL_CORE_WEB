@@ -32,7 +32,7 @@ export function Hero() {
           src="/generated/hero-bg.png"
           alt=""
           className="absolute inset-0 w-full h-full object-cover opacity-50 ai-bg-img"
-          onError={(e: any) => { e.target.style.display = 'none' }}
+          onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display = 'none' }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-soul-dark via-soul-dark/50 to-soul-dark/30 hero-gradient-bottom" />
         <div className="absolute inset-0 bg-gradient-to-b from-soul-dark/70 via-transparent to-transparent hero-gradient-top" />

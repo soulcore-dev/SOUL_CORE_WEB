@@ -2,7 +2,7 @@ import Link from 'next/link'
 import './globals.css'
 
 /**
- * Root-level not-found page. Handles routes that don't match any
+ * Root-level not-found page. Handles routes that don't match a
  * [locale] path. Must include <html> and <body> since it renders
  * outside the locale layout.
  */

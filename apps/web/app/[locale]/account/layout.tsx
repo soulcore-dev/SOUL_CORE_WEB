@@ -47,8 +47,8 @@ function CustomerLogin({ onLogin }: { onLogin: (info: CustomerInfo) => void }) {
       sessionStorage.setItem('soulcore_customer_token', data.token)
       sessionStorage.setItem('soulcore_customer_email', data.email)
       onLogin({ token: data.token, email: data.email, name: data.name })
-    } catch (err: any) {
-      setError(err.message || 'Authentication failed')
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Authentication failed')
     } finally {
       setLoading(false)
     }
@@ -166,8 +166,8 @@ function FreeProductClaim({ productSlug, onClaimed }: { productSlug: string; onC
           sessionStorage.setItem('soulcore_customer_email', email)
         }
       } catch { /* auto-login failed, user still has the key */ }
-    } catch (err: any) {
-      setError(err.message || 'Failed to generate license')
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Failed to generate license')
     } finally {
       setLoading(false)
     }

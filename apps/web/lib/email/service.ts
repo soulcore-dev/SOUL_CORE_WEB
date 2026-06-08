@@ -36,9 +36,10 @@ async function send(to: string, subject: string, html: string): Promise<SendResu
 
     console.log(`[email] Sent "${subject}" to ${to} — id: ${result.data?.id}`)
     return { success: true, messageId: result.data?.id }
-  } catch (err: any) {
-    console.error('[email] Send failed:', err.message)
-    return { success: false, error: err.message }
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err)
+    console.error('[email] Send failed:', message)
+    return { success: false, error: message }
   }
 }
 

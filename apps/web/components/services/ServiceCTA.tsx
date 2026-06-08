@@ -31,7 +31,7 @@ export function ServiceCTA({ serviceKey, color }: ServiceCTAProps) {
         src="/generated/svc-cta-bg.png"
         alt=""
         className="absolute inset-0 w-full h-full object-cover opacity-15 ai-bg-img"
-        onError={(e: any) => { e.target.style.display = 'none' }}
+        onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display = 'none' }}
       />
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />

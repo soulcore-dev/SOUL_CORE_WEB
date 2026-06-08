@@ -5,12 +5,13 @@ import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import {
   Package, Brain, Shield, TrendingUp, Boxes, Plug, Code, Cpu, Zap,
-  Copy, Check, Loader2, Calendar, Clock
+  Copy, Check, Loader2, Calendar, Clock,
+  type LucideIcon,
 } from 'lucide-react'
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || ''
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   Package, Brain, Shield, TrendingUp, Boxes, Plug, Code, Cpu, Zap,
 }
 

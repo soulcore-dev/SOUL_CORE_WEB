@@ -48,7 +48,7 @@ export function ServiceHero({ serviceKey, color }: ServiceHeroProps) {
         src={`/generated/svc-${serviceKey}.png`}
         alt=""
         className="absolute inset-0 w-full h-full object-cover opacity-25 z-[1] ai-bg-img"
-        onError={(e: any) => { e.target.style.display = 'none' }}
+        onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display = 'none' }}
       />
       {/* Gradient overlay — fades image from left for text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-soul-dark via-soul-dark/60 to-transparent z-[2]" />
