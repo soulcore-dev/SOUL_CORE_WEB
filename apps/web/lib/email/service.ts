@@ -1,13 +1,46 @@
 /**
- * SoulCore Email Service — centralized email sending via Resend
- * All emails go through here for consistency, logging, and compliance.
+ * SoulCore Email Service — centralized email sending via Google
+ * Workspace SMTP (nodemailer over smtp.gmail.com:587 with STARTTLS).
+ *
+ * Why this transport:
+ * - Sovereignty: we already pay Workspace; one provider for inbox + outbox.
+ * - No SPF/DKIM conflicts: outbound uses google._domainkey already in DNS.
+ * - 2,000 emails/day quota per Workspace user (more than enough).
+ *
+ * Auth: SMTP_USER (full address like founder@soulcore.dev) +
+ * SMTP_APP_PASSWORD (16-char Google App Password). 2-Step Verification
+ * must be enabled on the Google account to generate App Passwords.
+ *
+ * Note on `from`: Gmail SMTP will rewrite the "From" header to your
+ * authenticated user UNLESS the address is a verified "Send mail as"
+ * alias in Workspace. To send as hello@soulcore.dev with auth as
+ * founder@soulcore.dev, configure the alias in Gmail Settings →
+ * Accounts → Send mail as. Until then, FROM is set to SMTP_USER.
  */
-import { Resend } from 'resend'
+import nodemailer, { type Transporter } from 'nodemailer'
 import { transactionalEmail, receiptEmail } from './templates'
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
-const FROM = process.env.FROM_EMAIL ?? 'SoulCore <hello@soulcore.dev>'
+const SMTP_USER = process.env.SMTP_USER ?? ''
+const SMTP_PASS = process.env.SMTP_APP_PASSWORD ?? ''
+const FROM = process.env.FROM_EMAIL || SMTP_USER || 'hello@soulcore.dev'
+const REPLY_TO = process.env.REPLY_TO_EMAIL || FROM
 const PORTAL_URL = 'https://soulcore.dev/es/account'
+
+/**
+ * Single, reused SMTP transporter. Pool=true keeps a small connection
+ * pool open so we don't re-auth on every send.
+ */
+const transporter: Transporter | null = SMTP_USER && SMTP_PASS
+  ? nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false, // STARTTLS upgrade
+      auth: { user: SMTP_USER, pass: SMTP_PASS },
+      pool: true,
+      maxConnections: 3,
+      maxMessages: 100,
+    })
+  : null
 
 interface SendResult {
   success: boolean
@@ -15,30 +48,30 @@ interface SendResult {
   error?: string
 }
 
-async function send(to: string, subject: string, html: string): Promise<SendResult> {
-  if (!resend) {
-    console.warn('[email] Resend not configured — email not sent to', to)
-    return { success: false, error: 'Resend not configured' }
+/**
+ * Low-level send. Exported so non-template senders (e.g. the contact
+ * form admin notification) can compose their own HTML and still go
+ * through the centralized transport / FROM / logging path.
+ */
+export async function send(to: string, subject: string, html: string): Promise<SendResult> {
+  if (!transporter) {
+    console.warn('[email] SMTP not configured — email not sent to', to)
+    return { success: false, error: 'SMTP not configured' }
   }
 
   try {
-    const result = await resend.emails.send({
-      from: FROM,
+    const info = await transporter.sendMail({
+      from: FROM.includes('<') ? FROM : `SoulCore <${FROM}>`,
       to,
+      replyTo: REPLY_TO,
       subject,
       html,
     })
-
-    if (result.error) {
-      console.error('[email] Resend error:', result.error)
-      return { success: false, error: result.error.message }
-    }
-
-    console.log(`[email] Sent "${subject}" to ${to} — id: ${result.data?.id}`)
-    return { success: true, messageId: result.data?.id }
+    console.log(`[email] Sent "${subject}" to ${to} — id: ${info.messageId}`)
+    return { success: true, messageId: info.messageId }
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : String(err)
-    console.error('[email] Send failed:', message)
+    console.error('[email] SMTP send failed:', message)
     return { success: false, error: message }
   }
 }

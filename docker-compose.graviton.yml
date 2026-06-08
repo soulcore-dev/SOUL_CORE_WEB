@@ -12,10 +12,13 @@ services:
       - "127.0.0.1:3000:3000"
     environment:
       - NODE_ENV=production
-      # ANTHROPIC removed 2026-06-08 — NEXUS now uses DeepSeek (deepseek-v4-flash).
-      - RESEND_API_KEY=${RESEND_API_KEY:-}
+      # ANTHROPIC removed 2026-06-08 — NEXUS now uses DeepSeek.
+      # RESEND removed 2026-06-08 — migrated to Gmail SMTP (Google Workspace).
+      - SMTP_USER=${SMTP_USER:-}
+      - SMTP_APP_PASSWORD=${SMTP_APP_PASSWORD:-}
       - ADMIN_EMAIL=${ADMIN_EMAIL:-founder@soulcore.dev}
-      - FROM_EMAIL=${FROM_EMAIL:-hello@soulcore.dev}
+      - FROM_EMAIL=${FROM_EMAIL:-founder@soulcore.dev}
+      - REPLY_TO_EMAIL=${REPLY_TO_EMAIL:-founder@soulcore.dev}
       - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
       - NEXUS_LOG_DIR=${NEXUS_LOG_DIR:-/tmp}
     deploy:
