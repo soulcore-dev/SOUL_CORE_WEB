@@ -12,7 +12,7 @@ services:
       - "127.0.0.1:3000:3000"
     environment:
       - NODE_ENV=production
-      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      # ANTHROPIC removed 2026-06-08 — NEXUS now uses DeepSeek (deepseek-v4-flash).
       - RESEND_API_KEY=${RESEND_API_KEY:-}
       - ADMIN_EMAIL=${ADMIN_EMAIL:-founder@soulcore.dev}
       - FROM_EMAIL=${FROM_EMAIL:-hello@soulcore.dev}
@@ -54,10 +54,10 @@ services:
           memory: 128M
           cpus: "0.25"
     healthcheck:
-      # license-server is a Go binary — `wget` may or may not be in its
-      # base image. Use a TCP connect via Go's built-in net package via
-      # a one-line shell test instead of relying on wget.
-      test: ["CMD-SHELL", "timeout 3 bash -c '</dev/tcp/127.0.0.1/8090' || exit 1"]
+      # Go alpine image has busybox/nc but NOT bash. The previous test
+      # used /dev/tcp redirection which requires bash. nc with -z does a
+      # TCP-connect probe and is available in the standard busybox build.
+      test: ["CMD", "nc", "-z", "127.0.0.1", "8090"]
       interval: 30s
       timeout: 5s
       retries: 3
