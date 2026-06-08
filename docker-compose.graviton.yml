@@ -16,6 +16,8 @@ services:
       - RESEND_API_KEY=${RESEND_API_KEY:-}
       - ADMIN_EMAIL=${ADMIN_EMAIL:-founder@soulcore.dev}
       - FROM_EMAIL=${FROM_EMAIL:-hello@soulcore.dev}
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
+      - NEXUS_LOG_DIR=${NEXUS_LOG_DIR:-/tmp}
     deploy:
       resources:
         limits:
