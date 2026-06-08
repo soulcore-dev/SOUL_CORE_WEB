@@ -1,45 +1,111 @@
+/**
+ * NEXUS chat endpoint — DeepSeek-v4-flash backed, three-layer defense:
+ * input guard → sandwich prompt → output guard.
+ *
+ * Replaces the previous Anthropic-direct route. Server-only system
+ * prompt + audit log + rate limit + injection detection + leak
+ * detection + claim sanitization.
+ */
+
 import { NextRequest, NextResponse } from 'next/server'
-import Anthropic from '@anthropic-ai/sdk'
+import { inputGuard } from '@/lib/chat/guards/input-guard'
+import { outputGuard } from '@/lib/chat/guards/output-guard'
+import { callDeepSeek, type DeepSeekMessage } from '@/lib/chat/deepseek'
+import { buildSystemPrompt, buildReminder } from '@/lib/chat/prompt'
+import { audit, hashIp } from '@/lib/chat/audit'
 
-const SYSTEM_PROMPT = `You are NEXUS, the AI assistant of SoulCore.dev — a dev studio that builds AI-powered software, DevSecOps infrastructure, and custom web/mobile apps. You help visitors understand SoulCore's services, answer technical questions, and guide them toward contacting the team. Be concise, helpful, and professional. Respond in the same language the user writes in. If asked about pricing, guide them to the contact form.`
+export const runtime = 'nodejs'
 
-const anthropic = process.env.ANTHROPIC_API_KEY
-  ? new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
-  : null
+function newSessionId(): string {
+  return crypto.randomUUID().slice(0, 8)
+}
+
+function clientIp(req: NextRequest): string {
+  const fwd = req.headers.get('x-forwarded-for') ?? ''
+  const first = fwd.split(',')[0]?.trim()
+  if (first) return first
+  return req.headers.get('x-real-ip') ?? 'unknown'
+}
 
 export async function POST(req: NextRequest) {
-  const { message, session_id } = await req.json()
+  const t0 = Date.now()
+  const body = await req.json().catch(() => ({}))
+  const message: unknown = body?.message
+  const session_id: string =
+    typeof body?.session_id === 'string' && body.session_id.length > 0
+      ? body.session_id
+      : newSessionId()
 
-  if (!message || typeof message !== 'string') {
+  const ip_hash = hashIp(clientIp(req))
+
+  if (typeof message !== 'string') {
     return NextResponse.json({ error: 'message required' }, { status: 400 })
   }
 
-  if (!anthropic) {
-    return NextResponse.json({
-      reply: 'Chat is currently unavailable. Please contact us via the form or WhatsApp.',
-      session_id: session_id ?? crypto.randomUUID().slice(0, 8),
+  // -------- INPUT GUARD --------
+  const guard = inputGuard({ message, ipHash: ip_hash })
+  if (!guard.ok) {
+    audit({
+      ts: new Date().toISOString(),
+      session_id,
+      ip_hash,
+      in: message.slice(0, 500),
+      out: guard.reply,
+      guards_fired: [`block:${guard.reason}`],
+      latency_ms: Date.now() - t0,
+      confidence: 'low',
+      out_of_scope: true,
+      language: 'unknown',
+      blocked_reason: guard.reason,
     })
+    return NextResponse.json({ reply: guard.reply, session_id })
   }
 
-  try {
-    const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 500,
-      system: SYSTEM_PROMPT,
-      messages: [{ role: 'user', content: message }],
-    })
+  // -------- SANDWICH PROMPT --------
+  const messages: DeepSeekMessage[] = [
+    { role: 'system', content: buildSystemPrompt() },
+    { role: 'user', content: guard.sanitized },
+    { role: 'system', content: buildReminder() },
+  ]
 
-    const reply = response.content[0].type === 'text' ? response.content[0].text : ''
-
-    return NextResponse.json({
-      reply,
-      session_id: session_id ?? crypto.randomUUID().slice(0, 8),
+  // -------- DEEPSEEK CALL --------
+  const call = await callDeepSeek(messages)
+  if (!call.ok) {
+    const fallback =
+      'Chat is currently unavailable. Please use the contact form or write to founder@soulcore.dev.'
+    audit({
+      ts: new Date().toISOString(),
+      session_id,
+      ip_hash,
+      in: message.slice(0, 500),
+      out: fallback,
+      guards_fired: [`upstream:${call.reason}`],
+      latency_ms: Date.now() - t0,
+      confidence: 'low',
+      out_of_scope: false,
+      language: 'unknown',
+      blocked_reason: call.reason,
     })
-  } catch (err) {
-    console.error('Chat error:', err)
-    return NextResponse.json({
-      reply: 'Sorry, I encountered an error. Please try again or contact us directly.',
-      session_id: session_id ?? crypto.randomUUID().slice(0, 8),
-    })
+    console.error('[nexus]', call.reason, call.detail)
+    return NextResponse.json({ reply: fallback, session_id })
   }
+
+  // -------- OUTPUT GUARD --------
+  const out = outputGuard(call.raw)
+
+  audit({
+    ts: new Date().toISOString(),
+    session_id,
+    ip_hash,
+    in: message.slice(0, 500),
+    out: out.reply.slice(0, 1000),
+    guards_fired: out.guards_fired,
+    latency_ms: Date.now() - t0,
+    confidence: out.confidence,
+    out_of_scope: out.out_of_scope,
+    language: out.language,
+    model_usage: call.usage,
+  })
+
+  return NextResponse.json({ reply: out.reply, session_id })
 }
