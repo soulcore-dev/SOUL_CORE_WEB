@@ -22,6 +22,46 @@ interface ChatResponse {
 // SYSTEM tokens stay cached as long as they're the prefix).
 const HISTORY_CAP = 10
 
+// localStorage key + TTL for cross-refresh conversation persistence.
+// 24h is long enough to feel "remembered" within a session, short enough
+// that abandoned conversations don't linger forever (privacy).
+const STORAGE_KEY = 'nexus_chat_v1'
+const STORAGE_TTL_MS = 24 * 60 * 60 * 1000
+
+type PersistedChat = {
+  messages: Message[]
+  session_id: string | null
+  ts: number
+}
+
+function loadPersisted(): PersistedChat | null {
+  if (typeof window === 'undefined') return null
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY)
+    if (!raw) return null
+    const parsed = JSON.parse(raw) as PersistedChat
+    if (!parsed || typeof parsed.ts !== 'number') return null
+    if (Date.now() - parsed.ts > STORAGE_TTL_MS) {
+      window.localStorage.removeItem(STORAGE_KEY)
+      return null
+    }
+    if (!Array.isArray(parsed.messages) || parsed.messages.length === 0) return null
+    return parsed
+  } catch {
+    return null
+  }
+}
+
+function savePersisted(messages: Message[], session_id: string | null): void {
+  if (typeof window === 'undefined') return
+  try {
+    const payload: PersistedChat = { messages, session_id, ts: Date.now() }
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
+  } catch {
+    // Quota or disabled — silent. The conversation still works in memory.
+  }
+}
+
 /**
  * Lightweight markdown renderer for assistant replies. Handles only what
  * NEXUS actually emits:
@@ -36,7 +76,9 @@ function renderMarkdown(text: string): React.ReactNode {
   let key = 0
 
   // Split by URL first (so we don't double-process inside links).
-  const urlRegex = /(https?:\/\/[^\s)]+)/g
+  // Exclude trailing punctuation that the model typically writes after a
+  // URL ("...at https://soulcore.dev/#contact." → don't include the dot).
+  const urlRegex = /(https?:\/\/[^\s)<>"']+?)([.,;:!?)\]]*)(?=\s|$|[<])/g
   const lines = text.split('\n')
 
   lines.forEach((line, lineIdx) => {
@@ -49,17 +91,20 @@ function renderMarkdown(text: string): React.ReactNode {
       if (match.index > lastIndex) {
         lineTokens.push(formatInline(line.slice(lastIndex, match.index), key++))
       }
+      const url = match[1] // the URL itself, without trailing punct
+      const trailing = match[2] // trailing punct to render as plain text
       lineTokens.push(
         <a
           key={`url-${key++}`}
-          href={match[0]}
+          href={url}
           target="_blank"
           rel="noopener noreferrer"
           className="text-soul-purple-light underline hover:text-white"
         >
-          {match[0]}
+          {url}
         </a>
       )
+      if (trailing) lineTokens.push(<span key={`tp-${key++}`}>{trailing}</span>)
       lastIndex = match.index + match[0].length
     }
     if (lastIndex < line.length) {
@@ -118,7 +163,36 @@ export function ChatWidget() {
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [sessionId, setSessionId] = useState<string | null>(null)
+  const [hydrated, setHydrated] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+
+  // Hydrate from localStorage on mount. Runs once. Avoids SSR mismatch
+  // by only touching localStorage after first render.
+  useEffect(() => {
+    const persisted = loadPersisted()
+    if (persisted) {
+      setMessages(persisted.messages)
+      setSessionId(persisted.session_id)
+    }
+    setHydrated(true)
+  }, [])
+
+  // Persist on any message change (after hydration). Skip the initial
+  // single-greeting state so we don't litter localStorage for visitors
+  // who only opened-and-closed the widget.
+  useEffect(() => {
+    if (!hydrated) return
+    if (messages.length <= 1) return
+    savePersisted(messages, sessionId)
+  }, [messages, sessionId, hydrated])
+
+  function clearConversation() {
+    if (typeof window !== 'undefined') {
+      try { window.localStorage.removeItem(STORAGE_KEY) } catch {}
+    }
+    setMessages([{ id: '1', role: 'assistant', content: t('greeting') }])
+    setSessionId(null)
+  }
 
   // Suggested prompts shown ONLY before the user sends a first message.
   // Drive shy visitors toward high-value questions NEXUS handles best.
@@ -230,13 +304,25 @@ export function ChatWidget() {
                 <p className="text-white/70 text-xs">{t('assistant')}</p>
               </div>
             </div>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="p-2 hover:bg-white/10 rounded-lg transition-colors"
-              aria-label={t('closeChat')}
-            >
-              <X size={20} className="text-white" />
-            </button>
+            <div className="flex items-center gap-1">
+              {messages.length > 1 && (
+                <button
+                  onClick={clearConversation}
+                  className="px-2 py-1 text-xs text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                  aria-label="Clear conversation"
+                  title="Clear conversation"
+                >
+                  Clear
+                </button>
+              )}
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                aria-label={t('closeChat')}
+              >
+                <X size={20} className="text-white" />
+              </button>
+            </div>
           </div>
 
           {/* Messages */}

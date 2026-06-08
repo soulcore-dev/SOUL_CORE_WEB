@@ -19,8 +19,43 @@ export type InputGuardResult =
   | { ok: false; reason: string; reply: string }
 
 const MAX_MESSAGE_CHARS = 4000
+const MAX_MESSAGE_BYTES = 16_000 // UTF-8 worst case is ~4 bytes/char
 const MAX_REQUESTS_PER_WINDOW = 10
 const WINDOW_MS = 5 * 60 * 1000 // 5 minutes
+
+// If a message is mostly invisible / control chars after normalization,
+// it's almost certainly a smuggling attempt. Reject if >20% of the
+// codepoints fall into the suspicious classes.
+const SUSPICIOUS_RATIO_THRESHOLD = 0.20
+
+/**
+ * Count "suspicious" codepoints — invisible, zero-width, direction-
+ * override, control chars. Used to detect Unicode-smuggling attempts
+ * where the visible-to-human text is short but the actual codepoint
+ * stream is loaded with adversarial markers.
+ */
+function suspiciousCodepointRatio(s: string): number {
+  if (s.length === 0) return 0
+  let suspicious = 0
+  for (const ch of s) {
+    const code = ch.codePointAt(0) ?? 0
+    if (
+      (code >= 0x200B && code <= 0x200F) ||
+      (code >= 0x202A && code <= 0x202E) ||
+      (code >= 0x2060 && code <= 0x2064) ||
+      (code >= 0x2066 && code <= 0x2069) ||
+      code === 0xFEFF ||
+      code === 0x00AD ||
+      (code >= 0x180B && code <= 0x180D) ||
+      // ASCII control chars except \n \t \r
+      (code <= 0x1F && code !== 0x09 && code !== 0x0A && code !== 0x0D) ||
+      code === 0x7F
+    ) {
+      suspicious++
+    }
+  }
+  return suspicious / [...s].length
+}
 
 /**
  * In-process rate limiter. Survives module reload between requests in
@@ -89,7 +124,7 @@ export function inputGuard(opts: {
 }): InputGuardResult {
   const { message, ipHash } = opts
 
-  // 1. Length cap (hard refusal, not just truncation here).
+  // 1a. Length cap by char count.
   if (typeof message !== 'string' || message.trim().length === 0) {
     return { ok: false, reason: 'empty', reply: 'Please type your question.' }
   }
@@ -99,6 +134,31 @@ export function inputGuard(opts: {
       reason: 'too_long',
       reply:
         "Your message is too long for the chat. Could you summarize it in a few sentences, or use the contact form at https://soulcore.dev/#contact for longer requests?",
+    }
+  }
+
+  // 1b. Length cap by UTF-8 byte size. Defends against pathological
+  //     input where a moderate char count expands to a huge byte payload
+  //     (4-byte sequences, surrogate pairs, deeply combined emoji).
+  if (new TextEncoder().encode(message).byteLength > MAX_MESSAGE_BYTES) {
+    return {
+      ok: false,
+      reason: 'too_large',
+      reply:
+        "Your message is too large for the chat. Please keep it under ~16KB or use the contact form.",
+    }
+  }
+
+  // 1c. Unicode-smuggling check. If >20% of the codepoint stream is
+  //     invisible / control / direction-override chars, it's almost
+  //     certainly a smuggling attempt — refuse instead of trying to
+  //     sanitize, since the visible text is mostly hidden.
+  if (suspiciousCodepointRatio(message) > SUSPICIOUS_RATIO_THRESHOLD) {
+    return {
+      ok: false,
+      reason: 'unicode_smuggle',
+      reply:
+        "Your message contains a lot of invisible characters. Please paste it as plain text and try again.",
     }
   }
 

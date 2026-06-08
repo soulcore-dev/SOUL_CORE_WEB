@@ -61,33 +61,80 @@ export function buildReminder(): string {
 }
 
 /**
- * Sanitize user input. Strips role markers and known injection patterns
- * BEFORE they reach the model. Defense in depth — even if the input
- * guard misses a pattern, the model still receives cleaned text.
+ * Sanitize user input. Strips role markers, injection patterns, AND
+ * Unicode-level smuggling vectors BEFORE the message reaches the model.
  *
- * Notes:
- * - We do NOT strip emoji, normal punctuation, or polite text.
- * - We DO neutralize "system:", "assistant:", chat-template tokens, and
- *   long base64 blobs (common smuggling channel).
+ * Defense in depth — even if the input guard misses a pattern, the model
+ * still receives cleaned text.
+ *
+ * Layers:
+ *   1. Unicode normalization (NFKC) collapses lookalike codepoints into
+ *      their canonical form ("Аdmin" with Cyrillic А → "Admin").
+ *   2. Strip zero-width / invisible / direction-override codepoints.
+ *      These are the classic "invisible prompt injection" vector —
+ *      tokens hidden between visible chars that the model still tokenizes
+ *      but the human reviewer cannot see.
+ *   3. Strip ASCII control characters (except \n \t \r).
+ *   4. Defang chat-template tokens, role headers, instruction-override
+ *      phrases, long base64 blobs.
+ *   5. Hard length cap (defense in depth — input guard also caps).
+ *
+ * We do NOT strip emoji, normal punctuation, or non-Latin scripts in
+ * legitimate use (e.g. Spanish ñ, Japanese かな, Arabic) — only the
+ * adversarial Unicode classes.
  */
 export function sanitizeUserMessage(raw: string): string {
   let s = raw
 
-  // Strip chat-template tokens used by various models.
+  // 1. Unicode canonicalization. NFKC folds visually identical but
+  //    distinct codepoints (full-width ASCII, math symbols, ligatures)
+  //    into their canonical ASCII equivalents — defends against
+  //    homoglyph attacks ("ＳＹＳＴＥＭ:" → "SYSTEM:") that bypass
+  //    regex matchers tuned on plain ASCII.
+  try {
+    s = s.normalize('NFKC')
+  } catch {
+    // Some malformed input can throw on normalize — fall back to raw.
+  }
+
+  // 2. Strip invisible / direction-override / bidi codepoints.
+  //    These are the "prompt injection via invisible text" class:
+  //      U+200B..U+200D  zero-width space / non-joiner / joiner
+  //      U+200E..U+200F  LTR / RTL marks
+  //      U+202A..U+202E  bidi override / push
+  //      U+2060..U+2064  word joiner / function application
+  //      U+2066..U+2069  isolate marks
+  //      U+FEFF          BOM / zero-width no-break space
+  //      U+00AD          soft hyphen (renders empty inside words)
+  //      U+180B..U+180D  Mongolian variation selectors
+  //      U+FE00..U+FE0F  variation selectors (emoji modifiers — safe to keep)
+  //                      we KEEP these because they're used in legit emoji
+  //                      composition; strip would break 👨‍💻 etc.
+  s = s.replace(/[​-‏‪-‮⁠-⁤⁦-⁩﻿­᠋-᠍]/g, '')
+
+  // 3. Strip ASCII control characters except whitespace we tolerate.
+  //    These can be used to break ANSI / terminal rendering of audit logs
+  //    or smuggle null bytes into downstream tools.
+  // eslint-disable-next-line no-control-regex
+  s = s.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '')
+
+  // 4. Chat-template token smuggling.
   s = s.replace(/<\|im_start\|>|<\|im_end\|>|<\|endoftext\|>|<\|system\|>|<\|user\|>|<\|assistant\|>/gi, '[redacted-token]')
 
-  // Strip raw role headers at start of lines.
+  // 5. Raw role headers at start of lines.
   s = s.replace(/^(system|assistant|developer|tool)\s*[:>]\s*/gim, '[redacted-role] ')
 
-  // Neutralize "instructions" attempts (keep the text visible, just defang).
+  // 6. Instruction-override phrases (defang — keep visible to the model
+  //    so it sees what was attempted, but neutralize the imperative).
   s = s.replace(/ignore\s+(all\s+)?(previous|prior|above)\s+instructions/gi, '[redacted-injection]')
   s = s.replace(/forget\s+(all\s+)?(your\s+)?instructions/gi, '[redacted-injection]')
   s = s.replace(/disregard\s+(the\s+)?(above|previous|system)/gi, '[redacted-injection]')
 
-  // Cap very long base64-looking blobs (>200 chars) — typical smuggle channel.
+  // 7. Long base64-looking blobs (>200 chars) — classic smuggle channel
+  //    used to hide instructions behind an "encoded payload" facade.
   s = s.replace(/([A-Za-z0-9+/]{200,}={0,2})/g, '[redacted-base64]')
 
-  // Final length cap (defense in depth — input guard also caps).
+  // 8. Hard length cap.
   if (s.length > 4000) s = s.slice(0, 4000) + '...[truncated]'
 
   return s
